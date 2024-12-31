@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ /*
+  ~  * ************************************************************************************************
+  ~  * ***** Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~  * ************************************************************************************************
+  ~  */
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/grid_parent_view"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/settings_tile_width"
+    android:layout_height="@dimen/settings_tile_height"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/settings_item_image_view"
+        style="@style/SettingsGridRecyclerIconStyle"
+        android:background="@drawable/ic_40px_locked"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/settings_item_title_text_view"
+        style="@style/SettingsTileTitleTextViewStyle"
+        android:layout_marginBottom="@dimen/settings_grid_recycler_view_text_margin_bottom"
+        android:text="@string/control_lock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/viewDrawerSelectedLine" />
+    <View
+        android:id="@+id/viewDrawerSelectedLine"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/drawer_selector_line_width"
+        android:layout_marginTop="@dimen/drawer_selector_bottom_line_padding"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/settings_item_title_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/settings_item_title_text_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/selector_rounded_corner_textview_walnut_bottom"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

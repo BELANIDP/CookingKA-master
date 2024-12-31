@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/colorBlack"
+        style="@style/ServiceDiagnosticsErrorCodeListItemStyle">
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/errorCode"
+            style="@style/DefaultDiagnosticsListItemTitleTextStyle"
+            app:layout_constraintBottom_toTopOf="@id/errorCategory"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/errorCategory"
+            style="@style/ServiceDiagnosticsListItemDescriptionTextStyle"
+            app:layout_constraintBottom_toTopOf="@id/errorSuggestion"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/errorCode" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/errorSuggestion"
+            style="@style/ServiceDiagnosticsListItemDescriptionTextStyle"
+            app:layout_constraintBottom_toTopOf="@id/extraInfo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/errorCategory" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/extraInfo"
+            style="@style/ServiceDiagnosticsListItemDescriptionTextStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/errorSuggestion"/>
+
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/errorTime"
+            style="@style/DefaultDiagnosticsListItemTitleTextStyle"
+            app:layout_constraintBottom_toTopOf="@id/errorDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/errorDate"
+            style="@style/DefaultDiagnosticsListItemTitleTextStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/errorTime" />
+
+        <View
+            android:id="@+id/list_item_divider_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/diagnostics_list_item_label_divider_margin_top"
+            android:background="@color/light_grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,31 @@
+<!--Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="22dp"
+    android:viewportWidth="48"
+    android:viewportHeight="22">
+  <path
+      android:pathData="M9.912,0.44H0.96V9.428H9.912V0.44Z"
+      android:fillColor="#918072"/>
+  <path
+      android:pathData="M22.289,0.44H13.336V9.428H22.289V0.44Z"
+      android:fillColor="#918072"/>
+  <path
+      android:pathData="M34.663,0.44H25.71V9.428H34.663V0.44Z"
+      android:fillColor="#918072"/>
+  <path
+      android:pathData="M47.04,0.44H38.087V9.428H47.04V0.44Z"
+      android:fillColor="#918072"/>
+  <path
+      android:pathData="M9.912,12.866H0.96V21.853H9.912V12.866Z"
+      android:fillColor="#918072"/>
+  <path
+      android:pathData="M22.289,12.866H13.336V21.853H22.289V12.866Z"
+      android:fillColor="#918072"/>
+  <path
+      android:pathData="M34.663,12.866H25.71V21.853H34.663V12.866Z"
+      android:fillColor="#918072"/>
+  <path
+      android:pathData="M47.04,12.866H38.087V21.853H47.04V12.866Z"
+      android:fillColor="#918072"/>
+</vector>

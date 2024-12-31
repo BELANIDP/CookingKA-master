@@ -1,0 +1,10 @@
+{
+	"$schema": "https://github.whirlpool.com/pages/gpo-electronics/WP.BinaryManager/BuildProperties/buildproperties-schema.json#",
+	"ControlType": "HMI",
+	"Category": "Cooking",
+	"DistributionStatus": "Sprint_Drop",
+	"Node": 6,
+	"SoftwareArchitecture": "AndroidNucleus",
+	"BuildResultType": "Jenkins",
+	"IsIoTEvo": true
+}

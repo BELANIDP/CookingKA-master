@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/common_solid_black">
+
+    <android.presenter.customviews.widgets.headerbar.HeaderBarWidget
+        android:id="@+id/headerBarKitchenTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumbler
+        android:id="@+id/ktTumblers"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/kt_widget_height"
+        android:requiresFadingEdge="horizontal"
+        android:fadingEdgeLength="@dimen/kt_tumbler_fading_edge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/kt_tumbler_margin_bottom"
+
+        app:baseTumbler_item_spacing="24"
+        app:baseTumbler_item_layoutHeight="@dimen/kt_widget_height"
+        app:baseTumbler_item_layoutWidth="@dimen/kt_widget_width"
+        app:baseTumbler_scrollSpeed="@integer/tumbler_scroll_speed"
+        app:baseTumbler_maxFlingVelocity="@integer/tumbler_max_fling_velocity"
+        app:baseTumbler_orientation="horizontal" />
+    <com.whirlpool.hmi.uicomponents.widgets.progress.Stepper
+        android:id="@+id/stepperKitchenTimerWidget"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/kt_tumbler_stepper_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/kt_tumbler_stepper_margin_bottom"
+        app:no_of_steps="4"
+        app:non_highlighted_step_width="8dp"
+        app:highlighted_step_width="10dp"
+        app:padding_between_steps="8dp"
+        app:step_default_drawable="@drawable/stepper_non_selected"
+        app:step_highlighted_drawable="@drawable/stepper_selected"
+        app:stepper_highlighted_mode="current_index" />
+</androidx.constraintlayout.widget.ConstraintLayout>

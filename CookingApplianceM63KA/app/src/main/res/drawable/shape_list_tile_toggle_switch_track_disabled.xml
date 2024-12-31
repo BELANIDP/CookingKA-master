@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+  -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="@dimen/width_toggle_switch"
+        android:height="@dimen/height_toggle_switch_track"
+        android:gravity="center">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/radius_toggle_switch_track" />
+            <solid android:color="@color/color_selector_toggle_switch_track_disabled" />
+            <stroke
+                android:width="@dimen/toggle_switch_track_border_width"
+                android:color="@color/color_selector_toggle_switch_track_border_disabled" />
+            <size
+                android:width="@dimen/width_toggle_switch"
+                android:height="@dimen/height_toggle_switch_track" />
+            <padding
+                android:bottom="@dimen/padding_track_top_bottom"
+                android:left="@dimen/padding_track_start_end"
+                android:right="@dimen/padding_track_start_end"
+                android:top="@dimen/padding_track_top_bottom" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?><!--Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/HeaderBarNumpadStyle">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/leftIconWithTouchImprovement"
+        android:layout_width="@dimen/header_bar_icon_width_with_touch_improvement"
+        android:layout_height="@dimen/header_bar_icon_height_with_touch_improvement"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/headerBarHeight"
+        android:layout_marginTop="@dimen/header_bar_icon_top_padding_with_touch_improvement"
+        android:layout_marginStart="@dimen/header_bar_icon_start_padding_with_touch_improvement"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/flLeftIcon"
+            android:layout_width="@dimen/headerBarIconWidth"
+            android:layout_height="@dimen/headerBarIconHeight"
+            android:padding="@dimen/headerBarIconPadding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivBackIcon"
+                style="@style/LeftIconStyle"
+                tools:ignore="ContentDescription" />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/tvCookTime"
+            style="@style/HeaderBarNumpadKeypadTextViewStyle"
+            android:gravity="center_vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="00h00m" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.textview.KeypadTextView
+            android:id="@+id/keypadTextView"
+            style="@style/HeaderBarNumpadKeypadTextViewStyle"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:max_character_length="9"
+            app:text_activeColor="@color/colorWhite"
+            app:text_blink_cursor="false"
+            app:text_type="general"
+            tools:text="000000000" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.textview.KeypadTextView
+            android:id="@+id/keypadTextViewForDateTime"
+            style="@style/HeaderBarNumpadKeypadTextViewStyle"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:max_character_length="@integer/header_bar_max_char_date_time"
+            app:text_activeColor="@color/colorWhite"
+            app:text_inactiveColor="@color/colorWhite"
+            app:text_blink_cursor="false"
+            app:text_type="clock"
+            tools:text="000000000"
+            app:suffixShiftPercentage="0.10"
+            app:suffixUnderlineType="solid"
+            app:text_blink_color="@color/colorWhite"
+            app:suffixUnderlineColor="@color/under_line_color"
+            app:underlineOffsetFromText="@dimen/setup_later_numPad_am_pm_offset_text"
+            app:underlineStrokeSize="@dimen/setup_later_numPad_am_pm_stroke_size"
+            app:dotOffset="@dimen/setup_later_numPad_am_pm_dot_offset"
+            app:dotWidth="@dimen/setup_later_numPad_am_pm_dot_width"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:id="@+id/cancel_parent_view"
+                android:layout_width="@dimen/headerBarIconWidth"
+                android:layout_height="@dimen/headerBarIconHeight"
+                android:padding="@dimen/headerBarIconPadding"
+                app:layout_constraintEnd_toStartOf="@id/tumbler_parent_view"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivCancelIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_cancel"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/tumbler_parent_view"
+                android:layout_width="@dimen/headerBarIconWidth"
+                android:layout_height="@dimen/headerBarIconHeight"
+                android:padding="@dimen/headerBarIconPadding"
+                android:layout_marginStart="@dimen/header_bar_numpad_close_icon_margin_end_32"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivTumblerIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_tumbler"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?><!--/*
+    * ************************************************************************************************
+    * ***** Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+    * ************************************************************************************************
+    */-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/transparent_background_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_solid_black">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/popup_with_scroll"
+            style="@style/PopupViewStyle"
+            android:paddingTop="@dimen/_0dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/ll_provisioning_error_detail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/provisioning_layout_height"
+                android:layout_marginStart="@dimen/provisioning_layout_margin"
+                android:layout_marginTop="@dimen/provisioning_layout_margin_top"
+                android:layout_marginEnd="@dimen/provisioning_layout_margin"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_title"
+                    style="@style/ProvisioningTitleTextViewStyle"
+                    tools:text="Failed to Connect" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_title_description"
+                    style="@style/ProvisioningDescriptionTextViewStyle"
+                    tools:text="@string/text_description_failed_to_connect" />
+            </LinearLayout>
+
+            <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+                android:id="@+id/text_button_left"
+                style="@style/ProvisioningNavigationButtonStyle"
+                android:layout_marginStart="@dimen/provisioning_button_margin_start"
+                android:layout_marginBottom="@dimen/provisioning_button_margin_bottom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="DISMISS"/>
+
+            <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+                android:id="@+id/text_button_right"
+                style="@style/ProvisioningNavigationButtonStyle"
+                android:layout_marginEnd="@dimen/provisioning_button_margin_end"
+                android:layout_marginBottom="@dimen/provisioning_button_margin_bottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:text="TRY AGAIN" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

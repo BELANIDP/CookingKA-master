@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/self_clean_status_widget_height"
+        android:background="@color/common_solid_black">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clModeLayout"
+            android:layout_width="@dimen/width_app_window"
+            android:layout_height="@dimen/item_mode_height1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:paddingStart="@dimen/status_item_mode_padding_start"
+            android:paddingEnd="@dimen/status_item_mode_padding_end">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="@dimen/status_cooking_container_width"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivOvenCavity"
+                    style="@style/StatusWidgetOvenCavityIconStyle"
+                    tools:ignore="ContentDescription"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+                    android:id="@+id/tvTemperature"
+                    tools:text="Self Clean Medium"
+                    style="@style/StyleCookingStatusWidgetTextView"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivOvenCavity"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+                android:id="@+id/tvCookTime"
+                tools:text="2:00:00"
+                style="@style/StyleCookingStatusCookTimeRemaining"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBarCookTime"
+            style="@style/running_status_progressbar"
+            android:layout_marginTop="@dimen/status_item_progress_bar_margin_top"
+            android:layout_marginBottom="@dimen/status_item_progress_bar_margin_top"
+            android:clipToOutline="true"
+            android:visibility="visible"
+            android:transitionName="@string/transition_progress_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clModeLayout"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieProgressBarCookTime"
+            style="@style/running_status_progressbar"
+            android:layout_marginTop="@dimen/status_item_progress_bar_margin_top"
+            android:clipToOutline="true"
+            android:visibility="gone"
+            android:transitionName="@string/transition_progress_bar_lottie"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clModeLayout"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/tvStartNow"
+            style="@style/StatusWidgetTitleTextView"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/status_item_progress_bar_margin_top"
+            android:text="@string/text_start_now_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressBarCookTime"
+            android:visibility="visible"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

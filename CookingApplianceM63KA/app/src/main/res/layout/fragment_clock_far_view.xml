@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@color/black"
+    android:gravity="center_vertical"
+    tools:context=".ClockFarView">
+
+    <com.whirlpool.hmi.uicomponents.widgets.clock.ClockTextView
+        android:id="@+id/text_far_view_clock_digital_clock_time"
+        style="@style/StyleDigitalClockTime"
+        android:fontFamily="@font/roboto_light"
+        android:textColor="@color/color_white"
+        app:clockFormatString_12Hour="h:mm"
+        app:clockFormatString_24Hour="HH:mm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/clock_text_view_top_margin"
+        app:timePeriodTextSize="@dimen/clock_text_view_text_size"
+        android:visibility="visible"
+        tools:text="01:09"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_far_view_clock_digital_clock_day"
+        style="@style/StyleDigitalClockDay"
+        android:gravity="center_horizontal|top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Wednesday, April 10"
+        tools:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@+id/text_far_view_clock_digital_clock_time"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon_kitchen_timer_far_view_clock"
+        style="@style/KitchenTimerIconStyle"
+        android:src="@drawable/ic_kitchen_timer"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_kitchen_timer_running_text_far_view_clock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_view_kitchen_timer_running_text_far_view_clock"
+        tools:visibility="gone"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_view_kitchen_timer_running_text_far_view_clock"
+        style="@style/KTFarViewTextViewStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="01:09"
+        tools:visibility="gone"
+        android:visibility="invisible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

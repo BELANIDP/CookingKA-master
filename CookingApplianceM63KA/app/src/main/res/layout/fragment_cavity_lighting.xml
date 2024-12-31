@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2020. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+  -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <android.presenter.customviews.widgets.headerbar.HeaderBarWidget
+            android:id="@+id/headerBarSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_solid_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/icon_text_button_background_height"
+            android:layout_marginTop="@dimen/cavity_light_radio_margin"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerBarSettings">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:button="@drawable/ic_radio_button_selector"
+                android:id="@+id/radio_button_keep_light_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:paddingStart="@dimen/icon_text_button_padding"
+                android:lineSpacingExtra="@dimen/cavity_light_text_line_spacing_extra"
+                android:paddingEnd="@dimen/_0dp"
+                android:text="@string/text_keep_light_on"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/main_list_tiles_text_view_font_size" />
+
+            <View
+                android:id="@+id/view_list_separator"
+                android:layout_width="@dimen/drawer_bar_item_separator_width"
+                android:layout_height="@dimen/width_numeric_tumbler_divider_image"
+                android:layout_marginTop="@dimen/cavity_light_divider_margin"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/cavity_light_divider_margin"
+                android:background="@color/color_white" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:button="@drawable/ic_radio_button_selector"
+                android:id="@+id/radio_button_manually_controls_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/icon_text_button_padding"
+                android:paddingEnd="@dimen/_0dp"
+                android:lineSpacingExtra="@dimen/cavity_light_text_line_spacing_extra"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/text_control_light_manually"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/main_list_tiles_text_view_font_size" />
+        </RadioGroup>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

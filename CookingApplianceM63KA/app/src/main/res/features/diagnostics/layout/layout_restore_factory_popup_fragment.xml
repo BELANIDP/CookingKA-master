@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?><!--/*
+    * ************************************************************************************************
+    * ***** Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+    * ************************************************************************************************
+    */-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/transparent_background_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_solid_black">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/popup_with_scroll"
+            style="@style/RestorePopupViewStyle"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/header_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/popup_restore_header_content_height"
+                app:layout_constraintBottom_toTopOf="@+id/button_layout"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_title"
+                    style="@style/PopupTextViewRestoreStyle"
+                    android:layout_width="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/scroll_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="@string/app_name"
+                    tools:visibility="visible" />
+
+                <ScrollView
+                    android:id="@+id/scroll_view"
+                    style="@style/PopupInfoScrollStyle"
+                    android:layout_width="@dimen/diagnostics_popup_width"
+                    android:layout_marginTop="@dimen/diagnostics_margin_top_text_view_description"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/text_view_description"
+                        style="@style/PopupDescriptionTextViewStyle"
+                        android:layout_width="@dimen/popup_description_text_box_width"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/roboto_light"
+                        android:justificationMode="inter_word"
+                        tools:text="@string/text_layout_pop_up_decision_reset_learn_more" />
+                </ScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/popup_restore_footer_content_height"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <android.presenter.customviews.textButton.TextButton
+                    android:id="@+id/text_button_left"
+                    style="@style/RestorePopupTextButtonStyle"
+                    android:layout_marginBottom="@dimen/diagnostics_btn_margin_bottom"
+                    app:button_text="@string/app_name"
+                    app:enable="true"
+                    app:is_bottom_view_visible="false"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <android.presenter.customviews.textButton.TextButton
+                    android:id="@+id/text_button_center"
+                    style="@style/RestorePopupTextButtonStyle"
+                    android:layout_marginBottom="@dimen/diagnostics_btn_margin_bottom"
+                    app:button_text="@string/app_name"
+                    app:enable="true"
+                    app:is_bottom_view_visible="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <android.presenter.customviews.textButton.TextButton
+                    android:id="@+id/text_button_right"
+                    style="@style/RestorePopupTextButtonStyle"
+                    android:layout_marginBottom="@dimen/diagnostics_btn_margin_bottom"
+                    app:button_text="@string/app_name"
+                    app:enable="true"
+                    app:is_bottom_view_visible="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutItemDrawerMenu"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/drawerbar_height"
+    android:layout_gravity="center_horizontal|center_vertical"
+    android:clickable="true"
+    android:paddingStart="@dimen/drawer_icons_horizontal_padding"
+    android:paddingEnd="@dimen/drawer_icons_horizontal_padding"
+    tools:background="@color/notification_red">
+
+    <View
+        android:id="@+id/invisibleSpace1"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/drawer_icons_vertical_padding"
+        android:layout_marginBottom="@dimen/drawer_empty_space"
+        android:background="@color/common_transparent"
+        app:layout_constraintEnd_toEndOf="@+id/menu_text"
+        app:layout_constraintStart_toStartOf="@+id/menu_text"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/menu_icon"
+        android:layout_width="@dimen/drawerbar_item_icon_weight"
+        android:layout_height="@dimen/drawerbar_item_icon_height"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_placeholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/invisibleSpace1"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/ic_kitchen_timer" />
+
+    <TextView
+        android:id="@+id/menu_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/drawerbar_item_icon_title_text_margin_top"
+        android:layout_toEndOf="@id/menu_icon"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center_horizontal"
+        android:includeFontPadding="false"
+        android:letterSpacing="0.05"
+        android:lineHeight="@dimen/drawerbar_item_icon_title_text_line_height"
+        android:lineSpacingExtra="@dimen/drawerbar_item_icon_title_text_line_spacing"
+        android:textColor="@color/solid_white"
+        android:textSize="@dimen/drawerbar_item_icon_title_text_size"
+        app:layout_constraintEnd_toEndOf="@+id/menu_icon"
+        app:layout_constraintStart_toStartOf="@+id/menu_icon"
+        app:layout_constraintTop_toBottomOf="@+id/menu_icon"
+        tools:text="Kitchen Timer"
+        tools:textColor="@color/colorWhite" />
+
+    <View
+        android:id="@+id/viewDrawerSelectedLine"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/drawer_selector_line_width"
+        android:layout_marginTop="@dimen/drawer_selector_bottom_line_padding"
+        android:layout_marginBottom="@dimen/drawer_empty_space"
+        android:background="@drawable/selector_rounded_corner_textview_walnut_bottom"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/menu_text"
+        app:layout_constraintStart_toStartOf="@+id/menu_text"
+        app:layout_constraintTop_toBottomOf="@+id/menu_text"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/invisibleSpace"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/drawer_empty_space"
+        android:layout_marginTop="@dimen/drawer_selector_bottom_line_padding"
+        android:layout_marginBottom="@dimen/drawer_empty_space"
+        android:background="@color/common_transparent"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/menu_text"
+        app:layout_constraintStart_toStartOf="@+id/menu_text"
+        app:layout_constraintTop_toBottomOf="@+id/viewDrawerSelectedLine"
+        tools:visibility="visible" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

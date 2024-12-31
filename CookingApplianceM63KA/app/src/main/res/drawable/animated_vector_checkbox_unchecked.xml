@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+  -->
+
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="@dimen/checkbox_image_width"
+            android:height="@dimen/checkbox_image_height"
+            android:viewportWidth="@dimen/checkbox_viewport_width"
+            android:viewportHeight="@dimen/checkbox_viewport_height">
+
+            <group android:name="background">
+                <path
+                    android:name="checkbox"
+                    android:pathData="M0,0 L36,0 L36,35 L0,35 L0,0"
+                    android:strokeWidth="3"
+                    android:strokeColor="@color/checkbox_unchecked" />
+            </group>
+        </vector>
+    </aapt:attr>
+</animated-vector>

@@ -1,0 +1,21 @@
+#Owners of the repository
+* @PARDEKP
+CookingKA/CookingApplianceM63KA/app/src/main/java/com/whirlpool/cooking/ka/ktn/android/presenter/fragments/assisted/* @SANGAH @JIRAPSR @PARDEKP
+CookingKA/CookingApplianceM63KA/app/src/main/java/com/whirlpool/cooking/ka/ktn/android/presenter/fragments/combooven/* @SANGAH @JIRAPSR @PARDEKP
+CookingKA/CookingApplianceM63KA/app/src/main/java/com/whirlpool/cooking/ka/ktn/android/presenter/fragments/control_lock/* @VYASM @PARDEKP
+CookingKA/CookingApplianceM63KA/app/src/main/java/com/whirlpool/cooking/ka/ktn/android/presenter/fragments/demo/*  @dugamas @PARDEKP
+CookingKA/CookingApplianceM63KA/app/src/main/java/com/whirlpool/cooking/ka/ktn/android/presenter/fragments/digital_unboxing/* @PAYMOR @GHARDNS @PARDEKP
+CookingKA/CookingApplianceM63KA/app/src/main/java/com/whirlpool/cooking/ka/ktn/android/presenter/fragments/doubleoven/* @SANGAH @PARDEKP
+CookingKA/CookingApplianceM63KA/app/src/main/java/com/whirlpool/cooking/ka/ktn/android/presenter/fragments/doubleoven/* @SANGAH @PARDEKP
+CookingKA/CookingApplianceM63KA/app/src/main/java/com/whirlpool/cooking/ka/ktn/android/presenter/fragments/kitchentimer/* @SANGAH @pandes18 @PARDEKP
+CookingKA/CookingApplianceM63KA/app/src/main/java/com/whirlpool/cooking/ka/ktn/android/presenter/fragments/mwo/* @SANGAH @JIRAPSR @PARDEKP
+CookingKA/CookingApplianceM63KA/app/src/main/java/com/whirlpool/cooking/ka/ktn/android/presenter/fragments/ota/* @PAYMOR @PARDEKP
+CookingKA/CookingApplianceM63KA/app/src/main/java/com/whirlpool/cooking/ka/ktn/android/presenter/fragments/probe/* @SANGAH @GHARDNS @PARDEKP
+CookingKA/CookingApplianceM63KA/app/src/main/java/com/whirlpool/cooking/ka/ktn/android/presenter/fragments/provisioning/* @PAYMOR @SANGAV1 @PARDEKP
+CookingKA/CookingApplianceM63KA/app/src/main/java/com/whirlpool/cooking/ka/ktn/android/presenter/fragments/sabbath/* @SANGAH @PAYMOR @PARDEKP
+CookingKA/CookingApplianceM63KA/app/src/main/java/com/whirlpool/cooking/ka/ktn/android/presenter/fragments/self_clean/* @VYASM @JIRAPSR @PARDEKP
+CookingKA/CookingApplianceM63KA/app/src/main/java/com/whirlpool/cooking/ka/ktn/android/presenter/fragments/service_diagnostic/* @PAYMOR @GHARDNS @PARDEKP
+CookingKA/CookingApplianceM63KA/app/src/main/java/com/whirlpool/cooking/ka/ktn/android/presenter/fragments/settings/*  @PAYMOR @GHARDNS @PARDEKP
+CookingKA/CookingApplianceM63KA/app/src/main/java/com/whirlpool/cooking/ka/ktn/android/presenter/fragments/singleoven/* @SANGAH @PARDEKP
+CookingKA/CookingApplianceM63KA/app/src/main/java/com/whirlpool/cooking/ka/ktn/android/presenter/fragments/step_progress_bar/* @JIRAPSR @PARDEKP
+CookingKA/CookingApplianceM63KA/app/src/main/java/com/whirlpool/cooking/ka/ktn/android/presenter/adapters/manualMode/* @SANGAH @JIRAPSR @PARDEKP

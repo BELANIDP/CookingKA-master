@@ -1,0 +1,73 @@
+{
+  "version": "0.0.8",
+  "visionConfig": {
+    "cameraSource": "simulator",
+    "localPreviewTargets": {
+      "fps": 5,
+      "res": "720p"
+    },
+    "cameraLightAdjustmentDelay": 1500,
+    "visionModels": {
+      "recognition": {
+        "modelPath": "models/classifier.tflite",
+        "labels": ["asparagus", "bacon", "bagel", "beef-steak", "bread", "bread-sliced", "broccoli",
+          "brownies", "brussel-sprout", "butternut-squash", "cauliflower", "cavity-empty",
+          "chicken-breast", "chicken-nugget", "chicken-whole", "cookies", "fish-fillet", "fish-stick",
+          "french-fries", "hamburger", "lasagna", "muffin-and-cupcake", "pizza-sliced", "pizza-whole",
+          "pop-tart", "potato-cut-up", "potato-whole", "salmon-fillet", "toaster-strudel", "waffle"],
+        "preprocessingSteps": [
+          {
+            "type": "resize",
+            "targetHeight": 400,
+            "targetWidth": 400,
+            "method": "bilinear"
+          },
+          {
+            "type": "resize",
+            "targetHeight": 224,
+            "targetWidth": 224,
+            "method": "bilinear"
+          }
+        ]
+      },
+      "doneness": {
+        "modelPath": "models/doneness.tflite",
+        "preprocessingSteps": [
+          {
+            "type": "resize",
+            "targetHeight": 400,
+            "targetWidth": 400,
+            "method": "bilinear"
+          },
+          {
+            "type": "resize",
+            "targetHeight": 280,
+            "targetWidth": 280,
+            "method": "bilinear"
+          }
+        ]
+      },
+      "dirtylens": {
+        "modelPath": "models/dirtylens.tflite",
+        "preprocessingSteps": [
+          {
+            "type": "resize",
+            "targetHeight": 400,
+            "targetWidth": 400,
+            "method": "bilinear"
+          },
+          {
+            "type": "resize",
+            "targetHeight": 256,
+            "targetWidth": 256,
+            "method": "bilinear"
+          },
+          {
+            "type": "standardize",
+            "stdDev": 255
+          }
+        ]
+      }
+    }
+  }
+}

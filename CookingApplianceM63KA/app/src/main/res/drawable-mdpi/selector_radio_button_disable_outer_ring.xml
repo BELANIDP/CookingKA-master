@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+  -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/outer_ring">
+        <shape
+            android:shape="ring"
+            android:thickness="@dimen/thickness_radio_button_outer_ring"
+            android:innerRadius="@dimen/inner_radius_radio_button_outer_ring"
+            android:useLevel="false">
+            <solid android:color="@color/text_button_disabled_grey" />
+            <size
+                android:width="@dimen/width_height_radio_button_outer_ring"
+                android:height="@dimen/width_height_radio_button_outer_ring" />
+        </shape>
+    </item>
+</selector>

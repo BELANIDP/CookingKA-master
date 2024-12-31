@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ** Copyright 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL -->
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="Typos">
+
+    <!--******************** F1 ERRORS - HMI ********************-->
+    <string name="error_code_f1e1_1">F1E1–1</string>
+    <string name="error_category_f1e1_1">@string/text_fault_name_common_1</string>
+    <string name="error_suggestion_f1e1_1">@string/text_layout_information_paragraph_qr_code_error_description_step_11_sub_mode_element</string>
+    <string name="error_extra_info_f1e1_1"> </string>
+
+    <string name="error_code_f1e1_4">F1E1–4</string>
+    <string name="error_category_f1e1_4">@string/text_fault_name_common_1</string>
+    <string name="error_suggestion_f1e1_4">@string/text_layout_information_paragraph_qr_code_error_description_step_6_sub_mode_element</string>
+    <string name="error_extra_info_f1e1_4"> </string>
+
+    <string name="error_code_f1e1_5">F1E1–5</string>
+    <string name="error_category_f1e1_5">@string/text_fault_name_common_1</string>
+    <string name="error_suggestion_f1e1_5">@string/text_layout_information_paragraph_qr_code_error_description_step_7_sub_mode_element</string>
+    <string name="error_extra_info_f1e1_5"> </string>
+
+    <string name="error_code_f1e1_6">F1E1–6</string>
+    <string name="error_category_f1e1_6">@string/text_fault_name_common_1</string>
+    <string name="error_suggestion_f1e1_6">@string/text_layout_information_paragraph_qr_code_error_description_step_8_sub_mode_element_copy</string>
+    <string name="error_extra_info_f1e1_6"> </string>
+
+    <string name="error_code_f1e1_e">F1E1–E</string>
+    <string name="error_category_f1e1_e">@string/text_fault_name_common_1</string>
+    <string name="error_suggestion_f1e1_e">@string/text_layout_information_paragraph_qr_code_error_description_step_9_sub_mode_element</string>
+    <string name="error_extra_info_f1e1_e"> </string>
+
+    <string name="error_code_f1e3_1">F1E3–1</string>
+    <string name="error_category_f1e3_1">@string/step_turntable_motor_drive</string>
+    <string name="error_suggestion_f1e3_1">Voltage feedback on the turntable relay.</string>
+    <string name="error_extra_info_f1e3_1"> </string>
+
+    <string name="error_code_f1e3_3">F1E3–3</string>
+    <string name="error_category_f1e3_3">@string/step_convect_element</string>
+    <string name="error_suggestion_f1e3_3">@string/text_layout_information_paragraph_qr_code_error_description_step_14_sub_mode_element</string>
+    <string name="error_extra_info_f1e3_3"> </string>
+
+<!--    <string name="error_code_f1e4">F1E4</string>-->
+<!--    <string name="error_category_f1e4">MWO ACU Magnetron Fault</string>-->
+<!--    <string name="error_suggestion_f1e4">Magnetron Relay feedback</string>-->
+<!--    <string name="error_extra_info_f1e4"> </string>-->
+
+    <string name="error_code_f1e5_1">F1E5–1</string>
+    <string name="error_category_f1e5_1">@string/text_fault_name_common_2</string>
+    <string name="error_suggestion_f1e5_1">@string/text_layout_information_paragraph_qr_code_error_description_step_11_sub_mode_element</string>
+    <string name="error_extra_info_f1e5_1"> </string>
+
+    <string name="error_code_f1e5_4">F1E5–4</string>
+    <string name="error_category_f1e5_4">@string/text_fault_name_common_2</string>
+    <string name="error_suggestion_f1e5_4">@string/text_layout_information_paragraph_qr_code_error_description_step_6_sub_mode_element</string>
+    <string name="error_extra_info_f1e5_4"> </string>
+
+    <string name="error_code_f1e5_5">F1E5–5</string>
+    <string name="error_category_f1e5_5">@string/text_fault_name_common_2</string>
+    <string name="error_suggestion_f1e5_5">@string/text_layout_information_paragraph_qr_code_error_description_step_7_sub_mode_element</string>
+    <string name="error_extra_info_f1e5_5"> </string>
+
+    <string name="error_code_f1e5_6">F1E5–6</string>
+    <string name="error_category_f1e5_6">@string/text_fault_name_common_2</string>
+    <string name="error_suggestion_f1e5_6">@string/text_layout_information_paragraph_qr_code_error_description_step_8_sub_mode_element_copy</string>
+    <string name="error_extra_info_f1e5_6"> </string>
+
+    <string name="error_code_f1e5_7">F1E5–7</string>
+    <string name="error_category_f1e5_7">@string/text_fault_name_common_2</string>
+    <string name="error_suggestion_f1e5_7">ACU Cooling Fan Drive Open</string>
+    <string name="error_extra_info_f1e5_7"> </string>
+
+    <string name="error_code_f1e5_8">F1E5–8</string>
+    <string name="error_category_f1e5_8">@string/text_fault_name_common_2</string>
+    <string name="error_suggestion_f1e5_8">ACU Convect 1 Fan Drive Open</string>
+    <string name="error_extra_info_f1e5_8"> </string>
+
+    <string name="error_code_f1e5_e">F1E5–E</string>
+    <string name="error_category_f1e5_e">@string/text_fault_name_common_2</string>
+    <string name="error_suggestion_f1e5_e">@string/text_layout_information_paragraph_qr_code_error_description_step_9_sub_mode_element</string>
+    <string name="error_extra_info_f1e5_e"> </string>
+
+    <string name="error_code_f1e5_f">F1E5–F</string>
+    <string name="error_category_f1e5_f">@string/text_fault_name_common_2</string>
+    <string name="error_suggestion_f1e5_f">ACU JA Ext Convect 1 or 2 Fan Drive Open</string>
+    <string name="error_extra_info_f1e5_f"> </string>
+
+<!--    <string name="error_code_f1e6">F1E6</string>-->
+<!--    <string name="error_category_f1e6">ACU 3 Fault</string>-->
+<!--    <string name="error_suggestion_f1e6"> </string>-->
+<!--    <string name="error_extra_info_f1e6"> </string>-->
+
+    <string name="error_code_f1e7_0">F1E7–0</string>
+    <string name="error_category_f1e7_0">@string/text_fault_name_F1E70</string>
+    <string name="error_suggestion_f1e7_0">@string/text_layout_information_paragraph_qr_code_error_description_step_20_sub_mode_element</string>
+    <string name="error_extra_info_f1e7_0"> </string>
+
+    <string name="error_code_f1e7_1">F1E7–1</string>
+    <string name="error_category_f1e7_1">@string/text_fault_name_F1E70</string>
+    <string name="error_suggestion_f1e7_1">@string/text_layout_information_paragraph_qr_code_error_description_step_16_sub_mode_element</string>
+    <string name="error_extra_info_f1e7_1"> </string>
+
+    <string name="error_code_f1e7_2">F1E7–2</string>
+    <string name="error_category_f1e7_2">@string/text_fault_name_F1E70</string>
+    <string name="error_suggestion_f1e7_2">@string/text_layout_information_paragraph_qr_code_error_description_step_15_sub_mode_element</string>
+    <string name="error_extra_info_f1e7_2"> </string>
+
+    <string name="error_code_f1ea_0">F1EA–0</string>
+    <string name="error_category_f1ea_0">@string/text_layout_information_paragraph_qr_code_error_description_step_21_sub_mode_element</string>
+    <string name="error_suggestion_f1ea_0">@string/text_layout_information_paragraph_qr_code_error_description_step_20_sub_mode_element</string>
+    <string name="error_extra_info_f1ea_0"> </string>
+
+    <string name="error_code_f1ea_1">F1EA–1</string>
+    <string name="error_category_f1ea_1">@string/text_layout_information_paragraph_qr_code_error_description_step_21_sub_mode_element</string>
+    <string name="error_suggestion_f1ea_1">@string/text_layout_information_paragraph_qr_code_error_description_step_16_sub_mode_element</string>
+    <string name="error_extra_info_f1ea_1"> </string>
+
+    <string name="error_code_f1ea_2">F1EA–2</string>
+    <string name="error_category_f1ea_2">@string/text_layout_information_paragraph_qr_code_error_description_step_21_sub_mode_element</string>
+    <string name="error_suggestion_f1ea_2">@string/text_layout_information_paragraph_qr_code_error_description_step_15_sub_mode_element</string>
+    <string name="error_extra_info_f1ea_2"> </string>
+
+<!--    <string name="error_code_f1eb">F1EB</string>-->
+<!--    <string name="error_category_f1eb">ACU 2 Over Temperature</string>-->
+<!--    <string name="error_suggestion_f1eb"></string>-->
+<!--    <string name="error_extra_info_f1eb"> </string>-->
+
+<!--    <string name="error_code_f1ec">F1EC</string>-->
+<!--    <string name="error_category_f1ec">ACU 3 Over Temperature</string>-->
+<!--    <string name="error_suggestion_f1ec"> </string>-->
+<!--    <string name="error_extra_info_f1ec"> </string>-->
+    <!--******************** END OF F1 ERRORS ********************-->
+
+
+    <!--******************** F2 ERRORS - HMI ********************-->
+<!--    <string name="error_code_f2e1">F2E1</string>-->
+<!--    <string name="error_category_f2e1">Stuck Key</string>-->
+<!--    <string name="error_suggestion_f2e1"> </string>-->
+<!--    <string name="error_extra_info_f2e1"> </string>-->
+
+<!--    <string name="error_code_f2e2">F2E2</string>-->
+<!--    <string name="error_category_f2e2">Keypad/Display Disconnected</string>-->
+<!--    <string name="error_suggestion_f2e2"> </string>-->
+<!--    <string name="error_extra_info_f2e2"> </string>-->
+
+<!--    <string name="error_code_f2e3">F2E3</string>-->
+<!--    <string name="error_category_f2e3">Rotary Encoder Open or Shorted</string>-->
+<!--    <string name="error_suggestion_f2e3"> </string>-->
+<!--    <string name="error_extra_info_f2e3"> </string>-->
+
+<!--    <string name="error_code_f2e4">F2E4</string>-->
+<!--    <string name="error_category_f2e4">HMI 1 Over Temperature</string>-->
+<!--    <string name="error_suggestion_f2e4"> </string>-->
+<!--    <string name="error_extra_info_f2e4"> </string>-->
+
+<!--    <string name="error_code_f2e5">F2E5</string>-->
+<!--    <string name="error_category_f2e5">HMI 1 Fault</string>-->
+<!--    <string name="error_suggestion_f2e5"> </string>-->
+<!--    <string name="error_extra_info_f2e5"> </string>-->
+
+<!--    <string name="error_code_f2e6">F2E6</string>-->
+<!--    <string name="error_category_f2e6">HMI 2 Over Temperature</string>-->
+<!--    <string name="error_suggestion_f2e6"> </string>-->
+<!--    <string name="error_extra_info_f2e6"> </string>-->
+
+<!--    <string name="error_code_f2e7">F2E7</string>-->
+<!--    <string name="error_category_f2e7">HMI 2 Fault</string>-->
+<!--    <string name="error_suggestion_f2e7"> </string>-->
+<!--    <string name="error_extra_info_f2e7"> </string>-->
+    <!--******************** END OF F2 ERRORS ********************-->
+
+
+    <!--******************** F3 ERRORS - SENSOR ********************-->
+    <string name="error_code_f3e0_0">F3E0–0</string>
+    <string name="error_category_f3e0_0">@string/text_fault_name_F3E00</string>
+    <string name="error_suggestion_f3e0_0">@string/text_layout_information_paragraph_qr_code_error_description_step_10_sub_mode_element</string>
+    <string name="error_extra_info_f3e0_0"> </string>
+
+    <string name="error_code_f3e0_1">F3E0–1</string>
+    <string name="error_category_f3e0_1">@string/text_fault_name_F3E01</string>
+    <string name="error_suggestion_f3e0_1">@string/text_layout_information_paragraph_qr_code_error_description_step_10_sub_mode_element</string>
+    <string name="error_extra_info_f3e0_1"> </string>
+
+    <string name="error_code_f3e1_0">F3E1–0</string>
+    <string name="error_category_f3e1_0">@string/text_fault_name_F3E10</string>
+    <string name="error_suggestion_f3e1_0">@string/text_layout_information_paragraph_qr_code_error_description_step_10_sub_mode_element</string>
+    <string name="error_extra_info_f3e1_0"> </string>
+
+    <string name="error_code_f3e1_1">F3E1–1</string>
+    <string name="error_category_f3e1_1">@string/text_fault_name_F3E11</string>
+    <string name="error_suggestion_f3e1_1">@string/text_layout_information_paragraph_qr_code_error_description_step_10_sub_mode_element</string>
+    <string name="error_extra_info_f3e1_1"> </string>
+
+<!--    <string name="error_code_f3e2">F3E2</string>-->
+<!--    <string name="error_category_f3e2">Warming drawer Sensor</string>-->
+<!--    <string name="error_suggestion_f3e2"> </string>-->
+<!--    <string name="error_extra_info_f3e2"> </string>-->
+
+    <string name="error_code_f3e3_0">F3E3–0</string>
+    <string name="error_category_f3e3_0">@string/text_fault_name_F3E30</string>
+    <string name="error_suggestion_f3e3_0">@string/text_layout_information_paragraph_qr_code_error_description_step_22_sub_mode_element</string>
+    <string name="error_extra_info_f3e3_0"> </string>
+
+<!--    <string name="error_code_f3e4">F3E4</string>-->
+<!--    <string name="error_category_f3e4">Powered Accessory Sensor - Main Cavity</string>-->
+<!--    <string name="error_suggestion_f3e4"> </string>-->
+<!--    <string name="error_extra_info_f3e4"> </string>-->
+
+<!--    <string name="error_code_f3e5">F3E5</string>-->
+<!--    <string name="error_category_f3e5">No information available</string>-->
+<!--    <string name="error_suggestion_f3e5">No information available</string>-->
+<!--    <string name="error_extra_info_f3e5">No information available</string>-->
+
+<!--    <string name="error_code_f3e6">F3E6</string>-->
+<!--    <string name="error_category_f3e6">Powered Accessory Over Temperature</string>-->
+<!--    <string name="error_suggestion_f3e6">Check IPC Board</string>-->
+<!--    <string name="error_extra_info_f3e6"> </string>-->
+
+<!--    <string name="error_code_f3e7">F3E7</string>-->
+<!--    <string name="error_category_f3e7">No information available</string>-->
+<!--    <string name="error_suggestion_f3e7">No information available</string>-->
+<!--    <string name="error_extra_info_f3e7">No information available</string>-->
+
+<!--    <string name="error_code_f3e8">F3E8</string>-->
+<!--    <string name="error_category_f3e8">Oven IR Sensor</string>-->
+<!--    <string name="error_suggestion_f3e8"> </string>-->
+<!--    <string name="error_extra_info_f3e8"> </string>-->
+
+    <string name="error_code_f3e9_0">F3E9–0</string>
+    <string name="error_category_f3e9_0">@string/text_fault_name_F3E90</string>
+    <string name="error_suggestion_f3e9_0">@string/text_layout_information_paragraph_qr_code_error_description_step_22_sub_mode_element</string>
+    <string name="error_extra_info_f3e9_0"> </string>
+
+<!--    <string name="error_code_f3ea">F3EA</string>-->
+<!--    <string name="error_category_f3ea">Main Cavity Humidity sensor</string>-->
+<!--    <string name="error_suggestion_f3ea"> </string>-->
+<!--    <string name="error_extra_info_f3ea"> </string>-->
+
+<!--    <string name="error_code_f3eb">F3EB</string>-->
+<!--    <string name="error_category_f3eb">Water Tank Switch</string>-->
+<!--    <string name="error_suggestion_f3eb"> </string>-->
+<!--    <string name="error_extra_info_f3eb"> </string>-->
+    <!--******************** END OF F3 ERRORS ********************-->
+
+
+    <!--******************** F4 ERRORS - MWO SENSOR ********************-->
+    <string name="error_code_f4e1_0">F4E1–0</string>
+    <string name="error_category_f4e1_0">@string/text_fault_name_F4E10</string>
+    <string name="error_suggestion_f4e1_0">@string/text_layout_information_paragraph_qr_code_error_description_step_1_sub_mode_mw_system</string>
+    <string name="error_extra_info_f4e1_0"> </string>
+
+    <string name="error_code_f4e1_1">F4E1–1</string>
+    <string name="error_category_f4e1_1">@string/text_fault_name_F4E11</string>
+    <string name="error_suggestion_f4e1_1">@string/text_layout_information_paragraph_qr_code_error_description_step_1_sub_mode_mw_system</string>
+    <string name="error_extra_info_f4e1_1"> </string>
+
+    <string name="error_code_f4e2_0">F4E2–0</string>
+    <string name="error_category_f4e2_0">@string/text_fault_name_F4E20</string>
+    <string name="error_suggestion_f4e2_0">@string/text_layout_information_paragraph_qr_code_error_description_step_3_sub_mode_mw_system</string>
+    <string name="error_extra_info_f4e2_0"> </string>
+
+    <string name="error_code_f4e2_1">F4E2–1</string>
+    <string name="error_category_f4e2_1">@string/text_fault_name_F4E20</string>
+    <string name="error_suggestion_f4e2_1">@string/text_layout_information_paragraph_qr_code_error_description_step_3_sub_mode_mw_system</string>
+    <string name="error_extra_info_f4e2_1"> </string>
+
+    <string name="error_code_f4e2_2">F4E2–2</string>
+    <string name="error_category_f4e2_2">@string/text_fault_name_F4E22</string>
+    <string name="error_suggestion_f4e2_2">@string/text_layout_information_paragraph_qr_code_error_description_step_16_sub_mode_element</string>
+    <string name="error_extra_info_f4e2_2"> </string>
+
+    <string name="error_code_f4e2_3">F4E2–3</string>
+    <string name="error_category_f4e2_3">@string/text_fault_name_F4E23</string>
+    <string name="error_suggestion_f4e2_3">@string/text_layout_information_paragraph_qr_code_error_description_step_15_sub_mode_element</string>
+    <string name="error_extra_info_f4e2_3"> </string>
+
+<!--    <string name="error_code_f4e3">F4E3</string>-->
+<!--    <string name="error_category_f4e3">Hood Temperature Sensor</string>-->
+<!--    <string name="error_suggestion_f4e3"> </string>-->
+<!--    <string name="error_extra_info_f4e3"> </string>-->
+
+    <string name="error_code_f4e4_0">F4E4–0</string>
+    <string name="error_category_f4e4_0">@string/text_fault_name_F4E40</string>
+    <string name="error_suggestion_f4e4_0">@string/text_layout_information_paragraph_qr_code_error_description_step_5_sub_mode_elements_humitidy_sensor</string>
+    <string name="error_extra_info_f4e4_0"> </string>
+
+<!--    <string name="error_code_f4e6">F4E6</string>-->
+<!--    <string name="error_category_f4e6">Heat guide Sensor</string>-->
+<!--    <string name="error_suggestion_f4e6"> </string>-->
+<!--    <string name="error_extra_info_f4e6"> </string>-->
+
+<!--    <string name="error_code_f4ea">F4EA</string>-->
+<!--    <string name="error_category_f4ea">Toast Temperature Sensor</string>-->
+<!--    <string name="error_suggestion_f4ea"> </string>-->
+<!--    <string name="error_extra_info_f4ea"> </string>-->
+    <!--******************** END OF F4 ERRORS ********************-->
+
+
+    <!--************** F5 ERRORS - DOOR LATCH/SWITCH **************-->
+    <string name="error_code_f5e0_0">F5E0–0</string>
+    <string name="error_category_f5e0_0">@string/text_fault_name_F5E00</string>
+    <string name="error_suggestion_f5e0_0">@string/text_layout_information_paragraph_qr_code_error_description_step_24_sub_mode_element</string>
+    <string name="error_extra_info_f5e0_0"> </string>
+
+    <string name="error_code_f5e1_0">F5E1–0</string>
+    <string name="error_category_f5e1_0">@string/text_fault_name_F5E10</string>
+    <string name="error_suggestion_f5e1_0">@string/text_layout_information_paragraph_qr_code_error_description_step_23_sub_mode_element</string>
+    <string name="error_extra_info_f5e1_0"> </string>
+
+    <string name="error_code_f5e1_1">F5E1–1</string>
+    <string name="error_category_f5e1_1">@string/text_fault_name_F5E11</string>
+    <string name="error_suggestion_f5e1_1">@string/text_layout_information_paragraph_qr_code_error_description_step_25_sub_mode_element</string>
+    <string name="error_extra_info_f5e1_1"> </string>
+
+<!--    <string name="error_code_f5e2">F5E2</string>-->
+<!--    <string name="error_category_f5e2">Microwave Door Switch</string>-->
+<!--    <string name="error_suggestion_f5e2"> </string>-->
+<!--    <string name="error_extra_info_f5e2"> </string>-->
+
+    <string name="error_code_f5e3_0">F5E3–0</string>
+    <string name="error_category_f5e3_0">@string/text_fault_name_F5E30</string>
+    <string name="error_suggestion_f5e3_0">@string/text_layout_information_paragraph_qr_code_error_description_step_26_sub_mode_element</string>
+    <string name="error_extra_info_f5e3_0"> </string>
+
+    <string name="error_code_f5e4_0">F5E4–0</string>
+    <string name="error_category_f5e4_0">@string/text_fault_name_F5E40</string>
+    <string name="error_suggestion_f5e4_0">@string/text_layout_information_paragraph_qr_code_error_description_step_27_sub_mode_element</string>
+    <string name="error_extra_info_f5e4_0"> </string>
+
+    <string name="error_code_f5e4_1">F5E4–1</string>
+    <string name="error_category_f5e4_1">@string/text_fault_name_F5E41</string>
+    <string name="error_suggestion_f5e4_1">@string/text_layout_information_paragraph_qr_code_error_description_step_28_sub_mode_element</string>
+    <string name="error_extra_info_f5e4_1"> </string>
+
+<!--    <string name="error_code_f5e5">F5E5</string>-->
+<!--    <string name="error_category_f5e5">Main Door Latch switch</string>-->
+<!--    <string name="error_suggestion_f5e5"> </string>-->
+<!--    <string name="error_extra_info_f5e5"> </string>-->
+
+<!--    <string name="error_code_f5e6">F5E6</string>-->
+<!--    <string name="error_category_f5e6">Door Switch Mismatch</string>-->
+<!--    <string name="error_suggestion_f5e6"> </string>-->
+<!--    <string name="error_extra_info_f5e6"> </string>-->
+
+<!--    <string name="error_code_f5e8">F5E8</string>-->
+<!--    <string name="error_category_f5e8">Secondary Door Latch switch</string>-->
+<!--    <string name="error_suggestion_f5e8"> </string>-->
+<!--    <string name="error_extra_info_f5e8"> </string>-->
+    <!--******************** END OF F5 ERRORS ********************-->
+
+
+    <!--*************** F6 ERRORS - COMMUNICATION ***************-->
+    <string name="error_code_f6e1_0">F6E1–0</string>
+    <string name="error_category_f6e1_0">@string/text_fault_name_F6E10</string>
+    <string name="error_suggestion_f6e1_0">@string/text_layout_information_paragraph_qr_code_error_description_step_29_sub_mode_element</string>
+    <string name="error_extra_info_f6e1_0"> </string>
+
+    <string name="error_code_f6e2_0">F6E2–0</string>
+    <string name="error_category_f6e2_0">@string/text_fault_name_F6E20</string>
+    <string name="error_suggestion_f6e2_0">@string/text_layout_information_paragraph_qr_code_error_description_step_29_sub_mode_element</string>
+    <string name="error_extra_info_f6e2_0"> </string>
+
+<!--    <string name="error_code_f6e3">F6E3</string>-->
+<!--    <string name="error_category_f6e3">Communication lost Main ACU / HMI 2</string>-->
+<!--    <string name="error_suggestion_f6e3"> </string>-->
+<!--    <string name="error_extra_info_f6e3"> </string>-->
+
+<!--    <string name="error_code_f6e4">F6E4</string>-->
+<!--    <string name="error_category_f6e4">ACU 1 and HMI 1 mismatch</string>-->
+<!--    <string name="error_suggestion_f6e4"> </string>-->
+<!--    <string name="error_extra_info_f6e4"> </string>-->
+
+<!--    <string name="error_code_f6e5">F6E5</string>-->
+<!--    <string name="error_category_f6e5">ACU 1 and HMI 2 mismatch</string>-->
+<!--    <string name="error_suggestion_f6e5"> </string>-->
+<!--    <string name="error_extra_info_f6e5"> </string>-->
+
+    <string name="error_code_f6e7_0">F6E7–0</string>
+    <string name="error_category_f6e7_0">@string/text_fault_name_F6E70</string>
+    <string name="error_suggestion_f6e7_0">@string/text_layout_information_paragraph_qr_code_error_description_step_30_sub_mode_element</string>
+    <string name="error_extra_info_f6e7_0"> </string>
+    <!--******************** END OF F6 ERRORS ********************-->
+
+
+    <!--*************** F7 ERRORS - COOLING FAN ***************-->
+    <string name="error_code_f7e5_0">F7E5–0</string>
+    <string name="error_category_f7e5_0">@string/text_fault_name_F7E50</string>
+    <string name="error_suggestion_f7e5_0_COOLING_FAN_LOW_SPEED">@string/text_layout_information_paragraph_cooling_fan_speed_low</string>
+    <string name="error_suggestion_f7e5_0_COOLING_FAN_HIGH_SPEED">@string/text_layout_information_paragraph_cooling_fan_speed_high</string>
+    <string name="error_suggestion_f7e5_0"> </string>
+    <string name="error_extra_info_f7e5_0"> </string>
+
+    <string name="error_code_f7e5_1">F7E5–1</string>
+    <string name="error_category_f7e5_1">@string/text_fault_name_F7E51</string>
+    <string name="error_suggestion_f7e5_1">@string/text_layout_information_paragraph_cooling_fan_speed_high</string>
+    <string name="error_extra_info_f7e5_1"> </string>
+
+    <string name="error_code_f7e6_0">F7E6–0</string>
+    <string name="error_category_f7e6_0">@string/text_fault_name_F7E60</string>
+    <string name="error_suggestion_f7e6_0_COOLING_FAN_HIGH_SPEED">@string/text_layout_information_paragraph_qr_code_error_description_step_4_sub_mode_fan</string>
+    <string name="error_suggestion_f7e6_0_COOLING_FAN_LOW_SPEED">@string/text_layout_information_paragraph_qr_code_error_description_step_3_sub_mode_fan</string>
+    <string name="error_suggestion_f7e6_0"> </string>
+    <string name="error_extra_info_f7e6_0"> </string>
+
+    <string name="error_code_f7e7_0">F7E7–0</string>
+    <string name="error_category_f7e7_0">@string/text_fault_name_F7E70</string>
+    <string name="error_suggestion_f7e7_0_COOLING_FAN_LOW_SPEED">@string/text_layout_information_paragraph_cooling_fan_speed_low</string>
+    <string name="error_suggestion_f7e7_0_COOLING_FAN_HIGH_SPEED">@string/text_layout_information_paragraph_cooling_fan_speed_high</string>
+    <string name="error_suggestion_f7e7_0"> </string>
+    <string name="error_extra_info_f7e7_0"> </string>
+
+    <string name="error_code_f7e7_1">F7E7–1</string>
+    <string name="error_category_f7e7_1">@string/text_fault_name_F7E71</string>
+    <string name="error_suggestion_f7e7_1">@string/text_layout_information_paragraph_cooling_fan_speed_high</string>
+    <string name="error_extra_info_f7e7_1"> </string>
+
+    <string name="error_code_f7e8_0">F7E8–0</string>
+    <string name="error_category_f7e8_0">@string/text_fault_name_F7E80</string>
+    <string name="error_suggestion_f7e8_0_COOLING_FAN_HIGH_SPEED">@string/text_layout_information_paragraph_qr_code_error_description_step_4_sub_mode_fan</string>
+    <string name="error_suggestion_f7e8_0_COOLING_FAN_LOW_SPEED">@string/text_layout_information_paragraph_qr_code_error_description_step_3_sub_mode_fan</string>
+    <string name="error_suggestion_f7e8_0"> </string>
+    <string name="error_extra_info_f7e8_0"> </string>
+
+    <string name="error_code_f7e9">F7E9</string>
+    <string name="error_category_f7e9">Vent Motor Fault</string>
+    <string name="error_suggestion_f7e9"> </string>
+    <string name="error_extra_info_f7e9"> </string>
+    <!--******************** END OF F7 ERRORS ********************-->
+
+
+    <!--*************** F8 ERRORS - WATER SUPPLY DISPENSER ***************-->
+<!--    <string name="error_code_f8e1">F8E1</string>-->
+<!--    <string name="error_category_f8e1">Water Level Sensor</string>-->
+<!--    <string name="error_suggestion_f8e1"> </string>-->
+<!--    <string name="error_extra_info_f8e1"> </string>-->
+
+<!--    <string name="error_code_f8e2">F8E2</string>-->
+<!--    <string name="error_category_f8e2">Boiler Over Temperature</string>-->
+<!--    <string name="error_suggestion_f8e2"> </string>-->
+<!--    <string name="error_extra_info_f8e2"> </string>-->
+
+<!--    <string name="error_code_f8e3">F8E3</string>-->
+<!--    <string name="error_category_f8e3">Boiler NTC out of range</string>-->
+<!--    <string name="error_suggestion_f8e3"> </string>-->
+<!--    <string name="error_extra_info_f8e3"> </string>-->
+
+<!--    <string name="error_code_f8e7">F8E7</string>-->
+<!--    <string name="error_category_f8e7">Fill pump</string>-->
+<!--    <string name="error_suggestion_f8e7"> </string>-->
+<!--    <string name="error_extra_info_f8e7"> </string>-->
+
+<!--    <string name="error_code_f8e8">F8E8</string>-->
+<!--    <string name="error_category_f8e8">Drain pump</string>-->
+<!--    <string name="error_suggestion_f8e8"> </string>-->
+<!--    <string name="error_extra_info_f8e8"> </string>-->
+
+<!--    <string name="error_code_f8e9">F8E9</string>-->
+<!--    <string name="error_category_f8e9">Electrovalve</string>-->
+<!--    <string name="error_suggestion_f8e9"> </string>-->
+<!--    <string name="error_extra_info_f8e9"> </string>-->
+    <!--******************** END OF F8 ERRORS ********************-->
+
+
+    <!--****************** F9 ERRORS - LIGHTING ******************-->
+    <string name="error_code_f9e0_0">F9E0–0</string>
+    <string name="error_category_f9e0_0">@string/text_fault_name_F9E00</string>
+    <string name="error_suggestion_f9e0_0">@string/text_layout_information_paragraph_qr_code_error_description_step_31_sub_mode_element</string>
+    <string name="error_extra_info_f9e0_0"> </string>
+
+    <string name="error_code_f9e0_1">F9E0–1</string>
+    <string name="error_category_f9e0_1">@string/text_fault_name_F9E01</string>
+    <string name="error_suggestion_f9e0_1">@string/text_layout_information_paragraph_qr_code_error_description_step_31_sub_mode_element</string>
+    <string name="error_extra_info_f9e0_1"> </string>
+
+    <string name="error_code_f9e0_2">F9E0–2</string>
+    <string name="error_category_f9e0_2">@string/text_fault_name_F9E02</string>
+    <string name="error_suggestion_f9e0_2">@string/text_layout_information_paragraph_qr_code_error_description_step_32_sub_mode_element</string>
+    <string name="error_extra_info_f9e0_2"> </string>
+
+    <string name="error_code_f9ea">F9EA</string>
+    <string name="error_category_f9ea">Product Over Voltage</string>
+    <string name="error_suggestion_f9ea">@string/text_layout_information_paragraph_qr_code_error_description_step_33_sub_mode_element</string>
+    <string name="error_extra_info_f9ea"> </string>
+
+    <!--******************** END OF F9 ERRORS ********************-->
+
+
+    <!--*************** FA ERRORS - PRODUCT LEVEL ***************-->
+<!--    <string name="error_code_fae4">FAE4</string>-->
+<!--    <string name="error_category_fae4">Bake Gas Valve Malfunction</string>-->
+<!--    <string name="error_suggestion_fae4"> </string>-->
+<!--    <string name="error_extra_info_fae4"> </string>-->
+
+<!--    <string name="error_code_fae5">FAE5</string>-->
+<!--    <string name="error_category_fae5">Broil Gas Valve Malfunction</string>-->
+<!--    <string name="error_suggestion_fae5"> </string>-->
+<!--    <string name="error_extra_info_fae5"> </string>-->
+
+<!--    <string name="error_code_fae6">FAE6</string>-->
+<!--    <string name="error_category_fae6">Bake Burner Malfunction</string>-->
+<!--    <string name="error_suggestion_fae6"> </string>-->
+<!--    <string name="error_extra_info_fae6"> </string>-->
+
+<!--    <string name="error_code_fae7">FAE7</string>-->
+<!--    <string name="error_category_fae7">Broil Burner Malfunction</string>-->
+<!--    <string name="error_suggestion_fae7"> </string>-->
+<!--    <string name="error_extra_info_fae7"> </string>-->
+    <!--******************** END OF FA ERRORS ********************-->
+
+
+    <!--************** FB ERRORS - UNIQUE COMPONENT **************-->
+<!--    <string name="error_code_fbe0">FBE0</string>-->
+<!--    <string name="error_category_fbe0">Cooktop Lockout Element relay feedback</string>-->
+<!--    <string name="error_suggestion_fbe0"> </string>-->
+<!--    <string name="error_extra_info_fbe0"> </string>-->
+
+    <string name="error_code_fbe1_0">FBE1–0</string>
+    <string name="error_category_fbe1_0">@string/text_fault_name_FBE10</string>
+    <string name="error_suggestion_fbe1_0">@string/text_layout_information_paragraph_qr_code_error_description_step_34_sub_mode_element</string>
+    <string name="error_extra_info_fbe1_0"> </string>
+
+    <string name="error_code_fbe1_1">FBE1–1</string>
+    <string name="error_category_fbe1_1">@string/text_fault_name_FBE11</string>
+    <string name="error_suggestion_fbe1_1">@string/text_layout_information_paragraph_qr_code_error_description_step_35_sub_mode_element</string>
+    <string name="error_extra_info_fbe1_1"> </string>
+
+<!--    <string name="error_code_fbe2">FBE2</string>-->
+<!--    <string name="error_category_fbe2">Cooktop Lockout Pilot relay feedback</string>-->
+<!--    <string name="error_suggestion_fbe2"> </string>-->
+<!--    <string name="error_extra_info_fbe2"> </string>-->
+
+    <string name="error_code_fbe3_0">FBE3–0</string>
+    <string name="error_category_fbe3_0">@string/text_fault_name_FBE30</string>
+    <string name="error_suggestion_fbe3_0">@string/text_layout_information_paragraph_qr_code_error_description_step_34_sub_mode_element</string>
+    <string name="error_extra_info_fbe3_0"> </string>
+
+    <string name="error_code_fbe3_1">FBE3–1</string>
+    <string name="error_category_fbe3_1">@string/text_fault_name_FBE31</string>
+    <string name="error_suggestion_fbe3_1">@string/text_layout_information_paragraph_qr_code_error_description_step_35_sub_mode_element</string>
+    <string name="error_extra_info_fbe3_1"> </string>
+
+<!--    <string name="error_code_fbe4">FBE4</string>-->
+<!--    <string name="error_category_fbe4">Main Cavity Powered accessory sensor</string>-->
+<!--    <string name="error_suggestion_fbe4"> </string>-->
+<!--    <string name="error_extra_info_fbe4"> </string>-->
+
+<!--    <string name="error_code_fbe6">FBE6</string>-->
+<!--    <string name="error_category_fbe6">Main Cavity Powered accessory over temperature</string>-->
+<!--    <string name="error_suggestion_fbe6"> </string>-->
+<!--    <string name="error_extra_info_fbe6"> </string>-->
+
+<!--    <string name="error_code_fbea">FBEA</string>-->
+<!--    <string name="error_category_fbea">Scanned cook feature not available</string>-->
+<!--    <string name="error_suggestion_fbea"> </string>-->
+<!--    <string name="error_extra_info_fbea"> </string>-->
+
+<!--    <string name="error_code_fbeb">FBEB</string>-->
+<!--    <string name="error_category_fbeb">Content Camera Fault</string>-->
+<!--    <string name="error_suggestion_fbeb"> </string>-->
+<!--    <string name="error_extra_info_fbeb"> </string>-->
+
+<!--    <string name="error_code_fbec">FBEC</string>-->
+<!--    <string name="error_category_fbec">Rotisserie motor</string>-->
+<!--    <string name="error_suggestion_fbec"> </string>-->
+<!--    <string name="error_extra_info_fbec"> </string>-->
+    <!--******************** END OF FB ERRORS ********************-->
+
+    <string name="error_code_fce1_0">FCE1–0</string>
+    <string name="error_category_fce1_0">@string/text_header_model_serial_number_not_programmed</string>
+    <string name="error_suggestion_fce1_0">@string/text_layout_information_paragraph_qr_code_error_description_step_17_sub_mode_element_copy</string>
+    <string name="error_extra_info_fce1_0"> </string>
+
+    <string name="error_code_fce2_0">FCE2–0</string>
+    <string name="error_category_fce2_0">@string/text_header_model_serial_numbers_do_not_match</string>
+    <string name="error_suggestion_fce2_0">@string/text_layout_information_paragraph_qr_code_error_description_step_18_sub_mode_element_copy</string>
+    <string name="error_extra_info_fce2_0"> </string>
+
+    <string name="error_code_fce3_0">FCE3–0</string>
+    <string name="error_category_fce3_0">@string/text_header_wifi_radio_fault</string>
+    <string name="error_suggestion_fce3_0">@string/text_layout_information_paragraph_qr_code_error_description_step_38_sub_mode_element</string>
+    <string name="error_extra_info_fce3_0"> </string>
+
+    <!--*************** FD ERRORS - MWO COMPONENT ***************-->
+<!--    <string name="error_code_fde1">FDE1</string>-->
+<!--    <string name="error_category_fde1">High Voltage Transformer</string>-->
+<!--    <string name="error_suggestion_fde1"> </string>-->
+<!--    <string name="error_extra_info_fde1"> </string>-->
+
+<!--    <string name="error_code_fde2">FDE2</string>-->
+<!--    <string name="error_category_fde2">Microwave Turn Table Motor</string>-->
+<!--    <string name="error_suggestion_fde2"> </string>-->
+<!--    <string name="error_extra_info_fde2"> </string>-->
+
+<!--    <string name="error_code_fde3">FDE3</string>-->
+<!--    <string name="error_category_fde3">Hood Exhaust Fan</string>-->
+<!--    <string name="error_suggestion_fde3"> </string>-->
+<!--    <string name="error_extra_info_fde3"> </string>-->
+
+<!--    <string name="error_code_fde4">FDE4</string>-->
+<!--    <string name="error_category_fde4">MWO Cooling fan</string>-->
+<!--    <string name="error_suggestion_fde4"> </string>-->
+<!--    <string name="error_extra_info_fde4"> </string>-->
+
+<!--    <string name="error_code_fde6">FDE6</string>-->
+<!--    <string name="error_category_fde6">MWO Convect Fan</string>-->
+<!--    <string name="error_suggestion_fde6"> </string>-->
+<!--    <string name="error_extra_info_fde6"> </string>-->
+
+<!--    <string name="error_code_fde7">FDE7</string>-->
+<!--    <string name="error_category_fde7"> MWO Convection element</string>-->
+<!--    <string name="error_suggestion_fde7"> </string>-->
+<!--    <string name="error_extra_info_fde7"> </string>-->
+
+<!--    <string name="error_code_fde8">FDE8</string>-->
+<!--    <string name="error_category_fde8">MWO Grill element</string>-->
+<!--    <string name="error_suggestion_fde8"> </string>-->
+<!--    <string name="error_extra_info_fde8"> </string>-->
+    <!--******************** END OF FD ERRORS ********************-->
+
+
+    <!--****************** FE ERRORS - ELEMENTS ******************-->
+<!--    <string name="error_code_fee5">FEE5</string>-->
+<!--    <string name="error_category_fee5">Center Cooktop Element (Warming zone)</string>-->
+<!--    <string name="error_suggestion_fee5"> </string>-->
+<!--    <string name="error_extra_info_fee5"> </string>-->
+
+    <string name="error_code_fee6_0">FEE6–0</string>
+    <string name="error_category_fee6_0">@string/text_fault_name_FEE60</string>
+    <string name="error_suggestion_fee6_0">@string/text_layout_information_paragraph_qr_code_error_description_step_6_sub_mode_element</string>
+    <string name="error_extra_info_fee6_0"> </string>
+
+    <string name="error_code_fee7_0">FEE7–0</string>
+    <string name="error_category_fee7_0">@string/text_fault_name_FEE70</string>
+    <string name="error_suggestion_fee7_0">@string/text_layout_information_paragraph_qr_code_error_description_step_7_sub_mode_element</string>
+    <string name="error_extra_info_fee7_0"> </string>
+
+<!--    <string name="error_code_fee7_0">FEE7</string>-->
+<!--    <string name="error_category_fee7_0">@string/text_fault_name_FEE80</string>-->
+<!--    <string name="error_suggestion_fee7_0">@string/text_layout_information_paragraph_qr_code_error_description_step_11_sub_mode_element</string>-->
+<!--    <string name="error_extra_info_fee7_0"> </string>-->
+
+    <string name="error_code_fee8_0">FEE8–0</string>
+    <string name="error_category_fee8_0">@string/text_fault_name_FEE80</string>
+    <string name="error_suggestion_fee8_0">@string/text_layout_information_paragraph_qr_code_error_description_step_8_sub_mode_element_copy</string>
+    <string name="error_extra_info_fee8_0"> </string>
+
+<!--    <string name="error_code_fee8_0">FEE8</string>-->
+<!--    <string name="error_category_fee8_0">@string/text_fault_name_FEE80</string>-->
+<!--    <string name="error_suggestion_fee8_0">@string/text_layout_information_paragraph_qr_code_error_description_step_11_sub_mode_element</string>-->
+<!--    <string name="error_extra_info_fee8"> </string>-->
+
+    <string name="error_code_fee9_0">FEE9–0</string>
+    <string name="error_category_fee9_0">@string/text_fault_name_FEE90</string>
+    <string name="error_suggestion_fee9_0">@string/text_layout_information_paragraph_qr_code_error_description_step_9_sub_mode_element</string>
+    <string name="error_extra_info_fee9_0"> </string>
+
+<!--    <string name="error_code_fee9_0">FEE9</string>-->
+<!--    <string name="error_category_fee9_0">@string/text_fault_name_FEE90/string>-->
+<!--    <string name="error_suggestion_fee9_0">@string/text_layout_information_paragraph_qr_code_error_description_step_11_sub_mode_element</string>-->
+<!--    <string name="error_extra_info_fee9_0"> </string>-->
+
+    <string name="error_code_feea_0">FEEA–0</string>
+    <string name="error_category_feea_0">@string/text_fault_name_FEEA0</string>
+    <string name="error_suggestion_feea_0">@string/text_layout_information_paragraph_qr_code_error_description_step_6_sub_mode_element</string>
+    <string name="error_extra_info_feea_0"> </string>
+
+<!--    <string name="error_code_feea_0">FEEA</string>-->
+<!--    <string name="error_category_feea_0">@string/text_fault_name_FEEA0</string>-->
+<!--    <string name="error_suggestion_feea_0">@string/text_layout_information_paragraph_qr_code_error_description_step_11_sub_mode_element</string>-->
+<!--    <string name="error_extra_info_feea_0"> </string>-->
+
+    <string name="error_code_feeb_0">FEEB–0</string>
+    <string name="error_category_feeb_0">@string/text_fault_name_FEEB0</string>
+    <string name="error_suggestion_feeb_0">@string/text_layout_information_paragraph_qr_code_error_description_step_7_sub_mode_element</string>
+    <string name="error_extra_info_feeb_0"> </string>
+
+<!--    <string name="error_code_feeb_0">FEEB</string>-->
+<!--    <string name="error_category_feeb_0">@string/text_fault_name_FEEB0</string>-->
+<!--    <string name="error_suggestion_feeb_0">@string/text_layout_information_paragraph_qr_code_error_description_step_11_sub_mode_element</string>-->
+<!--    <string name="error_extra_info_feeb_0"> </string>-->
+
+    <string name="error_code_feec_0">FEEC–0</string>
+    <string name="error_category_feec_0">@string/text_fault_name_FEEC0</string>
+    <string name="error_suggestion_feec_0">@string/text_layout_information_paragraph_qr_code_error_description_step_8_sub_mode_element_copy</string>
+    <string name="error_extra_info_feec_0"> </string>
+
+<!--    <string name="error_code_feec_0">FEEC</string>-->
+<!--    <string name="error_category_feec_0">@string/text_fault_name_FEEC0</string>-->
+<!--    <string name="error_suggestion_feec_0">@string/text_layout_information_paragraph_qr_code_error_description_step_11_sub_mode_element</string>-->
+<!--    <string name="error_extra_info_feec_0"> </string>-->
+
+    <string name="error_code_feed_0">FEED–0</string>
+    <string name="error_category_feed_0">@string/text_fault_name_FEED0</string>
+    <string name="error_suggestion_feed_0">@string/text_layout_information_paragraph_qr_code_error_description_step_9_sub_mode_element</string>
+    <string name="error_extra_info_feed_0"> </string>
+
+<!--    <string name="error_code_feed_0">FEED</string>-->
+<!--    <string name="error_category_feed_0">@string/text_fault_name_FEED0</string>-->
+<!--    <string name="error_suggestion_feed_0">@string/text_layout_information_paragraph_qr_code_error_description_step_11_sub_mode_element</string>-->
+<!--    <string name="error_extra_info_feed_0"> </string>-->
+    <!--******************** END OF FD ERRORS ********************-->
+
+
+<!--    <string name="error_code_f11e1">F11E1</string>-->
+<!--    <string name="error_category_f11e1">Temperature Threshold Reach</string>-->
+<!--    <string name="error_suggestion_f11e1">Check Cavity Temperature / Fan</string>-->
+<!--    <string name="error_extra_info_f11e1"> </string>-->
+
+    <!-- Needed to override SDK diagnostics string  -->
+    <string name="sdk_diagnostics_label_paused">@string/str_pause_test</string>
+    <string name="str_resume_test">@string/text_button_MWO_cook_door_open_resume</string>
+    <string name="step_convect_1_relay">@string/step_name_convect_1_relay</string>
+    <string name="step_convect_2_relay">@string/step_name_convect_2_relay</string>
+    <string name="sdk_diagnostics_mode_name_upper">@string/cavity_selection_upper</string>
+    <string name="sdk_diagnostics_mode_name_lower">@string/cavity_selection_lower</string>
+    <string name="str_start">@string/text_button_start</string>
+    <string name="service_coolingfan_1">@string/cooling_fan_1</string>
+    <string name="service_coolingfan_2">@string/cooling_fan_2</string>
+    <string name="service_bake_1">@string/bake_1</string>
+    <string name="service_bake_2">@string/bake_2</string>
+    <string name="sdk_separator_day">@string/str_day</string>
+    <string name="sdk_separator_month">@string/text_label_m</string>
+    <string name="sdk_separator_year">@string/str_year</string>
+    <string name="material_timepicker_am">@string/text_label_am</string>
+    <string name="material_timepicker_pm">@string/text_label_pm</string>
+</resources>

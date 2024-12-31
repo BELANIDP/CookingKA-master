@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/fav_history_item_height"
+    android:background="@color/common_solid_black"
+    android:paddingEnd="@dimen/fav_history_item_padding"
+    android:paddingStart="@dimen/fav_history_item_padding">
+
+    <ImageView
+        android:id="@+id/imageCavityIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:background="@drawable/cavity_lower"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/history"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+        android:id="@+id/textTitle"
+        style="@style/HistoryTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imageCavityIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Bake" />
+
+    <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+        android:id="@+id/textTempAndDuration"
+        style="@style/HistorySubTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/imageCavityIcon"
+        app:layout_constraintTop_toBottomOf="@+id/textTitle"
+        tools:text="450°F for 15 min" />
+
+    <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+        android:id="@+id/textDay"
+        style="@style/HistoryDayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="@dimen/fav_history_item_margin_end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="Today" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_arrow"
+        android:contentDescription="@string/history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/light_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

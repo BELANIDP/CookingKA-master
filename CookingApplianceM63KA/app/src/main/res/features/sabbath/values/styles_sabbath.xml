@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="StyleSabbathModeInstructionScrollView" parent="StyleManualModeInstructionScrollView">
+        <item name="android:layout_marginTop">@dimen/popup_scroll_margin_top_24</item>
+    </style>
+
+    <style name="SabbathHomeModeIconStyle">
+        <item name="android:layout_width">@dimen/sabbath_mode_image_view_width</item>
+        <item name="android:layout_height">@dimen/sabbath_mode_image_view_height</item>
+        <item name="android:src">@drawable/ic_sabbath_white</item>
+        <item name="android:visibility">visible</item>
+        <item name="android:layout_marginTop">@dimen/sabbath_home_icon_margin_top</item>
+    </style>
+    <!-- Style for the Sabbath mode title TextView.
+    This style includes attributes for width, height, font family, font padding, line height,
+    line spacing, text, text color, text case, and text size. -->
+    <style name="SabbathHomeModeTitleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:includeFontPadding">@bool/_false</item>
+        <item name="android:lineHeight">@dimen/sabbath_mode_title_text_line_height</item>
+        <item name="android:lineSpacingExtra">@dimen/sabbath_mode_title_text_line_spacing_extra</item>
+        <item name="android:layout_marginStart">@dimen/sabbath_home_text_margin_start</item>
+        <item name="android:text">@string/text_sabbath</item>
+        <item name="android:textColor">@color/solid_white</item>
+        <item name="android:textSize">@dimen/sabbath_mode_title_text_size</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="SabbathHomeModeDescriptionStyle">
+        <item name="android:layout_width">@dimen/sabbath_mode_description_text_width</item>
+        <item name="android:layout_height">@dimen/sabbath_mode_description_text_height</item>
+        <item name="android:includeFontPadding">@bool/_false</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:lineSpacingExtra">@dimen/sabbath_mode_description_text_line_spacing_extra
+        </item>
+        <item name="android:translationY">@dimen/sabbath_mode_description_text_translation_y</item>
+        <item name="android:textSize">@dimen/sabbath_mode_description_text_size</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:gravity">center_horizontal|top</item>
+        <item name="android:layout_marginTop">@dimen/sabbath_home_description_text_margin_top</item>
+    </style>
+
+    <style name="SabbathCavitySelectionStartItem">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/sabbath_double_cavity_selection_start_cavity_item_height</item>
+        <item name="android:paddingStart">@dimen/sabbath_double_cavity_selection_start_cavity_item_margin</item>
+        <item name="android:paddingEnd">@dimen/sabbath_double_cavity_selection_start_cavity_item_margin</item>
+    </style>
+
+    <style name="StyleSabbathDoubleCavityNameTextView" parent="StyleModeStatusTextView">
+        <item name="android:textSize">@dimen/sabbath_double_cavity_selection_textview_size</item>
+        <item name="android:textColor">@color/color_white</item>
+    </style>
+    <style name="StyleSabbathDoubleCavityRecipeInfo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:lineSpacingExtra">1sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineHeight">@dimen/sabbath_double_cavity_selection_recipe_info_textview_line_height</item>
+        <item name="android:textSize">@dimen/sabbath_double_cavity_selection_recipe_info_textview_size</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:layout_marginEnd">@dimen/sabbath_double_cavity_selection_recipe_info_textview_margin_end</item>
+    </style>
+    <style name="StyleSabbathDoubleCavitySeparator">
+        <item name="android:layout_width">@dimen/sabbath_double_cavity_selection_separator_width</item>
+        <item name="android:layout_height">@dimen/sabbath_double_cavity_selection_separator_height</item>
+        <item name="android:background">@color/light_grey</item>
+    </style>
+    <style name="StyleSabbathDoubleCavityPreviewContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/sabbath_double_cavity_selection_start_height</item>
+        <item name="android:layout_marginTop">@dimen/sabbath_double_cavity_selection_start_marginTop</item>
+        <item name="android:layout_marginBottom">@dimen/sabbath_double_cavity_selection_start_marginBottom</item>
+    </style>
+    <style name="SabbathStyleClockErrorTextView">
+        <item name="android:textSize">@dimen/sabbath_clock_error_textview_size</item>
+        <item name="android:textColor">@color/notification_red</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lineSpacingExtra">1sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineHeight">36sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+</resources>

@@ -1,0 +1,11 @@
+.gradle
+/local.properties
+#Instead of having individual .idea, we can have the following to ignore all .idea related files
+#https://github.com/intellij-rust/intellij-rust/issues/1570
+*.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties

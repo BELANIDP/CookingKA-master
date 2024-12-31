@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/control_lock_popup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_solid_black">
+
+        <TextView
+            android:id="@+id/text_view_popup_control_lock_message"
+            style="@style/StyleControlLockMessageTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/group_1919"
+            android:layout_width="@dimen/control_lock_icon_layout_width"
+            android:layout_height="@dimen/control_lock_icon_layout_height"
+            android:layout_marginStart="@dimen/control_lock_icon_layout_margin_start"
+            android:layout_marginTop="@dimen/control_lock_icon_layout_margin_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/control_lock"
+                android:background="@drawable/icon_control_lock"
+                android:layout_width="@dimen/control_lock_icon_layout_width"
+                android:layout_height="@dimen/control_lock_icon_layout_height"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.whirlpool.cooking.widgets.CustomControlLockSeekBar
+            android:id="@+id/control_lock_custom_seek_bar"
+            style="@style/StyleCustomControlLockSeekBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon_40px_arrow_1"
+            android:background="@drawable/icon_list_item_right_arrow"
+            android:layout_width="@dimen/control_lock_arrow_icon_width"
+            android:layout_height="@dimen/control_lock_arrow_icon_height"
+            android:layout_marginStart="@dimen/control_lock_arrow_icon_margin_start"
+            android:layout_marginTop="@dimen/control_lock_arrow_icon_margin_top"
+            android:alpha="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon_40px_arrow_2"
+            android:background="@drawable/icon_list_item_right_arrow"
+            android:layout_width="@dimen/control_lock_arrow_icon_width"
+            android:layout_height="@dimen/control_lock_arrow_icon_height"
+            android:layout_marginStart="@dimen/control_lock_arrow_icon2_margin_start"
+            android:layout_marginTop="@dimen/control_lock_arrow_icon_margin_top"
+            android:alpha="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/icon_40px_arrow_3"
+            android:background="@drawable/icon_list_item_right_arrow"
+            android:layout_width="@dimen/control_lock_arrow_icon_width"
+            android:layout_height="@dimen/control_lock_arrow_icon_height"
+            android:layout_marginStart="@dimen/control_lock_arrow_icon3_margin_start"
+            android:layout_marginTop="@dimen/control_lock_arrow_icon_margin_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

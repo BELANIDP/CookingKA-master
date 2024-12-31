@@ -1,0 +1,568 @@
+{
+  "F1E10": {
+    "faultId": 204,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 15
+  },
+  "F1E11": {
+    "faultId": 32,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 16,
+    "comboOvenPriority": 11,
+    "singleOvenPriority": 10
+  },
+  "F1E14": {
+    "faultId": 33,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 18,
+    "comboOvenPriority": 12,
+    "singleOvenPriority": 11
+  },
+  "F1E15": {
+    "faultId": 34,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 20,
+    "comboOvenPriority": 13,
+    "singleOvenPriority": 12
+  },
+  "F1E16": {
+    "faultId": 35,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 25,
+    "comboOvenPriority": 15,
+    "singleOvenPriority": 14
+  },
+  "F1E17": {
+    "faultId": 39,
+    "category": 1,
+    "subCategory": 4,
+    "doubleOvenPriority": 38,
+    "comboOvenPriority": 22,
+    "singleOvenPriority": 21
+  },
+  "F1E18": {
+    "faultId": 37,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 52,
+    "comboOvenPriority": 30,
+    "singleOvenPriority": 30
+  },
+  "F1E19": {
+    "faultId": 142,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 14,
+    "comboOvenPriority": 10,
+    "singleOvenPriority": 9
+  },
+  "F1E1A": {
+    "faultId": 40,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 45,
+    "comboOvenPriority": 26,
+    "singleOvenPriority": 25
+  },
+  "F1E1E": {
+    "faultId": 36,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 22,
+    "comboOvenPriority": 16,
+    "singleOvenPriority": 15
+  },
+  "F1E1F": {
+    "faultId": 38,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 48,
+    "comboOvenPriority": 31,
+    "singleOvenPriority": 31
+  },
+  "F1E51": {
+    "faultId": 41,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 17
+  },
+  "F1E54": {
+    "faultId": 42,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 19
+  },
+  "F1E55": {
+    "faultId": 43,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 21
+  },
+  "F1E56": {
+    "faultId": 44,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 26
+  },
+  "F1E57": {
+    "faultId": 48,
+    "category": 1,
+    "subCategory": 4,
+    "doubleOvenPriority": 39
+  },
+  "F1E58": {
+    "faultId": 46,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 53
+  },
+  "F1E5E": {
+    "faultId": 45,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 27
+  },
+  "F1E5F": {
+    "faultId": 47,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 54
+  },
+  "F1E70": {
+    "faultId": 153,
+    "category": 2,
+    "subCategory": 3,
+    "comboOvenPriority": 33,
+    "microwaveOvenPriority": 7
+  },
+  "F1E71": {
+    "faultId": 105,
+    "category": 3,
+    "subCategory": 5,
+    "comboOvenPriority": 45,
+    "microwaveOvenPriority": 16
+  },
+  "F1E72": {
+    "faultId": 112,
+    "category": 3,
+    "subCategory": 5,
+    "comboOvenPriority": 46,
+    "microwaveOvenPriority": 17
+  },
+  "F1EA0": {
+    "faultId": 153,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 44,
+    "singleOvenPriority": 24,
+    "comboOvenPriority": 25
+  },
+  "F1EA1": {
+    "faultId": 105,
+    "category": 3,
+    "subCategory": 5,
+    "doubleOvenPriority": 60,
+    "singleOvenPriority": 36,
+    "comboOvenPriority": 43
+  },
+  "F1EA2": {
+    "faultId": 112,
+    "category": 3,
+    "subCategory": 5,
+    "doubleOvenPriority": 62,
+    "singleOvenPriority": 37,
+    "comboOvenPriority": 44
+  },
+  "F2E10": {
+    "faultId": 90,
+    "category": 3,
+    "subCategory": 5,
+    "doubleOvenPriority": 50,
+    "singleOvenPriority": 28,
+    "comboOvenPriority": 29,
+    "microwaveOvenPriority": 4
+  },
+  "F2E12": {
+    "faultId": 87,
+    "category": 3,
+    "subCategory": 5,
+    "doubleOvenPriority": 51,
+    "singleOvenPriority": 29,
+    "comboOvenPriority": 32,
+    "microwaveOvenPriority": 5
+  },
+  "F2E20": {
+    "faultId": 91,
+    "category": 1,
+    "subCategory": 4,
+    "doubleOvenPriority": 6,
+    "comboOvenPriority": 6
+  },
+  "F2E40": {
+    "faultId": 214,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 46,
+    "singleOvenPriority": 26,
+    "comboOvenPriority": 27,
+    "microwaveOvenPriority": 3
+  },
+  "F2E41": {
+    "faultId": 226,
+    "category": 3,
+    "subCategory": 5,
+    "doubleOvenPriority": 63,
+    "singleOvenPriority": 38,
+    "comboOvenPriority": 47,
+    "microwaveOvenPriority": 18
+  },
+  "F2E42": {
+    "faultId": 227,
+    "category": 3,
+    "subCategory": 5,
+    "doubleOvenPriority": 64,
+    "singleOvenPriority": 39,
+    "comboOvenPriority": 48,
+    "microwaveOvenPriority": 19
+  },
+  "F3E00": {
+    "faultId": 130,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 6,
+    "singleOvenPriority": 5
+  },
+  "F3E01": {
+    "faultId": 131,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 8,
+    "singleOvenPriority": 6
+  },
+  "F3E10": {
+    "faultId": 192,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 7,
+    "comboOvenPriority": 6
+  },
+  "F3E11": {
+    "faultId": 193,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 9,
+    "comboOvenPriority": 7
+  },
+  "F3E30": {
+    "faultId": 132,
+    "category": 3,
+    "subCategory": 5,
+    "doubleOvenPriority": 65,
+    "singleOvenPriority": 40
+  },
+  "F3E90": {
+    "faultId": 201,
+    "category": 3,
+    "subCategory": 5,
+    "doubleOvenPriority": 56,
+    "comboOvenPriority": 49
+  },
+  "F4E10": {
+    "faultId": 130,
+    "category": 2,
+    "subCategory": 2,
+    "comboOvenPriority": 34,
+    "microwaveOvenPriority": 8
+  },
+  "F4E11": {
+    "faultId": 131,
+    "category": 2,
+    "subCategory": 2,
+    "comboOvenPriority": 35,
+    "microwaveOvenPriority": 9
+  },
+  "F4E22": {
+    "faultId": 53,
+    "category": 2,
+    "subCategory": 2,
+    "comboOvenPriority": 36,
+    "microwaveOvenPriority": 10
+  },
+  "F4E23": {
+    "faultId": 54,
+    "category": 2,
+    "subCategory": 2,
+    "comboOvenPriority": 37,
+    "microwaveOvenPriority": 11
+  },
+  "F4E40": {
+    "faultId": 215,
+    "category": 2,
+    "subCategory": 2,
+    "comboOvenPriority": 41,
+    "microwaveOvenPriority": 15
+  },
+  "F5E00": {
+    "faultId": 137,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 47,
+    "singleOvenPriority": 27
+  },
+  "F5E10": {
+    "faultId": 138,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 10,
+    "singleOvenPriority": 8
+  },
+  "F5E11": {
+    "faultId": 139,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 11,
+    "singleOvenPriority": 7
+  },
+  "F5E30": {
+    "faultId": 194,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 49,
+    "comboOvenPriority": 28
+  },
+  "F5E40": {
+    "faultId": 195,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 12,
+    "comboOvenPriority": 9
+  },
+  "F5E41": {
+    "faultId": 196,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 13,
+    "comboOvenPriority": 8
+  },
+  "F6E10": {
+    "faultId": 16,
+    "category": 1,
+    "subCategory": 4,
+    "doubleOvenPriority": 4,
+    "singleOvenPriority": 4,
+    "comboOvenPriority": 4
+  },
+  "F6E20": {
+    "faultId": 17,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 5,
+    "comboOvenPriority": 5
+  },
+  "F6E70": {
+    "faultId": 16,
+    "category": 1,
+    "subCategory": 4,
+    "microwaveOvenPriority": 1
+  },
+  "F7E50": {
+    "faultId": 95,
+    "category": 1,
+    "subCategory": 4,
+    "doubleOvenPriority": 36,
+    "singleOvenPriority": 20
+  },
+  "F7E51": {
+    "faultId": 100,
+    "category": 1,
+    "subCategory": 4,
+    "doubleOvenPriority": 59,
+    "singleOvenPriority": 35
+  },
+  "F7E60": {
+    "faultId": 56,
+    "category": 1,
+    "subCategory": 4,
+    "doubleOvenPriority": 34,
+    "singleOvenPriority": 19
+  },
+  "F7E70": {
+    "faultId": 96,
+    "category": 1,
+    "subCategory": 4,
+    "doubleOvenPriority": 37,
+    "comboOvenPriority": 21
+  },
+  "F7E71": {
+    "faultId": 101,
+    "category": 1,
+    "subCategory": 4,
+    "doubleOvenPriority": 61,
+    "comboOvenPriority": 42
+  },
+  "F7E80": {
+    "faultId": 57,
+    "category": 1,
+    "subCategory": 4,
+    "doubleOvenPriority": 35,
+    "comboOvenPriority": 20
+  },
+  "F9E00": {
+    "faultId": 7,
+    "category": 1,
+    "subCategory": 4,
+    "doubleOvenPriority": 1,
+    "singleOvenPriority": 1,
+    "comboOvenPriority": 1
+  },
+  "F9E01": {
+    "faultId": 157,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 2,
+    "singleOvenPriority": 2,
+    "comboOvenPriority": 2
+  },
+  "F9E02": {
+    "faultId": 224,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 3,
+    "singleOvenPriority": 3,
+    "comboOvenPriority": 3
+  },
+  "F9EA0": {
+    "faultId": 9,
+    "category": 1,
+    "subCategory": 4,
+    "doubleOvenPriority": 66,
+    "singleOvenPriority": 41,
+    "comboOvenPriority": 50,
+    "microwaveOvenPriority": 20
+  },
+  "F9EA1": {
+    "faultId": 10,
+    "category": 1,
+    "subCategory": 4,
+    "doubleOvenPriority": 67,
+    "singleOvenPriority": 42,
+    "comboOvenPriority": 51,
+    "microwaveOvenPriority": 21
+  },
+  "FBE10": {
+    "faultId": 133,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 40,
+    "singleOvenPriority": 23
+  },
+  "FBE11": {
+    "faultId": 134,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 41,
+    "singleOvenPriority": 22
+  },
+  "FBE30": {
+    "faultId": 197,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 42,
+    "comboOvenPriority": 24
+  },
+  "FBE31": {
+    "faultId": 198,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 43,
+    "comboOvenPriority": 23
+  },
+  "FCE10": {
+    "faultId": 221,
+    "category": 3,
+    "subCategory": 5,
+    "doubleOvenPriority": 55,
+    "singleOvenPriority": 32,
+    "comboOvenPriority": 38,
+    "microwaveOvenPriority": 12
+  },
+  "FCE20": {
+    "faultId": 222,
+    "category": 3,
+    "subCategory": 5,
+    "doubleOvenPriority": 57,
+    "singleOvenPriority": 33,
+    "comboOvenPriority": 39,
+    "microwaveOvenPriority": 13
+  },
+  "FCE30": {
+    "faultId": 223,
+    "category": 3,
+    "subCategory": 5,
+    "doubleOvenPriority": 58,
+    "singleOvenPriority": 34,
+    "comboOvenPriority": 40,
+    "microwaveOvenPriority": 14
+  },
+  "FEE60": {
+    "faultId": 120,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 23,
+    "singleOvenPriority": 13
+  },
+  "FEE70": {
+    "faultId": 121,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 29,
+    "singleOvenPriority": 16
+  },
+  "FEE80": {
+    "faultId": 122,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 32,
+    "singleOvenPriority": 17
+  },
+  "FEE90": {
+    "faultId": 50,
+    "category": 2,
+    "subCategory": 3,
+    "doubleOvenPriority": 28,
+    "singleOvenPriority": 18
+  },
+  "FEEA0": {
+    "faultId": 184,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 24,
+    "comboOvenPriority": 14
+  },
+  "FEEB0": {
+    "faultId": 185,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 31,
+    "comboOvenPriority": 17
+  },
+  "FEEC0": {
+    "faultId": 186,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 33,
+    "comboOvenPriority": 18
+  },
+  "FEED0": {
+    "faultId": 51,
+    "category": 2,
+    "subCategory": 2,
+    "doubleOvenPriority": 30,
+    "comboOvenPriority": 19
+  }
+}

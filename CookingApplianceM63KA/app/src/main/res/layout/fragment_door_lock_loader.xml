@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+  -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="DoorLockingIntermediateLoader"
+            type="android.presenter.fragments.self_clean.DoorLockingIntermediateLoader" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_progress_bar_information"
+        style="@style/InformationScreenStyle">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/popup_with_scroll"
+            style="@style/DoorLockScreenStyle"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lock_image"
+                style="@style/DoorLockImageStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/title_text"
+                style="@style/DoorLockTitleTextStyle"
+                android:text="@string/text_locking_oven_door_self_clean"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lock_image" />
+
+            <ImageView
+                android:id="@+id/ivLockProgressbarInfinite"
+                style="@style/DoorLockProgressBarUpdateImageStyle"
+                android:background="@drawable/progress_round_grey_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="ContentDescription"
+                app:layout_constraintTop_toBottomOf="@+id/title_text"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/progress_bar_update_image"
+                style="@style/DoorLockProgressBarUpdateImageStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title_text" />
+
+            <TextView
+                android:id="@+id/details_text_view"
+                style="@style/DoorLockDetailsTextViewStyle"
+            android:text="@string/text_description_door_locking"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progress_bar_update_image" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+

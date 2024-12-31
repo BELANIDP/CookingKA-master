@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+  -->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate
+        android:fromXDelta="-5"
+        android:toXDelta="5"
+        android:repeatMode="reverse"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:duration="@integer/duration_error_helper_shake_anim" />
+</set>

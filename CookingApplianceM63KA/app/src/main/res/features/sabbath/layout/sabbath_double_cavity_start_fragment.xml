@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_layout"
+        style="@style/StyleManualModelInstructionScreen">
+
+        <android.presenter.customviews.widgets.headerbar.HeaderBarWidget
+            android:id="@+id/header_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_solid_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/StyleSabbathDoubleCavityPreviewContainer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clSabbathUpperCavityStartSelection"
+                style="@style/SabbathCavitySelectionStartItem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <ImageView
+                    android:id="@+id/ivUpperOvenCavity"
+                    style="@style/StatusWidgetOvenCavityIconStyle"
+                    tools:ignore="ContentDescription"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/ic_sabbath_cavity_selection_upper_oven"/>
+                <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+                    android:id="@+id/tvUpperOvenCavity"
+                    style="@style/StyleSabbathDoubleCavityNameTextView"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivUpperOvenCavity"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="@string/cavity_selection_upper_oven"/>
+                <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+                    android:id="@+id/tvUpperOvenCavityRecipeInfo"
+                    style="@style/StyleSabbathDoubleCavityRecipeInfo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivOvenCavityMore"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/cavity_selection_upper_oven"/>
+                <ImageView
+                    android:id="@+id/ivOvenCavityMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="ContentDescription"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/ic_sabbath_double_cavity_selection_more"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                style="@style/StyleSabbathDoubleCavitySeparator"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clSabbathUpperCavityStartSelection"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clSabbathLowerCavityStartSelection"
+                style="@style/SabbathCavitySelectionStartItem"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+                <ImageView
+                    android:id="@+id/ivLowerOvenCavity"
+                    style="@style/StatusWidgetOvenCavityIconStyle"
+                    tools:ignore="ContentDescription"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/ic_sabbath_cavity_selection_lower_oven"/>
+                <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+                    android:id="@+id/tvLowerOvenCavity"
+                    style="@style/StyleSabbathDoubleCavityNameTextView"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ivLowerOvenCavity"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="@string/cavity_selection_lower_oven"/>
+                <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+                    android:id="@+id/tvLowerOvenCavityRecipeInfo"
+                    style="@style/StyleSabbathDoubleCavityRecipeInfo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivLowerOvenCavityMore"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/cavity_selection_lower_oven"/>
+                <ImageView
+                    android:id="@+id/ivLowerOvenCavityMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="ContentDescription"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:src="@drawable/ic_sabbath_double_cavity_selection_more"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <android.presenter.customviews.textButton.IconTextButton
+            android:id="@+id/text_button_right"
+            style="@style/StyleManualModeRightButton"
+            app:icon_button_text="@string/text_button_start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

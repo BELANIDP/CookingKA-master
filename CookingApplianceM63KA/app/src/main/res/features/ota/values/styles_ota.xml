@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2019. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+  -->
+
+<resources>
+    <style name="StyleInformationTextScrollBar">
+        <item name="android:fadeScrollbars">true</item>
+        <item name="android:scrollbarFadeDuration">1000</item>
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">false</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_thumb</item>
+        <item name="android:scrollbarTrackVertical">@drawable/scrollbar_track</item>
+        <item name="android:scrollbarSize">4dp</item>
+        <item name="android:fastScrollEnabled">true</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/information_fading_layout_height</item>
+        <item name="android:fadingEdgeLength">@dimen/information_fading_region</item>
+        <item name="android:requiresFadingEdge">vertical</item>
+        <item name="android:layout_marginStart">@dimen/information_text_view_start_margin</item>
+        <item name="android:layout_marginEnd">@dimen/information_text_view_end_margin</item>
+        <item name="android:layout_marginTop">@dimen/information_text_view_top_margin</item>
+    </style>
+
+    <style name="Style30WhiteBold" parent="Style30_Base">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/solid_white</item>
+        <item name="android:layout_width">@dimen/custom_txt_ota_message_width</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Style30_Base">
+        <item name="android:textSize">30sp</item>
+        <item name="android:lineHeight">36sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="StyleOtaReleaseInfo" parent="Style_subText_30_Base">
+        <item name="android:letterSpacing">0.0</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:translationY">-0.94sp</item>
+        <item name="android:gravity">top</item>
+        <item name="android:textColor">@color/timeColor</item>
+        <item name="android:layout_width">@dimen/custom_txt_ota_message_width</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Style_subText_30_Base">
+        <item name="android:textSize">30sp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineHeight">36sp</item>
+        <item name="android:fontWeight">300</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/common_transparent</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppTheme.WhiteAccent">
+        <item name="colorAccent">@color/colorWhite</item>
+        <item name="android:layout_width">@dimen/custom_layout_ota_loading_progressbar_size</item>
+        <item name="android:layout_height">@dimen/custom_layout_ota_loading_progressbar_size</item>
+    </style>
+
+    <style name="StyleVersionDetailsViewOtaCompleted">
+        <item name="android:layout_width">@dimen/information_version_details_ota_completed_width</item>
+        <item name="android:layout_height">@dimen/information_version_details_ota_completed_height</item>
+        <item name="android:layout_marginEnd">@dimen/information_version_details_margin_end</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="Style22RobotBold" parent="Style30_Base">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <style name="StyleVersionHeader" parent="Style22RobotBold">
+        <item name="android:textColor">@color/subtext_light_grey</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center|top</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="StyleVersionNumber">
+        <item name="android:textSize">56sp</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:lineHeight">52dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="StyleSoftwareUpdateScheduled">
+        <item name="android:textSize">30sp</item>
+        <item name="android:lineHeight">36.0dp</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textColor">@color/common_solid_white</item>
+        <item name="android:gravity">center_horizontal|top</item>
+    </style>
+
+    <style name="StyleSoftwareUpdateSubInfo">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/light_grey</item>
+        <item name="android:lineHeight">36.0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontWeight">300</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+    </style>,
+
+    <style name="StyleProgressDetails">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_width">@dimen/information_progress_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/information_progress_margin_top</item>
+        <item name="fontFamily">@font/roboto_light</item>
+        <item name="android:fontWeight">300</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:lineHeight">36.0dp</item>
+    </style>
+
+    <style name="Style24_Base">
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineHeight">30sp</item>
+        <item name="android:fontWeight">400</item>
+    </style>
+
+    <style name="StatusSingleProgressbar" parent="@style/Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:layout_width">@dimen/width_status_single_progress_bar</item>
+        <item name="android:layout_height">@dimen/height_status_single_progress_bar</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/margin_status_single_progress_bar_top</item>
+        <item name="android:max">100</item>
+        <item name="android:progressBackgroundTint">@color/notification_red</item>
+        <item name="android:progressTint">@color/amber_primary</item>
+        <item name="android:visibility">invisible</item>
+    </style>
+
+    <style name="StyleErrorCodeImageView" parent="StyleQrCodeImageView">
+        <item name="android:layout_marginTop">@dimen/margin_top_error_code_500_image</item>
+    </style>
+
+    <style name="StyleErrorCode500Message" parent="StyleServiceAndSupportMessage">
+        <item name="android:layout_marginTop">@dimen/margin_top_error_code_500_message</item>
+    </style>
+
+    <style name="StyleMediumTextInformationHeaderText" parent="Style22BoldVCenter">
+        <item name="android:layout_width">@dimen/information_details_medium_description_textview_width</item>
+        <item name="android:layout_height">@dimen/information_details_header_text_height</item>
+        <item name="android:visibility">visible</item>
+        <item name="android:gravity">top</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:fontWeight">700</item>
+    </style>
+
+    <style name="Style22BoldVCenter" parent="Style22_Base">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/solid_white</item>
+    </style>
+
+    <style name="Style22_Base">
+        <item name="android:textSize">22sp</item>
+        <item name="android:letterSpacing">0.09</item>
+        <item name="android:lineSpacingExtra">-2sp</item>
+        <item name="android:lineHeight">24sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="StyleMediumTextInformationDescriptionText" parent="Style24_Base">
+        <item name="android:layout_width">@dimen/information_details_medium_description_textview_width</item>
+        <item name="android:layout_height">@dimen/information_details_medium_description_textview_height</item>
+        <item name="android:layout_marginTop">@dimen/information_details_medium_description_margin_top</item>
+        <item name="android:visibility">visible</item>
+        <item name="android:gravity">top</item>
+        <item name="android:translationY">-0.94sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/colorGray</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:letterSpacing">0.0</item>
+    </style>
+
+    <style name="StyleUpdatingVersionText" parent="Style28Light">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:layout_height">@dimen/information_version_text_height</item>
+        <item name="android:layout_marginTop">@dimen/information_version_text_margin_top</item>
+        <item name="android:fontWeight">300</item>
+        <item name="android:lineHeight">43.2dp</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:textColor">@color/timeColor</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:gravity">center</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="Style28Light" parent="Style28MediumWhiteVCenterHCenter">
+        <item name="android:fontFamily">@font/roboto_light</item>
+    </style>
+
+    <style name="Style28MediumWhiteVCenterHCenter">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.07</item>
+        <item name="android:lineSpacingExtra">-7sp</item>
+        <item name="android:textColor">@color/solid_white</item>
+    </style>
+
+    <style name="StyleInformationUpToDate">
+        <item name="android:gravity">start</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineHeight">43.20000076293945dp</item>
+        <item name="android:textColor">@color/solid_white</item>
+    </style>
+
+    <style name="StyleInformationUpToDateDateTime">
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:gravity">start</item>
+        <item name="android:fontWeight">300</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:lineHeight">36.0dp</item>
+        <item name="android:textColor">@color/solid_white</item>
+    </style>
+
+    <style name="StyleNewFeatureTextScrollBar">
+        <item name="android:fadeScrollbars">true</item>
+        <item name="android:scrollbarFadeDuration">1000</item>
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">false</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_thumb</item>
+        <item name="android:scrollbarTrackVertical">@drawable/scrollbar_track</item>
+        <item name="android:scrollbarSize">4dp</item>
+        <item name="android:fastScrollEnabled">true</item>
+        <item name="android:layout_width">526dp</item>
+        <item name="android:layout_height">276dp</item>
+        <item name="android:fadingEdgeLength">@dimen/information_fading_region</item>
+        <item name="android:requiresFadingEdge">vertical</item>
+        <item name="android:layout_marginStart">@dimen/software_details_layout_UpToDate_start_margin</item>
+    </style>
+
+    <style name="StyleOTAVersionHeader">
+        <item name="android:textColor">@color/timeColor</item>
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:layout_gravity">top|center</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:lineHeight">36.0dp</item>
+    </style>
+
+    <style name="StyleOTAVersionNumber">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">67.20000457763672dp</item>
+        <item name="android:layout_marginTop">46dp</item>
+        <item name="android:gravity">center_horizontal|top</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:fontWeight">400</item>
+        <item name="android:layout_gravity">top|center</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">56sp</item>
+        <item name="android:lineHeight">67.20000457763672dp</item>
+    </style>
+</resources>

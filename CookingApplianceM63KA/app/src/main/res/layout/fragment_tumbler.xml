@@ -1,0 +1,226 @@
+<?xml version="1.0" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="cookingViewModel"
+            type="com.whirlpool.hmi.cooking.viewmodel.CookingViewModel" />
+
+        <variable
+            name="recipeViewModel"
+            type="com.whirlpool.hmi.cooking.recipeexecution.RecipeExecutionViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_solid_black">
+
+        <android.presenter.customviews.widgets.headerbar.HeaderBarWidget
+            android:id="@+id/headerBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tumbler_gradient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumblerModifierButton
+            android:id="@+id/text_view_minus"
+            style="@style/TumblerNumericModifierLeft"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/tumblerNumericBased"
+            app:layout_constraintEnd_toStartOf="@id/image_view_divider" />
+
+        <ImageView
+            android:id="@+id/image_view_divider"
+            style="@style/TumblerNumericModifierDivider"
+            android:layout_margin="@dimen/dp_10"
+            app:layout_constraintBottom_toTopOf="@+id/tumblerNumericBased"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumblerModifierButton
+            android:id="@+id/text_view_plus"
+            style="@style/TumblerNumericModifierRight"
+            android:layout_marginStart="@dimen/plus_modifier_margin_start"
+            android:layout_marginBottom="@dimen/plus_modifier_margin_end"
+            app:layout_constraintBottom_toBottomOf="@+id/image_view_divider"
+            app:layout_constraintBottom_toTopOf="@id/tumblerNumericBased"
+            app:layout_constraintStart_toEndOf="@id/image_view_divider" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumbler
+            android:id="@+id/tumblerNumericBased"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tumbler_delay_height"
+            app:baseTumbler_item_divider="@drawable/ic_tumbler_item_separator"
+            app:baseTumbler_item_spacing="@integer/tumbler_item_spacing"
+            app:baseTumbler_scrollSpeed="@integer/tumbler_scroll_speed"
+            app:baseTumbler_maxFlingVelocity="@integer/tumbler_max_fling_velocity"
+            app:baseTumbler_textViewSelectedStyle="@style/TumblerTextViewStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/temperature_tumbler_margin_top"
+            />
+
+        <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumbler
+            android:id="@+id/serviceTumblerNumericBased"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/tumbler_delay_height"
+            app:baseTumbler_item_divider="@drawable/ic_tumbler_item_separator"
+            app:baseTumbler_item_spacing="@integer/tumbler_item_spacing"
+            app:baseTumbler_scrollSpeed="@integer/tumbler_scroll_speed"
+            app:baseTumbler_maxFlingVelocity="@integer/tumbler_max_fling_velocity"
+            android:visibility="gone"
+            app:baseTumbler_textViewSelectedStyle="@style/StyleNumericTumblerSelectedTextView"
+            app:baseTumbler_textViewStyle="@style/StyleNumericTumblerTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <View
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="@dimen/_0dp"
+            android:background="@drawable/tumbler_gradient"
+            app:layout_constrainedHeight="@bool/_true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerBar"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintRightButton"
+            android:layout_width="@dimen/width_touch_constraint"
+            android:layout_height="@dimen/height_touch_constraint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/btnPrimary"
+            style="@style/TumblerNumericPrimaryBtnStyle"
+            android:layout_marginBottom="@dimen/tumbler_button_text_margin_bottom"
+            tools:text="next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+            android:id="@+id/primaryButton"
+            style="@style/TumblerNumericPrimaryBtnStyle"
+            tools:text="START"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLeftButton"
+            android:layout_width="@dimen/width_touch_constraint"
+            android:layout_height="@dimen/height_touch_constraint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/btnGhost"
+            style="@style/TumblerNumericGhostBtnStyle"
+            android:layout_marginBottom="@dimen/tumbler_button_text_margin_bottom"
+            tools:text="cancel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <View
+            android:id="@+id/selectionLine"
+            app:layout_constraintStart_toStartOf="@id/btnGhost"
+            app:layout_constraintEnd_toEndOf="@id/btnGhost"
+            app:layout_constraintTop_toBottomOf="@+id/btnGhost"
+            android:visibility="gone"
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_4"
+            android:background="@color/black_walnut"/>
+
+        <TextView
+            android:id="@+id/degrees_type"
+            style="@style/TumblerDegreeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Starts at 5:20 PM"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tumblerNumericBased"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Auto layout, variables, and unit scale are not yet supported -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frameUPOLabels"
+            android:visibility="gone"
+            android:layout_width="@dimen/temperature_calibration_label_frame_width"
+            android:layout_height="@dimen/temperature_calibration_label_frame_height"
+            android:layout_marginTop="@dimen/temperature_calibration_label_frame_margin_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tumblerNumericBased"
+            app:layout_constraintEnd_toEndOf="parent">
+            <TextView
+                android:id="@+id/ifTooHot"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/temperature_calibration_label_frame_height"
+                android:text="@string/text_helper_if_too_hot"
+                android:textAppearance="@style/UpoLabel"
+                android:gravity="center_vertical"
+                android:layout_marginStart="@dimen/temperature_calibration_label_width"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginEnd="@dimen/divider_margin"
+                android:background="@drawable/drawable_divider_1"
+                app:layout_constraintStart_toEndOf="@+id/ifTooHot"
+                app:layout_constraintEnd_toStartOf="@+id/tempeatureUnitLabel"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/ifTooCool"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/temperature_calibration_label_frame_height"
+                android:text="@string/text_helper_if_too_cool"
+                android:textAppearance="@style/UpoLabel"
+                android:gravity="center_vertical"
+                android:layout_marginEnd="@dimen/temperature_calibration_label_width"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="@dimen/divider_height"
+                android:background="@drawable/drawable_divider_2"
+                android:layout_marginStart="@dimen/divider_margin"
+                app:layout_constraintStart_toEndOf="@+id/tempeatureUnitLabel"
+                app:layout_constraintEnd_toStartOf="@+id/ifTooCool"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/tempeatureUnitLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/temperature_calibration_label_frame_height"
+                android:text="@string/text_temperature_unit_fahrenheit"
+                android:textAppearance="@style/UpoLabel"
+                android:gravity="center_horizontal|center_vertical"
+                app:layout_constraintTop_toTopOf="@id/frameUPOLabels"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

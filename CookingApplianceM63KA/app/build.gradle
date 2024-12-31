@@ -1,0 +1,327 @@
+buildscript {
+    apply from: '../versions.gradle'
+}
+apply plugin: 'com.android.application'
+apply plugin: 'com.whirlpool.hmi.AppResourceCurator'
+apply plugin: 'androidx.navigation.safeargs'
+apply plugin: 'org.jetbrains.kotlin.android'
+apply plugin: 'jacoco'
+apply plugin: 'kotlin-kapt'
+/*
+ * ************************************************************************************************
+ * ***** Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+ * ************************************************************************************************
+ */
+// Definitions ..........
+// Place for all definitions here ...
+// Not using Cucumber as of now for jenkins builds as we have compilation issues.
+def tagName = ""
+// Default tag for cucumber tests
+
+jacoco {
+    toolVersion = "0.8.11"
+}
+
+String buildVersion = "0.9.8"
+
+String buildWPartNumberA20= "\"W00000000\""
+
+if (System.getProperty("PART_NUMBER") != null) {
+    // Read the Version property from Jenkins parameters
+    buildWPartNumberA20 = "\"" + System.getProperty("PART_NUMBER") + "\""
+}
+def generateVersionCode() {
+    def result = ""
+    def os = System.getProperty("os.name").toLowerCase()
+
+    if (os.contains("win")) {
+        // Windows
+        try {
+            result = "PowerShell -Command git rev-list HEAD --count".execute().text.trim()
+        } catch (Exception e) {
+            println("Error executing command on Windows: ${e.message}")
+        }
+    } else {
+        // macOS and other Unix-like systems
+        def versionOut = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'rev-list', 'HEAD', '--count'
+            standardOutput = versionOut
+        }
+        result = versionOut.toString().trim()
+    }
+
+    if (result.empty) {
+        throw new RuntimeException("Could not generate version code on this platform! Cmd output: ${result}")
+    }
+    return result.toInteger()
+}
+
+def generateVersionName() {
+    def result = ""
+    def os = System.getProperty("os.name").toLowerCase()
+
+    if (os.contains("win")) {
+        // Windows
+        try {
+            result = ["PowerShell", "-Command", "git describe --tags --always --first-parent"].execute().text.trim()
+        } catch (Exception e) {
+            println("Error executing command on Windows: ${e.message}")
+        }
+    } else {
+        //macOS and other Unix-like systems
+        def versionOut = new ByteArrayOutputStream()
+        exec {
+            commandLine 'git', 'describe','--tags','--always', '--first-parent'
+            standardOutput = versionOut
+        }
+        result = versionOut.toString().trim()
+    }
+
+    if (result.empty) {
+        throw new RuntimeException("Could not generate versionName on this platform! Cmd output: ${result}")
+    }
+    return result
+}
+
+android {
+    namespace "com.whirlpool.cooking.ka"
+    lintOptions {
+        baseline file("lint-KitchenAid.xml")
+    }
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    compileSdk 34
+    defaultConfig {
+        applicationId "com.whirlpool.cooking.ka"
+        minSdkVersion 31
+        //noinspection EditedTargetSdkVersion,ExpiredTargetSdkVersion
+        targetSdkVersion 31
+        versionCode generateVersionCode()
+        buildConfigField "long", "BUILD_DATE", System.currentTimeMillis() + "L"
+        buildConfigField "boolean", "IS_VISION_BUILD", "false"
+        multiDexEnabled true
+        tagName = generateVersionName()
+        versionName tagName
+        testApplicationId("com.whirlpool.cooking.ka.test")
+        testInstrumentationRunner("com.whirlpool.cooking.ka.test.CookingKACucumberTestRunner")
+        testInstrumentationRunnerArguments clearPackageData: 'true'
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('aosp-debug.keystore')
+            storePassword 'android'
+            keyAlias 'android'
+            keyPassword 'android'
+        }
+        emulator {
+            storeFile file('aosp-debug.keystore')
+            storePassword 'android'
+            keyAlias 'android'
+            keyPassword 'android'
+        }
+    }
+
+    testOptions {
+        animationsDisabled = true
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean", "IS_REAL_ACU_BUILD", "true"
+        }
+        debug {
+            testCoverageEnabled = true
+            debuggable true
+            buildConfigField "boolean", "IS_REAL_ACU_BUILD", "true"
+        }
+        emulator{
+            testCoverageEnabled = true
+            debuggable true
+            buildConfigField "boolean", "IS_REAL_ACU_BUILD", "false"
+            signingConfig signingConfigs.emulator
+        }
+    }
+    applicationVariants.configureEach { variant ->
+        def flavorName = variant.productFlavors[0].name
+        variant.outputs.configureEach {
+            // Customize the output file name for the release build
+            outputFileName = "${flavorName}-${variant.versionName}-${tagName}-${variant.buildType.name}.apk"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    flavorDimensions.add("cooking")
+    productFlavors{
+        kitchenaid {
+            versionName buildVersion
+            // Assigns this product flavor to the flavor dimension, this is optional if you are using only one dimension.
+            dimension "cooking"
+            minSdkVersion 31
+            applicationId 'com.whirlpool.cooking.ka'
+            targetSdkVersion 31
+            buildConfigField("String", "APK_PARTNUMBER", buildWPartNumberA20)
+        }
+    }
+    packagingOptions.jniLibs.useLegacyPackaging true
+    sourceSets {
+        kitchenaid {
+            res.srcDirs = [
+                    'src/main/res',
+                    'src/main/res/features/preview', 'src/main/res/features/status',  'src/main/res/features/assisted', 'src/main/res/features/kitchen_timer','src/main/res/features/diagnostics','src/main/res/features/ota'
+                    ,'src/main/res/features/sabbath', 'src/main/res/features/digital_unboxing', 'src/main/res/features/favorites', 'src/main/res/features/popups'
+            ]
+            java.srcDirs =['src/main/java/com/whirlpool/cooking/ka/ktn']
+        }
+        emulator{
+            manifest.srcFile 'src/emulator/AndroidManifest.xml'
+        }
+        release{
+            manifest.srcFile 'src/release/AndroidManifest.xml'
+        }
+        debug{
+            manifest.srcFile 'src/debug/AndroidManifest.xml'
+        }
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+    testBuildType "emulator"
+}
+
+configurations.configureEach {
+    resolutionStrategy.eachDependency { details ->
+        if (details.requested.group == 'androidx.test' && details.requested.name == 'core') {
+            details.useVersion '1.5.0'
+        }
+
+        if (details.requested.group == 'androidx.test' && details.requested.name == 'rules') {
+            details.useVersion '1.5.0'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "androidx.appcompat:appcompat:$dependencyVersions.appcompat"
+    implementation "androidx.constraintlayout:constraintlayout:$dependencyVersions.constraintlayout"
+    implementation "com.google.android.material:material:$dependencyVersions.material"
+    kapt "com.android.databinding:compiler:3.1.4"
+
+    implementation "androidx.navigation:navigation-runtime-ktx:$dependencyVersions.navigation_runtime"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$dependencyVersions.lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$dependencyVersions.lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$dependencyVersions.lifecycle_version"
+    implementation "androidx.viewpager2:viewpager2:$dependencyVersions.viewpager"
+
+
+    //Common module
+    implementation "com.airbnb.android:lottie:$dependencyVersions.lottie"
+    implementation "androidx.core:core-ktx:1.13.1"
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+    kapt 'com.github.bumptech.glide:compiler:4.15.1'
+
+    //Testing dependencies
+    androidTestImplementation "androidx.test:core:1.5.0"
+    androidTestImplementation "androidx.test:core-ktx:1.5.0"
+    androidTestImplementation "androidx.test.ext:junit:$dependencyVersions.ext_junit"
+    androidTestImplementation "androidx.test.ext:junit-ktx:$dependencyVersions.ext_junit"
+    androidTestImplementation "androidx.test:runner:$dependencyVersions.runner"
+    androidTestImplementation "androidx.test:rules:$dependencyVersions.rules"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$dependencyVersions.espresso"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$dependencyVersions.espresso"
+    androidTestImplementation "androidx.test.espresso:espresso-idling-resource:$dependencyVersions.espresso"
+    androidTestImplementation "io.cucumber:cucumber-android:$dependencyVersions.cucumber_version"
+    androidTestImplementation "androidx.test.ext:truth:$dependencyVersions.ext_truth"
+    testImplementation "androidx.test.ext:truth:$dependencyVersions.ext_truth"
+    androidTestUtil "androidx.test:orchestrator:$dependencyVersions.orchestrator"
+
+    testImplementation "junit:junit:$dependencyVersions.junit"
+    testImplementation "org.robolectric:robolectric:$dependencyVersions.robolectric"
+    testImplementation "org.mockito:mockito-core:$dependencyVersions.mockito_core"
+    androidTestImplementation "org.mockito:mockito-android:$dependencyVersions.mockito"
+    androidTestImplementation "com.android.support.test.uiautomator:$dependencyVersions.ui_automator"
+
+
+    //Navigation Graph Test Dependency
+    androidTestImplementation "androidx.navigation:navigation-testing:$dependencyVersions.nav_version"
+    debugImplementation "androidx.fragment:fragment-testing:$dependencyVersions.fragment_version"
+    androidTestImplementation 'androidx.fragment:fragment-testing:1.5.0'
+
+    // Leak Canary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.14'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
+
+    //sdk
+    if (gradle.buildFromMaven) {
+        //StandBy : Low Power
+        implementation "com.whirlpool.hmi:Standby:$dependencyVersions.sdk_version"
+        implementation "com.whirlpool.hmi:Cooking:$dependencyVersions.sdk_version"
+        implementation "com.whirlpool.hmi:CookingSimulator:$dependencyVersions.sdk_version"
+        implementation "com.whirlpool.hmi:CookBook:$dependencyVersions.sdk_version"
+        implementation "com.whirlpool.hmi:HMIExpansion:$dependencyVersions.sdk_version"
+        implementation "com.whirlpool.hmi:UiComponents:$dependencyVersions.sdk_version"
+        implementation "com.whirlpool.hmi:KitchenTimer:$dependencyVersions.sdk_version"
+        implementation "com.whirlpool.hmi:UiTesting:$dependencyVersions.sdk_version"
+        implementation "com.whirlpool.hmi:CookingUiTesting:$dependencyVersions.sdk_version"
+        implementation "com.whirlpool.cooking:common:$dependencyVersions.common_library"
+        implementation "com.whirlpool.hmi:Diagnostics:$dependencyVersions.sdk_version"
+        implementation "com.whirlpool.hmi:Provisioning:$dependencyVersions.sdk_version"
+        implementation "com.whirlpool.hmi:Cloud:$dependencyVersions.sdk_version"
+        implementation "com.whirlpool.hmi:CookingRemoteUi:$dependencyVersions.sdk_version"
+        implementation "com.whirlpool.hmi:CookingUiComponents:$dependencyVersions.sdk_version"
+        implementation "com.whirlpool.hmi:Vision:$dependencyVersions.sdk_version"
+
+    } else {
+        implementation project(path: ':cooking')
+        implementation project(path: ':cookingsimulator')
+        implementation project(path: ':cookbook')
+        implementation project(path: ':hmiexpansion')
+        implementation project(path: ':uicomponents')
+        implementation project(path: ':kitchentimer')
+        implementation project(path: ':uitesting')
+        implementation project(path: ':cookinguitesting')
+        implementation project(path: ':utils')
+        implementation project(path: ':nucleusbridge')
+        implementation project(path: ':settings')
+        implementation project(path: ':wirelessprobeinterface')
+        implementation project(path: ':blegattmodel')
+        implementation project(path: ':ota')
+        implementation project(path: ':provisioning')
+        implementation project(path: ':Common')
+        implementation project(path: ':diagnostics')
+        implementation project(path: ':cloud')
+        implementation project(path: ':cookingremoteui')
+        implementation project(path: ':fvt_testing')
+        implementation project(path: ':standby')
+        implementation project(path: ':cookinguicomponents')
+        implementation project(path: ':vision')
+    }
+}
+
+configurations.configureEach {
+    resolutionStrategy {
+        eachDependency { details ->
+            if ('org.jacoco' == details.requested.group) {
+                details.useVersion "0.8.11"
+            }
+        }
+    }
+}
+//configurations {
+//    debugImplementation.exclude group: "junit", module: "junit"
+//}

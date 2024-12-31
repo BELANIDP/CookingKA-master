@@ -1,0 +1,113 @@
+{
+  "presentationTree": {
+    "tools_grid": [
+      {
+        "itemId": "control_lock"
+      },
+      {
+        "itemId": "mute_unmute"
+      },
+      {
+        "itemId": "remote_enable"
+      },
+      {
+        "itemId": "turn_table"
+      }
+    ],
+    "tools_menu": [
+      {
+        "itemId": "preferences"
+      },
+      {
+        "itemId": "connectivity"
+      },
+      {
+        "itemId": "info"
+      }
+    ],
+    "preferences": [
+      {
+        "itemId": "time_date"
+      },
+      {
+        "itemId": "sound_volume"
+      },
+      {
+        "itemId": "display_settings"
+      },
+      {
+        "itemId": "regional_settings"
+      },
+      {
+        "itemId": "temperature_calibration"
+      },
+      {
+        "itemId": "restore_setting"
+      }
+    ],
+    "manage_profile": [
+      {
+        "itemId": "profile"
+      }
+    ],
+    "regional_settings": [
+      {
+        "itemId": "language"
+      },
+      {
+        "itemId": "temperature_unit"
+      },
+      {
+        "itemId": "weight_unit"
+      },
+      {
+        "itemId": "date_format"
+      },
+      {
+        "itemId": "time_format"
+      }
+    ],
+    "info": [
+      {
+        "itemId": "demo_mode"
+      },
+      {
+        "itemId": "service_and_support"
+      },
+      {
+        "itemId": "software_terms_and_conditions"
+      },
+      {
+        "itemId": "tutorials"
+      }
+    ],
+    "service_diagnostics": [
+      {
+        "itemId": "error_code_history"
+      },
+      {
+        "itemId": "self_diagnostics"
+      },
+      {
+        "itemId": "component_activation"
+      },
+      {
+        "itemId": "system_info"
+      },
+      {
+        "itemId": "restore_factory_default"
+      }
+    ],
+    "system_info": [
+      {
+        "itemId": "product"
+      },
+      {
+        "itemId": "wifi"
+      },
+      {
+        "itemId": "software"
+      }
+    ]
+  }
+}

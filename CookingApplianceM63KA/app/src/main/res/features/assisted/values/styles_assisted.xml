@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="titleAssistedTextView" parent="BaseTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginTop">32dp</item>
+        <item name="android:layout_marginBottom">24dp</item>
+    </style>
+    <style name="popupTitleAssistedTextView" parent="BaseTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginBottom">24dp</item>
+    </style>
+    <style name="AssistedCookingGuideFragmentScroll" parent="StylePopupTextScrollBar">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">320dp</item>
+        <item name="android:fadingEdgeLength">136dp</item>
+        <item name="android:paddingEnd">48.4dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:importantForAccessibility">no</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:lineSpacingExtra">3sp</item>
+        <item name="android:layout_marginStart">32dp</item>
+    </style>
+    <style name="AssistedCookingGuideFragmentLongTextViewStyle" parent="Style30RegularWhite">
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">208dp</item>
+        <item name="android:text">@string/porkRoastProbConvectRoast_accessory_guide</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+    <style name="AssistedCookingGuidePopupInfoScroll" parent="StylePopupTextScrollBar">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">208dp</item>
+        <item name="android:fadingEdgeLength">106dp</item>
+        <item name="android:paddingEnd">48.4dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:importantForAccessibility">no</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:lineSpacingExtra">3sp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+    </style>
+    <style name="AssistedCookingGuidePopUpLongTextViewStyle" parent="Style30RegularWhite">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">320dp</item>
+        <item name="android:text">@string/porkRoastProbConvectRoast_accessory_guide</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:gravity">start</item>
+    </style>
+    <style name="StylePopupTextScrollBar">
+        <item name="android:requiresFadingEdge">vertical</item>
+        <item name="android:fadeScrollbars">false</item>
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">false</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:scrollbarThumbVertical">@drawable/scrollbar_thumb</item>
+        <item name="android:scrollbarTrackVertical">@drawable/scrollbar_track</item>
+        <item name="android:scrollbarSize">4dp</item>
+        <item name="android:fastScrollEnabled">true</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+    </style>
+    <style name="Style30RegularWhite">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:lineSpacingExtra">1sp</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+</resources>

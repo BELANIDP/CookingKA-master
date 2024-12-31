@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="dateFragment_ktn"
+            type="android.presenter.basefragments.numpad_abstract.AbstractDateNumberPadFragment" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".testwidgets.numpad.DateFragment">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/numPad_margin_top_30dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.whirlpool.hmi.uicomponents.widgets.textview.KeypadTextView
+                android:id="@+id/dateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:max_character_length="@integer/date_profile_input_field_max_length"
+                app:text_active_style="@style/Date_and_Timer_Numpad_values"
+                app:text_blink_cursor="false"
+                app:text_inactive_style="@style/Date_and_Timer_Numpad_unit"
+                app:text_separator="alpha_caps_with_space"
+                app:text_type="date" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_view_backspace_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/numPad_margin_start_30dp"
+                android:background="@drawable/selector_number_pad_back_space_icon" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/errorTextHelper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/error_text_color"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/keyboardview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/str_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/keyboardview" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.keyboard.KeyboardView
+            android:id="@+id/keyboardview"
+            style="@style/Keyboard_Styles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

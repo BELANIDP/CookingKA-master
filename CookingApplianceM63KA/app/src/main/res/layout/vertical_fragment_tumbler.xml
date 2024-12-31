@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="cookingViewModel"
+            type="com.whirlpool.hmi.cooking.viewmodel.CookingViewModel" />
+
+        <variable
+            name="recipeExecutionViewModel"
+            type="com.whirlpool.hmi.cooking.recipeexecution.RecipeExecutionViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_solid_black">
+
+        <android.presenter.customviews.widgets.headerbar.HeaderBarWidget
+            android:id="@+id/headerBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/text_view_helper_text"
+            style="@style/NumPadHelperTextStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/vertical_tumbler_helper_text_margin_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:text="@string/text_error_helper_description"
+            />
+        <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumbler
+            android:id="@+id/tumblerLeft"
+            android:layout_width="@dimen/width_vertical_tumbler"
+            android:layout_height="@dimen/height_vertical_tumbler"
+            android:layout_marginTop="@dimen/margin_top_vertical_tumbler"
+            android:layout_marginBottom="@dimen/margin_bottom_vertical_tumbler"
+            app:baseTumbler_item_layoutHeight="@dimen/vertical_timer_tumbler_item_height"
+            app:baseTumbler_item_layoutWidth="@dimen/width_vertical_tumbler"
+            app:baseTumbler_orientation="vertical"
+            app:baseTumbler_textViewSelectedStyle="@style/VerticalTumblerTextViewSelectedStyle"
+            app:baseTumbler_textViewStyle="@style/VerticalTumblerTextViewStyle"
+            app:layout_constraintBottom_toTopOf="@+id/btnPrimary"
+            app:layout_constraintEnd_toStartOf="@+id/leftView"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerBar"
+            tools:ignore="TextSizeCheck" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/labelLeftTumbler"
+            style="@style/VerticalTumblerLableStyle"
+            android:includeFontPadding="true"
+            android:text="@string/text_label_H"
+            android:textAllCaps="false"
+            android:textColor="@color/color_white"
+            app:layout_constraintBottom_toBottomOf="@id/tumblerLeft"
+            app:layout_constraintStart_toEndOf="@id/tumblerLeft"
+            app:layout_constraintTop_toTopOf="@id/tumblerLeft" />
+
+        <View
+            android:id="@+id/leftView"
+            android:layout_width="@dimen/width_view"
+            android:layout_height="@dimen/height_view"
+            android:layout_marginStart="@dimen/margin_view"
+            android:background="@color/light_grey"
+            app:layout_constraintBottom_toBottomOf="@+id/tumblerLeft"
+            app:layout_constraintEnd_toStartOf="@+id/tumblerCenter"
+            app:layout_constraintStart_toEndOf="@+id/tumblerLeft"
+            app:layout_constraintTop_toTopOf="@+id/tumblerLeft" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumbler
+            android:id="@+id/tumblerCenter"
+            android:layout_width="@dimen/width_vertical_tumbler"
+            android:layout_height="@dimen/height_vertical_tumbler"
+            android:layout_marginStart="@dimen/tumbler_start_margin"
+            android:layout_marginTop="@dimen/margin_top_vertical_tumbler"
+            android:layout_marginBottom="@dimen/margin_bottom_vertical_tumbler"
+            app:baseTumbler_item_layoutHeight="@dimen/vertical_timer_tumbler_item_height"
+            app:baseTumbler_item_layoutWidth="@dimen/width_vertical_tumbler"
+            app:baseTumbler_orientation="vertical"
+            app:baseTumbler_scrollSpeed="@integer/tumbler_scroll_speed"
+            app:baseTumbler_maxFlingVelocity="@integer/tumbler_max_fling_velocity"
+            app:baseTumbler_textViewSelectedStyle="@style/VerticalTumblerTextViewSelectedStyle"
+            app:baseTumbler_textViewStyle="@style/VerticalTumblerTextViewStyle"
+            app:layout_constraintBottom_toTopOf="@+id/btnPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/leftView"
+            app:layout_constraintTop_toBottomOf="@+id/headerBar"
+            tools:ignore="TextSizeCheck" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/labelCenterTumbler"
+            style="@style/VerticalTumblerLableStyle"
+            android:includeFontPadding="false"
+            android:text="@string/text_label_M"
+            android:textAllCaps="false"
+            android:textColor="@color/color_white"
+            app:layout_constraintBottom_toBottomOf="@id/tumblerLeft"
+            app:layout_constraintStart_toEndOf="@id/tumblerCenter"
+            app:layout_constraintTop_toTopOf="@id/tumblerLeft" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintPrimaryRight"
+            android:layout_width="@dimen/width_touch_constraint"
+            android:layout_height="@dimen/height_touch_constraint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <android.presenter.customviews.textButton.TextButton
+            android:id="@+id/btnPrimary"
+            style="@style/PopupTextButtonStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="@dimen/text_button_text_margin"
+            android:padding="@dimen/text_button_padding"
+            tools:text="next" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintGhostLeft"
+            android:layout_width="400dp"
+            android:layout_height="112dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <android.presenter.customviews.textButton.TextButton
+            android:id="@+id/btnGhost"
+            style="@style/PopupTextButtonStyle"
+            android:layout_margin="@dimen/text_button_text_margin"
+            android:padding="@dimen/text_button_padding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="cancel" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintGhostLeftPower"
+            android:layout_width="@dimen/width_touch_constraint"
+            android:layout_height="@dimen/height_touch_constraint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <android.presenter.customviews.textButton.TextButton
+            android:id="@+id/vertical_tumbler_cook_time_left_power"
+            style="@style/PopupTextButtonStyle"
+            android:layout_margin="@dimen/text_button_text_margin"
+            android:padding="@dimen/text_button_padding"
+            android:visibility="gone"
+            app:button_text="@string/text_header_power"
+            app:enable="true"
+            app:is_bottom_view_visible="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

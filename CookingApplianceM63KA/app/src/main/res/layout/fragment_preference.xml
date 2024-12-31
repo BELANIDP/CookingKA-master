@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2020. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+  -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.presenter.customviews.widgets.headerbar.HeaderBarWidget
+            android:id="@+id/headerBarPreferences"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_solid_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"  />
+
+        <com.whirlpool.hmi.uicomponents.widgets.list.ListView
+            android:id="@+id/preferencesRecyclerList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_list_tile_right_text_view"
+            android:layout_marginTop="@dimen/network_settings_recyclerview_top_margin"
+            android:paddingBottom="@dimen/keyboard_key_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/color_black"
+            app:layout_constraintTop_toBottomOf="@id/headerBarPreferences"
+            tools:listitem="@layout/item_list_tile"
+             />
+
+        <android.presenter.customviews.topsheet.TopSheetView
+            android:id="@+id/drwawerbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

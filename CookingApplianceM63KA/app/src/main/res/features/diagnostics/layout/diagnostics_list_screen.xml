@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parent_view"
+        style="@style/DefaultDiagnosticsScreenStyle">
+
+        <android.presenter.customviews.widgets.headerbar.HeaderBarWidget
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_solid_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/text_sub_text"
+            style="@style/ServiceDiagnosticsHelperTextStyle"
+            android:visibility="gone"
+            android:lineSpacingExtra="@dimen/diagnostics_helper_text_line_spacing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_bar" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.list.ListView
+            android:id="@+id/list"
+            style="@style/serviceDiagnosticsListViewStyle"
+            android:layout_marginStart="@dimen/service_diagnostics_content_offset_list"
+            android:layout_marginEnd="@dimen/service_diagnostics_content_offset_list"
+            app:layout_constraintBottom_toTopOf="@id/button_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:paddingBottom="@dimen/dp_20"
+            android:clipToPadding="true"
+            android:clipChildren="true"
+            app:layout_constraintTop_toBottomOf="@+id/text_sub_text" />
+
+        <View
+            android:id="@+id/list_shadow"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/default_diagnostics_list_shadow_layer_height"
+            android:background="@drawable/sample_diag_list_shadow_layer"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/list"
+            app:layout_constraintEnd_toEndOf="@id/list"
+            app:layout_constraintStart_toStartOf="@id/list" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+            android:id="@+id/button_primary"
+            style="@style/TumblerPrimaryBtnStyle"
+            android:layout_marginBottom="@dimen/default_diagnostics_content_offset_common"
+            android:visibility="gone"
+            app:selection_audio="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/list" />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/ServiceDiagnosticsSecondaryBoldTextStyle"
+            android:visibility="gone"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:id="@+id/scrollbar_overlay"
+            android:layout_width="@dimen/diagnostics_scrollbar_overlay_height"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/button_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:clipToPadding="true"
+            android:clipChildren="true"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:background="@color/common_solid_black"
+            app:layout_constraintTop_toBottomOf="@+id/text_sub_text"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

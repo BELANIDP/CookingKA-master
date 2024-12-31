@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="kitchenTimerProgressbarStyle" parent="@android:style/Widget.Holo.Light.ProgressBar.Horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">16dp</item>
+        <item name="android:progressDrawable">@drawable/progress_0_rectangle</item>
+    </style>
+    <style name="kitchenTimerTitleTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/kt_widget_title_text_height</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:lineSpacingExtra">1sp</item>
+    </style>
+    <style name="kitchenTimeRemainingTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:textSize">80sp</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:layout_marginTop">30dp</item>
+    </style>
+    <style name="kitchenTimerAddPlusOneMinTextStyle" parent="BaseStyleTitleText32White">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lineSpacingExtra">1sp</item>
+        <item name="android:background">@drawable/text_view_ripple_effect</item>
+    </style>
+    <style name="StyleKitchenTimerRecyclerView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/kt_widget_height</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:layout_marginBottom">64dp</item>
+    </style>
+    <style name="KTClockTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">250dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textSize">208sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:requiresFadingEdge">none</item>
+        <item name="android:layout_marginStart">150dp</item>
+        <item name="android:layout_marginTop">-100dp</item>
+        <item name="android:textColor">@color/common_solid_white</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+    </style>
+
+    <style name="KTFarViewTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">250dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:textSize">208sp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:requiresFadingEdge">none</item>
+        <item name="android:layout_marginStart">100dp</item>
+        <item name="android:textColor">@color/common_solid_white</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+    </style>
+</resources>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="display_brightness_array">
+        <item>@string/off</item>
+        <item>@string/low</item>
+        <item>@string/med</item>
+        <item>@string/high</item>
+        <item>@string/max</item>
+    </string-array>
+
+    <string-array name="standard_brightness">
+        <item>@string/off</item>
+        <item>@string/low</item>
+        <item>@string/med</item>
+        <item>@string/high</item>
+        <item>@string/max</item>
+    </string-array>
+
+    <string-array name="sound_button">
+        <item>@string/off</item>
+        <item>@string/low</item>
+        <item>@string/med</item>
+        <item>@string/high</item>
+        <item>@string/max</item>
+    </string-array>
+
+    <!-- Appliance assign fav guide array -->
+    <string-array name="appliance_assign_favorites_guide_message_1">
+        <item>@string/appliance_assign_favorites_guide_step_1</item>
+        <item>@string/appliance_assign_favorites_guide_step_2</item>
+    </string-array>
+
+    <string-array name="appliance_assign_favorites_guide_message_2">
+        <item>@string/appliance_assign_favorites_guide_step_3</item>
+        <item>@string/appliance_assign_favorites_guide_step_4</item>
+    </string-array>
+
+    <string-array name="appliance_features_steam_clean_instruction">
+        <item>@string/appliance_features_steam_clean_instruction_1</item>
+        <item>@string/appliance_features_steam_clean_instruction_2</item>
+        <item>@string/appliance_features_steam_clean_instruction_3</item>
+    </string-array>
+
+    <string-array name="demo_mode_video_list">
+        <item>@string/text_see_video_assisted_cooking</item>
+        <item>@string/airFry</item>
+        <item>@string/text_see_video_connect_your_oven</item>
+        <item>@string/text_see_video_favorites</item>
+        <item>@string/probe</item>
+        <item>@string/text_see_video_pizza</item>
+    </string-array>
+
+    <string-array name="demo_mode_video_files">
+        <item>video_assisted_cooking_demo</item>
+        <item>video_airfry_demo</item>
+        <item>video_connect_your_oven_demo</item>
+        <item>video_favorites_demo</item>
+        <item>video_probe_demo</item>
+        <item>video_pizza_demo</item>
+    </string-array>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2020. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/itemContainer"
+        android:layout_width="@dimen/diagnostics_tumbler_item_width"
+        android:layout_height="@dimen/diagnostics_tumbler_item_height"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/tumbler_item_title"
+            style="@style/DiagnosticsCustomViewTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textAlignment="center"/>
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/tumbler_item_subtitle"
+            style="@style/DiagnosticsSecondaryBoldTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:visibility="gone"
+            app:center_by_value="true" />
+    </LinearLayout>
+</layout>

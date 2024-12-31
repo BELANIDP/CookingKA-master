@@ -1,0 +1,2055 @@
+<?xml version="1.0" encoding="utf-8"?><!--suppress NavigationFile -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/clockFragment">
+    <include app:graph="@navigation/provisioning_connect_now_nav_graph" />
+    <include app:graph="@navigation/fvt_navigation_graph" />
+    <include app:graph="@navigation/diagnostics_nav_graph" />
+    <include app:graph="@navigation/ota_nav_graph" />
+
+    <action android:id="@+id/action_global_provisioningBleConnectAoB" app:destination="@id/provisioningConnectNowNavGraph" />
+
+    <action
+        android:id="@+id/action_global_cavity_selection"
+        app:destination="@+id/recipeSelectionFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/recipeSelectionFragment"
+        app:popUpToInclusive="true" />
+
+
+    <action
+        android:id="@+id/global_action_to_otaBusyUpdateAvailableViewHolder"
+        app:destination="@id/otaBusyUpdateAvailableViewHolder" />
+
+    <action
+        android:id="@+id/action_global_navigate_to_fvtFragment"
+        app:destination="@id/fvt_navigation_graph" />
+    <action
+        android:id="@+id/global_action_to_showInstructionFragment"
+        app:destination="@+id/showInstructionFragment"/>
+    <action
+        android:id="@+id/global_action_to_showAssistedInstructionFragment"
+        app:destination="@+id/assistedCookingGuideFragment"/>
+    <action
+        android:id="@+id/global_action_to_single_status_screen"
+        app:destination="@id/single_manual_status" />
+    <action
+        android:id="@+id/global_action_to_double_status_screen"
+        app:destination="@id/double_manual_status" />
+    <action
+        android:id="@+id/global_action_to_single_lower_status_screen"
+        app:destination="@id/single_manual_status_lower" />
+    <action
+        android:id="@+id/global_action_to_preferences"
+        app:destination="@id/preferenceFragment" />
+    <action
+        android:id="@+id/global_action_to_settingsTimeAndDateFragment"
+        app:destination="@id/settingsTimeAndDateFragment" />
+    <action
+        android:id="@+id/global_action_to_provisioning_ble_connect"
+        app:destination="@id/provisioningConnectNowNavGraph" />
+    <action
+        android:id="@+id/global_action_to_clockScreen"
+        app:destination="@id/clockFragment"
+        app:popUpTo="@id/clockFragment"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/global_action_go_to_error_screen"
+        app:destination="@id/fragment_error_screen"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/fragment_error_screen"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/global_action_to_fault_error_type_a"
+        app:destination="@id/faultErrorTypeAFragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/faultErrorTypeAFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_to_probeCyclesSelectionFragment"
+        app:destination="@id/probeCyclesGridFragment"
+        app:launchSingleTop="true" />
+    <action
+        android:id="@+id/global_action_to_self_clean_status"
+        app:destination="@id/selfCleanStatusFragment"
+        app:popUpTo="@id/selfCleanStatusFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/global_action_to_kitchenTimerFragment"
+        app:destination="@id/kitchenTimerFragment" />
+    <!-- Sabbath Related Global Actions -->
+    <action
+        android:id="@+id/global_action_to_single_sabbath_status_screen"
+        app:destination="@id/single_sabbath_status" />
+    <action
+        android:id="@+id/global_action_to_single_sabbath_lower_status_screen"
+        app:destination="@id/single_sabbath_lower_status" />
+    <action
+        android:id="@+id/global_action_to_double_sabbath_status_screen"
+        app:destination="@id/double_sabbath_status" />
+    <!-- Sabbath Related Global Actions -->
+    <action
+        android:id="@+id/global_action_to_demoModeLandingFragment"
+        app:destination="@id/demoModeLandingFragment" />
+
+    <action
+        android:id="@+id/action_global_navigate_to_notificationCenter"
+        app:destination="@id/notificationCenterFragment" />
+    <action
+        android:id="@+id/action_global_navigate_to_notificationEmpty"
+        app:destination="@id/NotificationEmptyFragment" />
+
+    <action
+        android:id="@+id/global_action_to_steamInstructionFragment"
+        app:destination="@id/steamCleanInstructionsFragment" />
+
+    <!-- Favorites related global actions -->
+    <action
+        android:id="@+id/global_action_to_favorite_preview_fragment"
+        app:destination="@+id/favoritesPreviewFragment"
+        />
+    <action
+        android:id="@+id/global_action_to_keyboard_fragment"
+        app:destination="@+id/keyboardFragment"
+        />
+    <!-- Favorites related global actions -->
+
+    <!-- Tools Related Global Actions start-->
+    <action
+        android:id="@+id/global_action_to_connectivity_list_fragment"
+        app:destination="@+id/connectivityListFragment"
+        />
+    <!-- Tools Related Global Actions end-->
+
+    <fragment
+        android:id="@+id/faultErrorTypeAFragment"
+        android:name="android.presenter.fragments.FaultErrorTypeAFragment"
+        android:label="fragment_fault_error_type_a"
+        tools:layout="@layout/fragment_error_type_a" />
+    <fragment
+        android:id="@+id/clockFragment"
+        android:name="android.presenter.fragments.singleoven.ClockFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_clock">
+        <action
+            android:id="@+id/action_clockFragment_to_settingsLandingFragment"
+            app:destination="@id/settingsLandingFragment" />
+        <action
+            android:id="@+id/action_to_recipeSelectionFragment"
+            app:destination="@id/recipeSelectionFragment" />
+        <action
+            android:id="@+id/action_to_kitchenTimerFragment"
+            app:destination="@id/kitchenTimerFragment" />
+        <action
+            android:id="@+id/action_clockFragment_to_demoModeLandingFragment"
+            app:destination="@id/demoModeLandingFragment" />
+        <action
+            android:id="@+id/action_to_controlUnlockFragment"
+            app:destination="@id/controlUnlockFragment" />
+        <action
+            android:id="@+id/action_clockFragment_to_unboxingTechnicianExitModeFragment"
+            app:destination="@id/unboxingTechnicianExitModeFragment" />
+        <action
+            android:id="@+id/action_clockFragment_to_favoriteLandingFragment"
+            app:destination="@id/favoriteLandingFragment" />
+        <action
+            android:id="@+id/action_clockFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_clockFragment_to_otaBusyUpdateAvailableViewHolder"
+            app:destination="@id/otaBusyUpdateAvailableViewHolder" />
+        <action
+            android:id="@+id/action_connectivityListFragment_to_provisioningBleConnect"
+            app:destination="@id/provisioningConnectNowNavGraph" />
+        <action
+            android:id="@+id/action_clockFragment_to_unboxingExploreFeaturesInfoFragment"
+            app:destination="@id/unBoxingExploreFeaturesGuideFragment" />
+        <action
+            android:id="@+id/action_clockFragment_to_otaCompleteNotificationView"
+            app:destination="@id/otaCompleteNotificationView" />
+        <action
+            android:id="@+id/action_ClockNearViewFragment_to_ClockFarViewFragment"
+            app:destination="@id/ClockFarViewFragment" />
+        <action
+            android:id="@+id/action_clockFragment_to_showInactivityVideoFragment"
+            app:destination="@id/showInactivityVideoFragment" />
+        <action
+            android:id="@+id/action_clockFragment_to_fav_preview_fragment"
+            app:destination="@+id/favoritesPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/showInactivityVideoFragment"
+        android:name="android.presenter.fragments.ClockInactiveVideo">
+        <action
+            android:id="@+id/action_showInactivityVideoFragment_to_clockFragment"
+            app:destination="@id/clockFragment"/>
+        <action
+            android:id="@+id/action_to_recipeSelectionFragment"
+            app:destination="@id/recipeSelectionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ClockFarViewFragment"
+        android:name="android.presenter.basefragments.ClockFarViewFragment"
+        android:label="fragmentClockFarView"
+        tools:layout="@layout/fragment_clock_far_view">
+        <action
+            android:id="@+id/action_to_recipeSelectionFragment"
+            app:destination="@id/recipeSelectionFragment" />
+        <action
+            android:id="@+id/action_clockFragment_to_showInactivityVideoFragment"
+            app:destination="@id/showInactivityVideoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/showInstructionFragment"
+        android:name="android.presenter.fragments.ShowInstructionFragment">
+        <action
+            android:id="@+id/action_to_manualMode_temperatureTumblerFragment"
+            app:destination="@id/manualModeTemperatureTumblerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/controlUnlockFragment"
+        android:name="android.presenter.fragments.control_lock.ControlUnlockFragment"
+        android:label="fragment_control_unlock"
+        tools:layout="@layout/fragment_control_unlock" />
+
+    <fragment
+        android:id="@+id/durationSelectionFragment"
+        android:name="android.presenter.fragments.self_clean.DurationSelectionFragment"
+        android:label="fragment_duration_selection"
+        >
+        <action
+            android:id="@+id/action_durationSelectionFragment_to_selfCleanInstructionsFragment"
+            app:destination="@id/selfCleanInstructionsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/selfCleanInstructionsFragment"
+        android:name="android.presenter.fragments.self_clean.SelfCleanInstructionsFragment"
+        android:label="fragment_self_clean_instructions"
+        tools:layout="@layout/fragment_self_clean_instructions">
+        <action
+            android:id="@+id/action_selfCleanInstructionsFragment_to_selfCleanDelayTimeTumblerFragment"
+            app:destination="@id/selfCleanDelayTimeTumblerFragment" />
+        <action
+            android:id="@+id/action_selfCleanInstructionsFragment_to_selfCleanStatusFragment"
+            app:destination="@id/selfCleanStatusFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/selfCleanDelayTimeTumblerFragment"
+        android:name="android.presenter.fragments.self_clean.SelfCleanDelayTimeTumblerFragment"
+        android:label="fragment_self_clean_delay_time_tumbler"
+        tools:layout="@layout/fragment_self_clean_delay_time_tumbler">
+        <action
+            android:id="@+id/action_selfCleanDelayTimeTumblerFragment_to_selfCleanInstructionsFragment"
+            app:destination="@id/selfCleanInstructionsFragment" />
+        <action
+            android:id="@+id/action_selfCleanDelayTimeTumblerFragment_to_settingsLandingFragment"
+            app:destination="@id/settingsLandingFragment"
+            app:popUpTo="@id/settingsLandingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsLandingFragment"
+        android:name="android.presenter.fragments.settings.SettingsLandingFragment"
+        android:label="SettingsLandingFragment">
+        <action
+            android:id="@+id/action_settingsLandingFragment_to_durationSelectionFragmentSOktn"
+            app:destination="@id/durationSelectionFragment" />
+        <action
+            android:id="@+id/action_settingsLandingFragment_to_preferencesFragment"
+            app:destination="@id/preferenceFragment" />
+        <action
+            android:id="@+id/action_settingsLandingFragment_to_clockFragment"
+            app:destination="@id/clockFragment"
+            app:popUpTo="@id/clockFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_settingsLandingFragment_to_provisioningBleConnect"
+            app:destination="@id/provisioningConnectNowNavGraph" />
+        <action
+            android:id="@+id/action_settingsLandingFragment_to_networkDetailsInformationFragment"
+            app:destination="@+id/networkDetailsInformationFragment" />
+
+        <action
+            android:id="@+id/action_settingsLandingFragment_to_toolsConnectivityList"
+            app:destination="@+id/connectivityListFragment" />
+        <action
+            android:id="@+id/action_settingsLandingFragment_to_sabbathSelectionListFragment"
+            app:destination="@id/sabbathSelectionListFragment" />
+        <action
+            android:id="@+id/action_settingsLandingFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+        <action
+            android:id="@+id/action_settingsLandingFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_settingsLandingFragment_to_settingsKnobFragment"
+            app:destination="@id/settingsKnobFragment" />
+        <action
+            android:id="@+id/action_settingsLandingFragment_to_settingsTimeAndDateFragment"
+            app:destination="@id/settingsTimeAndDateFragment" />
+        <action
+            android:id="@+id/action_to_live_preview_fragment"
+            app:destination="@+id/liveLookInFragment" />
+        <action
+            android:id="@+id/action_dummy_dirty_lens_action"
+            app:destination="@+id/liveLookInFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/networkDetailsInformationFragment"
+        android:name="android.presenter.fragments.provisioning.NetworkDetailsInformationFragment"
+        android:label="fragment_network_details_information"
+        tools:layout="@layout/fragment_instruction_widget">
+        <action
+            android:id="@+id/action_networkDetailsInformationFragment_to_settingsLandingFragment"
+            app:destination="@+id/settingsLandingFragment" />
+        <action
+            android:id="@+id/action_networkDetailsInformationFragment_to_connectivityListFragment"
+            app:destination="@id/connectivityListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/preferenceFragment"
+        android:name="android.presenter.fragments.settings.PreferencesFragment"
+        android:label="fragment_preference"
+        tools:layout="@layout/fragment_preference">
+        <action
+            android:id="@+id/action_preferencesFragment_to_settingsTimeAndDateFragment"
+            app:destination="@id/settingsTimeAndDateFragment" />
+        <action
+            android:id="@+id/action_preferencesFragment_to_soundVolumeDisplayFragment"
+            app:destination="@id/soundVolumeDisplayFragment" />
+        <action
+            android:id="@+id/action_preferencesFragment_to_cavity_light"
+            app:destination="@id/cavityFragment" />
+        <action
+            android:id="@+id/action_preferenceFragment_to_settingsRegionalSettingsFragment"
+            app:destination="@+id/settingsRegionalSettingsFragment" />
+        <action
+            android:id="@+id/action_preferenceFragment_to_temperatureCalibrationTumbler"
+            app:destination="@+id/temperatureCalibrationFragment" />
+        <action
+            android:id="@+id/action_preferenceFragment_to_restoreSettingsListFragment"
+            app:destination="@id/restoreSettingsListFragment" />
+        <action
+            android:id="@+id/action_preferenceFragment_to_settingsKnobFragment"
+            app:destination="@id/settingsKnobFragment" />
+        <action
+            android:id="@+id/action_preferenceFragment_to_settingsLandingFragment"
+            app:destination="@id/settingsLandingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="android.presenter.fragments.settings.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info">
+
+        <action
+            android:id="@+id/action_infoFragment_to_settingsSoftwareTermAndConditionFragment"
+            app:destination="@id/settingsSoftwareTermAndConditionFragment" />
+        <action
+            android:id="@+id/action_infoFragment_to_settingsLandingFragment"
+            app:destination="@id/settingsLandingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cavityFragment"
+        android:name="android.presenter.fragments.settings.SettingsCavityLightFragment"
+        android:label="fragment_cavity_lighting"
+        tools:layout="@layout/fragment_cavity_lighting" >
+        <action
+            android:id="@+id/action_cavityFragment_to_preferenceFragment"
+            app:destination="@id/preferenceFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/durationSelectionFragment2"
+        android:name="android.presenter.fragments.self_clean.DurationSelectionFragment"
+        android:label="fragment_duration_selection">
+        <action
+            android:id="@+id/action_durationSelectionFragment2_to_selfCleanInstructionsFragment"
+            app:destination="@id/selfCleanInstructionsFragment" />
+        <action
+            android:id="@+id/action_durationSelectionFragment2_to_settingsLandingFragmentsettingsLandingFragment"
+            app:destination="@id/settingsLandingFragment"
+            app:popUpTo="@id/settingsLandingFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/selfCleanStatusFragment"
+        android:name="android.presenter.fragments.self_clean.SelfCleanStatusFragment">
+        <action
+            android:id="@+id/action_selfCleanStatusFragment_to_clockFragment"
+            app:destination="@id/clockFragment"
+            app:popUpTo="@id/clockFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_selfCleanStatusFragment_to_singleFarView"
+            app:destination="@id/single_far_manual_status">
+            <argument
+                android:name="cavityPosition"
+                android:defaultValue="primaryCavity"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/door_locking_fragment"
+        android:name="android.presenter.fragments.self_clean.DoorLockingIntermediateLoader">
+        <action
+            android:id="@+id/action_goToSelfCleanStatus"
+            app:destination="@id/selfCleanStatusFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipeSelectionFragment"
+        android:name="android.presenter.fragments.singleoven.RecipeSelectionFragment">
+        <action
+            android:id="@+id/action_recipeSelectionFragment_to_recipeInstructionFragment"
+            app:destination="@id/recipeInstructionFragment" />
+        <action
+            android:id="@+id/action_to_assisted_pick_doneness_level"
+            app:destination="@id/assistedPickDoneNessFragment" />
+        <action
+            android:id="@+id/action_to_manualMode_temperatureTumblerFragment"
+            app:destination="@id/manualModeTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_recipeSelectionFragment_to_ConvectCyclesSelectionFragment"
+            app:destination="@id/convectCyclesGridFragment" />
+        <action
+            android:id="@+id/action_to_manualMode_durationSelectionManualModeFragment"
+            app:destination="@id/durationSelectionManualModeFragment" />
+        <action
+            android:id="@+id/action_to_manualMode_cookTimeFragment"
+            app:destination="@id/cookTimeFragment" />
+        <action
+            android:id="@+id/action_manualMode_to_verticalTumblerFragment"
+            app:destination="@id/VerticalTumblerFragment" />
+        <action
+            android:id="@+id/action_recipeSelection_to_assistedMainCategory"
+            app:destination="@id/assisted_food_main_category" />
+        <action
+            android:id="@+id/action_recipeSelectionFragment_to_probeCyclesSelectionFragment"
+            app:destination="@id/probeCyclesGridFragment" />
+        <action
+            android:id="@+id/action_recipeSelectionFragment_to_moreModesCyclesSelectionFragment"
+            app:destination="@id/moreModesCyclesGridFragment" />
+        <action
+            android:id="@+id/action_recipeSelectionFragment_to_createNewFavoriteFragment"
+            app:destination="@id/createNewFavoriteFragment" />
+        <action
+            android:id="@+id/action_recipeSelectionFragment_to_favoriteFromFragment"
+            app:destination="@id/favoriteFromFragment" />
+        <action
+            android:id="@+id/action_recipeSelectionFragment_to_favoriteLandingFragment"
+            app:destination="@id/favoriteLandingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipeInstructionFragment"
+        android:name="android.presenter.fragments.singleoven.RecipeInstructionFragment">
+        <action
+            android:id="@+id/action_to_manualMode_temperatureTumblerFragment"
+            app:destination="@id/manualModeTemperatureTumblerFragment"
+            app:popUpTo="@id/recipeInstructionFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_to_manualMode_durationSelectionManualModeFragment"
+            app:destination="@id/durationSelectionManualModeFragment"
+            app:popUpTo="@id/recipeInstructionFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_to_manualMode_cookTimeFragment"
+            app:destination="@id/cookTimeFragment"
+            app:popUpTo="@id/recipeInstructionFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_manualMode_to_verticalTumblerFragment"
+            app:destination="@id/VerticalTumblerFragment"
+            app:popUpTo="@id/recipeInstructionFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_manualMode_slowRoastFragment"
+            app:destination="@id/convectSlowRoastCyclesGridFragment"
+            app:popUpTo="@id/recipeInstructionFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_to_probeTemperatureTumbler"
+            app:destination="@id/probeTemperatureTumblerFragment"
+            app:popUpTo="@id/recipeInstructionFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/durationSelectionManualModeFragment"
+        android:name="android.presenter.fragments.singleoven.DurationSelectionManualModeFragment">
+        <action
+            android:id="@+id/action_to_delayTumblerFragment"
+            app:destination="@id/delayTumblerFragment" />
+        <action
+            android:id="@+id/action_to_manualMode_cookTimeFragment"
+            app:destination="@id/cookTimeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/manualModeTemperatureTumblerFragment"
+        android:name="android.presenter.fragments.singleoven.ManualModeTemperatureTumblerFragment">
+        <action
+            android:id="@+id/action_to_manualMode_cookTimeFragment"
+            app:destination="@id/cookTimeFragment" />
+        <action
+            android:id="@+id/action_manualMode_to_verticalTumblerFragment"
+            app:destination="@id/VerticalTumblerFragment" />
+        <action
+            android:id="@+id/action_manualModeTemperatureTumblerFragment_to_temperature_numpad"
+            app:destination="@id/temperatureKeyboardSelectionFragment"
+            app:popUpTo="@id/manualModeTemperatureTumblerFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_to_assisted_preview"
+            app:destination="@id/assistedPreviewFragment" />
+        <action
+            android:id="@+id/action_to_delayTumblerFragment"
+            app:destination="@id/delayTumblerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/single_manual_status"
+        android:name="android.presenter.fragments.singleoven.SingleStatusFragment"
+        android:label="SingleStatus">
+        <action
+            android:id="@+id/action_to_recipeSelectionFragment"
+            app:destination="@id/recipeSelectionFragment" />
+        <action
+            android:id="@+id/action_status_to_verticalTumblerFragment"
+            app:destination="@id/VerticalTumblerFragment" />
+        <action
+            android:id="@+id/action_recipeExecutionFragment_to_cookTimeFragment"
+            app:destination="@id/cookTimeFragment" />
+        <action
+            android:id="@+id/action_recipeExecutionFragment_to_liveLookInFragment"
+            app:destination="@id/liveLookInFragment" />
+        <action
+            android:id="@+id/action_to_manualMode_durationSelectionManualModeFragment"
+            app:destination="@id/durationSelectionManualModeFragment" />
+        <action
+            android:id="@+id/action_to_manualMode_temperatureTumblerFragment"
+            app:destination="@id/manualModeTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_manualModeTemperatureTumblerFragment_to_temperature_numpad"
+            app:destination="@id/temperatureKeyboardSelectionFragment" />
+        <action
+            android:id="@+id/action_status_to_assistedDoneNess"
+            app:destination="@id/assistedPickDoneNessFragment" />
+        <action
+            android:id="@+id/action_singleNearView_to_singleFarView"
+            app:destination="@id/single_far_manual_status" />
+        <action
+            android:id="@+id/action_to_probeTemperatureTumbler"
+            app:destination="@id/probeTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_probeTemperatureNumPad"
+            app:destination="@id/probeTemperatureNumberPadFragment" />
+        <action
+            android:id="@+id/action_status_to_manualModeTemperatureTumblerFragment"
+            app:destination="@id/manualModeTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_kitchenTimerFragment"
+            app:destination="@id/kitchenTimerFragment" />
+        <action
+            android:id="@+id/action_to_controlUnlockFragment"
+            app:destination="@id/controlUnlockFragment" />
+        <action
+            android:id="@+id/action_to_delayTumblerFragment"
+            app:destination="@id/delayTumblerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cookTimeFragment"
+        android:name="android.presenter.fragments.singleoven.CookTimeNumberPadFragment">
+        <action
+            android:id="@+id/action_cookTimeFragment_to_verticalTumblerFragment"
+            app:destination="@id/VerticalTumblerFragment"
+            app:popUpTo="@id/cookTimeFragment" />
+        <action
+            android:id="@+id/action_cookTimeFragment_to_clockFragment"
+            app:destination="@id/clockFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_to_assisted_preview"
+            app:destination="@id/assistedPreviewFragment" />
+    </fragment>
+
+    <!-- Live Look Preview-->
+    <fragment
+        android:id="@+id/liveLookInFragment"
+        android:name="core.utils.LiveLookInPreviewFragment">
+
+        <action
+            android:id="@+id/action_liveLookInPreviewFragment_to_settingsLandingFragment"
+            app:destination="@id/settingsLandingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/VerticalTumblerFragment"
+        android:name="android.presenter.fragments.singleoven.VerticalTumblerFragment">
+        <action
+            android:id="@+id/action_verticalTumblerFragment_to_cookTimeFragment"
+            app:destination="@id/cookTimeFragment"
+            app:popUpTo="@id/VerticalTumblerFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_to_assisted_preview"
+            app:destination="@id/assistedPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/convectCyclesGridFragment"
+        android:name="android.presenter.fragments.singleoven.ConvectCyclesSelectionFragment"
+        android:label="ConvectCyclesSelectionFragment">
+        <action
+            android:id="@+id/action_recipeSelectionFragment_to_recipeInstructionFragment"
+            app:destination="@id/recipeInstructionFragment" />
+        <action
+            android:id="@+id/action_to_manualMode_temperatureTumblerFragment"
+            app:destination="@id/manualModeTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_manualMode_durationSelectionManualModeFragment"
+            app:destination="@id/durationSelectionManualModeFragment" />
+        <action
+            android:id="@+id/action_to_manualMode_cookTimeFragment"
+            app:destination="@id/cookTimeFragment" />
+        <action
+            android:id="@+id/action_manualMode_slowRoastFragment"
+            app:destination="@id/convectSlowRoastCyclesGridFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/convectSlowRoastCyclesGridFragment"
+        android:name="android.presenter.fragments.singleoven.ConvectSlowRoastSelectionFragment"
+        android:label="ConvectCyclesSelectionFragment">
+        <action
+            android:id="@+id/action_recipeSelectionFragment_to_recipeInstructionFragment"
+            app:destination="@id/recipeInstructionFragment" />
+        <action
+            android:id="@+id/action_to_manualMode_temperatureTumblerFragment"
+            app:destination="@id/manualModeTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_manualMode_durationSelectionManualModeFragment"
+            app:destination="@id/durationSelectionManualModeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/temperatureKeyboardSelectionFragment"
+        android:name="android.presenter.fragments.singleoven.TemperatureNumberPadFragment">
+        <action
+            android:id="@+id/action_temperatureKeyboardSelectionFragment_to_manualModeTemperatureTumblerFragment"
+            app:destination="@id/manualModeTemperatureTumblerFragment"
+            app:popUpTo="@id/temperatureKeyboardSelectionFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_to_manualMode_cookTimeFragment"
+            app:destination="@id/cookTimeFragment" />
+        <action
+            android:id="@+id/action_to_delayTumblerFragment"
+            app:destination="@id/delayTumblerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/single_far_manual_status"
+        android:name="android.presenter.fragments.singleoven.SingleFarStatusFragment"
+        android:label="SingleFarStatus" />
+
+    <fragment
+        android:id="@+id/fragment_error_screen"
+        android:name="core.jbase.BaseInformationServiceAndSupportFragment">
+        <action
+            android:id="@+id/action_go_to_diagnostics"
+            app:destination="@+id/diagnostics_nav_graph" />
+        <action
+            android:id="@+id/action_goToSelfCleanStatus"
+            app:destination="@id/selfCleanStatusFragment" />
+        <action
+            android:id="@+id/action_fragment_error_screen_to_settingsLandingFragment"
+            app:destination="@id/settingsLandingFragment" />
+        <action
+            android:id="@+id/action_fragment_error_screen_to_settingsInfoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
+    <!-- Assisted Related Navigation Flows -->
+    <fragment
+        android:id="@+id/assisted_food_main_category"
+        android:name="android.presenter.fragments.assisted.FoodMainCategoryGridFragment"
+        android:label="assistedMainFoodCategory">
+        <action
+            android:id="@+id/action_assisted_foodMainCategory_to_foodSubCategory"
+            app:destination="@id/assisted_food_sub_category" />
+        <action
+            android:id="@+id/action_to_manualMode_temperatureTumblerFragment"
+            app:destination="@id/assistedTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_probeTemperatureTumbler"
+            app:destination="@id/assistedProbeTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_manualMode_cookTimeFragment"
+            app:destination="@id/assistedCookTimeFragment" />
+        <action
+            android:id="@+id/action_to_assisted_pick_doneness_level"
+            app:destination="@id/assistedPickDoneNessFragment" />
+        <action
+            android:id="@+id/action_to_assisted_pick_weight"
+            app:destination="@id/assistedPickWeightFragment" />
+        <action
+            android:id="@+id/action_to_assisted_pick_amount"
+            app:destination="@id/assistedPickAmountFragment" />
+        <action
+            android:id="@+id/action_to_assisted_preview"
+            app:destination="@id/assistedPreviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/assisted_food_sub_category"
+        android:name="android.presenter.fragments.assisted.FoodSubCategoryGridFragment"
+        android:label="assistedSubFoodCategory">
+        <action
+            android:id="@+id/action_to_manualMode_temperatureTumblerFragment"
+            app:destination="@id/assistedTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_probeTemperatureTumbler"
+            app:destination="@id/assistedProbeTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_manualMode_cookTimeFragment"
+            app:destination="@id/assistedCookTimeFragment" />
+        <action
+            android:id="@+id/action_to_assisted_pick_doneness_level"
+            app:destination="@id/assistedPickDoneNessFragment" />
+        <action
+            android:id="@+id/action_to_assisted_pick_weight"
+            app:destination="@id/assistedPickWeightFragment" />
+        <action
+            android:id="@+id/action_to_assisted_pick_amount"
+            app:destination="@id/assistedPickAmountFragment" />
+        <action
+            android:id="@+id/action_to_assisted_preview"
+            app:destination="@id/assistedPreviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/assistedPickDoneNessFragment"
+        android:name="android.presenter.fragments.assisted.PickDoneNessLevelFragment"
+        android:label="assistedDoneNess">
+        <action
+            android:id="@+id/action_to_assisted_preview"
+            app:destination="@id/assistedPreviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/assistedPickWeightFragment"
+        android:name="android.presenter.fragments.assisted.PickWeightTumblerFragment"
+        android:label="assistedWeight">
+        <action
+            android:id="@+id/action_to_assisted_pick_doneness_level"
+            app:destination="@id/assistedPickDoneNessFragment" />
+        <action
+            android:id="@+id/action_to_assisted_preview"
+            app:destination="@id/assistedPreviewFragment"
+            app:popUpTo="@id/assistedPreviewFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/assistedPickAmountFragment"
+        android:name="android.presenter.fragments.assisted.PickAmountTumblerFragment"
+        android:label="assistedAmount">
+        <action
+            android:id="@+id/action_to_assisted_pick_doneness_level"
+            app:destination="@id/assistedPickDoneNessFragment" />
+        <action
+            android:id="@+id/action_to_assisted_preview"
+            app:destination="@id/assistedPreviewFragment"
+            app:popUpTo="@id/assistedPreviewFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/assistedCookTimeFragment"
+        android:name="android.presenter.fragments.assisted.CookTimeNumberPadFragment">
+        <action
+            android:id="@+id/action_cookTimeFragment_to_verticalTumblerFragment"
+            app:destination="@id/assistedVerticalTumblerFragment"
+            app:popUpTo="@id/assistedCookTimeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_cookTimeFragment_to_clockFragment"
+            app:destination="@id/clockFragment" />
+        <action
+            android:id="@+id/action_to_assisted_preview"
+            app:destination="@id/assistedPreviewFragment" />
+        <action
+            android:id="@+id/DemoModeCodeFragment"
+            app:destination="@id/clockFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/assistedVerticalTumblerFragment"
+        android:name="android.presenter.fragments.assisted.VerticalTumblerFragment">
+        <action
+            android:id="@+id/action_verticalTumblerFragment_to_cookTimeFragment"
+            app:destination="@id/assistedCookTimeFragment"
+            app:popUpTo="@id/assistedCookTimeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_to_assisted_preview"
+            app:destination="@id/assistedPreviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/assistedTemperatureTumblerFragment"
+        android:name="android.presenter.fragments.assisted.TemperatureTumblerFragment">
+        <action
+            android:id="@+id/action_to_manualMode_cookTimeFragment"
+            app:destination="@id/assistedCookTimeFragment" />
+        <action
+            android:id="@+id/action_manualModeTemperatureTumblerFragment_to_temperature_numpad"
+            app:destination="@id/assistedTemperatureKeyboardSelectionFragment"
+            app:popUpTo="@id/assistedTemperatureTumblerFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_to_assisted_pick_doneness_level"
+            app:destination="@id/assistedPickDoneNessFragment" />
+        <action
+            android:id="@+id/action_to_assisted_preview"
+            app:destination="@id/assistedPreviewFragment" />
+        <action
+            android:id="@+id/action_manualMode_to_verticalTumblerFragment"
+            app:destination="@id/assistedVerticalTumblerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/assistedTemperatureKeyboardSelectionFragment"
+        android:name="android.presenter.fragments.assisted.TemperatureNumberPadFragment">
+        <action
+            android:id="@+id/action_assistedTemperatureNumPad_to_assistedTemperatureTumblerFragment"
+            app:destination="@id/assistedTemperatureTumblerFragment"
+            app:popUpTo="@id/assistedTemperatureKeyboardSelectionFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_to_assisted_pick_doneness_level"
+            app:destination="@id/assistedPickDoneNessFragment" />
+        <action
+            android:id="@+id/action_to_manualMode_cookTimeFragment"
+            app:destination="@id/assistedCookTimeFragment" />
+        <action
+            android:id="@+id/action_to_assisted_preview"
+            app:destination="@id/assistedPreviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/assistedPreviewFragment"
+        android:name="android.presenter.fragments.assisted.AssistedPreviewFragment"
+        android:label="assistedPreview">
+        <action
+            android:id="@+id/action_to_assisted_temperatureTumblerFragment"
+            app:destination="@id/assistedTemperatureTumblerFragment"
+            app:popUpTo="@id/assistedPreviewFragment">
+            <argument
+                android:name="isFromPreviewScreen"
+                android:defaultValue="popToPreview"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_to_assisted_cookTimeFragment"
+            app:destination="@id/assistedCookTimeFragment"
+            app:popUpTo="@id/assistedPreviewFragment">
+            <argument
+                android:name="isFromPreviewScreen"
+                android:defaultValue="popToPreview"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_to_assisted_pick_doneness_level"
+            app:destination="@id/assistedPickDoneNessFragment"
+            app:popUpTo="@id/assistedPreviewFragment">
+            <argument
+                android:name="isFromPreviewScreen"
+                android:defaultValue="popToPreview"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_to_assisted_pick_weight"
+            app:destination="@id/assistedPickWeightFragment"
+            app:popUpTo="@id/assistedPreviewFragment">
+            <argument
+                android:name="isFromPreviewScreen"
+                android:defaultValue="popToPreview"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_to_assisted_pick_amount"
+            app:destination="@id/assistedPickAmountFragment"
+            app:popUpTo="@id/assistedPreviewFragment">
+            <argument
+                android:name="isFromPreviewScreen"
+                android:defaultValue="popToPreview"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_to_assistedProbeTemperatureTumbler"
+            app:destination="@id/assistedProbeTemperatureTumblerFragment"
+            app:popUpTo="@id/assistedPreviewFragment">
+            <argument
+                android:name="isFromPreviewScreen"
+                android:defaultValue="popToPreview"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_to_assisted_cookingGuideFragment"
+            app:destination="@id/assistedCookingGuideFragment"
+            app:popUpTo="@id/assistedPreviewFragment" />
+        <action
+            android:id="@+id/action_to_assistedDelayTumblerFragment"
+            app:destination="@id/assistedDelayTumblerFragment"
+            app:popUpTo="@id/assistedPreviewFragment" >
+            <argument
+                android:name="isFromPreviewScreen"
+                android:defaultValue="popToPreview"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_to_manualMode_durationSelectionManualModeFragment"
+            app:destination="@id/durationSelectionManualModeFragment"
+            app:popUpTo="@id/assistedPreviewFragment">
+            <argument
+                android:name="isFromPreviewScreen"
+                android:defaultValue="popToPreview"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/assistedCookingGuideFragment"
+        android:name="android.presenter.fragments.assisted.AssistedCookingGuideFragment" />
+    <fragment
+        android:id="@+id/assistedDelayTumblerFragment"
+        android:name="android.presenter.fragments.assisted.AssistedDelayTumblerFragment"
+        android:label="assistedDelayTumblerFragment">
+        <action
+            android:id="@+id/action_to_assisted_cookingGuideFragment_from_assistedDelay"
+            app:destination="@id/assistedCookingGuideFragment"/>
+    </fragment>
+    <!-- Temperature Calibration related fragments -->
+    <fragment
+        android:id="@+id/temperatureCalibrationFragment"
+        android:name="android.presenter.fragments.settings.TemperatureCalibrationTumbler" />
+    <!-- probe related Navigations -->
+    <fragment
+        android:id="@+id/probeCyclesGridFragment"
+        android:name="android.presenter.fragments.probe.ProbeRecipeSelectionGridFragment"
+        android:label="ProbeRecipeSelectionGridFragment">
+        <action
+            android:id="@+id/action_probeCyclesGridFragment_to_recipeInstructionFragment"
+            app:destination="@id/recipeInstructionFragment" />
+        <action
+            android:id="@+id/action_to_probeTemperatureTumbler"
+            app:destination="@id/probeTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_recipeSelection_to_assistedMainCategory"
+            app:destination="@id/assisted_food_main_category">
+            <argument
+                android:name="isForProbeRecipeOnly"
+                android:defaultValue="true"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_probeCyclesSelectionFragment_to_favoritesLandingFragment"
+            app:destination="@+id/favoriteLandingFragment" />
+        <action
+            android:id="@+id/action_probeCyclesSelectionFragment_to_historyFragment"
+            app:destination="@+id/historyFragment" />
+    </fragment>
+
+<!-- moreModes related Navigations -->
+    <fragment
+        android:id="@+id/moreModesCyclesGridFragment"
+        android:name="android.presenter.fragments.singleoven.MoreModesCyclesSelectionFragment"
+        android:label="MoreModesCyclesSelectionFragment">
+        <action
+            android:id="@+id/action_recipeSelectionFragment_to_recipeInstructionFragment"
+            app:destination="@id/recipeInstructionFragment" />
+        <action
+            android:id="@+id/action_to_manualMode_temperatureTumblerFragment"
+            app:destination="@id/manualModeTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_manualMode_durationSelectionManualModeFragment"
+            app:destination="@id/durationSelectionManualModeFragment" />
+        <action
+            android:id="@+id/action_to_manualMode_cookTimeFragment"
+            app:destination="@id/cookTimeFragment" />
+        <action
+            android:id="@+id/action_recipeSelectionFragment_to_probeCyclesSelectionFragment"
+            app:destination="@id/probeCyclesGridFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/probeTemperatureTumblerFragment"
+        android:name="android.presenter.fragments.singleoven.ProbeTemperatureTumblerFragment"
+        android:label="ProbeTemperatureTumblerFragment">
+        <action
+            android:id="@+id/action_to_manualMode_temperatureTumblerFragment"
+            app:destination="@id/manualModeTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_probeTemperatureTumblerFragment_to_probeNumPad"
+            app:destination="@id/probeTemperatureNumberPadFragment"
+            app:popUpTo="@id/probeTemperatureTumblerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/probeTemperatureNumberPadFragment"
+        android:name="android.presenter.fragments.singleoven.ProbeTemperatureNumberPadFragment"
+        android:label="probeTemperatureNumberPadFragment">
+        <action
+            android:id="@+id/action_to_manualMode_temperatureTumblerFragment"
+            app:destination="@id/manualModeTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_probeTemperatureNumPadFragment_to_probeTumbler"
+            app:destination="@id/probeTemperatureTumblerFragment"
+            app:popUpTo="@id/probeTemperatureNumberPadFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/assistedProbeTemperatureTumblerFragment"
+        android:name="android.presenter.fragments.assisted.ProbeTemperatureTumblerFragment"
+        android:label="AssistedProbeTemperatureTumblerFragment">
+        <action
+            android:id="@+id/action_to_manualMode_temperatureTumblerFragment"
+            app:destination="@id/assistedTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_probeTemperatureTumblerFragment_to_probeNumPad"
+            app:destination="@id/assistedProbeTemperatureNumberPadFragment"
+            app:popUpTo="@id/assistedProbeTemperatureTumblerFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_to_assisted_preview"
+            app:destination="@id/assistedPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/assistedProbeTemperatureNumberPadFragment"
+        android:name="android.presenter.fragments.assisted.ProbeTemperatureNumberPadFragment"
+        android:label="assistedProbeTemperatureNumberPadFragment">
+        <action
+            android:id="@+id/action_to_manualMode_temperatureTumblerFragment"
+            app:destination="@id/assistedTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_probeTemperatureNumPadFragment_to_probeTumbler"
+            app:destination="@id/assistedProbeTemperatureTumblerFragment"
+            app:popUpTo="@id/assistedProbeTemperatureNumberPadFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_to_assisted_preview"
+            app:destination="@id/assistedPreviewFragment" />
+    </fragment>
+    <!-- Kitchen Timer -->
+    <fragment
+        android:id="@+id/setKTFragment"
+        android:name="android.presenter.fragments.kitchentimer.KitchenTimerTumblerFragment">
+        <action
+            android:id="@+id/action_setKTFragment_to_kitchenTimerFragment"
+            app:destination="@id/kitchenTimerFragment" />
+        <action
+            android:id="@+id/action_setKTFragment_to_setManualKTFragment"
+            app:destination="@id/setManualKTFragment"
+            app:popUpTo="@id/setKTFragment" app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/kitchenTimerFragment"
+        android:name="android.presenter.fragments.kitchentimer.KitchenTumblerListTimerFragment">
+        <action
+            android:id="@+id/action_kitchenTimerFragment_to_setKTFragment"
+            app:destination="@id/setKTFragment" />
+        <action
+            android:id="@+id/action_kitchenTimerFragment_to_setManualKTFragment"
+            app:destination="@id/setManualKTFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setManualKTFragment"
+        android:name="android.presenter.fragments.kitchentimer.KitchenTimerNumpadFragment"
+        android:label="SetManualKTFragment" >
+        <action
+            android:id="@+id/action_setManualKTFragment_to_kitchenTimerFragment"
+            app:destination="@id/kitchenTimerFragment" />
+        <action
+            android:id="@+id/action_setManualKTFragment_to_setKTFragment"
+            app:destination="@id/setKTFragment"
+            app:popUpTo="@id/setManualKTFragment" app:popUpToInclusive="true"/>
+    </fragment>
+    <!-- Kitchen Timer -->
+    <fragment
+        android:id="@+id/DemoModeCodeFragment"
+        android:name="android.presenter.fragments.settings.DemoModeCodeFragment">
+        <action
+            android:id="@+id/action_DemoModeCodeFragment_to_demoModeLandingFragment"
+            app:destination="@id/demoModeLandingFragment" />
+        <action
+            android:id="@+id/action_DemoModeCodeFragment_to_settingsLanguageFragment"
+            app:destination="@id/settingsLanguageFragment" />
+        <action
+            android:id="@+id/action_DemoModeCodeFragment_to_settingsResetRestoreConfirmationFragment"
+            app:destination="@id/settingsResetRestoreConfirmationFragment" />
+    </fragment>
+    <!-- Delay recipe start -->
+    <fragment
+        android:id="@+id/delayTumblerFragment"
+        android:name="android.presenter.fragments.singleoven.DelayTumblerFragment"
+        android:label="DelayTumblerFragment">
+    </fragment>
+    <!-- Delay recipe start -->
+    <!-- Network Settings -->
+    <fragment
+        android:id="@+id/connectivityListFragment"
+        android:name="android.presenter.fragments.settings.ConnectivityListFragment">
+        <action
+            android:id="@+id/action_connectivityListFragment_to_networkDetailsInformationFragment4"
+            app:destination="@id/networkDetailsInformationFragment" />
+        <action
+            android:id="@+id/action_connectivityListFragment_to_networkDetailsInformationFragment"
+            app:destination="@id/networkDetailsInformationFragment" />
+        <action
+            android:id="@+id/action_connectivityListFragment_to_provisioningBleConnect"
+            app:destination="@id/provisioningConnectNowNavGraph" />
+        <action
+            android:id="@+id/action_connectivityListFragment_to_otaBusyUpdateAvailableViewHolder"
+            app:destination="@id/otaBusyUpdateAvailableViewHolder" />
+    </fragment>
+    <!-- SABBATH Related Navigation-->
+    <fragment
+        android:id="@+id/sabbathSelectionListFragment"
+        android:name="android.presenter.fragments.sabbath.SabbathSelectionListFragment"
+        android:label="SabbathSelectionListFragment"
+        tools:layout="@layout/sabbath_list_fragment">
+        <action
+            android:id="@+id/action_recipeSelectionFragment_to_sabbathRecipeInstructionFragment"
+            app:destination="@+id/sabbathInstructionFragment"/>
+        <action
+            android:id="@+id/action_to_sabbathTemperatureTumblerFragment"
+            app:destination="@+id/sabbathTemperatureTumblerFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/sabbathInstructionFragment"
+        android:name="android.presenter.fragments.sabbath.SabbathRecipeInstructionFragment"
+        android:label="SabbathRecipeInstructionFragment">
+        <action
+            android:id="@+id/action_to_sabbathTemperatureTumblerFragment"
+            app:destination="@+id/sabbathTemperatureTumblerFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/sabbathTemperatureTumblerFragment"
+        android:name="android.presenter.fragments.sabbath.SabbathTemperatureTumblerFragment"
+        android:label="SabbathTemperatureTumblerFragment">
+        <action
+            android:id="@+id/action_sabbathTemperatureTumblerFragment_to_sabbathTemperatureNumPadFragment"
+            app:destination="@+id/sabbathTemperatureNumPadFragment"
+            app:popUpTo="@id/sabbathTemperatureTumblerFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_to_sabbathCookTimeTumblerFragment"
+            app:destination="@+id/sabbathCookTimeTumblerFragment"/>
+        <action
+            android:id="@+id/action_to_sabbathCookTimeNumPadFragment"
+            app:destination="@+id/sabbathCookTimeNumPadFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/sabbathTemperatureNumPadFragment"
+        android:name="android.presenter.fragments.sabbath.SabbathTemperatureNumberPadFragment"
+        android:label="SabbathTemperatureNumberPadFragment">
+        <action
+            android:id="@+id/action_sabbathTemperatureNumPadFragment_to_sabbathTemperatureTumblerFragment"
+            app:destination="@+id/sabbathTemperatureTumblerFragment"
+            app:popUpTo="@id/sabbathTemperatureNumPadFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_to_sabbathCookTimeNumPadFragment"
+            app:destination="@+id/sabbathCookTimeNumPadFragment"/>
+        <action
+            android:id="@+id/action_to_sabbathCookTimeTumblerFragment"
+            app:destination="@+id/sabbathCookTimeTumblerFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/sabbathCookTimeTumblerFragment"
+        android:name="android.presenter.fragments.sabbath.SabbathCookTimeVerticalTumblerFragment"
+        android:label="SabbathCookTimeTumblerFragment">
+        <action
+            android:id="@+id/action_verticalTumblerFragment_to_cookTimeFragment"
+            app:destination="@+id/sabbathCookTimeNumPadFragment"
+            app:popUpTo="@id/sabbathCookTimeTumblerFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/sabbathCookTimeNumPadFragment"
+        android:name="android.presenter.fragments.sabbath.SabbathCookTimeNumberPadFragment"
+        android:label="SabbathCookTimeNumPadFragment">
+        <action
+            android:id="@+id/action_cookTimeFragment_to_verticalTumblerFragment"
+            app:destination="@+id/sabbathCookTimeTumblerFragment"
+            app:popUpTo="@id/sabbathCookTimeNumPadFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/single_sabbath_status"
+        android:name="android.presenter.fragments.sabbath.SingleSabbathStatusFragment"
+        android:label="SingleSabbathStatusFragment">
+    </fragment>
+    <!-- SABBATH Related Navigation-->
+    <fragment
+        android:id="@+id/demoModeLandingFragment"
+        android:name="android.presenter.fragments.demo.DemoModeLandingFragment"
+        android:label="DemoModeLandingFragment">
+        <action
+            android:id="@+id/action_demoModeLandingScreen_to_demoModeSeeVideoListFragment"
+            app:destination="@id/demoModeVideoListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/demoModeVideoListFragment"
+        android:name="android.presenter.fragments.demo.DemoModeSeeVideoListFragment"
+        android:label="DemoModeVideoListFragment">
+        <action
+            android:id="@+id/action_demoModeSeeVideoListFragment_to_demoModeVideoPreviewFragment"
+            app:destination="@id/demoModeVideoPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/demoModeVideoPreviewFragment"
+        android:name="android.presenter.fragments.demo.DemoModeVideoPreviewFragment"
+        android:label="DemoModeVideoPreviewFragment" />
+    <fragment
+        android:id="@+id/otaBusyUpdateAvailableViewHolder"
+        android:name="android.presenter.fragments.ota.OtaBusyUpdateAvailableViewHolder"
+        android:label="OtaBusyUpdateAvailableViewHolder" >
+        <action
+            android:id="@+id/action_otaBusyUpdateAvailableViewHolder_to_connectivityListFragment"
+            app:destination="@id/connectivityListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unboxingTechnicianExitModeFragment"
+        android:name="android.presenter.fragments.digital_unboxing.UnBoxingTechnicianExitModeFragment"
+        android:label="UnboxingTechnicianExitModeFragment" />
+
+    <!-- Favorite and History-->
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="android.presenter.fragments.favorites.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_historyFragment_to_favoritesPreviewFragment"
+            app:destination="@id/favoritesPreviewFragment" />
+        <action
+            android:id="@+id/action_historyFragment_to_historyPreviewFragment"
+            app:destination="@id/historyPreviewFragment" />
+        <action
+            android:id="@+id/action_historyFragment_to_notificationCenterFragment"
+            app:destination="@id/notificationCenterFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createNewFavoriteFragment"
+        android:name="android.presenter.fragments.favorites.CreateNewFavoriteFragment"
+        android:label="fragment_create_new_favorite"
+        tools:layout="@layout/fragment_create_new_favorite" >
+        <action
+            android:id="@+id/action_createNewFavoriteFragment_to_favoriteFromFragment"
+            app:destination="@id/favoriteFromFragment" />
+        <action
+            android:id="@+id/action_createNewFavoriteFragment_to_recipeSelectionFragment"
+            app:destination="@id/recipeSelectionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoriteFromFragment"
+        android:name="android.presenter.fragments.favorites.FavoriteFromFragment"
+        android:label="FavoriteFromFragment" >
+        <action
+            android:id="@+id/action_favoriteFromFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_favoriteFromFragment_to_favoriteRecipeSelectionFragment"
+            app:destination="@id/favoriteRecipeSelectionFragment" />
+        <action
+            android:id="@+id/action_favoriteFromFragment_to_assisted_food_main_category"
+            app:destination="@id/favoritesFoodMainCategoryGridFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoriteRecipeSelectionFragment"
+        android:name="android.presenter.fragments.favorites.FavoriteRecipeSelectionFragment"
+        android:label="fragment_favorite_recipe_selection"
+        tools:layout="@layout/fragment_recipe_selection" >
+        <action
+            android:id="@+id/action_recipeSelectionFragment_to_recipeInstructionFragment"
+            app:destination="@id/recipeInstructionFragment" />
+        <action
+            android:id="@+id/action_to_favoritesTemperatureTumblerFragment"
+            app:destination="@id/favoritesTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesTemperatureNumPadFragment"
+            app:destination="@+id/favoritesTemperatureNumPadFragment" />
+        <action
+            android:id="@+id/action_to_favoritesMicrowavePowerTumblerFragment"
+            app:destination="@id/favoritesMicrowavePowerTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesCookTimeTumbler"
+            app:destination="@id/favoritesVerticalTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesCookTimeNumberPadFragment"
+            app:destination="@id/favoritesCookTimeNumberPadFragment" />
+        <action
+            android:id="@+id/action_recipeSelectionFragment_to_ConvectCyclesSelectionFragment"
+            app:destination="@id/favoritesConvectCyclesSelectionFragment" />
+        <action
+            android:id="@+id/action_to_favoritesDurationSelectionTumbler"
+            app:destination="@id/favoritesDurationSelectionManualModeFragment" />
+        <action
+            android:id="@+id/action_recipeSelectionFragment_to_probeCyclesSelectionFragment"
+            app:destination="@id/probeCyclesGridFragment" />
+        <action
+            android:id="@+id/action_recipeSelectionFragment_to_moreModesCyclesSelectionFragment"
+            app:destination="@id/favoritesMoreModesCyclesSelectionFragment" />
+        <action
+            android:id="@+id/action_favoriteRecipeSelectionFragment_to_favoritesFoodMainCategoryGridFragment"
+            app:destination="@id/favoritesFoodMainCategoryGridFragment" />
+        <action
+            android:id="@+id/action_to_favoritesPreviewFragment"
+            app:destination="@id/favoritesPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesPreviewFragment"
+        android:name="android.presenter.fragments.favorites.FavoritesPreviewFragment"
+        android:label="FavoritesPreviewFragment"
+        tools:layout="@layout/fragment_preview">
+        <action
+            android:id="@+id/action_favoritesPreviewFragment_to_favoriteLandingFragment"
+            app:destination="@id/favoriteLandingFragment" />
+
+        <action
+            android:id="@+id/action_favoritesPreviewFragment_to_keyboardFragment"
+            app:destination="@id/keyboardFragment" />
+
+        <action
+            android:id="@+id/action_to_favoritesDurationSelectionTumbler"
+            app:destination="@id/favoritesDurationSelectionManualModeFragment"
+            app:popUpTo="@id/favoritesPreviewFragment">
+            <argument
+                android:name="isFromPreviewScreen"
+                android:defaultValue="popToPreview"
+                app:argType="string" />
+        </action>
+
+        <action
+            android:id="@+id/action_to_favoritesTemperatureNumPadFragment"
+            app:destination="@id/favoritesTemperatureNumPadFragment"
+            app:popUpTo="@id/favoritesPreviewFragment">
+            <argument
+                android:name="isFromPreviewScreen"
+                android:defaultValue="popToPreview"
+                app:argType="string" />
+        </action>
+
+        <action
+            android:id="@+id/action_favoritesPreviewFragment_to_chooseSmallImageFragment"
+            app:destination="@id/chooseSmallImageFragment" />
+        <action
+            android:id="@+id/action_to_delayTumblerFragment"
+            app:destination="@id/delayTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesCookTimeNumberPadFragment"
+            app:destination="@id/favoritesCookTimeNumberPadFragment"
+            app:popUpTo="@id/favoritesPreviewFragment">
+            <argument
+                android:name="isFromPreviewScreen"
+                android:defaultValue="popToPreview"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_to_favoritesMicrowavePowerTumblerFragment"
+            app:destination="@id/favoritesMicrowavePowerTumblerFragment"
+            app:popUpTo="@id/favoritesPreviewFragment">
+            <argument
+                android:name="isFromPreviewScreen"
+                android:defaultValue="popToPreview"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_to_favoritesAmountFragment"
+            app:destination="@id/favoritesAmountTumblerFragment"
+            app:popUpTo="@id/favoritesPreviewFragment">
+            <argument
+                android:name="isFromPreviewScreen"
+                android:defaultValue="popToPreview"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_to_favoritesDoneNessFragment"
+            app:destination="@id/favoritesDoneNessLevelFragment"
+            app:popUpTo="@id/favoritesPreviewFragment">
+            <argument
+                android:name="isFromPreviewScreen"
+                android:defaultValue="popToPreview"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_to_favoritesWeightFragment"
+            app:destination="@id/favoritesWeightTumblerFragment"
+            app:popUpTo="@id/favoritesPreviewFragment">
+            <argument
+                android:name="isFromPreviewScreen"
+                android:defaultValue="popToPreview"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_to_meatProbeTemperatureTumblerFragment"
+            app:destination="@id/favoritesProbeTemperatureTumblerFragment"
+            app:popUpTo="@id/favoritesPreviewFragment">
+            <argument
+                android:name="isFromPreviewScreen"
+                android:defaultValue="popToPreview"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_to_favoriteRecipeSelectionFragment"
+            app:destination="@+id/favoriteRecipeSelectionFragment" />
+        <action
+            android:id="@+id/action_to_favoritesFoodMainCategoryGridFragment"
+            app:destination="@+id/favoritesFoodMainCategoryGridFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoriteLandingFragment"
+        android:name="android.presenter.fragments.favorites.FavoriteLandingFragment"
+        android:label="FavoriteLandingFragment" >
+        <action
+            android:id="@+id/action_favoriteLandingFragment_to_favoriteFromFragment"
+            app:destination="@id/favoriteFromFragment"
+            app:popUpTo="@+id/favoriteFromFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_favoriteLandingFragment_to_recipeSelectionFragment"
+            app:destination="@id/recipeSelectionFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/recipeSelectionFragment"/>
+        <action
+            android:id="@+id/action_favoriteLandingFragment_to_favoritesPreviewFragment"
+            app:destination="@id/favoritesPreviewFragment" />
+        <action
+            android:id="@+id/action_favoriteLandingFragment_to_createNewFavoriteFragment"
+            app:destination="@id/createNewFavoriteFragment" />
+        <action
+            android:id="@+id/action_favoriteLandingFragment_to_HistoryFragment"
+            app:destination="@id/historyFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/keyboardFragment"
+        android:name="android.presenter.fragments.favorites.KeyboardFragment"
+        android:label="KeyboardFragment" >
+        <action
+            android:id="@+id/action_keyboardFragment_to_favoritePreviewFragment"
+            app:destination="@id/favoritesPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chooseImageFragment"
+        android:name="android.presenter.fragments.favorites.ChooseImageFragment"
+        android:label="fragment_choose_image"
+        tools:layout="@layout/fragment_choose_image" >
+        <action
+            android:id="@+id/action_chooseImageFragment_to_favoritesPreviewFragment"
+            app:destination="@id/favoritesPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chooseSmallImageFragment"
+        android:name="android.presenter.fragments.favorites.ChooseSmallImageFragment"
+        android:label="ChooseSmallImageFragment"
+        tools:layout="@layout/fragment_choose_small_image">
+        <action
+            android:id="@+id/action_chooseSmallImageFragment_to_chooseImageFragment"
+            app:destination="@id/chooseImageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/historyPreviewFragment"
+        android:name="android.presenter.fragments.favorites.HistoryPreviewFragment"
+        android:label="HistoryPreviewFragment" >
+        <action
+            android:id="@+id/action_historyPreviewFragment_to_favoritesPreviewFragment"
+            app:destination="@id/favoritesPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesFoodMainCategoryGridFragment"
+        android:name="android.presenter.fragments.favorites.FavoritesFoodMainCategoryGridFragment"
+        android:label="FavoritesFoodMainCategoryGridFragment"
+        >
+        <action
+            android:id="@+id/action_favoritesFoodMainCategoryGridFragment_to_favoritesFoodSubCategoryGridFragment"
+            app:destination="@id/favoritesFoodSubCategoryGridFragment" />
+        <action
+            android:id="@+id/action_to_favoritesTemperatureTumblerFragment"
+            app:destination="@id/favoritesTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesTemperatureNumPadFragment"
+            app:destination="@id/favoritesTemperatureNumPadFragment" />
+        <action
+            android:id="@+id/action_to_favoritesProbeTemperatureTumbler"
+            app:destination="@id/favoritesProbeTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesCookTimeNumberPadFragment"
+            app:destination="@id/favoritesCookTimeNumberPadFragment" />
+        <action
+            android:id="@+id/action_to_favoritesCookTimeTumbler"
+            app:destination="@id/favoritesVerticalTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesDoneNessFragment"
+            app:destination="@id/favoritesDoneNessLevelFragment" />
+        <action
+            android:id="@+id/action_to_favoritesWeightFragment"
+            app:destination="@id/favoritesWeightTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesAmountFragment"
+            app:destination="@id/favoritesAmountTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesDurationSelectionTumbler"
+            app:destination="@id/favoritesDurationSelectionManualModeFragment" />
+        <action
+            android:id="@+id/action_to_favoritesPreviewFragment"
+            app:destination="@id/favoritesPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesFoodSubCategoryGridFragment"
+        android:name="android.presenter.fragments.favorites.FavoritesFoodSubCategoryGridFragment"
+        android:label="FavoritesFoodSubCategoryGridFragment"
+        >
+        <action
+            android:id="@+id/action_to_favoritesTemperatureTumblerFragment"
+            app:destination="@id/favoritesTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesTemperatureNumPadFragment"
+            app:destination="@id/favoritesTemperatureNumPadFragment" />
+        <action
+            android:id="@+id/action_to_favoritesProbeTemperatureTumbler"
+            app:destination="@id/favoritesProbeTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesCookTimeNumberPadFragment"
+            app:destination="@id/favoritesCookTimeNumberPadFragment" />
+        <action
+            android:id="@+id/action_to_favoritesCookTimeTumbler"
+            app:destination="@id/favoritesVerticalTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesDoneNessFragment"
+            app:destination="@id/favoritesDoneNessLevelFragment" />
+        <action
+            android:id="@+id/action_to_favoritesWeightFragment"
+            app:destination="@id/favoritesWeightTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesAmountFragment"
+            app:destination="@id/favoritesAmountTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesDurationSelectionTumbler"
+            app:destination="@id/favoritesDurationSelectionManualModeFragment" />
+        <action
+            android:id="@+id/action_to_favoritesPreviewFragment"
+            app:destination="@id/favoritesPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesTemperatureTumblerFragment"
+        android:name="android.presenter.fragments.favorites.FavoritesTemperatureTumblerFragment">
+        <action
+            android:id="@+id/action_to_favoritesTemperatureNumPadFragment"
+            app:destination="@id/favoritesTemperatureNumPadFragment" />
+        <action
+            android:id="@+id/action_to_favoritesCookTimeNumberPadFragment"
+            app:destination="@id/favoritesCookTimeNumberPadFragment" />
+        <action
+            android:id="@+id/action_to_favoritesCookTimeTumbler"
+            app:destination="@id/favoritesVerticalTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesPreviewFragment"
+            app:destination="@id/favoritesPreviewFragment" />
+        <action
+            android:id="@+id/action_to_favoritesDoneNessFragment"
+            app:destination="@id/favoritesDoneNessLevelFragment" />
+        <action
+            android:id="@+id/action_to_probeTemperatureTumbler"
+            app:destination="@+id/favoritesProbeTemperatureTumblerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesTemperatureNumPadFragment"
+        android:name="android.presenter.fragments.favorites.FavoritesTemperatureNumPadFragment">
+        <action
+            android:id="@+id/action_to_favoritesTemperatureTumblerFragment"
+            app:destination="@id/favoritesTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesCookTimeNumberPadFragment"
+            app:destination="@id/favoritesCookTimeNumberPadFragment" />
+        <action
+            android:id="@+id/action_to_favoritesCookTimeTumbler"
+            app:destination="@id/favoritesVerticalTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesDoneNessFragment"
+            app:destination="@id/favoritesDoneNessLevelFragment" />
+        <action
+            android:id="@+id/action_to_favoritesPreviewFragment"
+            app:destination="@id/favoritesPreviewFragment" />
+        <action
+            android:id="@+id/action_to_probeTemperatureTumbler"
+            app:destination="@+id/favoritesProbeTemperatureTumblerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesProbeTemperatureTumblerFragment"
+        android:name="android.presenter.fragments.favorites.FavoritesProbeTemperatureTumblerFragment">
+
+        <action
+            android:id="@+id/action_to_favoritesProbeTemperatureNumPad"
+            app:destination="@id/favoritesProbeTemperatureNumberPadFragment" />
+        <action
+            android:id="@+id/action_to_favoritesPreviewFragment"
+            app:destination="@id/favoritesPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesProbeTemperatureNumberPadFragment"
+        android:name="android.presenter.fragments.favorites.FavoritesProbeTemperatureNumberPadFragment">
+        <action
+            android:id="@+id/action_to_favoritesProbeTemperatureTumbler"
+            app:destination="@id/favoritesProbeTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesPreviewFragment"
+            app:destination="@id/favoritesPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesCookTimeNumberPadFragment"
+        android:name="android.presenter.fragments.favorites.FavoritesCookTimeNumberPadFragment">
+        <action
+            android:id="@+id/action_to_favoritesCookTimeTumbler"
+            app:destination="@+id/favoritesVerticalTumblerFragment"/>
+        <action
+            android:id="@+id/action_to_favoritesPreviewFragment"
+            app:destination="@id/favoritesPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesVerticalTumblerFragment"
+        android:name="android.presenter.fragments.favorites.FavoritesVerticalTumblerFragment">
+        <action
+            android:id="@+id/action_to_favoritesCookTimeNumberPadFragment"
+            app:destination="@+id/favoritesCookTimeNumberPadFragment" />
+        <action
+            android:id="@+id/action_to_favoritesPreviewFragment"
+            app:destination="@id/favoritesPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesAmountTumblerFragment"
+        android:name="android.presenter.fragments.favorites.FavoritesAmountTumblerFragment">
+        <action
+            android:id="@+id/action_to_favoritesPreviewFragment"
+            app:destination="@id/favoritesPreviewFragment" />
+        <action
+            android:id="@+id/action_to_favoritesDoneNessFragment"
+            app:destination="@id/favoritesDoneNessLevelFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesConvectCyclesSelectionFragment"
+        android:name="android.presenter.fragments.favorites.FavoritesConvectCyclesSelectionFragment">
+        <action
+            android:id="@+id/action_manualMode_slowRoastFragment"
+            app:destination="@id/favoritesConvectSlowRoastSelectionFragment" />
+        <action
+            android:id="@+id/action_to_favoritesTemperatureTumblerFragment"
+            app:destination="@id/favoritesTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesTemperatureNumPadFragment"
+            app:destination="@id/favoritesTemperatureNumPadFragment" />
+        <action
+            android:id="@+id/action_to_favoritesDurationSelectionTumbler"
+            app:destination="@id/favoritesDurationSelectionManualModeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesConvectSlowRoastSelectionFragment"
+        android:name="android.presenter.fragments.favorites.FavoritesConvectSlowRoastSelectionFragment">
+
+        <action
+            android:id="@+id/action_to_favoritesTemperatureTumblerFragment"
+            app:destination="@id/favoritesTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesTemperatureNumPadFragment"
+            app:destination="@id/favoritesTemperatureNumPadFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesDoneNessLevelFragment"
+        android:name="android.presenter.fragments.favorites.FavoritesDoneNessLevelFragment">
+        <action
+            android:id="@+id/action_to_favoritesPreviewFragment"
+            app:destination="@id/favoritesPreviewFragment" />
+        <action
+            android:id="@+id/action_to_favoritesTemperatureNumPadFragment"
+            app:destination="@id/favoritesTemperatureNumPadFragment" />
+        <action
+            android:id="@+id/action_to_favoritesTemperatureTumblerFragment"
+            app:destination="@id/favoritesTemperatureTumblerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesMoreModesCyclesSelectionFragment"
+        android:name="android.presenter.fragments.favorites.FavoritesMoreModesCyclesSelectionFragment">
+        <action
+            android:id="@+id/action_to_favoritesTemperatureTumblerFragment"
+            app:destination="@id/favoritesTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesTemperatureNumPadFragment"
+            app:destination="@id/favoritesTemperatureNumPadFragment" />
+        <action
+            android:id="@+id/action_to_favoritesCookTimeNumberPadFragment"
+            app:destination="@id/favoritesCookTimeNumberPadFragment" />
+        <action
+            android:id="@+id/action_to_favoritesCookTimeTumbler"
+            app:destination="@id/favoritesVerticalTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesDurationSelectionTumbler"
+            app:destination="@id/favoritesDurationSelectionManualModeFragment" />
+        <action
+            android:id="@+id/action_recipeSelectionFragment_to_probeCyclesSelectionFragment"
+            app:destination="@id/favoritesProbeRecipeSelectionGridFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesWeightTumblerFragment"
+        android:name="android.presenter.fragments.favorites.FavoritesWeightTumblerFragment">
+        <action
+            android:id="@+id/action_to_favoritesPreviewFragment"
+            app:destination="@id/favoritesPreviewFragment" />
+        <action
+            android:id="@+id/action_to_favoritesDoneNessFragment"
+            app:destination="@id/favoritesDoneNessLevelFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favoritesMicrowavePowerTumblerFragment"
+        android:name="android.presenter.fragments.favorites.FavoritesMicrowavePowerTumblerFragment">
+        <action
+            android:id="@+id/action_to_favoritesCookTimeNumberPadFragment"
+            app:destination="@id/favoritesCookTimeNumberPadFragment" />
+        <action
+            android:id="@+id/action_to_favoritesCookTimeTumbler"
+            app:destination="@id/favoritesVerticalTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesPreviewFragment"
+            app:destination="@id/favoritesPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id = "@+id/favoritesDurationSelectionManualModeFragment"
+        android:name="android.presenter.fragments.favorites.FavoritesDurationSelectionManualModeFragment">
+        <action
+            android:id="@+id/action_to_favoritesTemperatureTumblerFragment"
+            app:destination="@id/favoritesTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesTemperatureNumPadFragment"
+            app:destination="@id/favoritesTemperatureNumPadFragment" />
+        <action
+            android:id="@+id/action_to_favoritesCookTimeNumberPadFragment"
+            app:destination="@id/favoritesCookTimeNumberPadFragment" />
+        <action
+            android:id="@+id/action_to_favoritesCookTimeTumbler"
+            app:destination="@id/favoritesVerticalTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesPreviewFragment"
+            app:destination="@id/favoritesPreviewFragment" />
+    </fragment>
+
+    <fragment
+        android:id = "@+id/favoritesProbeRecipeSelectionGridFragment"
+        android:name="android.presenter.fragments.favorites.FavoritesProbeRecipeSelectionGridFragment">
+        <action
+            android:id="@+id/action_to_favoritesCookTimeNumberPadFragment"
+            app:destination="@id/favoritesCookTimeNumberPadFragment" />
+        <action
+            android:id="@+id/action_to_favoritesCookTimeTumbler"
+            app:destination="@id/favoritesVerticalTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesTemperatureTumblerFragment"
+            app:destination="@id/favoritesTemperatureTumblerFragment" />
+        <action
+            android:id="@+id/action_to_favoritesTemperatureNumPadFragment"
+            app:destination="@id/favoritesTemperatureNumPadFragment" />
+    </fragment>
+
+    <!-- Favorite and History-->
+
+    <fragment
+        android:id ="@+id/settingsTimeAndDateFragment"
+        android:name="android.presenter.fragments.settings.SettingsTimeAndDateFragment"
+        android:label="SettingsTimeAndDateFragment">
+        <action
+            android:id="@+id/action_settingsTimeAndDateFragment_to_settingsSetTimeTumblerFragment"
+            app:destination="@+id/settingsSetTimeTumblerFragment"/>
+        <action
+            android:id="@+id/action_settingsTimeAndDateFragment_to_settingsSetDateTumblerFragment"
+            app:destination="@+id/settingsSetDateTumblerFragment"/>
+        <action
+            android:id="@+id/action_settingsTimeAndDateFragment_to_settingsLandingFragment"
+            app:destination="@+id/settingsLandingFragment"/>
+        <action
+            android:id="@+id/action_settingsTimeAndDateFragment_to_settingsPreferencesFragment"
+            app:destination="@+id/preferenceFragment"/>
+    </fragment>
+
+    <fragment
+        android:id ="@+id/settingsSetTimeTumblerFragment"
+        android:name="android.presenter.fragments.settings.SettingsSetTimeTumblerFragment"
+        android:label="SettingsSetTimeTumblerFragment">
+        <action
+            android:id="@+id/action_settingsSetTimeTumblerFragment_to_settingsTimeAndDateFragment"
+            app:destination="@+id/settingsTimeAndDateFragment"/>
+        <action
+            android:id="@+id/action_settingsSetTimeTumblerFragment_to_settingsSetTimeNumpadFragment"
+            app:destination="@+id/settingsSetTimeNumpadFragment"/>
+    </fragment>
+    <fragment
+        android:id ="@+id/settingsSetTimeNumpadFragment"
+        android:name="android.presenter.fragments.settings.SettingsSetTimeNumpadFragment"
+        android:label="SettingsSetTimeNumpadFragment">
+        <action
+            android:id="@+id/action_settingsSetTimeNumpadFragment_to_settingsTimeAndDateFragment"
+            app:destination="@+id/settingsTimeAndDateFragment"/>
+        <action
+            android:id="@+id/action_settingsSetTimeNumpadFragment_to_settingsSetTimeTumblerFragment"
+            app:destination="@+id/settingsSetTimeTumblerFragment"/>
+    </fragment>
+    <fragment
+        android:id ="@+id/settingsSetDateTumblerFragment"
+        android:name="android.presenter.fragments.settings.SettingsSetDateTumblerFragment"
+        android:label="SettingsSetDateTumblerFragment">
+        <action
+            android:id="@+id/action_settingsSetDateTumblerFragment_to_settingsTimeAndDateFragment"
+            app:destination="@+id/settingsTimeAndDateFragment"/>
+        <action
+            android:id="@+id/action_settingsSetDateTumblerFragment_to_settingsSetDateNumpadFragment"
+            app:destination="@+id/settingsSetDateNumpadFragment"/>
+    </fragment>
+    <fragment
+        android:id ="@+id/settingsSetDateNumpadFragment"
+        android:name="android.presenter.fragments.settings.SettingsSetDateNumpadFragment"
+        android:label="SettingsSetDateNumpadFragment">
+        <action
+            android:id="@+id/action_settingsSetDateNumpadFragment_to_settingsTimeAndDateFragment"
+            app:destination="@+id/settingsTimeAndDateFragment"/>
+        <action
+            android:id="@+id/action_settingsSetDateNumpadFragment_to_settingsSetDateTumblerFragment"
+            app:destination="@+id/settingsSetDateTumblerFragment"/>
+    </fragment>
+    <fragment
+        android:id ="@+id/soundVolumeDisplayFragment"
+        android:name="android.presenter.fragments.settings.SettingsSoundDisplayFragment"
+        android:label="SoundVolumeDisplayFragment">
+        <action
+            android:id="@+id/action_soundVolumeFragment_to_intensitySelectionFragment"
+            app:destination="@+id/intensitySelectionFragment"/>
+        <action
+            android:id="@+id/action_SoundVolumeDisplayFragment_to_settingsLandingFragment"
+            app:destination="@+id/settingsLandingFragment" />
+        <action
+            android:id="@+id/action_SoundVolumeDisplayFragment_to_settingsPreferencesFragment"
+            app:destination="@+id/preferenceFragment"/>
+    </fragment>
+
+    <fragment
+        android:id ="@+id/intensitySelectionFragment"
+        android:name="android.presenter.fragments.settings.IntensitySelectionFragment"
+        android:label="IntensitySelectionFragment">
+        <action
+            android:id="@+id/action_intensitySelectionFragment_to_soundVolumeDisplayFragment"
+            app:destination="@+id/soundVolumeDisplayFragment"/>
+    </fragment>
+
+       <fragment
+        android:id="@+id/restoreSettingsListFragment"
+        android:name="android.presenter.fragments.settings.RestoreSettingsListFragment"
+        android:label="RestoreSettingsListFragment" >
+        <action
+            android:id="@+id/action_restoreSettingsListFragment_to_settingsResetRestoreConfirmationFragment"
+            app:destination="@id/settingsResetRestoreConfirmationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsResetRestoreConfirmationFragment"
+        android:name="android.presenter.fragments.settings.SettingsResetRestoreConfirmationFragment"
+        android:label="SettingsResetRestoreConfirmationFragment" >
+    <action
+        android:id="@+id/action_settingsResetRestoreConfirmationFragment_to_demoModeCodeFragment"
+        app:destination="@id/DemoModeCodeFragment" />
+    <action
+        android:id="@+id/action_settingsResetRestoreConfirmationFragment_to_restoreSettingsListFragment"
+        app:destination="@id/restoreSettingsListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsKnobFragment"
+        android:name="android.presenter.fragments.settings.SettingsKnobFragment"
+        android:label="SettingsKnobFragment" >
+        <action
+            android:id="@+id/action_settingsKnobFragment_to_preferenceFragment"
+            app:destination="@id/preferenceFragment" />
+        <action
+            android:id="@+id/action_settingsKnobFragment_to_settingsLandingFragment"
+            app:destination="@id/settingsLandingFragment" />
+        <action
+            android:id="@+id/action_settingsKnobFragment_to_settingsKnobSwapFragment"
+            app:destination="@id/settingsKnobSwapFragment" />
+        <action
+            android:id="@+id/action_settingsKnobFragment_to_settingsKnobFunctionInfoFragment"
+            app:destination="@id/settingsKnobInfoFragment" />
+        <action
+            android:id="@+id/action_settingsKnobFragment_to_settingsAssignFavoriteToKnobFragment"
+            app:destination="@id/settingsAssignFavoriteToKnobFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsKnobSwapFragment"
+        android:name="android.presenter.fragments.settings.SettingsKnobSwapFragment"
+        android:label="SettingsKnobSwapFragment" >
+        <action
+            android:id="@+id/action_settingsKnobSwapFragment_to_settingsKnobFragment"
+            app:destination="@id/settingsKnobFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsKnobInfoFragment"
+        android:name="android.presenter.fragments.settings.SettingsKnobInfoFragment"
+        android:label="SettingsKnobInfoFragment" >
+        <action
+            android:id="@+id/action_settingsKnobInfoFragment_to_settingsKnobFragment"
+            app:destination="@id/settingsKnobFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsAssignFavoriteToKnobFragment"
+        android:name="android.presenter.fragments.settings.SettingsAssignFavoriteToKnobFragment"
+        android:label="SettingsAssignFavoriteToKnobFragment" >
+        <action
+            android:id="@+id/action_settingsAssignFavoriteToKnobFragment_to_settingsKnobFragment"
+            app:destination="@id/settingsKnobFragment" />
+        <action
+            android:id="@+id/action_settingsAssignFavoriteToKnobFragment_to_assignKnobFavoritesListFragment"
+            app:destination="@id/assignKnobFavoritesListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/assignKnobFavoritesListFragment"
+        android:name="android.presenter.fragments.settings.AssignKnobFavoritesListFragment"
+        android:label="AssignKnobFavoritesListFragment" >
+        <action
+            android:id="@+id/action_assignKnobFavoritesListFragment_to_settingsAssignFavoriteToKnobFragment"
+            app:destination="@id/settingsAssignFavoriteToKnobFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsSoftwareTermAndConditionFragment"
+        android:name="android.presenter.fragments.settings.SettingsSoftwareTermAndConditionFragment"
+        android:label="SettingsSoftwareTermAndConditionFragment" >
+        <action
+            android:id="@+id/action_settingsSoftwareTermAndConditionFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsRegionalSettingsFragment"
+        android:name="android.presenter.fragments.settings.SettingsRegionalSettingsFragment"
+        android:label="SettingsRegionalSettingsFragment" >
+        <action
+            android:id="@+id/action_settingsRegionalSettingsFragment_to_settingsLanguageFragment"
+            app:destination="@id/settingsLanguageFragment" />
+        <action
+            android:id="@+id/action_settingsRegionalSettingsFragment_to_preferencesFragment"
+            app:destination="@id/preferenceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsLanguageFragment"
+        android:name="android.presenter.fragments.settings.SettingsLanguageFragment"
+        android:label="SettingsLanguageFragment" >
+        <action
+            android:id="@+id/action_settingsLanguageFragment_to_settingsRegionalSettingsFragment"
+            app:destination="@id/settingsRegionalSettingsFragment" />
+        <action
+            android:id="@+id/action_settingsLanguageFragment_to_demoModeCodeFragment"
+            app:destination="@id/DemoModeCodeFragment" />
+    </fragment>
+    <fragment
+
+        android:id="@+id/notificationCenterFragment"
+        android:name="android.presenter.fragments.NotificationCenterFragment"
+        android:label="NotificationCenterFragment" >
+        <action
+            android:id="@+id/action_notificationCenterFragment_to_unBoxingExploreFeaturesGuideFragment"
+            app:destination="@id/unBoxingExploreFeaturesGuideFragment" />
+        <action
+            android:id="@+id/action_notificationCenterFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_notificationCenterFragment_to_otaCompleteNotificationView"
+            app:destination="@id/otaCompleteNotificationView" />
+        <action
+            android:id="@+id/action_connectivityListFragment_to_provisioningBleConnect"
+            app:destination="@id/provisioningConnectNowNavGraph" />
+        <action
+            android:id="@+id/action_notificationCenterFragment_to_fav_preview_fragment"
+            app:destination="@+id/favoritesPreviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/NotificationEmptyFragment"
+        android:name="android.presenter.fragments.NotificationsEmpty"
+        android:label="NotificationEmptyFragment" >
+        <action
+            android:id="@+id/action_NotificationEmptyFragment_to_clockFragment"
+            app:destination="@id/clockFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/unBoxingExploreFeaturesGuideFragment"
+        android:name="android.presenter.fragments.digital_unboxing.UnBoxingExploreFeaturesGuideFragment"
+        android:label="UnBoxingExploreFeaturesGuideFragment" >
+        <action
+            android:id="@+id/action_unBoxingExploreFeaturesGuideFragment_to_clockFragment"
+            app:destination="@id/clockFragment" />
+        <action
+            android:id="@+id/action_unBoxingExploreFeaturesGuideFragment_to_notificationCenterFragment"
+            app:destination="@id/notificationCenterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/otaCompleteNotificationView"
+        android:name="android.presenter.fragments.OtaCompleteNotificationView"
+        android:label="OtaCompleteNotificationView" >
+        <action
+            android:id="@+id/action_otaCompleteNotificationView_to_clockFragment"
+            app:destination="@id/clockFragment" />
+        <action
+            android:id="@+id/action_otaCompleteNotificationView_to_notificationCenterFragment"
+            app:destination="@id/notificationCenterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/steamCleanInstructionsFragment"
+        android:name="android.presenter.fragments.steamclean.SteamCleanInstructionsFragment"
+        android:label="SteamCleanInstructionsFragment">
+    <action
+        android:id="@+id/action_to_delayTumblerFragment"
+        app:destination="@id/delayTumblerFragment" />
+    </fragment>
+</navigation>

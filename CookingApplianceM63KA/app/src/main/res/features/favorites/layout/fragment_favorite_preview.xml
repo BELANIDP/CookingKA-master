@@ -1,0 +1,66 @@
+<?xml version="1.0" ?><!--Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_solid_black">>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageMainBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <android.presenter.customviews.widgets.headerbar.HeaderBarWidget
+        android:id="@+id/headerBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.whirlpool.hmi.uicomponents.widgets.list.ListView
+        android:id="@+id/recycler_view_preview"
+        style="@style/StylePreviewRecyclerView"
+        app:orientation="horizontal"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        style="@style/LinearLayoutPrimaryBtnStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/btnPrimary"
+            style="@style/TumblerPrimaryBtnStyle"
+            tools:text="next"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        style="@style/LinearLayoutGhostBtnStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/btnLeft"
+            style="@style/TumblerGhostBtnStyle"
+            tools:text="cancel"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

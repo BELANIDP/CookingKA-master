@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fav_margin_top">16dp</dimen>
+    <dimen name="fav_history_item_height">96dp</dimen>
+    <dimen name="fav_history_item_padding">32dp</dimen>
+    <dimen name="fav_history_item_margin_end">56dp</dimen>
+    <dimen name="fav_text_margin_top">148dp</dimen>
+    <dimen name="fav_text_margin_bottom">196dp</dimen>
+    <dimen name="fav_text_margin_side">151dp</dimen>
+    <dimen name="fav_from_item_height">96dp</dimen>
+    <dimen name="fav_from_item_width">790dp</dimen>
+    <dimen name="fav_from_item_margin">32dp</dimen>
+    <dimen name="fav_landing_item_height">112dp</dimen>
+    <dimen name="fav_item_divider_height">16dp</dimen>
+    <dimen name="fav_offset">32dp</dimen>
+    <dimen name="fav_page_margin">16dp</dimen>
+    <dimen name="fav_image_height_width">250dp</dimen>
+    <dimen name="fav_image_padding">12dp</dimen>
+    <dimen name="fav_holder_stepper_width">270dp</dimen>
+    <dimen name="fav_stepper_width">180dp</dimen>
+    <dimen name="fav_margin_bottom">50dp</dimen>
+    <dimen name="fav_8dp">8dp</dimen>
+    <dimen name="fav_size">10dp</dimen>
+    <dimen name="fav_divider_height">2dp</dimen>
+    <dimen name="fav_probe_icon_margin_end">108dp</dimen>
+    <dimen name="fav_small_image_margin_start">20dp</dimen>
+    <dimen name="fav_small_image_margin_top">52dp</dimen>
+    <dimen name="fav_small_image_margin_end">32dp</dimen>
+    <dimen name="fav_keyboard_margin_top">-17dp</dimen>
+    <dimen name="fav_image_width">240dp</dimen>
+    <dimen name="fav_max_width">380dp</dimen>
+    <dimen name="fav_delete_icon_hw">64dp</dimen>
+    <dimen name="fav_holder_width">152dp</dimen>
+</resources>

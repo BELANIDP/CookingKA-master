@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2023. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+  -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@color/common_solid_black">
+
+        <RadioGroup
+            android:id="@+id/format_selection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/date_time_item_margin_top"
+            android:layout_marginBottom="@dimen/date_time_item_margin_top"
+            android:orientation="horizontal"
+            android:transitionGroup="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RadioButton
+                android:id="@+id/left_format_selection"
+                style="@style/RegionalToggleSwitchNormalStyle"
+                android:drawableBottom="@drawable/ic_selector_date_time_format"
+                android:button="@null"
+                android:gravity="center|top"
+                android:text="@string/text_12_HR" />
+
+            <RadioButton
+                android:id="@+id/right_format_selection"
+                style="@style/RegionalToggleSwitchDisableStyle"
+                android:drawableBottom="@drawable/ic_selector_date_time_format"
+                android:button="@null"
+                android:gravity="center|top"
+                android:text="@string/text_24_HR" />
+        </RadioGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

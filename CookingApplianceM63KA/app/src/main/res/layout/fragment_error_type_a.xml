@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?><!--/*
+    * ************************************************************************************************
+    * ***** Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+    * ************************************************************************************************
+    */-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bg_error_type_a_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_solid_black">
+
+        <ImageView
+            android:id="@+id/iv_error_type_a"
+            style="@style/ErrorTypeAImageViewStyle"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        
+        <TextView
+            android:id="@+id/tv_error_type_a_title"
+            style="@style/ErrorTypeATitleStyle"
+            app:layout_constraintTop_toBottomOf="@id/iv_error_type_a"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Lorem Ipsum" />
+
+        <TextView
+            android:id="@+id/tv_error_type_a_description"
+            style="@style/ErrorTypeADescriptionStyle"
+            app:layout_constraintTop_toBottomOf="@id/tv_error_type_a_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus egestas ipsum urna, nec consectetur ligula ultricies laoreet. Praesent vel auctor dui. Curabitur pulvinar interdum massa in volutpat. Nam luctus commodo eros, vel tincidunt arcu sollicitudin vitae. Fusce dignissim dolor nunc, sit amet vehicula risus consectetur at."/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

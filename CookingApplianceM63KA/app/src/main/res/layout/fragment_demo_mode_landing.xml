@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clock_screen"
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="400dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="227dp"
+                android:layout_marginTop="220dp"
+                android:background="@drawable/logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/exit_demo"
+                style="@style/StyleDemoImageExit"
+                android:background="@drawable/ic_close"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/exit_demo_1"
+                style="@style/StyleDemoExit"
+                android:layout_width="wrap_content"
+                android:text="@string/text_exit_demo"
+                android:gravity="center_horizontal|center_vertical"
+                android:includeFontPadding="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+                android:id="@+id/see_videos"
+                style="@style/StyleDemoSeeVideos"
+                android:background="@drawable/text_view_ripple_effect"
+                android:gravity="center_horizontal|center_vertical"
+                android:includeFontPadding="false"
+                android:textAllCaps="false"
+                android:text="@string/text_button_see_videos"
+                app:backgroundTint="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+                android:id="@+id/explore_product"
+                style="@style/StyleDemoExplore"
+                android:background="@drawable/text_view_ripple_effect"
+                android:gravity="center_horizontal|center_vertical"
+                android:includeFontPadding="false"
+                android:textAllCaps="false"
+                android:text="@string/text_button_explore_product"
+                app:backgroundTint="@null"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

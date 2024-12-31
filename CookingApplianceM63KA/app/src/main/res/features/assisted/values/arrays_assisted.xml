@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="assisted_rack_positions">
+        <item>@array/rack_position_1</item>
+        <item>@array/rack_position_2</item>
+        <item>@array/rack_position_3</item>
+    </string-array>
+
+    <!--image for recipes on rack position 3 - R.drawable.rack_guide_position_3-->
+    <string-array name="rack_position_3">
+        <item>beefRoastProbConveBake</item>
+        <item>chickPiecesProbConveRoast</item>
+        <item>turkeBreasProbConveRoast</item>
+        <item>biscuConvBake</item>
+        <item>cookiConvBake</item>
+        <item>cakeConvBake</item>
+        <item>cupcaConvBake</item>
+        <item>brownConvBake</item>
+        <item>lasagConvBake</item>
+        <item>casseConvBake</item>
+        <item>beefProbRoast</item>
+        <item>meatLoafRoas</item>
+        <item>chickPieceProbBake</item>
+        <item>salmoFilleProbeRoast</item>
+        <item>tunaSteakProbRoast</item>
+        <item>swordSteakProbRoast</item>
+        <item>fishFilleProbRoast</item>
+        <item>potatBakedProbRoast</item>
+        <item>potatRoastBake</item>
+        <item>pizzaFrozenCook3</item>
+    </string-array>
+
+    <!--image for recipes on rack position 2 - R.drawable.rack_guide_position_2-->
+    <string-array name="rack_position_2">
+        <item>chickWholeProbConveRoast</item>
+        <item>porkRoastProbConvectRoast</item>
+        <item>lambCrownProbConveRoast</item>
+        <item>porkHamProbConveRoast</item>
+        <item>lambCrownProbRoast</item>
+        <item>porkHamProbRoast</item>
+        <item>porkLoinProbRoast</item>
+        <item>chickWholeStuffProbBake</item>
+        <item>chickWholeProbConveRoast</item>
+    </string-array>
+
+    <!--image for recipes on rack position 1 - R.drawable.rack_guide_position_1-->
+    <string-array name="rack_position_1">
+        <item>turkeWholeProbConveRoast</item>
+        <item>turkeWholeProbRoast</item>
+    </string-array>
+
+    <string-array name="utensils_crisper_pan_convention_grid">
+        <item>chickenNuggetsFrozenCrispFry</item>
+        <item>chickWingsFrozeMWCrisp</item>
+        <item>fishBreadStickFrozeMWCrisp</item>
+        <item>biscuConvBake</item>
+        <item>cinnaRollsConvBake</item>
+    </string-array>
+
+    <string-array name="utensils_convention_grid">
+        <item>chickenPiecesMwBroilGrill</item>
+        <item>chickenPiecesCrisp</item>
+        <item>potatBakedMW</item>
+        <item>sweetPotatConvBake</item>
+        <item>lasagnaBakeAndMicrowave</item>
+    </string-array>
+
+    <string-array name="utensils_crisper_pan">
+        <item>baconCrispPreheatAndTurn</item>
+        <item>sausageAndWurstelCrispTurn</item>
+        <item>potatoFriesFrozenCrispFry</item>
+        <item>pizzaThickFrozeMWCrisp</item>
+        <item>pizzaThinFrozeMWCrisp</item>
+    </string-array>
+
+    <string-array name="utensils_steamer">
+        <item>fishFilletSteamedMicrowave</item>
+        <item>vegetFrozeHUMMW</item>
+        <item>vegetableSoftSteamedMicrowave</item>
+        <item>vegetableRootsSteamedMicrowave</item>
+    </string-array>
+
+    <string-array name="serving_tips">
+        <item>@array/serving_tip_1</item>
+        <item>@array/serving_tip_2</item>
+        <item>@array/serving_tip_3</item>
+    </string-array>
+
+    <string-array name="serving_tip_1">
+        <item>beefRoastProbConveBake</item>
+        <item>chickPiecesProbConveRoast</item>
+        <item>chickWholeProbConveRoast</item>
+        <item>turkeBreasProbConveRoast</item>
+        <item>turkeWholeProbConveRoast</item>
+        <item>porkRoastProbConvectRoast</item>
+        <item>lambCrownProbConveRoast</item>
+        <item>porkHamProbConveRoast</item>
+        <item>beefProbRoast</item>
+        <item>lambCrownProbRoast</item>
+        <item>porkhamprobconveroast</item>
+        <item>porkLoinProbRoast</item>
+        <item>chickWholeStuffProbBake</item>
+        <item>turkeWholeProbRoast</item>
+    </string-array>
+
+    <string-array name="serving_tip_2">
+        <item>chickPieceProbBake</item>
+        <item>salmoFilleProbeRoast</item>
+        <item>tunaSteakProbRoast</item>
+        <item>swordSteakProbRoast</item>
+        <item>fishFilleProbRoast</item>
+    </string-array>
+
+    <string-array name="serving_tip_3">
+        <item>lasagnaBakeAndMicrowave</item>
+    </string-array>
+
+    <string-array name="assisted_cook_guide_common_messages">
+        <item>@array/assisted_cook_guide_common_message_1</item>
+        <item>@array/assisted_cook_guide_common_message_2</item>
+        <item>@array/assisted_cook_guide_common_message_3</item>
+        <item>@array/assisted_cook_guide_common_message_4</item>
+        <item>@array/assisted_cook_guide_common_message_5</item>
+    </string-array>
+
+    <string-array name="assisted_cook_guide_common_message_1">
+        <item>chickWholeProbConveRoast</item>
+        <item>turkeBreasProbConveRoast</item>
+        <item>turkeWholeProbConveRoast</item>
+        <item>porkRoastProbConvectRoast</item>
+        <item>lambCrownProbConveRoast</item>
+        <item>porkHamProbConveRoast</item>
+        <item>beefWholeProbConveRoast</item>
+        <item>salmoFilleProbeRoast</item>
+        <item>tunaSteakProbRoast</item>
+        <item>swordSteakProbRoast</item>
+        <item>fishFilleProbRoast</item>
+        <item>chickPiecesProbConveRoast</item>
+        <item>chickWholeProbConveBake</item>
+        <item>chickBreasProbConveRoast</item>
+    </string-array>
+
+    <string-array name="assisted_cook_guide_common_message_2">
+        <item>biscuConvBake</item>
+        <item>cookiConvBake</item>
+        <item>cakeConvBake</item>
+        <item>brownConvBake</item>
+        <item>breadGentleSteamConvectBake</item>
+        <item>lasagFrozeConvBake</item>
+        <item>casseConvBake</item>
+        <item>baconBake</item>
+        <item>chickNuggeAirFry</item>
+        <item>fishSticksFrozeAirFry</item>
+        <item>vegetRoastAirFry</item>
+        <item>pizzaRollsAirFry</item>
+        <item>frencFriesFrozeAirFry</item>
+        <item>frencFriesAirFry</item>
+        <item>pizzaFrozenCook3</item>
+        <item>pizzaBake</item>
+    </string-array>
+
+    <string-array name="assisted_cook_guide_common_message_3">
+        <item>vegetFrozeHUMMW_MW</item>
+        <item>vegetableSoftSteamedMicrowave_MW</item>
+        <item>vegetableRootsSteamedMicrowave_MW</item>
+    </string-array>
+
+    <string-array name="assisted_cook_guide_common_message_4">
+        <item>butterSoften_MW</item>
+        <item>iceCreamSoften_MW</item>
+        <item>creamCheeseSoften_MW</item>
+    </string-array>
+
+    <string-array name="assisted_cook_guide_common_message_5">
+        <item>butterMelt_MW</item>
+        <item>chocolateMelt_MW</item>
+    </string-array>
+
+    <string-array name="assisted_utensil_guide_common_messages">
+        <item>@array/assisted_utensil_guide_common_message_1</item>
+        <item>@array/assisted_utensil_guide_common_message_2</item>
+        <item>@array/assisted_utensil_guide_common_message_3</item>
+        <item>@array/assisted_utensil_guide_common_message_4</item>
+    </string-array>
+
+    <string-array name="assisted_utensil_guide_common_message_1">
+        <item>chickenNuggetsFrozenCrispFry</item>
+        <item>chickWingsFrozeMWCrisp</item>
+        <item>fishBreadStickFrozeMWCrisp</item>
+        <item>cinnaRollsConvBake</item>
+    </string-array>
+
+    <string-array name="assisted_utensil_guide_common_message_2">
+        <item>chickenPiecesMwBroilGrill</item>
+        <item>chickenPiecesCrisp</item>
+        <item>potatBakedMW</item>
+        <item>sweetPotatConvBake</item>
+        <item>biscuConvBake</item>
+        <item>lasagnaBakeAndMicrowave</item>
+    </string-array>
+
+    <string-array name="assisted_utensil_guide_common_message_3">
+        <item>baconCrispPreheatAndTurn</item>
+        <item>sausageAndWurstelCrispTurn</item>
+        <item>potatoFriesFrozenCrispFry</item>
+        <item>pizzaThickFrozeMWCrisp</item>
+        <item>pizzaThinFrozeMWCrisp</item>
+    </string-array>
+
+    <string-array name="assisted_utensil_guide_common_message_4">
+        <item>fishFilletSteamedMicrowave</item>
+        <item>vegetFrozeHUMMW</item>
+        <item>vegetableSoftSteamedMicrowave</item>
+        <item>vegetableRootsSteamedMicrowave</item>
+    </string-array>
+
+    <string-array name="assisted_accessory_guide_common_messages">
+        <item>@array/assisted_accessory_guide_common_message_1</item>
+        <item>@array/assisted_accessory_guide_common_message_2</item>
+        <item>@array/assisted_accessory_guide_common_message_3</item>
+        <item>@array/assisted_accessory_guide_common_message_4</item>
+    </string-array>
+
+    <string-array name="assisted_accessory_guide_common_message_1">
+        <item>chickenNuggetsFrozenCrispFry_MW</item>
+        <item>baconCrispPreheatAndTurn_MW</item>
+        <item>potatoFriesFrozenCrispFry_MW</item>
+        <item>biscuConvBake_MW</item>
+        <item>cinnaRollsConvBake_MW</item>
+        <item>chickNuggeToas_MW</item>
+        <item>frencFriesFrozeAirFry_MW</item>
+        <item>brussSprouRoastToas_MW</item>
+        <item>baconAirFry_MW</item>
+    </string-array>
+
+    <string-array name="assisted_accessory_guide_common_message_2">
+        <item>chickenPiecesMwBroilGrill_MW</item>
+        <item>chickenPiecesCrisp_MW</item>
+    </string-array>
+
+    <string-array name="assisted_accessory_guide_common_message_3">
+        <item>fishFilletSteamedMicrowave_MW</item>
+        <item>vegetFrozeHUMMW_MW</item>
+        <item>vegetableSoftSteamedMicrowave_MW</item>
+        <item>vegetableRootsSteamedMicrowave_MW</item>
+    </string-array>
+
+    <string-array name="assisted_accessory_guide_common_message_4">
+        <item>potatBakedMW_MW</item>
+        <item>sweetPotatConvBake_MW</item>
+    </string-array>
+
+</resources>

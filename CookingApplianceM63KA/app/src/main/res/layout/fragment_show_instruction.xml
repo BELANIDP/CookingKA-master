@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_layout"
+        style="@style/StyleManualModelInstructionScreen">
+
+        <android.presenter.customviews.widgets.headerbar.HeaderBarWidget
+            android:id="@+id/header_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_solid_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            style="@style/StyleManualModeInstructionScrollView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_bar">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/description_text"
+                style="@style/StyleManualModeInstructionText" />
+
+        </androidx.core.widget.NestedScrollView>
+
+        <android.presenter.customviews.textButton.IconTextButton
+            android:id="@+id/text_button_right_ok"
+            style="@style/StyleManualModeRightButton"
+            app:icon_button_text="@string/text_button_ok"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="visible"
+            android:background="@drawable/text_view_ripple_effect"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

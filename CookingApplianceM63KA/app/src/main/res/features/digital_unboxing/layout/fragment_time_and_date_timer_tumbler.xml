@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_solid_black"
+    tools:background="@color/colorWhite">
+
+    <android.presenter.customviews.widgets.headerbar.HeaderBarWidget
+        android:id="@+id/headerBar"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/vertical_tumbler_header_bar_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_helper_red_warning_text"
+        style="@style/DiagnosticsHelperTextStyle"
+        android:textColor="@color/notification_red"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/tumblerNumeric"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/kt_tumbler_height"
+        android:layout_marginTop="@dimen/vertical_tumbler_margin_top"
+        android:background="@drawable/kt_tumbler_background_gradient"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerBar">
+
+        <RelativeLayout
+            android:id="@+id/startTumbler"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+
+            <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumbler
+                android:id="@+id/tumblerNumericBasedHours"
+                android:layout_width="@dimen/kt_tumbler_width"
+                android:layout_height="@dimen/kt_tumbler_height"
+                app:baseTumbler_infiniteScroll="true"
+                app:baseTumbler_item_layoutHeight="@dimen/vertical_tumbler_item_parent_height"
+                app:baseTumbler_item_layoutWidth="@dimen/unboxing_tumbler_item_width"
+                app:baseTumbler_nonSelectedFadeMode="none"
+                app:baseTumbler_orientation="vertical"
+                app:baseTumbler_scrollSpeed="@integer/tumbler_scroll_speed"
+                app:baseTumbler_maxFlingVelocity="@integer/tumbler_max_fling_velocity"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextSizeCheck" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/centerDivider"
+            android:layout_width="@dimen/width_view"
+            android:layout_height="@dimen/height_view"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/vertical_tumbler_margin"
+            android:layout_toEndOf="@+id/startTumbler"
+            android:background="@color/light_grey" />
+
+        <RelativeLayout
+            android:id="@+id/centerTumbler"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumbler
+                android:id="@+id/tumblerNumericBasedMins"
+                android:layout_width="@dimen/kt_tumbler_width"
+                android:layout_height="@dimen/kt_tumbler_height"
+                android:background="@color/common_transparent"
+                app:baseTumbler_item_layoutHeight="@dimen/vertical_tumbler_item_parent_height"
+                app:baseTumbler_item_layoutWidth="@dimen/unboxing_tumbler_item_width"
+                app:baseTumbler_nonSelectedFadeMode="none"
+                app:baseTumbler_orientation="vertical"
+                app:baseTumbler_scrollSpeed="@integer/tumbler_scroll_speed"
+                app:baseTumbler_maxFlingVelocity="@integer/tumbler_max_fling_velocity"
+                tools:ignore="TextSizeCheck" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/endDivider"
+            android:layout_width="@dimen/width_view"
+            android:layout_height="@dimen/height_view"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/vertical_tumbler_margin"
+            android:layout_toEndOf="@+id/centerTumbler"
+            android:background="@color/light_grey" />
+
+        <RelativeLayout
+            android:id="@+id/endTumbler"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumbler
+                android:id="@+id/tumblerNumericBasedSeconds"
+                android:layout_width="@dimen/kt_tumbler_width"
+                android:layout_height="@dimen/kt_tumbler_height"
+                app:baseTumbler_infiniteScroll="false"
+                app:baseTumbler_item_layoutHeight="@dimen/vertical_tumbler_item_size_width"
+                app:baseTumbler_item_layoutWidth="@dimen/vertical_tumbler_item_size_height"
+                app:baseTumbler_nonSelectedFadeMode="none"
+                app:baseTumbler_orientation="vertical"
+                app:baseTumbler_scrollSpeed="@integer/tumbler_scroll_speed"
+                app:baseTumbler_maxFlingVelocity="@integer/tumbler_max_fling_velocity"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextSizeCheck" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <View
+        android:id="@+id/gradient"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constrainedHeight="@bool/_true"
+        app:layout_constraintTop_toBottomOf="@+id/headerBar"
+        app:layout_constraintBottom_toTopOf="@+id/startNowText"
+        android:background="@drawable/ic_vertical_tumbler_gradient"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <android.presenter.customviews.textButton.TextButton
+        android:id="@+id/startNowText"
+        style="@style/PopupTextButtonStyle"
+        android:layout_marginEnd="@dimen/text_button_text_margin"
+        android:layout_marginBottom="@dimen/text_button_text_margin_bottom"
+        android:padding="@dimen/text_button_padding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <include
+        android:id="@+id/date_time_format_widget"
+        layout="@layout/include_datetime_format_layout"
+        android:transitionGroup="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

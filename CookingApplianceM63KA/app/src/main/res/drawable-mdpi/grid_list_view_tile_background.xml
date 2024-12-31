@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/grid_list_item_width"
+    android:height="@dimen/grid_list_item_height"
+    android:viewportWidth="480"
+    android:viewportHeight="110">
+    <group>
+        <clip-path android:pathData="M4 0H476C478.209 0 480 1.79086 480 4V106C480 108.209 478.209 110 476 110H4C1.79086 110 0 108.209 0 106V4C0 1.79086 1.79086 0 4 0Z" />
+        <path
+            android:fillColor="#252525"
+            android:pathData="M0 0V110H480V0" />
+    </group>
+</vector>
+

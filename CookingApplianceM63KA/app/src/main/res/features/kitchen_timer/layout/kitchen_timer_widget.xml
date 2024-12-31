@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/kitchen_timer_widget"
+            android:layout_width="@dimen/kt_widget_width"
+            android:layout_height="@dimen/kt_widget_height"
+            android:background="@color/popup_container_background_grey"
+            android:padding="@dimen/kt_widget_padding">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/kt_widget_title_layout_height"
+                android:id="@+id/holderTimerNameTime"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+                    android:id="@+id/tvKitchenTimerName"
+                    style="@style/kitchenTimerTitleTextStyle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Timer 1" />
+
+                <com.whirlpool.hmi.kitchentimer.uicomponents.widgets.KitchenTimerTextView
+                    android:id="@+id/tvKitchenTimeRemaining"
+                    style="@style/kitchenTimeRemainingTextStyle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvKitchenTimerName"
+                    tools:text="19:59" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="@dimen/kt_widget_bottom_layout_width"
+                android:layout_height="@dimen/kt_widget_bottom_layout_height"
+                app:layout_constraintTop_toBottomOf="@+id/holderTimerNameTime"
+                android:layout_marginTop="@dimen/kt_widget_margin_top"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ProgressBar
+                    android:id="@+id/kitchenTimerProgressBar"
+                    style="@style/kitchenTimerProgressbarStyle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivKitchenTimerPause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/ic_kt_pause" />
+
+                <android.presenter.customviews.textButton.TextButton
+                    android:id="@+id/tvKitchenTimerAddOneMin"
+                    style="@style/kitchenTimerAddPlusOneMinTextStyle"
+                    app:button_text="@string/text_add_1_min"
+                    app:enable="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivKitchenTimerCancel"
+                    app:layout_constraintStart_toEndOf="@id/ivKitchenTimerPause"
+                    app:layout_constraintTop_toTopOf="@+id/ivKitchenTimerPause" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivKitchenTimerCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@drawable/ic_kt_cancel" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/kt_widget_knob_underline_height"
+                android:layout_marginBottom="@dimen/kt_widget_knob_underline_height"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <View
+                    android:id="@+id/ktKnobPauseUnderline"
+                    tools:visibility="visible"
+                    android:layout_width="@dimen/kt_widget_knob_underline_imageview_width"
+                    android:layout_height="@dimen/kt_widget_knob_underline_height"
+                    android:background="@color/statusIconColor"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <View
+                    android:id="@+id/ktKnobOneMinUnderline"
+                    tools:visibility="visible"
+                    android:layout_width="@dimen/kt_widget_knob_underline_one_min_width"
+                    android:layout_height="@dimen/kt_widget_knob_underline_height"
+                    android:background="@color/statusIconColor"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ktKnobCancelUnderline"
+                    app:layout_constraintStart_toEndOf="@id/ktKnobPauseUnderline"
+                    app:layout_constraintTop_toTopOf="@+id/ktKnobPauseUnderline" />
+
+                <View
+                    android:id="@+id/ktKnobCancelUnderline"
+                    tools:visibility="visible"
+                    android:layout_width="@dimen/kt_widget_knob_underline_imageview_width"
+                    android:layout_height="@dimen/kt_widget_knob_underline_height"
+                    android:background="@color/statusIconColor"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

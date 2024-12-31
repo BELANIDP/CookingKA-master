@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="@dimen/walnut_divider_minus_size"
+        android:right="@dimen/walnut_divider_minus_size"
+        android:top="@dimen/walnut_divider_minus_size">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="@dimen/walnut_divider_size"
+                android:color="@color/walnut" />
+        </shape>
+    </item>
+</layer-list>

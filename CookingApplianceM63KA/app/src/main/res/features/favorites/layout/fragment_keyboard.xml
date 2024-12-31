@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_solid_black"
+        tools:context="android.presenter.fragments.favorites.HistoryFragment">
+
+        <android.presenter.customviews.widgets.headerbar.HeaderBarWidget
+            android:id="@+id/headerBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/textHelperText"
+            style="@style/FavoritesHelperText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fav_keyboard_margin_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/text_name_favorite_helper_text"
+            app:layout_constraintTop_toBottomOf="@id/headerBar" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.keyboard.KeyboardView
+            android:id="@+id/keyboard"
+            style="@style/AlphaNumericKeyBoardStyle"
+            app:keyBackground="@drawable/ic_keyboard_key_background"
+            app:keyboardAlpha="@xml/service_keyboard_alpha_local"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textHelperText"
+            app:providePredictionCandidates="false"
+            app:showKeyPopups="false" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

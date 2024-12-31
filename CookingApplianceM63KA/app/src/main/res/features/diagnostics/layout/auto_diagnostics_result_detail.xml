@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2020. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/DiagnosticsScreenStyle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.presenter.customviews.widgets.headerbar.HeaderBarWidget
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_solid_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/error_detail"
+            style="@style/AutoDiagnosticsResultDetailComponent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/diagnostics_result_details_margin_top"
+            android:paddingStart="@dimen/diagnostics_result_details_padding_start"
+            android:paddingTop="@dimen/diagnostics_result_details_padding_top"
+            android:paddingEnd="@dimen/diagnostics_result_details_padding_end"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_bar">
+
+            <TextView
+                android:id="@+id/errorTitleText"
+                style="@style/AutoDiagnosticsResultDetailErrorNameTextStyle"
+                android:layout_width="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scroll_view"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                style="@style/PopupInfoScrollStyle"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_marginTop="@dimen/diagnostics_result_details_top_margin"
+                android:layout_marginStart="@dimen/auto_diagnostics_result_margin_start"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/errorTitleText">
+
+                <TextView
+                    android:id="@+id/errorDescriptionText"
+                    style="@style/AutoDiagnosticsResultDetailErrorDescriptionTextStyle"
+                    android:layout_marginStart="@dimen/_0dp"
+                    android:layout_height="match_parent"
+                    android:layout_width="@dimen/diagnostics_result_details_max_width"
+                    android:gravity="start"
+                    android:visibility="visible"
+                    tools:visibility="visible" />
+            </androidx.core.widget.NestedScrollView>
+
+
+            <ImageView
+                android:id="@+id/iconError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/text_button_enter_diagnostics"
+                android:src="@drawable/diagnostics_alert_red"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

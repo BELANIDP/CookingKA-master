@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/*
+** Copyright 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL
+*/
+-->
+
+<Keyboard xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:keyDivider="@drawable/ic_keyboard_divider"
+    app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+    app:verticalGap="@dimen/keyboard_symbol_vertical_gap_local">
+
+    <!-- Row 1 Start -->
+    <Row>
+        <Key
+            app:codes="49"
+            app:horizontalGap="@dimen/keyboard_key1_gap_margin"
+            app:keyEdgeFlags="left"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="7.5%p"
+            app:keyLabel="1"
+            />
+        <Key
+            app:codes="50"
+            app:horizontalGap="@dimen/keyboard_key2_gap_margin"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="7.5%p"
+            app:keyLabel="2"
+            />
+        <Key
+            app:codes="51"
+            app:horizontalGap="@dimen/keyboard_key3_gap_margin"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="7.5%p"
+            app:keyLabel="3"
+            />
+        <Key
+            app:codes="52"
+            app:horizontalGap="@dimen/keyboard_key2_gap_margin"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="7.5%p"
+            app:keyLabel="4"
+            />
+        <Key
+            app:codes="53"
+            app:horizontalGap="@dimen/keyboard_key5_gap_margin"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="7.5%p"
+            app:keyLabel="5"
+            />
+        <Key
+            app:codes="54"
+            app:horizontalGap="@dimen/keyboard_key3_gap_margin"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="7.5%p"
+            app:keyLabel="6"
+            />
+        <Key
+            app:codes="55"
+            app:horizontalGap="@dimen/keyboard_key2_gap_margin"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="7.5%p"
+            app:keyLabel="7"
+            />
+        <Key
+            app:codes="56"
+            app:horizontalGap="@dimen/keyboard_key3_gap_margin"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="7.5%p"
+            app:keyLabel="8"
+            />
+        <Key
+            app:codes="57"
+            app:horizontalGap="@dimen/keyboard_key4_gap_margin"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="7.5%p"
+            app:keyLabel="9"
+            />
+        <Key
+            app:codes="48"
+            app:keyEdgeFlags="right"
+            app:horizontalGap="@dimen/keyboard_key5_gap_margin"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="7.5%p"
+            app:keyLabel="0"
+            />
+    </Row>
+    <!-- Row 1 End -->
+
+    <!-- Row 2 Start -->
+    <Row>
+
+        <Key
+            app:codes="45"
+            app:horizontalGap="@dimen/keyboard_key6_gap_margin"
+            app:keyEdgeFlags="left"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="7.5%p"
+            app:keyLabel="-"
+            />
+        <Key
+            app:codes="47"
+            app:horizontalGap="@dimen/keyboard_symbol_horizontal_gap_local"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="7.5%p"
+            app:keyLabel="/"
+            />
+        <Key
+            app:codes="58"
+            app:horizontalGap="@dimen/keyboard_key2_gap_margin"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="7.5%p"
+            app:keyLabel=":"
+            />
+        <Key
+            app:codes="59"
+            app:horizontalGap="@dimen/keyboard_key3_gap_margin"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="7.5%p"
+            app:keyLabel=";"
+            />
+        <Key
+            app:codes="40"
+            app:horizontalGap="@dimen/keyboard_symbol_horizontal_gap_local"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="7.5%p"
+            app:keyLabel="("
+            />
+        <Key
+            app:codes="41"
+            app:horizontalGap="@dimen/keyboard_symbol_horizontal_gap_local"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="7.5%p"
+            app:keyLabel=")"
+            />
+        <Key
+            app:codes="95"
+            app:horizontalGap="@dimen/keyboard_key2_gap_margin"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="7.5%p"
+            app:keyLabel="_"
+            />
+        <Key
+            app:codes="38"
+            app:horizontalGap="@dimen/keyboard_symbol_horizontal_gap_local"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="7.5%p"
+            app:keyLabel="&amp;"
+            />
+        <Key
+            app:codes="34"
+            app:horizontalGap="@dimen/keyboard_symbol_horizontal_gap_local"
+            app:keyEdgeFlags="right"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="7.5%p"
+            app:keyLabel="&quot;"
+            />
+
+    </Row>
+    <!-- Row 2 End -->
+
+    <!-- Row 3 Start -->
+    <Row>
+        <Key
+            app:codes="126"
+            app:keyLabel="~"
+            app:keyEdgeFlags="left"
+            app:horizontalGap="@dimen/keyboard_key7_gap_margin"
+            app:keyWidth="6.5%p"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"/>
+        <Key
+            app:codes="92"
+            app:isSticky="false"
+            app:horizontalGap="@dimen/keyboard_key8_gap_margin"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="6.5%p"
+            app:keyLabel="\\"
+            />
+        <Key
+            app:codes="46"
+            app:horizontalGap="@dimen/keyboard_key9_gap_margin"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="6.5%p"
+            app:keyLabel="."
+            />
+        <Key
+            app:codes="44"
+            app:horizontalGap="@dimen/keyboard_key10_gap_margin"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="6.5%p"
+            app:keyLabel=","
+            />
+        <Key
+            app:codes="63"
+            app:horizontalGap="@dimen/keyboard_key11_gap_margin"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="6.5%p"
+            app:keyLabel="\?"
+            />
+        <Key
+            app:codes="33"
+            app:horizontalGap="@dimen/keyboard_key12_gap_margin"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="6.5%p"
+            app:keyLabel="!"
+            />
+        <Key
+            app:codes="39"
+            app:keyEdgeFlags="right"
+            app:horizontalGap="@dimen/keyboard_key13_gap_margin"
+            app:keyHeight="@dimen/keyboard_symbol_key_height_local"
+            app:keyWidth="6.5%p"
+            app:keyLabel="‘"
+            />
+    </Row>
+    <!-- Row 3 End -->
+
+    <!-- Row 4 Start -->
+    <Row app:rowEdgeFlags="bottom">
+        <Key
+            app:codes="-2"
+            app:keyEdgeFlags="left"
+            app:keyHeight="@dimen/keyboard_special_key_height"
+            app:keyIcon="@drawable/ic_keyboad_abc_btn"
+            app:keyWidth="28%p"
+             />
+
+        <Key
+            app:codes="32"
+            app:isRepeatable="true"
+            app:keyHeight="@dimen/keyboard_special_key_height"
+            app:keyIcon="@drawable/ic_keyboad_space_btn"
+            app:keyWidth="37.5%p"
+             />
+
+        <Key
+            app:codes="-4"
+            app:keyEdgeFlags="right"
+            app:keyHeight="@dimen/keyboard_special_key_height"
+            app:keyIcon="@drawable/key_enter_selector"
+            app:keyWidth="28%p"
+             />
+    </Row>
+    <!-- Row 4 End -->
+</Keyboard>

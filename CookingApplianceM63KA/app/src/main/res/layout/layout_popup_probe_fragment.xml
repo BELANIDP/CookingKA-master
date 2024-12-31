@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?><!--/*
+    * ************************************************************************************************
+    * ***** Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+    * ************************************************************************************************
+    */-->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/transparent_background_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_solid_black">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/popup_with_scroll"
+            style="@style/PopupViewStyle"
+            android:paddingTop="@dimen/_0dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:id="@+id/flOvenCavityIcon"
+                style="@style/BaseStyleImage"
+                android:layout_marginStart="@dimen/header_bar_numpad_padding_32"
+                android:layout_marginTop="@dimen/manual_mode_description_margin_top"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivOvenCavity"
+                    style="@style/OvenCavityIconStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:ignore="ContentDescription" />
+            </FrameLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_title"
+                style="@style/PopupTextViewBoundsErrorStyle"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/manual_mode_description_margin_top"
+                android:layout_marginHorizontal="@dimen/probe_margin_popup_container_margin_and_padding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/app_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_center_title"
+                style="@style/PopupTextViewBoundsStyle"
+                android:layout_marginBottom="@dimen/text_view_center_top_bottom_margin"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/app_name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_center_description"
+                style="@style/PopupDescriptionTextViewStyle"
+                android:layout_marginTop="@dimen/text_view_center_top_bottom_margin"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@string/app_name" />
+
+            <ProgressBar
+                android:id="@+id/popup_progressbar"
+                style="@style/PopupProgressBarStyle"
+                android:layout_width="match_parent"
+                app:layout_constraintBottom_toTopOf="@+id/text_view_notification"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_notification"
+                style="@style/PopupNotificationTextViewStyle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="@string/app_name" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_view_text_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="@dimen/probe_guidance_left_image_margin_top"
+                android:layout_marginStart="@dimen/header_bar_numpad_padding_32"
+                app:srcCompat="@drawable/img_assisted_cooking_guide_leaf_small"
+                android:visibility="gone"/>
+
+            <ScrollView
+                android:id="@+id/scroll_view"
+                style="@style/PopupInfoScrollStyle"
+                android:visibility="visible"
+                android:layout_marginHorizontal="@dimen/probe_margin_scrollview_margin_and_padding"
+                app:layout_constraintBottom_toTopOf="@id/text_button_right"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/image_view_text_center"
+                app:layout_constraintTop_toBottomOf="@+id/text_view_title">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_description"
+                    style="@style/PopupDescriptionTextViewStyle"
+                    android:layout_marginTop="@dimen/probe_popup_description_margin_top"
+                    android:gravity="center" />
+            </ScrollView>
+
+            <android.presenter.customviews.textButton.TextButton
+                android:id="@+id/text_button_left"
+                style="@style/PopupTextButtonStyle"
+                app:button_text="@string/app_name"
+                app:enable="true"
+                app:is_bottom_view_visible="false"
+                android:layout_marginBottom="@dimen/diagnostics_btn_margin_bottom"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scroll_view" />
+
+            <android.presenter.customviews.textButton.TextButton
+                android:id="@+id/text_button_center"
+                style="@style/PopupTextButtonStyle"
+                app:button_text="@string/app_name"
+                app:enable="true"
+                app:is_bottom_view_visible="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="@dimen/diagnostics_btn_margin_bottom"
+                app:layout_constraintTop_toBottomOf="@+id/scroll_view" />
+
+            <android.presenter.customviews.textButton.TextButton
+                android:id="@+id/text_button_right"
+                style="@style/PopupTextButtonStyle"
+                app:button_text="@string/app_name"
+                app:enable="true"
+                app:is_bottom_view_visible="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="@dimen/diagnostics_btn_margin_bottom"
+                app:layout_constraintTop_toBottomOf="@+id/scroll_view" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

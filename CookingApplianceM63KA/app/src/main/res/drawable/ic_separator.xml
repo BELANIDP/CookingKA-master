@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:top="1dp" android:bottom="50dp">
+        <shape android:shape="rectangle">
+            <size
+                android:width="2dp"
+                android:height="2dp" />
+            <solid android:color="@color/tumbler_separator_color_grey" />
+        </shape>
+    </item>
+</layer-list>

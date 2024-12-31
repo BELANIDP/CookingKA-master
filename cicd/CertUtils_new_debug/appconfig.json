@@ -1,0 +1,8 @@
+{
+  "ServiceConfig": {
+    "BaseUrl": "https://awn-gpojnkmp1.na.ad.whirlpool.com:444/SecurePartsService/certsvc/",
+    "LoginUrl": "https://awn-gpojnkmp1.na.ad.whirlpool.com:444/ToolsAuthService/api/security/login",
+    "appKey": "bf80b4b9-5974-4048-9b2c-f8e1cd5b1f05",
+    "jsonClaimData": "{\"SystemRoles\": {\"EES_SecureBoards\": {} } }"
+  }
+}

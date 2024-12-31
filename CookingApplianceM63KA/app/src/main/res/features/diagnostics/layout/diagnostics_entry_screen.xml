@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/DefaultDiagnosticsScreenStyle">
+
+        <android.presenter.customviews.widgets.headerBarNumpad.HeaderBarNumPadWidget
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/text_view_helper_text"
+            style="@style/DiagnosticsHelperTextStyle"
+            android:layout_marginStart="@dimen/helper_text_margin_start"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/text_view_system_edit_text"
+            style="@style/DiagnosticsHelperTextStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_helper_red_warning_text"
+            style="@style/DiagnosticsHelperTextStyle"
+            android:textColor="@color/notification_red"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.whirlpool.hmi.uicomponents.widgets.keyboard.KeyboardView
+            android:id="@+id/keyboard"
+            style="@style/NumberPadKeyBoardStyle"
+            app:keyBackground="@drawable/ic_keyboard_key_background"
+            app:keyDividerColor="@color/key_divider_color"
+            app:keyLabelTextSize="@dimen/keyboard_digit_text_size"
+            app:keyTextColor="@color/common_solid_white"
+            app:keyTextSize="@dimen/keyboard_digit_text_size"
+            app:keyboardAlpha="@xml/keyboard_numpad"
+            app:keyboardTypeface="@font/roboto_thin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:providePredictionCandidates="false"
+            app:showKeyPopups="false" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+            android:id="@+id/next_button"
+            style="@style/TumblerPrimaryBtnStyle"
+            android:padding="@dimen/text_button_padding"
+            android:layout_marginEnd="@dimen/diagnostics_next_button_margin_end"
+            android:text="@string/text_button_next"
+            app:selection_audio="none"
+            app:textAllCaps="true"
+            app:enable="true"
+            app:is_bottom_view_visible="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

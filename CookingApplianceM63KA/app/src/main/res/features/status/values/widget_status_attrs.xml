@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    Status widgets attributes-->
+    <declare-styleable name="status_widget">
+        <attr name="oven_type" format="string"/>
+        <attr name="sabbath_type" format="boolean"/>
+    </declare-styleable>
+</resources>

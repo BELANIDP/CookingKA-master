@@ -1,0 +1,156 @@
+{
+  "DayAndDate": {
+    "notificationId": 1,
+    "type": "informative",
+    "priority": 5,
+    "noInteractionDismiss": false,
+    "goesToNotificationCenter": false,
+    "allowedToBeDuplicatedInNotificationCenter": false,
+    "isHistoryNeeded": false,
+    "maxDurationType": "clock",
+    "maxDuration": 2
+  },
+  "TapToBegin": {
+    "notificationId": 2,
+    "type": "informative",
+    "priority": 5,
+    "noInteractionDismiss": false,
+    "goesToNotificationCenter": false,
+    "allowedToBeDuplicatedInNotificationCenter": false,
+    "isHistoryNeeded": false,
+    "maxDurationType": "usage",
+    "maxDuration": 2
+  },
+  "GetToKnowYourAppliance": {
+    "notificationId": 3,
+    "type": "actionable",
+    "priority": 5,
+    "noInteractionDismiss": true,
+    "goesToNotificationCenter": true,
+    "allowedToBeDuplicatedInNotificationCenter": false,
+    "isHistoryNeeded": false,
+    "maxDurationType": "time",
+    "maxDuration": 24
+  },
+  "OvenCooling": {
+    "notificationId": 4,
+    "type": "informative",
+    "priority": 3,
+    "noInteractionDismiss": false,
+    "goesToNotificationCenter": false,
+    "allowedToBeDuplicatedInNotificationCenter": false,
+    "isHistoryNeeded": false,
+    "maxDurationType": "time",
+    "maxDuration": 2
+  },
+  "SaveLastRecipeToFavorite": {
+    "notificationId": 5,
+    "type": "actionable",
+    "priority": 1,
+    "noInteractionDismiss": true,
+    "goesToNotificationCenter": true,
+    "allowedToBeDuplicatedInNotificationCenter": true,
+    "isHistoryNeeded": true,
+    "maxDurationType": "clock",
+    "maxDuration": 2
+  },
+  "SoftwareUpdatedSuccessfully": {
+    "notificationId": 6,
+    "type": "actionable",
+    "priority": 3,
+    "noInteractionDismiss": true,
+    "goesToNotificationCenter": true,
+    "allowedToBeDuplicatedInNotificationCenter": false,
+    "isHistoryNeeded": false,
+    "maxDurationType": "clock",
+    "maxDuration": 2
+  },
+  "ConnectToNetwork": {
+    "notificationId": 7,
+    "type": "actionable",
+    "priority": 4,
+    "noInteractionDismiss": true,
+    "goesToNotificationCenter": true,
+    "allowedToBeDuplicatedInNotificationCenter": false,
+    "isHistoryNeeded": false,
+    "maxDurationType": "clock",
+    "maxDuration": 2
+  },
+  "UpdateDateAndTime": {
+    "notificationId": 8,
+    "type": "actionable",
+    "priority": 2,
+    "noInteractionDismiss": true,
+    "goesToNotificationCenter": true,
+    "allowedToBeDuplicatedInNotificationCenter": false,
+    "isHistoryNeeded": false,
+    "maxDurationType": "clock",
+    "maxDuration": 2
+  },
+  "SoftwareUpdateIsAvailable": {
+    "notificationId": 9,
+    "type": "actionable",
+    "priority": 3,
+    "noInteractionDismiss": true,
+    "goesToNotificationCenter": true,
+    "allowedToBeDuplicatedInNotificationCenter": false,
+    "isHistoryNeeded": false,
+    "maxDurationType": "clock",
+    "maxDuration": 2
+  },
+  "PressAndHoldToQuicklyStart": {
+    "notificationId": 10,
+    "type": "tip",
+    "priority": 3,
+    "noInteractionDismiss": false,
+    "goesToNotificationCenter": false,
+    "allowedToBeDuplicatedInNotificationCenter": false,
+    "isHistoryNeeded": false,
+    "maxDurationType": "clock",
+    "maxDuration": 2
+  },
+  "TurnYourOvenLightKnobPush": {
+    "notificationId": 11,
+    "type": "tip",
+    "priority": 3,
+    "noInteractionDismiss": false,
+    "goesToNotificationCenter": false,
+    "allowedToBeDuplicatedInNotificationCenter": false,
+    "isHistoryNeeded": false,
+    "maxDurationType": "clock",
+    "maxDuration": 2
+  },
+  "SwapYourKnobPreference": {
+    "notificationId": 12,
+    "type": "tip",
+    "priority": 3,
+    "noInteractionDismiss": false,
+    "goesToNotificationCenter": false,
+    "allowedToBeDuplicatedInNotificationCenter": false,
+    "isHistoryNeeded": false,
+    "maxDurationType": "clock",
+    "maxDuration": 2
+  },
+  "AddRecipesToFavoritesFromHistory": {
+    "notificationId": 13,
+    "type": "tip",
+    "priority": 3,
+    "noInteractionDismiss": false,
+    "goesToNotificationCenter": false,
+    "allowedToBeDuplicatedInNotificationCenter": false,
+    "isHistoryNeeded": false,
+    "maxDurationType": "clock",
+    "maxDuration": 2
+  },
+  "ExploreTheFreshPizzaRecipe": {
+    "notificationId": 14,
+    "type": "tip",
+    "priority": 3,
+    "noInteractionDismiss": false,
+    "goesToNotificationCenter": false,
+    "allowedToBeDuplicatedInNotificationCenter": false,
+    "isHistoryNeeded": false,
+    "maxDurationType": "clock",
+    "maxDuration": 2
+  }
+}

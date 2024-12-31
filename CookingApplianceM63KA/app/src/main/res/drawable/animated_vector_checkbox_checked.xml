@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+  -->
+
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="@dimen/checkbox_image_width"
+            android:height="@dimen/checkbox_image_height"
+            android:viewportWidth="@dimen/checkbox_viewport_width"
+            android:viewportHeight="@dimen/checkbox_viewport_height">
+
+            <group android:name="default">
+                <path
+                    android:name="checkbox_default"
+                    android:pathData="M0,0 L36,0 L36,35 L0,35 L0,0"
+                    android:strokeWidth="3"
+                    android:strokeColor="@color/checkbox_unchecked" />
+            </group>
+
+            <group android:name="background">
+                <path
+                    android:name="checkbox"
+                    android:pathData="M0,0 L36,0 L36,35 L0,35 L0,0"
+                    android:strokeWidth="3"
+                    android:strokeColor="@color/amber_primary" />
+            </group>
+            <group android:name="check">
+                <path
+                    android:name="tick"
+                    android:pathData="M8,16 l0,0 l0,0"
+                    android:strokeWidth="2"
+                    android:strokeColor="@color/amber_primary" />
+            </group>
+
+        </vector>
+
+    </aapt:attr>
+    <target android:name="checkbox">
+        <aapt:attr name="android:animation">
+
+            <set
+                android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+                android:ordering="sequentially"
+                android:shareInterpolator="false">
+
+                <objectAnimator
+                    android:duration="@integer/check_box_background_anim_duration"
+                    android:propertyName="pathData"
+                    android:valueFrom="M36,0 l0, 0"
+                    android:valueTo="M36,0 l-36,0"
+                    android:valueType="pathType" />
+
+                <objectAnimator
+                    android:duration="@integer/check_box_background_anim_duration"
+                    android:propertyName="pathData"
+                    android:valueFrom="M36,0 l-36,0 l0,0"
+                    android:valueTo="M36,0 l-36,0 l0,35"
+                    android:valueType="pathType" />
+
+                <objectAnimator
+                    android:duration="@integer/check_box_background_anim_duration"
+                    android:propertyName="pathData"
+                    android:valueFrom="M36,0 l-36,0 l0,35 l0,0"
+                    android:valueTo="M36,0 l-36,0 l0,35 l36,0"
+                    android:valueType="pathType" />
+
+                <objectAnimator
+                    android:duration="@integer/check_box_background_anim_duration"
+                    android:propertyName="pathData"
+                    android:valueFrom="M36,0 l-36,0 l0,35 l36,0 l0,0"
+                    android:valueTo="M36,0 l-36,0 l0,35 l36,0 l0,-35"
+                    android:valueType="pathType" />
+            </set>
+        </aapt:attr>
+    </target>
+
+    <target android:name="tick">
+        <aapt:attr name="android:animation">
+
+            <set
+                android:interpolator="@android:anim/accelerate_interpolator"
+                android:ordering="sequentially"
+                android:shareInterpolator="false">
+
+                <objectAnimator
+                    android:duration="@integer/check_box_tick_anim_duration"
+                    android:propertyName="pathData"
+                    android:startOffset="@integer/check_box_tick_anim_start_offset"
+                    android:valueFrom="M8,16 l0,0 l0,0"
+                    android:valueTo="M8,16 l8,10 l0,0"
+                    android:valueType="pathType" />
+
+                <objectAnimator
+                    android:duration="@integer/check_box_tick_anim_duration"
+                    android:propertyName="pathData"
+                    android:valueFrom="M8,16 l8,10 l0,0"
+                    android:valueTo="M8,16 l8,10 l12,-18"
+                    android:valueType="pathType" />
+
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>

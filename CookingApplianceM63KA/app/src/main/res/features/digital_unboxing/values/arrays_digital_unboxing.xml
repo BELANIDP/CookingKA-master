@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App language array -->
+    <string-array name="app_languages" translatable="false">
+        <item>english</item>  <!-- ENGLISH -->
+        <item>french_canadian</item>  <!-- FRENCH CANADIAN -->
+        <item>spanish</item>  <!-- SPANISH -->
+    </string-array>
+
+
+    <!-- User role array -->
+    <string-array name="user_role">
+        <item>technician</item>
+        <item>product_owner</item>
+    </string-array>
+
+    <!-- Appliance features guide array -->
+    <string-array name="appliance_features_guide_common_message_1">
+        <item>@string/appliance_features_guide_step_1</item>
+        <item>@string/appliance_features_guide_step_2</item>
+    </string-array>
+
+    <string-array name="appliance_features_guide_common_message_2">
+        <item>@string/appliance_features_guide_step_3</item>
+        <item>@string/appliance_features_guide_step_4</item>
+        <item>@string/appliance_features_guide_step_5</item>
+    </string-array>
+
+    <!-- Appliance swap left array -->
+    <string-array name="appliance_features_guide_common_message_4">
+        <item>@string/appliance_features_guide_step_9</item>
+        <item>@string/appliance_features_guide_step_10</item>
+        <item>@string/appliance_features_guide_step_11</item>
+    </string-array>
+
+    <string-array name="appliance_features_guide_common_message_5">
+        <item>@string/appliance_features_guide_step_12</item>
+        <item>@string/appliance_features_guide_step_13</item>
+    </string-array>
+
+    <string-array name="appliance_features_guide_common_message_3">
+        <item>@string/appliance_features_guide_step_6</item>
+        <item>@string/appliance_features_guide_step_7</item>
+    </string-array>
+</resources>

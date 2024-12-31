@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!--This layout is common for all the numberPad fragments with three base and three subtext
+     input fields like cook timer and date.-->
+
+    <data>
+
+        <variable
+            name="cookingViewModel"
+            type="com.whirlpool.hmi.cooking.viewmodel.CookingViewModel" />
+
+        <variable
+            name="demoModeCodeFragment"
+            type="core.jbase.AbstractDemoModeCodeFragment" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout style="@style/NumberPadScreenStyle">
+
+        <ImageView
+            android:id="@+id/image_view_numpad_background"
+            style="@style/StyleBackgroundImageView"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.presenter.customviews.widgets.headerBarNumpad.HeaderBarNumPadWidget
+            android:id="@+id/header_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/text_view_helper_text"
+            style="@style/NumPadHelperTextStyle"
+            tools:text="Enter Demo Code"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+          />
+
+
+        <com.whirlpool.hmi.uicomponents.widgets.keyboard.KeyboardView
+            android:id="@+id/keyboardview"
+            style="@style/NumberPadKeyBoardStyle"
+            app:keyBackground="@drawable/ic_keyboard_key_background"
+            app:keyDividerColor="@color/key_divider_color"
+            app:keyLabelTextSize="@dimen/keyboard_digit_text_size"
+            app:keyTextColor="@color/common_solid_white"
+            app:keyTextSize="@dimen/keyboard_digit_text_size"
+            app:keyboardAlpha="@xml/keyboard_numpad"
+            app:keyboardTypeface="@font/roboto_thin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:providePredictionCandidates="false"
+            app:showKeyPopups="false" />
+
+
+        <android.presenter.customviews.textButton.TextButton
+            android:id="@+id/demo_code_text_button_right"
+            style="@style/PopupTextButtonStyle"
+            android:layout_marginEnd="@dimen/text_button_text_margin"
+            android:layout_marginBottom="@dimen/text_button_text_margin_bottom"
+            android:padding="@dimen/text_button_padding"
+            app:button_text="@string/text_button_next"
+            app:enable="true"
+            app:is_bottom_view_visible="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <android.presenter.customviews.textButton.TextButton
+            android:id="@+id/demo_code_text_button_middle"
+            style="@style/PopupTextButtonStyle"
+            android:layout_marginEnd="@dimen/text_button_text_margin"
+            android:layout_marginBottom="@dimen/text_button_text_margin_bottom"
+            android:padding="@dimen/text_button_padding"
+            android:visibility="gone"
+            app:button_text="@string/text_button_next"
+            app:enable="true"
+            app:is_bottom_view_visible="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <android.presenter.customviews.textButton.TextButton
+            android:id="@+id/demo_code_text_button_left"
+            style="@style/PopupTextButtonStyle"
+            android:layout_marginEnd="@dimen/text_button_text_margin"
+            android:layout_marginBottom="@dimen/text_button_text_margin_bottom"
+            android:padding="@dimen/text_button_padding"
+            android:visibility="gone"
+            app:button_text="@string/text_button_wait_for_preheat"
+            app:enable="true"
+            app:is_bottom_view_visible="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <android.presenter.customviews.textButton.TextButton
+            android:id="@+id/demo_code_text_button_left_power"
+            style="@style/PopupTextButtonStyle"
+            android:layout_margin="@dimen/text_button_text_margin"
+            android:padding="@dimen/text_button_padding"
+            android:visibility="gone"
+            app:button_text="@string/text_header_power"
+            app:enable="true"
+            app:is_bottom_view_visible="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

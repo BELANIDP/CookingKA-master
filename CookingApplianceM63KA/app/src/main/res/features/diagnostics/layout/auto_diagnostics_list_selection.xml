@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2020. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+-->
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/DiagnosticsScreenStyle">
+
+        <android.presenter.customviews.widgets.headerbar.HeaderBarWidget
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_solid_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.list.ListView
+            android:id="@+id/list"
+            style="@style/DiagnosticsListSelectionStyle"
+            android:foregroundGravity="center_horizontal"
+            android:requiresFadingEdge="vertical"
+            app:layout_constraintBottom_toTopOf="@id/button_primary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/service_cavitylist_item_top_margin"
+            app:layout_constraintTop_toBottomOf="@id/title_bar"
+            tools:listitem="@layout/diagnostics_cavity_list_item"
+            app:layout_constraintVertical_bias="0" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+            android:id="@+id/button_primary"
+            style="@style/TumblerGhostBtnStyle"
+            android:layout_marginBottom="@dimen/checkbox_text_margin_bottom"
+            android:visibility="visible"
+            tools:text="@string/text_button_start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/list" />
+
+        <CheckBox
+            android:id="@+id/select_all_checkbox"
+            style="@style/CheckBoxTextViewBounds"
+            android:layout_marginBottom="@dimen/checkbox_text_margin_bottom"
+            android:layout_marginStart="@dimen/service_cavitylist_checkbox_maring_end"
+            android:button="@drawable/diagnostics_checkbox"
+            android:visibility="gone"
+            app:buttonTint="@color/walnut"
+            tools:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/list" />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/DiagnosticsSecondaryBoldTextStyle"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

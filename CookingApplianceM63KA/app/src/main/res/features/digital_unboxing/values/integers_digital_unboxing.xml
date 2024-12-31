@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="scrollbarfade_duration">1000</integer>
+    <!--error helper animations-->
+
+    <integer name="duration_default_view_animator">300</integer>
+    <integer name="duration_error_helper">5000</integer>
+    <integer name="duration_demo_mode">40</integer>
+    <integer name="action_timer_fade_animation">1500</integer>
+    <integer name="separator_spacing">100</integer>
+    <integer name="header_bar_max_char_date_time">9</integer>
+    <integer name="tumbler_scroll_speed">9</integer>
+    <integer name="tumbler_max_fling_velocity">8000</integer>
+</resources>

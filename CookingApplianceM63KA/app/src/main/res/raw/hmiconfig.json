@@ -1,0 +1,189 @@
+{
+  "Version": "0.0.1",
+  "HmiExpansionConfig": {
+    "Buttons": {
+      "1": {
+        "Offset": 0,
+        "Func": "home"
+      },
+      "2": {
+        "Offset": 0,
+        "Func": "clean"
+      },
+      "4": {
+        "Offset": 0,
+        "Func": "cancel"
+      },
+      "6": {
+        "Offset": 0,
+        "Func": "knobLeft",
+        "Hold": {
+          "Func": "knobLeftHold",
+          "Time": 3000,
+          "tickInterval": 100
+        }
+      },
+      "7": {
+        "Offset": 0,
+        "Func": "knobRight",
+        "Hold": {
+          "Func": "knobRightHold",
+          "Time": 1500,
+          "tickInterval": 100
+        }
+      }
+    },
+    "Lights": {
+      "3": {
+        "Offset": 0,
+        "Func": "home"
+      },
+      "2": {
+        "Offset": 0,
+        "Func": "clean"
+      },
+      "6": {
+        "Offset": 0,
+        "Func": "cancel"
+      },
+      "8": {
+        "Offset": 0,
+        "Func": "knobLedSetRight"
+      },
+      "9": {
+        "Offset": 0,
+        "Func": "knobLedSetRight"
+      },
+      "10": {
+        "Offset": 0,
+        "Func": "knobLedSetRight"
+      },
+      "11": {
+        "Offset": 0,
+        "Func": "knobLedSetRight"
+      },
+      "12": {
+        "Offset": 0,
+        "Func": "knobLedSetRight"
+      },
+      "13": {
+        "Offset": 0,
+        "Func": "knobLedSetRight"
+      },
+      "14": {
+        "Offset": 0,
+        "Func": "knobLedSetRight"
+      },
+      "15": {
+        "Offset": 0,
+        "Func": "knobLedSetRight"
+      },
+      "16": {
+        "Offset": 0,
+        "Func": "knobLedSetRight"
+      },
+      "17": {
+        "Offset": 0,
+        "Func": "knobLedSetRight"
+      },
+      "18": {
+        "Offset": 0,
+        "Func": "knobLedSetRight"
+      },
+      "19": {
+        "Offset": 0,
+        "Func": "knobLedSetRight"
+      },
+      "20": {
+        "Offset": 0,
+        "Func": "knobLedSetRight"
+      },
+      "21": {
+        "Offset": 0,
+        "Func": "knobLedSetRight"
+      },
+      "22": {
+        "Offset": 0,
+        "Func": "knobLedSetRight"
+      },
+      "23": {
+        "Offset": 0,
+        "Func": "knobLedSetRight"
+      },
+      "24": {
+        "Offset": 0,
+        "Func": "knobLedSetLeft"
+      },
+      "25": {
+        "Offset": 0,
+        "Func": "knobLedSetLeft"
+      },
+      "26": {
+        "Offset": 0,
+        "Func": "knobLedSetLeft"
+      },
+      "27": {
+        "Offset": 0,
+        "Func": "knobLedSetLeft"
+      },
+      "28": {
+        "Offset": 0,
+        "Func": "knobLedSetLeft"
+      },
+      "29": {
+        "Offset": 0,
+        "Func": "knobLedSetLeft"
+      },
+      "30": {
+        "Offset": 0,
+        "Func": "knobLedSetLeft"
+      },
+      "31": {
+        "Offset": 0,
+        "Func": "knobLedSetLeft"
+      },
+      "32": {
+        "Offset": 0,
+        "Func": "knobLedSetLeft"
+      },
+      "33": {
+        "Offset": 0,
+        "Func": "knobLedSetLeft"
+      },
+      "34": {
+        "Offset": 0,
+        "Func": "knobLedSetLeft"
+      },
+      "35": {
+        "Offset": 0,
+        "Func": "knobLedSetLeft"
+      },
+      "36": {
+        "Offset": 0,
+        "Func": "knobLedSetLeft"
+      },
+      "37": {
+        "Offset": 0,
+        "Func": "knobLedSetLeft"
+      },
+      "38": {
+        "Offset": 0,
+        "Func": "knobLedSetLeft"
+      },
+      "39": {
+        "Offset": 0,
+        "Func": "knobLedSetLeft"
+      }
+    },
+    "Knobs": {
+      "0": {
+        "Offset": 0,
+        "Func": "leftKnobRotation"
+      },
+      "1": {
+        "Offset": 0,
+        "Func": "rightKnobRotation"
+      }
+    }
+  }
+}

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="isCavityIconVisible"
+            type="Boolean" />
+        <import type="com.whirlpool.hmi.cooking.viewmodel.CookingViewModelFactory" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/farViewParentView"
+        android:layout_width="@dimen/width_app_window"
+        android:layout_height="@dimen/far_view_parent_item_height"
+        android:background="@color/common_solid_black">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clModeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/far_view_child_item_height"
+            app:layout_constraintHeight_min="@dimen/far_view_child_item_height"
+            android:minHeight="@dimen/far_view_child_item_height"
+            android:layout_marginStart="@dimen/far_view_margin"
+            android:visibility="invisible"
+            tools:visibility="visible"
+            android:layout_marginEnd="@dimen/far_view_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivOvenCavity"
+                    style="@style/FarViewStatusWidgetOvenCavityIconStyle"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="@{isCavityIconVisible ? View.VISIBLE : View.GONE}"
+                    tools:ignore="ContentDescription" />
+
+                <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+                    android:id="@+id/tvRecipeWithTemperature"
+                    style="@style/StyleCookingFarViewStatusWidgetTextView"
+                    android:includeFontPadding="false"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    tools:text="135" />
+
+                <ImageView
+                    android:id="@+id/ivTemperatureRamp"
+                    style="@style/FarViewStatusWidgetTemperatureRampStyle"
+                    android:visibility="gone"
+                    tools:visibility="visible"
+                    tools:ignore="ContentDescription" />
+
+                <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+                    android:id="@+id/tvCookTimeRemaining"
+                    style="@style/StyleCookingFarViewStatusWidgetTextView"
+                    android:includeFontPadding="false"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivProbeIcon"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="00:00" />
+
+                <ImageView
+                    android:id="@+id/ivProbeIcon"
+                    style="@style/FarStatusWidgetProbeIconStyle"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="ContentDescription"
+                    tools:visibility="visible" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBarRecipeCookTime"
+            style="@style/running_far_view_status_progressbar"
+            android:clipToOutline="true"
+            android:minHeight="@dimen/progressbar_height_large"
+            app:layout_constraintHeight_min="@dimen/progressbar_height_large"
+            android:layout_height="@dimen/far_view_progressbar_height"
+            android:transitionName="@string/transition_progress_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/tvCookTimeCompleted"
+            android:layout_height="@dimen/far_view_progressbar_height"
+            style="@style/StyleCookingCompletedFarViewStatusWidgetTextView"
+            android:layout_marginStart="@dimen/status_item_margin"
+            android:includeFontPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBarRecipeCookTime"
+            tools:visibility="gone" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/ivProgressbarInfinite"
+            style="@style/running_far_view_status_progressbar"
+            android:clipToOutline="true"
+            android:transitionName="@string/transition_progress_bar_lottie"
+            android:src="@drawable/progressbar_indeterminate"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:minHeight="@dimen/progressbar_height_large"
+            app:layout_constraintHeight_min="@dimen/progressbar_height_large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

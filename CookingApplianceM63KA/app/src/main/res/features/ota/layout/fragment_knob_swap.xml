@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+  -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_solid_black">
+
+        <android.presenter.customviews.widgets.headerbar.HeaderBarWidget
+            android:id="@+id/headerBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/network_settings_item_height_list_tile"
+            android:background="@color/common_solid_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/widget_swap"
+            android:layout_width="@dimen/knob_layout_width"
+            android:layout_height="@dimen/knob_layout_height"
+            android:layout_marginStart="@dimen/knob_layout_margin_start"
+            android:layout_marginTop="@dimen/knob_layout_margin_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/parameter_1"
+                android:layout_width="@dimen/left_knob_layout_width"
+                android:layout_height="@dimen/knob_layout_height"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/left_knob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/left_knob_height"
+                    android:layout_marginStart="@dimen/left_knob_margin_start"
+                    style="@style/StyleLeftRightKnob"
+                    android:text="@string/text_left_knob_label"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/icon_40px_settings"
+                    android:layout_width="@dimen/settings_assisted_image_width"
+                    android:layout_height="@dimen/settings_assisted_image_width"
+                    android:layout_marginStart="@dimen/settings_knob_layout_margin_start"
+                    android:layout_marginTop="@dimen/settings_layout_margin_top"
+                    tools:background="@drawable/icon_40px_settings"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/left_knob_description"
+                    android:layout_width="@dimen/knob_layout_description_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/knob_layout_description_margin_start"
+                    style="@style/StyleLeftRightKnobDescription"
+                    app:backgroundTint="@null"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/swap_arrow_layout"
+                android:layout_width="@dimen/swap_arrow_layout_width"
+                android:layout_height="@dimen/swap_arrow_layout_height"
+                android:layout_marginStart="@dimen/swap_arrow_layout_margin_start"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:id="@+id/swap_arrow"
+                    android:layout_width="@dimen/swap_arrow_layout_width"
+                    android:layout_height="@dimen/swap_arrow_layout_height"
+                    android:background="@drawable/swap_arrow"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/parameter_2"
+                android:layout_width="@dimen/left_knob_layout_width"
+                android:layout_height="@dimen/knob_layout_height"
+                android:layout_marginStart="@dimen/right_knob_layout_margin_start"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/right_knob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/demo_exit_layout_height"
+                    android:layout_marginStart="@dimen/right_knob_margin_start"
+                    style="@style/StyleLeftRightKnob"
+                    android:text="@string/text_right_knob_label"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/icon_40px_assisted"
+                    android:layout_width="@dimen/settings_assisted_image_width"
+                    android:layout_height="@dimen/settings_assisted_image_width"
+                    android:layout_marginStart="@dimen/settings_knob_layout_margin_start"
+                    android:layout_marginTop="@dimen/settings_layout_margin_top"
+                    tools:background="@drawable/icon_40px_assisted"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/right_knob_description"
+                    android:layout_width="@dimen/right_knob_layout_description_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/right_knob_layout_description_margin_start"
+                    style="@style/StyleLeftRightKnobDescription"
+                    app:backgroundTint="@null"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+            android:id="@+id/btnPrimarySwap"
+            style="@style/TumblerNumericPrimaryBtnStyle"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="@dimen/tumbler_btn_margin_bottom"
+            android:layout_marginBottom="@dimen/regional_cn_btn_margin_bottom"
+            android:text="@string/text_button_swap"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

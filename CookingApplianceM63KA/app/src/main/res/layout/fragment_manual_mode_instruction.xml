@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_layout"
+        style="@style/StyleManualModelInstructionScreen">
+
+        <android.presenter.customviews.widgets.headerbar.HeaderBarWidget
+            android:id="@+id/header_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_solid_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/left_image_view"
+            android:layout_width="@dimen/manual_mode_image_height_width"
+            android:layout_height="@dimen/manual_mode_image_height_width"
+            android:layout_marginStart="@dimen/manual_mode_image_margin_start"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/scroll_view"
+            app:layout_constraintTop_toTopOf="@+id/scroll_view"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            style="@style/StyleManualModeInstructionScrollView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/left_image_view"
+            app:layout_constraintTop_toBottomOf="@id/header_bar">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/description_text"
+                style="@style/StyleManualModeInstructionText" />
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintInstructionRight"
+            android:layout_width="@dimen/width_touch_constraint"
+            android:layout_height="@dimen/height_touch_constraint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <android.presenter.customviews.textButton.IconTextButton
+            android:id="@+id/text_button_right"
+            style="@style/StyleManualModeRightButton"
+            app:icon_button_text="@string/text_button_next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/text_view_ripple_effect"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintInstructionLeft"
+            android:layout_width="@dimen/width_touch_constraint"
+            android:layout_height="@dimen/height_touch_constraint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <android.presenter.customviews.textButton.IconTextButton
+            android:id="@+id/text_button_left"
+            style="@style/StyleManualModeLeftButton"
+            app:icon_button_text="@string/text_button_dont_show_again"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,72 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@drawable/background"
+    tools:context="android.presenter.fragments.favorites.ChooseImageFragment">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.presenter.customviews.widgets.headerbar.HeaderBarWidget
+        android:id="@+id/headerBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top" />
+
+    <com.whirlpool.hmi.uicomponents.widgets.progress.Stepper
+        android:id="@+id/stepperImages"
+        android:layout_width="@dimen/fav_stepper_width"
+        android:layout_height="@dimen/kt_tumbler_stepper_height"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/fav_margin_bottom"
+        app:highlighted_step_width="@dimen/fav_size"
+        app:no_of_steps="10"
+        app:non_highlighted_step_width="@dimen/fav_8dp"
+        app:padding_between_steps="@dimen/fav_8dp"
+        app:step_default_drawable="@drawable/stepper_non_selected"
+        app:step_highlighted_drawable="@drawable/stepper_selected"
+        app:stepper_highlighted_mode="current_index" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/holderArrows"
+        android:layout_width="@dimen/fav_holder_stepper_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/fav_margin_top"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageArrowLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@drawable/ic_arrow_left"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageArrowRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@drawable/ic_arrow_right"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+        android:id="@+id/btnLeft"
+        style="@style/TumblerGhostBtnStyle"
+        android:layout_gravity="bottom|center_horizontal|end"
+        android:layout_marginBottom="@dimen/fav_margin_top"
+        android:text="@string/text_button_set" />
+
+</FrameLayout>

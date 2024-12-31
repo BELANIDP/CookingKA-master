@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/DefaultDiagnosticsScreenStyle">
+
+        <android.presenter.customviews.widgets.headerbar.HeaderBarWidget
+            android:id="@+id/headerBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tumbler_gradient"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/widget_runningStatus"
+            android:layout_width="@dimen/diagnostics_status_item_height"
+            android:layout_height="@dimen/diagnostics_tumbler_item_height"
+            android:layout_marginTop="@dimen/service_title_status_margin_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/row"
+                android:layout_width="@dimen/diagnostics_status_item_height"
+                android:layout_height="@dimen/diagnostics_status_item_title_height"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/activation_section"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/diagnostics_status_item_title_height"
+                    android:layout_marginStart="@dimen/service_title_status_margin_start"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/text_component"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/diagnostics_status_item_title_height"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+                            android:id="@+id/text_component_activation"
+                            style="@style/StyleServiceTitleStatusTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/diagnostics_status_item_title_height"
+                            android:gravity="start"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/time_section"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/diagnostics_status_item_title_height"
+                    android:layout_marginEnd="@dimen/service_title_status_margin_end"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/timer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/diagnostics_status_item_title_height"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.whirlpool.hmi.uicomponents.widgets.textview.TimerTextView
+                            android:id="@+id/text_time"
+                            style="@style/StyleServiceTitleStatusTextView"
+                            android:layout_width="@dimen/diagnostics_status_item_title_width"
+                            android:layout_height="@dimen/diagnostics_status_item_title_height"
+                            android:gravity="end"
+                            app:selection_audio="none"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.whirlpool.hmi.uicomponents.widgets.progress.HorizontalProgressBar
+                android:id="@+id/progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="@dimen/diagnostics_status_title_width"
+                android:layout_height="@dimen/service_diagnostics_content_offset_list"
+                android:layout_marginTop="@dimen/service_title_status_title_margin_end"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/service_progress_rectangle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:progress_bar_background_height="@dimen/service_diagnostics_content_offset_list"
+                app:progress_bar_height="@dimen/service_diagnostics_content_offset_list"
+                app:progress_bar_secondary_height="@dimen/service_diagnostics_content_offset_list" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+            android:id="@+id/primary_button"
+            style="@style/TumblerPrimaryBtnStyle"
+            android:layout_marginEnd="@dimen/diagnostics_next_button_margin_end"
+            android:padding="@dimen/text_button_padding"
+            app:enable="true"
+            app:is_bottom_view_visible="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:textAllCaps="true" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+            android:id="@+id/button_secondary"
+            style="@style/TumblerGhostBtnStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/diagnostics_status_button_height"
+            android:layout_marginStart="@dimen/diagnostics_next_button_margin_end"
+            android:layout_marginBottom="@dimen/diagnostics_next_button_margin_end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/component_name_subtext"
+            android:layout_width="@dimen/diagnostics_status_title_width"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/service_title_status_margin_end"
+            android:layout_marginTop="@dimen/service_status_title_margin_end"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+                android:id="@+id/component_load"
+                style="@style/StyleStatusTextView"
+                android:layout_width="@dimen/diagnostics_status_title_width"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.05"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+                android:id="@+id/component_load_state"
+                style="@style/StyleStatusTextView"
+                android:layout_width="@dimen/diagnostics_status_title_width"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/service_title_status_margin_top_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

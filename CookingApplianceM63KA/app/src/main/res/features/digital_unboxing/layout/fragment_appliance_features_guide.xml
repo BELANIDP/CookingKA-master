@@ -1,0 +1,112 @@
+<?xml version="1.0" ?><!--Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_view"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black">
+
+    <FrameLayout
+        android:id="@+id/flHeaderBackIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/guide_header_back_margin_start"
+        android:layout_marginTop="@dimen/guide_header_back_margin_top"
+        android:padding="@dimen/guide_header_back_padding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivheaderBack"
+            style="@style/LeftIconStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="ContentDescription" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvTitleApplianceFeatureGuide"
+        style="@style/ApplianceFeaturesHeaderTitleStyle"
+        android:text="@string/knob_function_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivCookingGuide"
+        style="@style/ApplianceFeaturesImageStyle"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleApplianceFeatureGuide"
+        app:srcCompat="@drawable/img_assisted_cooking_guide_leaf" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_view_title"
+        style="@style/ApplianceFeaturesGuideTitleTextViewStyle"
+        app:layout_constraintStart_toEndOf="@+id/ivCookingGuide"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleApplianceFeatureGuide" />
+
+    <ScrollView
+        android:id="@+id/scroll_view_popup_info_text"
+        style="@style/ApplianceFeaturesGuideFragmentScroll"
+        android:layout_height="@dimen/_0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivCookingGuide"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_title">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_popup_info"
+                style="@style/ApplianceFeaturesGuideLongTextViewStyle" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+
+    <View
+        android:id="@+id/gradient"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/guide_scrollview_fading_height"
+        android:layout_marginStart="@dimen/guide_scrollview_fading_margin_start"
+        android:layout_marginEnd="@dimen/guide_scrollview_fading_margin_end"
+        android:layout_marginBottom="@dimen/guide_scrollview_fading_margin_bottom"
+        android:background="@drawable/ic_bottom_gradient_horizontal"
+        app:layout_constrainedHeight="@bool/_true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivCookingGuide"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.whirlpool.hmi.uicomponents.widgets.progress.Stepper
+        android:id="@+id/stepperFeatureGuide"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:no_of_steps="3"
+        app:stepper_highlighted_mode="current_index" />
+
+    <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+        android:id="@+id/btnPrimary"
+        style="@style/ApplianceFeaturesButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+        android:id="@+id/btnGhost"
+        style="@style/ApplianceFeaturesButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_button_customizeKnob"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

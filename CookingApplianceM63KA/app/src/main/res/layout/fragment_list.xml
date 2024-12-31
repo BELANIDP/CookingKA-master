@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2024. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+  -->
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="listFragment"
+            type="android.presenter.customviews.listView.AbstractListFragment" />
+        <variable
+            name="settingsViewModel"
+            type="com.whirlpool.hmi.settings.SettingsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_solid_black">
+
+        <android.presenter.customviews.widgets.headerbar.HeaderBarWidget
+            android:id="@+id/headerBarPreferences"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/network_settings_header_height"
+            android:background="@color/common_solid_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.list.ListView
+            android:id="@+id/recycler_view_list"
+            style="@style/RegionalRecyclerViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_0dp"
+            android:paddingBottom="@dimen/list_fading_effect"
+            android:clipToPadding="false"
+            android:paddingHorizontal="@dimen/regional_settings_recyclerview_padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/common_solid_black"
+            app:layout_constraintTop_toBottomOf="@id/headerBarPreferences"
+            tools:listitem="@layout/item_list_tile" />
+
+        <View
+            android:id="@+id/list_gradient"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="@dimen/guide_scrollview_fading_height"
+            android:background="@drawable/ic_bottom_gradient_horizontal"
+            app:layout_constrainedHeight="@bool/_true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+            android:id="@+id/button_left"
+            style="@style/StyleConnectLater"
+            android:background="@drawable/text_view_ripple_effect"
+            android:gravity="center_horizontal|center_vertical"
+            android:includeFontPadding="false"
+            android:layout_marginTop="@dimen/regional_cn_left_button_layout_margin_top"
+            android:text="@string/text_button_set_up_later"
+            android:visibility="gone"
+            android:textAllCaps="false"
+            app:backgroundTint="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible"/>
+
+        <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+            android:id="@+id/button_right"
+            style="@style/TumblerNumericPrimaryBtnStyle"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:text="@string/text_button_next"
+            android:layout_marginEnd="@dimen/tumbler_btn_margin_bottom"
+            android:layout_marginBottom="@dimen/regional_cn_btn_margin_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:visibility="visible"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,184 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="settingViewModel"
+            type="com.whirlpool.hmi.settings.SettingsViewModel" />
+        <variable
+            name="primaryCookingViewModel"
+            type="com.whirlpool.hmi.cooking.viewmodel.CookingViewModel" />
+
+        <variable
+            name="secondaryCookingViewModel"
+            type="com.whirlpool.hmi.cooking.viewmodel.CookingViewModel" />
+
+        <variable
+            name="primaryRecipeExecutionViewModel"
+            type="com.whirlpool.hmi.cooking.recipeexecution.RecipeExecutionViewModel" />
+
+        <variable
+            name="secondaryRecipeExecutionViewModel"
+            type="com.whirlpool.hmi.cooking.recipeexecution.RecipeExecutionViewModel" />
+
+        <variable
+            name="statusFragment"
+            type="android.presenter.basefragments.AbstractStatusFragment" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/width_app_window"
+        android:background="@color/common_solid_black"
+        android:layout_height="@dimen/height_app_window">
+
+
+
+        <android.presenter.customviews.widgets.status.CookingStatusWidget
+            android:id="@+id/doubleStatusWidgetUpper"
+            style="@style/StyleStatusWidgetLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/cooking_double_status_upper_widget_margin_top"
+            app:oven_type="@string/cavity_selection_upper_oven"
+
+            app:status_execution_fragment="@{statusFragment}"
+            app:status_execution_view_model="@{primaryCookingViewModel}"
+            app:status_execution_state="@{primaryRecipeExecutionViewModel.recipeExecutionState}"
+
+            app:status_recipe_text_cooking_state="@{primaryRecipeExecutionViewModel.recipeCookingState}"
+            app:status_recipe_text_recipe_name="@{primaryRecipeExecutionViewModel.recipeName}"
+            app:status_recipe_cook_view_model="@{primaryCookingViewModel}"
+            app:status_recipe_text_door_state="@{primaryCookingViewModel.doorState.booleanValue()}"
+            app:status_recipe_fragment="@{statusFragment}"
+            app:status_recipe_recipe_execution_state="@{primaryRecipeExecutionViewModel.recipeExecutionState}"
+
+            app:status_temperature_text_cooking_state="@{primaryRecipeExecutionViewModel.recipeCookingState}"
+            app:status_temperature_text_display_temperature="@{primaryCookingViewModel.ovenDisplayTemperature}"
+            app:status_temperature_text_recipe_name="@{primaryRecipeExecutionViewModel.recipeName}"
+            app:status_temperature_cook_view_model="@{primaryCookingViewModel}"
+            app:status_temperature_text_target_temperature="@{primaryRecipeExecutionViewModel.targetTemperature}"
+            app:status_temperature_fragment="@{statusFragment}"
+            app:status_temperature_recipe_execution_state="@{primaryRecipeExecutionViewModel.recipeExecutionState}"
+
+            app:status_progress_bar_cook_view_model="@{primaryCookingViewModel}"
+            app:status_progress_bar_fragment="@{statusFragment}"
+            app:status_progress_bar_basis="@{primaryRecipeExecutionViewModel.recipeProgressBasis}"
+            app:status_progress_bar_cook_timer_state="@{primaryRecipeExecutionViewModel.cookTimerState}"
+            app:status_progress_bar_progress_percentage="@{primaryRecipeExecutionViewModel.recipeProgressPercentage}"
+            app:status_progress_bar_recipe_execution_state="@{primaryRecipeExecutionViewModel.recipeExecutionState}"
+
+
+            app:status_etr_cook_view_model="@{primaryCookingViewModel}"
+            app:status_etr_cook_timer_fragment="@{statusFragment}"
+            app:status_etr_cook_timer_recipe_timer_state="@{primaryRecipeExecutionViewModel.cookTimerState}"
+            app:status_etr_cook_timer_remaining_cook_time="@{primaryRecipeExecutionViewModel.remainingCookTime}"
+            app:status_etr_cook_time_recipe_cooking_state="@{primaryRecipeExecutionViewModel.recipeCookingState}"
+            app:status_etr_cook_time_probe_current_temperature="@{primaryCookingViewModel.meatProbeTemperature}"
+            app:status_etr_cook_time_probe_target_temperature="@{primaryRecipeExecutionViewModel.meatProbeTargetTemperature}"
+            app:status_etr_cook_time_probe_connection_state="@{primaryCookingViewModel.meatProbeState.booleanValue()}"
+            app:status_etr_cook_time_probe_target_temperature_reached="@{primaryRecipeExecutionViewModel.targetMeatProbeTemperatureReached}"
+
+
+            app:status_preheat_cook_view_model="@{primaryCookingViewModel}"
+            app:status_preheat_fragment="@{statusFragment}"
+            app:status_preheat_door_state="@{primaryCookingViewModel.doorState.booleanValue()}"
+            app:status_preheat_notification="@{primaryRecipeExecutionViewModel.notification}"
+            app:status_preheat_timer_state="@{primaryRecipeExecutionViewModel.readySincePreheatTimerState}"
+            app:status_preheat_recipe_execution_state="@{primaryRecipeExecutionViewModel.recipeExecutionState}"
+
+            app:status_cookTimer_cook_view_model="@{primaryCookingViewModel}"
+            app:status_cookTimer_fragment="@{statusFragment}"
+            app:status_cookTimer_state="@{primaryRecipeExecutionViewModel.cookTimerState}"
+            app:status_cookTimer_probe_temperature_reached="@{primaryRecipeExecutionViewModel.targetMeatProbeTemperatureReached.booleanValue()}"
+            app:status_cookTimer_recipe_execution_state="@{primaryRecipeExecutionViewModel.recipeExecutionState}"
+
+            app:status_user_instruction="@{primaryRecipeExecutionViewModel.userInstruction}"
+            app:status_user_instruction_fragment="@{statusFragment}"
+            app:status_user_instruction_cook_view_model="@{primaryCookingViewModel}"
+
+            app:status_door_fragment="@{statusFragment}"
+            app:status_door_cook_view_model="@{primaryCookingViewModel}"
+            app:status_door_state="@{primaryCookingViewModel.doorState.booleanValue()}"
+            />
+
+        <android.presenter.customviews.widgets.status.CookingStatusWidget
+            android:id="@+id/doubleStatusWidgetLower"
+            android:layout_marginTop="@dimen/cooking_double_status_lower_widget_margin_top"
+            style="@style/StyleStatusWidgetLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:oven_type="@string/cavity_selection_lower_oven"
+
+            app:status_execution_fragment="@{statusFragment}"
+            app:status_execution_view_model="@{secondaryCookingViewModel}"
+            app:status_execution_state="@{secondaryRecipeExecutionViewModel.recipeExecutionState}"
+
+
+            app:status_recipe_text_cooking_state="@{secondaryRecipeExecutionViewModel.recipeCookingState}"
+            app:status_recipe_text_recipe_name="@{secondaryRecipeExecutionViewModel.recipeName}"
+            app:status_recipe_cook_view_model="@{secondaryCookingViewModel}"
+            app:status_recipe_text_door_state="@{secondaryCookingViewModel.doorState.booleanValue()}"
+            app:status_recipe_fragment="@{statusFragment}"
+            app:status_recipe_recipe_execution_state="@{secondaryRecipeExecutionViewModel.recipeExecutionState}"
+
+            app:status_temperature_text_cooking_state="@{secondaryRecipeExecutionViewModel.recipeCookingState}"
+            app:status_temperature_text_display_temperature="@{secondaryCookingViewModel.ovenDisplayTemperature}"
+            app:status_temperature_text_recipe_name="@{secondaryRecipeExecutionViewModel.recipeName}"
+            app:status_temperature_cook_view_model="@{secondaryCookingViewModel}"
+            app:status_temperature_text_target_temperature="@{secondaryRecipeExecutionViewModel.targetTemperature}"
+            app:status_temperature_fragment="@{statusFragment}"
+            app:status_temperature_recipe_execution_state="@{secondaryRecipeExecutionViewModel.recipeExecutionState}"
+
+            app:status_progress_bar_cook_view_model="@{secondaryCookingViewModel}"
+            app:status_progress_bar_fragment="@{statusFragment}"
+            app:status_progress_bar_basis="@{secondaryRecipeExecutionViewModel.recipeProgressBasis}"
+            app:status_progress_bar_cook_timer_state="@{secondaryRecipeExecutionViewModel.cookTimerState}"
+            app:status_progress_bar_progress_percentage="@{secondaryRecipeExecutionViewModel.recipeProgressPercentage}"
+            app:status_progress_bar_recipe_execution_state="@{secondaryRecipeExecutionViewModel.recipeExecutionState}"
+
+            app:status_etr_cook_view_model="@{secondaryCookingViewModel}"
+            app:status_etr_cook_timer_fragment="@{statusFragment}"
+            app:status_etr_cook_timer_recipe_timer_state="@{secondaryRecipeExecutionViewModel.cookTimerState}"
+            app:status_etr_cook_timer_remaining_cook_time="@{secondaryRecipeExecutionViewModel.remainingCookTime}"
+            app:status_etr_cook_time_recipe_cooking_state="@{secondaryRecipeExecutionViewModel.recipeCookingState}"
+            app:status_etr_cook_time_probe_current_temperature="@{secondaryCookingViewModel.meatProbeTemperature}"
+            app:status_etr_cook_time_probe_target_temperature="@{secondaryRecipeExecutionViewModel.meatProbeTargetTemperature}"
+            app:status_etr_cook_time_probe_connection_state="@{secondaryCookingViewModel.meatProbeState.booleanValue()}"
+            app:status_etr_cook_time_probe_target_temperature_reached="@{secondaryRecipeExecutionViewModel.targetMeatProbeTemperatureReached}"
+
+
+            app:status_preheat_cook_view_model="@{secondaryCookingViewModel}"
+            app:status_preheat_fragment="@{statusFragment}"
+            app:status_preheat_door_state="@{secondaryCookingViewModel.doorState.booleanValue()}"
+            app:status_preheat_notification="@{secondaryRecipeExecutionViewModel.notification}"
+            app:status_preheat_timer_state="@{secondaryRecipeExecutionViewModel.readySincePreheatTimerState}"
+            app:status_preheat_recipe_execution_state="@{secondaryRecipeExecutionViewModel.recipeExecutionState}"
+
+            app:status_cookTimer_cook_view_model="@{secondaryCookingViewModel}"
+            app:status_cookTimer_fragment="@{statusFragment}"
+            app:status_cookTimer_state="@{secondaryRecipeExecutionViewModel.cookTimerState}"
+            app:status_cookTimer_probe_temperature_reached="@{secondaryRecipeExecutionViewModel.targetMeatProbeTemperatureReached.booleanValue()}"
+            app:status_cookTimer_recipe_execution_state="@{secondaryRecipeExecutionViewModel.recipeExecutionState}"
+
+            app:status_user_instruction="@{secondaryRecipeExecutionViewModel.userInstruction}"
+            app:status_user_instruction_fragment="@{statusFragment}"
+            app:status_user_instruction_cook_view_model="@{secondaryCookingViewModel}"
+
+            app:status_door_fragment="@{statusFragment}"
+            app:status_door_cook_view_model="@{secondaryCookingViewModel}"
+            app:status_door_state="@{secondaryCookingViewModel.doorState.booleanValue()}"/>
+
+        <android.presenter.customviews.widgets.headerbar.NoTitleHeaderBarWidget
+            android:id="@+id/oven_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
