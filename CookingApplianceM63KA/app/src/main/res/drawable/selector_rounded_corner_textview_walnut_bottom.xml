@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="rectangle">
-
-    <solid android:color="@color/walnut" />
-    <corners android:radius="@dimen/drawer_selector_line_corner_radius" />
-
-</shape>

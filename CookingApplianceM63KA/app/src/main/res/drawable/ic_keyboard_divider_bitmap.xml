@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
-    android:src="@drawable/ic_keyboard_key_divider"
-    android:tint="@color/key_divider_color" />
