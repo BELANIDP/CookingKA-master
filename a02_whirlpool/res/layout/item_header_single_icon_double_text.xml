@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="480dp"
+        android:layout_height="79dp"
+        android:background="@color/color_alabaster">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/frame_1309"
+            android:layout_width="344dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/single_icon_double_text_title"
+                style="@style/W35HeaderRegular30"
+                android:layout_width="344dp"
+                android:layout_height="36dp"
+                android:gravity="center_horizontal|bottom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/single_icon_double_text_subtitle"
+                style="@style/W35ClockLight20"
+                android:layout_width="344dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="3dp"
+                android:alpha="0.63"
+                android:fontFamily="@font/roboto_light"
+                android:fontWeight="400"
+                android:gravity="center_horizontal|center_vertical"
+                android:includeFontPadding="false"
+                android:lineHeight="34.0dp"
+                android:textColor="@color/color_whp_text_gray"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ImageView
+            android:id="@+id/single_icon_double_text_back_arrow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="26dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/single_icon_double_text_placeholder"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="422dp"
+            android:layout_marginTop="26dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

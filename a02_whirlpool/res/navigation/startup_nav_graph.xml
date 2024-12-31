@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2019. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+  -->
+<!--    app:startDestination="@id/clock_screen"-->
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/splash_screen"
+    android:id="@+id/startup_nav_graph">
+
+    <!--
+       The splash fragment controls the flow to start the app, loading the product variant from the cyclemappings.json file, and if it were necessary, could
+       also initiate the provisioning. To do that, you would add a second action to the Splash Fragment node and include a separate graph that is dedicated
+       for provisioning.
+   -->
+
+    <fragment
+        android:id="@+id/splash_screen"
+        android:name="com.whirlpool.cooking.SplashFragment"
+        tools:layout="@layout/fragment_splash_screen"
+        android:label="SplashScreen">
+        <action
+            android:id="@+id/action_splashFragment_to_startFragment"
+            app:destination="@id/cavity_graph" />
+        <action
+            android:id="@+id/action_splashFragment_to_provisioningGraph"
+            app:destination="@id/provisioningNavGraph" />
+        <action
+            android:id="@+id/action_splash_screen_to_unboxing_nav_graph"
+            app:destination="@id/unboxing_nav_graph" />
+        <action
+            android:id="@+id/action_splash_screen_to_manual_cooking_single_oven_graph"
+            app:destination="@id/manual_cooking_single_oven_graph" />
+    </fragment>
+    <include app:graph="@navigation/cavity_graph" />
+    <include app:graph="@navigation/digital_unboxing_nav_graph" />
+    <include app:graph="@navigation/manual_cooking_single_oven_graph" />
+</navigation>

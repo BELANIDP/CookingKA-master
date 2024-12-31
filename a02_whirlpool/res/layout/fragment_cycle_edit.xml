@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="480dp"
+        android:layout_height="236dp"
+        android:background="@drawable/background_fragment_bottomsheet_tile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/rectangle_1045"
+            android:layout_width="65dp"
+            android:layout_height="6dp"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="21dp"
+            android:alpha="0.5"
+            android:background="@drawable/background_scrollpopup_rectangle_1045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/cycle_edit_back_arrow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/icon_40px_backarrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/cycle_edit_right_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="435dp"
+            android:layout_marginTop="11dp"
+            android:visibility="gone"
+            android:background="@drawable/icon_40px_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.grid.GridView
+            android:id="@+id/cycleeditRecycler"
+            android:layout_width="440dp"
+            android:layout_height="185dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="63.71dp"
+            android:clipChildren="false"
+            app:item_spacing="16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:number_of_columns="2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/widget_popup_instruction"
+            android:layout_width="445dp"
+            android:layout_height="262dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ScrollView
+                android:id="@+id/information_primary_scroll_view"
+                style="@style/CleanInstructionScroll"
+                android:layout_width="304dp"
+                android:layout_height="210dp"
+                android:layout_marginStart="134dp"
+                android:layout_marginTop="52dp"
+                android:scrollbarThumbVertical="@drawable/background_vertical_scrollbar_color"
+                android:scrollbarTrackVertical="@drawable/background_vertical_scrollbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/CleanInstruction"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical|top"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/golddash"
+                        android:layout_width="17dp"
+                        android:layout_height="2dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <View
+                            android:id="@+id/rectangle"
+                            android:layout_width="17dp"
+                            android:layout_height="2dp"
+                            android:background="@drawable/background_golddash_rectangle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/headline_1"
+                        style="@style/W35PopupHeadlineMedium20"
+                        android:layout_width="269dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="6dp"
+                        android:gravity="left|top"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text1"
+                        style="@style/W35PopupBodyLight20"
+                        android:layout_width="269dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:fontWeight="300"
+                        android:gravity="left|top"
+                        android:includeFontPadding="false"
+                        android:lineHeight="22.0dp"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <FrameLayout
+                        android:id="@+id/golddash_1"
+                        android:layout_width="17dp"
+                        android:layout_height="2dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <View
+                            android:id="@+id/rectangle_1"
+                            android:layout_width="17dp"
+                            android:layout_height="2dp"
+                            android:background="@drawable/background_golddash_rectangle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/headline_2"
+                        android:layout_width="269dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:fontWeight="500"
+                        android:gravity="left|top"
+                        android:includeFontPadding="false"
+                        android:lineHeight="25.0dp"
+                        android:textColor="@color/color_whp_text_gray"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text2"
+                        style="@style/W35PopupBodyLight20"
+                        android:layout_width="269dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:fontWeight="300"
+                        android:gravity="left|top"
+                        android:includeFontPadding="false"
+                        android:lineHeight="22.0dp"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <FrameLayout
+                        android:id="@+id/golddash_2"
+                        android:layout_width="17dp"
+                        android:layout_height="2dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <View
+                            android:id="@+id/rectangle_2"
+                            android:layout_width="17dp"
+                            android:layout_height="2dp"
+                            android:background="@drawable/background_golddash_rectangle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/headline_3"
+                        android:layout_width="269dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:fontWeight="500"
+                        android:gravity="left|top"
+                        android:includeFontPadding="false"
+                        android:lineHeight="25.0dp"
+                        android:textColor="@color/color_whp_text_gray"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text3"
+                        style="@style/W35PopupBodyLight20"
+                        android:layout_width="269dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:fontWeight="300"
+                        android:gravity="left|top"
+                        android:includeFontPadding="false"
+                        android:lineHeight="22.0dp"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <FrameLayout
+                        android:id="@+id/golddash_3"
+                        android:layout_width="17dp"
+                        android:layout_height="2dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <View
+                            android:id="@+id/rectangle_3"
+                            android:layout_width="17dp"
+                            android:layout_height="2dp"
+                            android:background="@drawable/background_golddash_rectangle"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/headline_4"
+                        android:layout_width="269dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:fontWeight="500"
+                        android:gravity="left|top"
+                        android:includeFontPadding="false"
+                        android:lineHeight="25.0dp"
+                        android:textColor="@color/color_whp_text_gray"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text4"
+                        style="@style/W35PopupBodyLight20"
+                        android:layout_width="269dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:fontWeight="300"
+                        android:gravity="left|top"
+                        android:includeFontPadding="false"
+                        android:lineHeight="22.0dp"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </LinearLayout>
+            </ScrollView>
+
+            <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+                android:id="@+id/active_button_left"
+                android:layout_width="218dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="193dp"
+                android:background="@drawable/background_active_buttons_buttons_primary"
+                android:fontFamily="@font/roboto_bold"
+                android:fontWeight="700"
+                android:gravity="center_horizontal|center_vertical"
+                android:includeFontPadding="false"
+                android:lineHeight="20.0dp"
+                android:textAllCaps="false"
+                android:textColor="@color/color_whp_text_gray"
+                android:textSize="20sp"
+                app:backgroundTint="@null"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+                android:id="@+id/active_button_right"
+                style="@style/W35ButtonBold20"
+                android:layout_width="111dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="314dp"
+                android:layout_marginTop="193dp"
+                android:background="@drawable/background_buttons_button_cta_primary_active"
+                android:textAllCaps="false"
+                app:backgroundTint="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_oven_instruction"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="52dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

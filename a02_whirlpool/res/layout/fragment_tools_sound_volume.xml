@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.whirlpool.cooking.widgets.header.HeaderSingleIconDoubleText
+            android:id="@+id/toolsShowAllHeaderBar"
+            android:layout_width="480dp"
+            android:layout_height="79dp"
+            android:background="@drawable/background_layout_home"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/toolsShowAllHeaderBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/display_item1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginEnd="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:layout_width="399dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="68dp"
+                    android:background="@color/color_whp_text_gray77"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="407dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/item1_title"
+                        style="@style/Tile35Regular20"
+                        android:layout_width="248dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:fontWeight="400"
+                        android:gravity="start|center_vertical"
+                        android:includeFontPadding="false"
+                        android:lineHeight="22.0dp"
+                        android:text="@string/text_mute"
+                        android:textColor="@color/color_whp_text_gray"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/mute_toggle"
+                        android:layout_width="0dp"
+                        android:layout_height="28dp"
+                        android:layout_marginStart="347dp"
+                        android:theme="@style/MyActivityTheme"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:switchMinWidth="60dp"
+                        app:track="@drawable/background_frame_1138_toggle" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/display_item2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/display_item1">
+
+                <View
+                    android:layout_width="399dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="68dp"
+                    android:background="@color/color_whp_text_gray77"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="407dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/item2_title"
+                        style="@style/Tile35Regular20"
+                        android:layout_width="248dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:fontWeight="400"
+                        android:gravity="start|center_vertical"
+                        android:includeFontPadding="false"
+                        android:lineHeight="22.0dp"
+                        android:text="@string/text_sound_volume"
+                        android:textColor="@color/color_whp_text_gray"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/item2_value"
+                        android:layout_width="181dp"
+                        android:layout_height="28dp"
+                        android:layout_marginStart="192dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:fontWeight="400"
+                        android:gravity="end|center_vertical"
+                        android:includeFontPadding="false"
+                        android:lineHeight="22.0dp"
+                        android:textColor="@color/color_whp_text_gray42"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="377dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/icon_30px_forward_arrow"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/display_item3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/display_item2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="407dp"
+                    android:layout_height="31dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/item3_title"
+                        style="@style/Tile35Regular20"
+                        android:layout_width="248dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:fontWeight="400"
+                        android:gravity="start|center_vertical"
+                        android:includeFontPadding="false"
+                        android:lineHeight="22.0dp"
+                        android:text="@string/text_button_effects"
+                        android:textColor="@color/color_whp_text_gray"
+                        android:textSize="20sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/item3_value"
+                        android:layout_width="181dp"
+                        android:layout_height="28dp"
+                        android:layout_marginStart="192dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:fontWeight="400"
+                        android:gravity="end|center_vertical"
+                        android:includeFontPadding="false"
+                        android:lineHeight="22.0dp"
+                        android:textColor="@color/color_whp_text_gray42"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="377dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/icon_30px_forward_arrow"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/shadow_view"
+                android:layout_width="match_parent"
+                android:layout_height="158dp"
+                android:layout_marginTop="72dp"
+                android:alpha="0.4"
+                android:background="@color/color_aplha_white"
+                android:clickable="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

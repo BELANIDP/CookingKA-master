@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/unboxing_nav_graph"
+    app:startDestination="@id/languageSelection">
+
+    <include app:graph="@navigation/provisioning_connect_now_nav_graph" />
+
+    <action android:id="@+id/action_global_navigate_to_region" app:destination="@id/digitalUnboxingRegion"/>
+
+    <fragment
+        android:id="@+id/setUpYourAppliance"
+        android:name="com.whirlpool.cooking.unboxing.DigitalUnboxingSetUp"
+        android:label="setUpYourAppliance">
+        <action
+            android:id="@+id/action_digitalUnboxingSetUp_to_provisioningBleConnect"
+            app:destination="@id/provisioningConnectNowNavGraph" />
+        <action
+            android:id="@+id/action_unboxingStart_to_digitalUnboxingRegion"
+            app:destination="@id/digitalUnboxingRegion" />
+        <action
+            android:id="@+id/action_setUpYourAppliance_to_languageSelection"
+            app:destination="@id/languageSelection" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/digitalUnboxingRegion"
+        android:name="com.whirlpool.cooking.tools.DigitalUnboxingRegion"
+        android:label="DigitalUnboxingRegion">
+        <action
+            android:id="@+id/action_digitalUnboxingRegion_to_timeVerticalTumbler"
+            app:destination="@id/timeVerticalTumbler" />
+        <action
+            android:id="@+id/action_global_to_set_time_12Hr"
+            app:destination="@id/timeVerticalTumbler" />
+        <action
+            android:id="@+id/action_global_to_set_time_24Hr"
+            app:destination="@id/time24HrTumbler" />
+        <action
+            android:id="@+id/action_digitalUnboxingRegion_to_setUpYourAppliance"
+            app:destination="@id/setUpYourAppliance" />
+        <action
+            android:id="@+id/action_digitalUnboxingRegion_to_powerManagement"
+            app:destination="@id/powerManagement" />
+    </fragment>
+    <fragment
+        android:id="@+id/timeVerticalTumbler"
+        android:name="com.whirlpool.cooking.tools.TimeVerticalTumbler"
+        android:label="TimeVerticalTumbler" >
+        <action
+            android:id="@+id/action_timeVerticalTumbler_to_time12HrNumpad"
+            app:destination="@id/time12HrNumpad" />
+        <action
+            android:id="@+id/action_timeVerticalTumbler_to_dateNumpad"
+            app:destination="@id/dateNumpad" />
+        <deepLink
+            android:id="@+id/linkTo12HrTimeVerticalTumbler"
+            app:uri="cookingApplianceApp://timeVerticalTumbler" />
+        <action
+            android:id="@+id/action_timeVerticalTumbler_to_powerlossRecovery"
+            app:destination="@id/powerlossRecovery" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dateVerticalTumbler"
+        android:name="com.whirlpool.cooking.tools.DateVerticalTumbler"
+        android:label="DateVerticalTumbler">
+        <action
+            android:id="@+id/action_dateVerticalTumbler_to_powerManagement"
+            app:destination="@id/powerManagement" />
+        <action
+            android:id="@+id/action_dateVerticalTumbler_to_dateNumpad"
+            app:destination="@id/dateNumpad" />
+    </fragment>
+    <fragment
+        android:id="@+id/dateNumpad"
+        android:name="com.whirlpool.cooking.tools.DateNumpad"
+        android:label="DateNumpad" >
+        <action
+            android:id="@+id/action_dateNumpad_to_dateVerticalTumbler"
+            app:destination="@id/dateVerticalTumbler" />
+        <action
+            android:id="@+id/action_dateNumpad_to_powerManagement"
+            app:destination="@id/powerManagement" />
+    </fragment>
+    <fragment
+        android:id="@+id/time12HrNumpad"
+        android:name="com.whirlpool.cooking.tools.Time12HrNumpad"
+        android:label="Time12HrNumpad" >
+        <action
+            android:id="@+id/action_time12HrNumpad_to_dateNumpad"
+            app:destination="@id/dateNumpad" />
+        <action
+            android:id="@+id/action_time12HrNumpad_to_timeVerticalTumbler"
+            app:destination="@id/timeVerticalTumbler" />
+    </fragment>
+    <fragment
+        android:id="@+id/time24HrTumbler"
+        android:name="com.whirlpool.cooking.tools.Time24HrTumbler"
+        android:label="Time24HrTumbler" >
+        <action
+            android:id="@+id/action_time24HrTumbler_to_timeNumpad"
+            app:destination="@id/timeNumpad" />
+        <action
+            android:id="@+id/action_time24HrTumbler_to_dateNumpad"
+            app:destination="@id/dateNumpad" />
+        <deepLink
+            android:id="@+id/linkTo24HrTimeVerticalTumbler"
+            app:uri="cookingApplianceApp://time24HrTumbler" />
+        <action
+            android:id="@+id/action_time24HrTumbler_to_powerlossRecovery"
+            app:destination="@id/powerlossRecovery" />
+    </fragment>
+    <fragment
+        android:id="@+id/timeNumpad"
+        android:name="com.whirlpool.cooking.tools.TimeNumpad"
+        android:label="TimeNumpad" >
+        <action
+            android:id="@+id/action_timeNumpad_to_dateNumpad"
+            app:destination="@id/dateNumpad" />
+        <action
+            android:id="@+id/action_timeNumpad_to_time24HrTumbler"
+            app:destination="@id/time24HrTumbler" />
+    </fragment>
+    <fragment
+        android:id="@+id/powerManagement"
+        android:name="com.whirlpool.cooking.tools.PowerManagement"
+        android:label="PowerManagement" >
+        <action
+            android:id="@+id/action_powerManagement_to_toolsRestoreInstruction"
+            app:destination="@id/toolsRestoreInstruction" />
+    </fragment>
+    <fragment
+        android:id="@+id/languageSelection"
+        android:name="com.whirlpool.cooking.tools.LanguageSelection"
+        android:label="LanguageSelection" >
+        <action
+            android:id="@+id/action_languageSelection_to_setUpYourAppliance"
+            app:destination="@id/setUpYourAppliance" />
+    </fragment>
+    <fragment
+        android:id="@+id/toolsRestoreInstruction"
+        android:name="com.whirlpool.cooking.tools.ToolsRestoreInstruction"
+        android:label="ToolsRestoreInstruction" >
+        <action
+            android:id="@+id/action_toolsRestoreInstruction_to_cavity_graph"
+            app:destination="@id/cavity_graph" />
+    </fragment>
+    <include app:graph="@navigation/cavity_graph" />
+    <fragment
+        android:id="@+id/powerlossRecovery"
+        android:name="com.whirlpool.cooking.powerloss.PowerlossRecovery"
+        android:label="PowerlossRecovery" >
+        <action
+            android:id="@+id/action_powerlossRecovery_to_timeVerticalTumbler"
+            app:destination="@id/timeVerticalTumbler" />
+        <action
+            android:id="@+id/action_powerlossRecovery_to_time24HrTumbler"
+            app:destination="@id/time24HrTumbler" />
+    </fragment>
+
+</navigation>

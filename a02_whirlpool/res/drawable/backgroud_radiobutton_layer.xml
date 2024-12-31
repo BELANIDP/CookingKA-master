@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/backgroud_radiobutton_outer_ring" />
+    <item android:drawable="@drawable/backgroud_radiobutton_inner_ring" />
+
+</layer-list>

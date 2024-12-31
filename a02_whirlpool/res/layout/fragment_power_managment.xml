@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_alabaster">
+
+        <com.whirlpool.cooking.widgets.header.HeaderSingleIconDoubleText
+            android:id="@+id/widget_header_topmenu"
+            android:layout_width="480dp"
+            android:layout_height="79dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/widget_tools_item"
+            android:layout_width="480dp"
+            android:layout_height="166dp"
+            android:layout_marginTop="79dp"
+            android:background="@color/color_aplha_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/icon_30px_forwardarrow"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="412dp"
+                android:layout_marginTop="94dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/widget_tool_1"
+                android:layout_width="409dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/radiobutton_13A"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/backgroud_radiobutton_selector"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:textAllCaps="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_upper_1"
+                    android:layout_width="275dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:fontWeight="400"
+                    android:gravity="left|top"
+                    android:includeFontPadding="false"
+                    android:lineHeight="22.0dp"
+                    android:text="@string/text_13_ampere"
+                    android:textColor="@color/color_whp_text_gray"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_lower_1"
+                    android:layout_width="275dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="35dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:fontWeight="400"
+                    android:gravity="left|top"
+                    android:includeFontPadding="false"
+                    android:lineHeight="22.0dp"
+                    android:text="@string/text_uk"
+                    android:textColor="@color/color_tumbler_divider"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/vector_83"
+                    android:layout_width="399dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="68dp"
+                    android:background="@color/color_whp_text_gray77"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/widget_tool_2"
+                android:layout_width="409dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="86dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/radiobutton_16A"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/backgroud_radiobutton_selector"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:textAllCaps="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_upper_2"
+                    android:layout_width="275dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:fontWeight="400"
+                    android:gravity="left|top"
+                    android:includeFontPadding="false"
+                    android:lineHeight="22.0dp"
+                    android:text="@string/text_16_ampere"
+                    android:textColor="@color/color_whp_text_gray"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_lower_2"
+                    android:layout_width="275dp"
+                    android:layout_height="22dp"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="35dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:fontWeight="400"
+                    android:gravity="left|top"
+                    android:includeFontPadding="false"
+                    android:lineHeight="22.0dp"
+                    android:text="@string/text_europe"
+                    android:textColor="@color/color_tumbler_divider"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/cta_primary_active"
+            style="@style/ButtonOtherBold15"
+            android:layout_width="90dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="364dp"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/background_cta_primary_active"
+            android:fontFamily="@font/roboto_bold"
+            android:fontWeight="700"
+            android:gravity="center_horizontal|center_vertical"
+            android:includeFontPadding="false"
+            android:lineHeight="16.0dp"
+            android:text="@string/text_set"
+            android:textAllCaps="false"
+            android:textColor="@color/color_whp_keypad_color"
+            android:textSize="16sp"
+            app:backgroundTint="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

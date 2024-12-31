@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *************************************************************************************************
+  ~ ****** Copyright (c) 2020. Whirlpool Corporation. All rights reserved - CONFIDENTIAL *****
+  ~ *************************************************************************************************
+  -->
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="primaryCookingViewModel"
+            type="com.whirlpool.hmi.cooking.viewmodel.CookingViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="?attr/screenBackground">
+
+        <com.whirlpool.hmi.uicomponents.widgets.clock.ClockTextView
+            android:id="@+id/textView_homeScreenDigitalClock"
+            style="@style/CommonHomeAndStatusScreenDigitalClock"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="20:08"/>
+
+        <com.whirlpool.cooking.widgets.header.HeaderBar
+            android:id="@+id/header_bar_dummy_options"
+            style="@style/StyleNumericTumblerHeaderBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/options_text_label_doneness"
+            style="@style/DummyOptionLabels"
+            app:layout_constraintTop_toBottomOf="@+id/header_bar_dummy_options"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Doneness"
+            android:text="@string/text_doneness_label"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumbler
+            android:id="@+id/numeric_tumbler_doneness_recycler_view"
+            android:layout_width="match_parent"
+            style="@style/DummyTumbler"
+            android:layout_height="@dimen/numeric_tumbler_dummy_options_height"
+            android:clipToPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/options_text_label_doneness"
+            app:layout_constraintTop_toBottomOf="@id/options_text_label_doneness"
+            app:baseTumbler_item_spacing="@integer/integer_dummy_options_tumbler_item_spacing"
+            app:baseTumbler_textViewBackgroundColor="#b3252525"
+            app:baseTumbler_textViewSelectedBackgroundColor="#b3888888"
+            app:baseTumbler_textViewCornerRadius="@integer/integer_dummy_options_tumbler_item_spacing"
+            app:baseTumbler_item_layoutWidth="@integer/integer_dummy_options_tumbler_layout_width"
+            app:baseTumbler_item_layoutHeight="@integer/integer_dummy_options_tumbler_layout_height"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/options_text_label_weight"
+            style="@style/DummyOptionLabels"
+            app:layout_constraintTop_toBottomOf="@+id/numeric_tumbler_doneness_recycler_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Weight"
+            android:text="@string/text_weight_label"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumbler
+            android:id="@+id/numeric_tumbler_weight_recycler_view"
+            android:layout_width="match_parent"
+            style="@style/DummyTumbler"
+            android:layout_height="@dimen/numeric_tumbler_dummy_options_height"
+            android:clipToPadding="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/options_text_label_weight"
+            app:baseTumbler_item_spacing="@integer/integer_dummy_options_tumbler_item_spacing"
+            app:baseTumbler_textViewBackgroundColor="#b3252525"
+            app:baseTumbler_textViewSelectedBackgroundColor="#b3888888"
+            app:baseTumbler_textViewCornerRadius="@integer/integer_dummy_options_tumbler_item_spacing"
+            app:baseTumbler_item_layoutWidth="@integer/integer_dummy_options_tumbler_layout_width"
+            app:baseTumbler_item_layoutHeight="@integer/integer_dummy_options_tumbler_layout_height"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+<!--        <TextView-->
+<!--            android:id="@+id/options_text_label_pansize"-->
+<!--            style="@style/DummyOptionLabels"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/numeric_tumbler_weight_recycler_view"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            tools:text="Weight"-->
+<!--            android:text="@string/text_pan_size_label"-->
+<!--            android:visibility="gone"-->
+<!--            tools:visibility="visible" />-->
+
+<!--        <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumbler-->
+<!--            android:id="@+id/numeric_tumbler_pansize_recycler_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            style="@style/DummyTumbler"-->
+<!--            android:layout_height="@dimen/numeric_tumbler_dummy_options_height"-->
+<!--            android:clipToPadding="false"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/options_text_label_pansize"-->
+<!--            app:baseTumbler_item_spacing="@integer/integer_dummy_options_tumbler_item_spacing"-->
+<!--            app:baseTumbler_textViewBackgroundColor="#b3252525"-->
+<!--            app:baseTumbler_textViewSelectedBackgroundColor="#b3888888"-->
+<!--            app:baseTumbler_textViewCornerRadius="@integer/integer_dummy_options_tumbler_item_spacing"-->
+<!--            app:baseTumbler_item_layoutWidth="@integer/integer_dummy_options_tumbler_layout_width"-->
+<!--            app:baseTumbler_item_layoutHeight="@integer/integer_dummy_options_tumbler_layout_height"-->
+<!--            android:visibility="gone"-->
+<!--            tools:visibility="visible"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/options_text_label_foodsize"-->
+<!--            style="@style/DummyOptionLabels"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/numeric_tumbler_pansize_recycler_view"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            tools:text="Weight"-->
+<!--            android:text="@string/text_food_size_label"-->
+<!--            android:visibility="gone"-->
+<!--            tools:visibility="visible" />-->
+
+<!--        <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumbler-->
+<!--            android:id="@+id/numeric_tumbler_foodsize_recycler_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            style="@style/DummyTumbler"-->
+<!--            android:layout_height="@dimen/numeric_tumbler_dummy_options_height"-->
+<!--            android:clipToPadding="false"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/options_text_label_foodsize"-->
+<!--            app:baseTumbler_item_spacing="@integer/integer_dummy_options_tumbler_item_spacing"-->
+<!--            app:baseTumbler_textViewBackgroundColor="#b3252525"-->
+<!--            app:baseTumbler_textViewSelectedBackgroundColor="#b3888888"-->
+<!--            app:baseTumbler_textViewCornerRadius="@integer/integer_dummy_options_tumbler_item_spacing"-->
+<!--            app:baseTumbler_item_layoutWidth="@integer/integer_dummy_options_tumbler_layout_width"-->
+<!--            app:baseTumbler_item_layoutHeight="@integer/integer_dummy_options_tumbler_layout_height"-->
+<!--            android:visibility="gone"-->
+<!--            tools:visibility="visible"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/options_text_label_amount"-->
+<!--            style="@style/DummyOptionLabels"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/numeric_tumbler_foodsize_recycler_view"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            tools:text="Weight"-->
+<!--            android:text="@string/text_amount_label"-->
+<!--            android:visibility="gone"-->
+<!--            tools:visibility="visible" />-->
+
+<!--        <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumbler-->
+<!--            android:id="@+id/numeric_tumbler_amount_recycler_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            style="@style/DummyTumbler"-->
+<!--            android:layout_height="@dimen/numeric_tumbler_dummy_options_height"-->
+<!--            android:clipToPadding="false"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/options_text_label_amount"-->
+<!--            app:baseTumbler_item_spacing="@integer/integer_dummy_options_tumbler_item_spacing"-->
+<!--            app:baseTumbler_textViewBackgroundColor="#b3252525"-->
+<!--            app:baseTumbler_textViewSelectedBackgroundColor="#b3888888"-->
+<!--            app:baseTumbler_textViewCornerRadius="@integer/integer_dummy_options_tumbler_item_spacing"-->
+<!--            app:baseTumbler_item_layoutWidth="@integer/integer_dummy_options_tumbler_layout_width"-->
+<!--            app:baseTumbler_item_layoutHeight="@integer/integer_dummy_options_tumbler_layout_height"-->
+<!--            android:visibility="gone"-->
+<!--            tools:visibility="visible"/>-->
+
+<!--        <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumbler-->
+<!--            android:id="@+id/numeric_tumbler_browning_recycler_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/numeric_tumbler_dummy_options_height"-->
+<!--            android:clipToPadding="false"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/numeric_tumbler_amount_recycler_view"-->
+<!--            app:baseTumbler_item_spacing="8"-->
+<!--            app:baseTumbler_textViewBackgroundColor="#b3252525"-->
+<!--            app:baseTumbler_textViewSelectedBackgroundColor="#b3888888"-->
+<!--            app:baseTumbler_textViewCornerRadius="10"-->
+<!--            app:baseTumbler_item_layoutWidth="140"-->
+<!--            app:baseTumbler_item_layoutHeight="72"-->
+<!--            android:visibility="gone"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/options_text_label_foodtype"-->
+<!--            style="@style/DummyOptionLabels"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/numeric_tumbler_amount_recycler_view"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            tools:text="Weight"-->
+<!--            android:text="@string/text_food_type"-->
+<!--            android:visibility="gone"-->
+<!--            tools:visibility="visible" />-->
+
+<!--        <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumbler-->
+<!--            android:id="@+id/numeric_tumbler_foodtype_recycler_view"-->
+<!--            android:layout_width="match_parent"-->
+<!--            style="@style/DummyTumbler"-->
+<!--            android:layout_height="@dimen/numeric_tumbler_dummy_options_height"-->
+<!--            android:clipToPadding="false"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/options_text_label_foodtype"-->
+<!--            app:baseTumbler_item_spacing="@integer/integer_dummy_options_tumbler_item_spacing"-->
+<!--            app:baseTumbler_textViewBackgroundColor="#b3252525"-->
+<!--            app:baseTumbler_textViewSelectedBackgroundColor="#b3888888"-->
+<!--            app:baseTumbler_textViewCornerRadius="@integer/integer_dummy_options_tumbler_item_spacing"-->
+<!--            app:baseTumbler_item_layoutWidth="@integer/integer_dummy_options_tumbler_layout_width"-->
+<!--            app:baseTumbler_item_layoutHeight="@integer/integer_dummy_options_tumbler_layout_height"-->
+<!--            android:visibility="gone"/>-->
+
+        <Button
+            android:id="@+id/button_start_button"
+            style="@style/CommonNumpadAndTumblerScreenStartAndCancelButton"
+            android:text="@string/text_start"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

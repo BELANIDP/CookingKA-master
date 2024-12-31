@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="primaryCookingViewModel"
+            type="com.whirlpool.hmi.cooking.viewmodel.CookingViewModel" />
+
+        <variable
+            name="recipeViewModel"
+            type="com.whirlpool.hmi.cooking.recipeexecution.RecipeExecutionViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_alabaster">
+
+        <ImageView
+            android:id="@+id/image_home"
+            android:layout_width="283dp"
+            android:layout_height="281dp"
+            android:layout_marginStart="314dp"
+            android:layout_marginTop="59dp"
+            android:background="@drawable/home"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whirlpool.cooking.widgets.header.HeaderTop
+            android:id="@+id/widget_header_top"
+            android:layout_width="480dp"
+            android:layout_height="47dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whirlpool.cooking.widgets.HomeCycleView
+            android:id="@+id/home_directaccesfunction"
+            android:layout_width="166dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="59dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whirlpool.cooking.widgets.HomeCycleView
+            android:id="@+id/home_directaccesfunction_1"
+            android:layout_width="166dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="202dp"
+            android:layout_marginTop="59dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/home_6thfunctions"
+            android:layout_width="343dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="230dp"
+            android:background="@drawable/background_tile_home_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/home_6thfunctions_functions"
+                style="@style/W35NumpadHometileRobotoBold20"
+                android:layout_width="343dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="21dp"
+                android:text="FUNCTIONS"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_3dotscategorytile"
+                android:layout_width="20dp"
+                android:layout_height="4dp"
+                android:layout_marginStart="162dp"
+                android:layout_marginTop="54dp"
+                android:background="@drawable/icon_3dotscategorytile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/home_6htsense_function"
+                android:layout_width="37dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="29dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/sixth_sense_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_30px_heart_yellow"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="317dp"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/home_moremodes"
+            android:layout_width="343dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="152dp"
+            android:background="@drawable/background_tile_home_1_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/home_moremodes_more_modes"
+                style="@style/W35NumpadHometileRobotoBold20"
+                android:layout_width="343dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="21dp"
+                android:text="@string/text_manual_modes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_3dotscategorytile_1"
+                android:layout_width="20dp"
+                android:layout_height="4dp"
+                android:layout_marginStart="162dp"
+                android:layout_marginTop="54dp"
+                android:background="@drawable/icon_3dotscategorytile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_30px_heart_yellow_1"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginStart="317dp"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

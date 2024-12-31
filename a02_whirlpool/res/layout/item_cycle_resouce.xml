@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="218dp"
+        android:layout_height="90dp"
+        android:background="@drawable/background_item_cycle_resource">
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/text_cycle_name"
+            style="@style/W35TileRegular20"
+            android:layout_width="121dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="97dp"
+            android:layout_marginTop="29dp"
+            android:fontFamily="@font/roboto_regular"
+            android:fontWeight="400"
+            android:gravity="left|top"
+            android:includeFontPadding="false"
+            android:lineHeight="22.0dp"
+            android:textColor="@color/color_whp_text_gray"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/golddash"
+            android:layout_width="17dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="97dp"
+            android:layout_marginTop="23dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:id="@+id/rectangle"
+                android:layout_width="17dp"
+                android:layout_height="2dp"
+                android:background="@drawable/background_golddash_rectangle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/icon_3dotscategorytile"
+            android:layout_width="20dp"
+            android:layout_height="4dp"
+            android:layout_marginStart="188dp"
+            android:layout_marginTop="78dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceImageView
+            android:id="@+id/cycle_icon"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

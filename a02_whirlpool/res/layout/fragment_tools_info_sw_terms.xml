@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.whirlpool.cooking.utils.AppConstants" />
+
+        <variable
+            name="settingsViewModel"
+            type="com.whirlpool.hmi.settings.SettingsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_tumbler_background">
+
+        <com.whirlpool.cooking.widgets.header.HeaderSingleIconDoubleText
+            android:id="@+id/myappliance_header"
+            android:layout_width="480dp"
+            android:layout_height="79dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            style="@style/CleanInstructionScroll"
+            android:layout_width="445dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="79dp"
+            android:paddingEnd="18dp"
+            android:scrollbarThumbVertical="@drawable/background_vertical_scrollbar_color"
+            android:scrollbarTrackVertical="@drawable/background_vertical_scrollbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myappliance_header"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/view_sw_tc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="17dp"
+                    android:layout_height="2dp"
+                    android:background="@drawable/background_golddash_rectangle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_sw_tc_headline"
+                    android:layout_width="401dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:fontWeight="400"
+                    android:gravity="start|top"
+                    android:includeFontPadding="false"
+                    android:lineHeight="32.0dp"
+                    android:text="@string/text_sw_term_title"
+                    android:textColor="@color/color_whp_text_gray"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_sw_tc_content"
+                    android:layout_width="401dp"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="38dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:fontWeight="300"
+                    android:gravity="start|top"
+                    android:includeFontPadding="false"
+                    android:lineHeight="22.0dp"
+                    android:text="@string/text_sw_term_content"
+                    android:textColor="@color/color_whp_text_gray"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

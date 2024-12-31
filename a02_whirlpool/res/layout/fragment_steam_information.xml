@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_alabaster">
+
+        <ScrollView
+            android:id="@+id/information_primary_scroll_view"
+            style="@style/CleanInstructionScroll"
+            android:layout_width="334dp"
+            android:layout_height="241dp"
+            android:layout_marginStart="134dp"
+            android:layout_marginTop="79dp"
+            android:scrollbarThumbVertical="@drawable/background_vertical_scrollbar_color"
+            android:scrollbarTrackVertical="@drawable/background_vertical_scrollbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_bar_information"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/CleanInstruction"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical|top"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/golddash1"
+                    android:layout_width="17dp"
+                    android:layout_height="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <View
+                        android:id="@+id/rectangle1"
+                        android:layout_width="17dp"
+                        android:layout_height="2dp"
+                        android:background="@drawable/background_golddash_rectangle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/headline_1"
+                    style="@style/W35PopupHeadlineMedium20"
+                    android:layout_width="269dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="6dp"
+                    android:gravity="left|top"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text1"
+                    style="@style/W35PopupBodyLight20"
+                    android:layout_width="269dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:fontWeight="300"
+                    android:gravity="left|top"
+                    android:includeFontPadding="false"
+                    android:lineHeight="22.0dp"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <FrameLayout
+                    android:id="@+id/golddash2"
+                    android:layout_width="17dp"
+                    android:layout_height="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <View
+                        android:id="@+id/rectangle2"
+                        android:layout_width="17dp"
+                        android:layout_height="2dp"
+                        android:background="@drawable/background_golddash_rectangle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/headline_2"
+                    android:layout_width="269dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:fontWeight="500"
+                    android:gravity="left|top"
+                    android:includeFontPadding="false"
+                    android:lineHeight="25.0dp"
+                    android:textColor="@color/color_whp_text_gray"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    style="@style/W35PopupBodyLight20"
+                    android:layout_width="269dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:fontWeight="300"
+                    android:gravity="left|top"
+                    android:includeFontPadding="false"
+                    android:lineHeight="22.0dp"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <FrameLayout
+                    android:id="@+id/golddash3"
+                    android:layout_width="17dp"
+                    android:layout_height="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <View
+                        android:id="@+id/rectangle3"
+                        android:layout_width="17dp"
+                        android:layout_height="2dp"
+                        android:background="@drawable/background_golddash_rectangle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/headline_3"
+                    android:layout_width="269dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:fontWeight="500"
+                    android:gravity="left|top"
+                    android:includeFontPadding="false"
+                    android:lineHeight="25.0dp"
+                    android:textColor="@color/color_whp_text_gray"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text3"
+                    style="@style/W35PopupBodyLight20"
+                    android:layout_width="269dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:fontWeight="300"
+                    android:gravity="left|top"
+                    android:includeFontPadding="false"
+                    android:lineHeight="22.0dp"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <FrameLayout
+                    android:id="@+id/golddash4"
+                    android:layout_width="17dp"
+                    android:layout_height="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <View
+                        android:id="@+id/rectangle4"
+                        android:layout_width="17dp"
+                        android:layout_height="2dp"
+                        android:background="@drawable/background_golddash_rectangle"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/headline_4"
+                    android:layout_width="269dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:fontWeight="500"
+                    android:gravity="left|top"
+                    android:includeFontPadding="false"
+                    android:lineHeight="25.0dp"
+                    android:textColor="@color/color_whp_text_gray"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text4"
+                    style="@style/W35PopupBodyLight20"
+                    android:layout_width="269dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:fontWeight="300"
+                    android:gravity="left|top"
+                    android:includeFontPadding="false"
+                    android:lineHeight="22.0dp"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+        </ScrollView>
+
+        <com.whirlpool.cooking.widgets.header.HeaderSingleIconDoubleText
+            android:id="@+id/header_bar_information"
+            android:layout_width="480dp"
+            android:layout_height="79dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frame_1170"
+            android:layout_width="427dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="250dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+                android:id="@+id/button_left"
+                style="@style/W35ButtonBold20"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:background="@drawable/background_frame_1170_button_cta_ghost_light_text"
+                android:maxWidth="220dp"
+                android:minWidth="50dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:textAllCaps="false"
+                app:backgroundTint="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+                android:id="@+id/button_right_start"
+                style="@style/W35ButtonBold20"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="340dp"
+                android:background="@drawable/background_frame_1170_buttons_primary"
+                android:maxWidth="220dp"
+                android:minWidth="50dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:textAllCaps="false"
+                app:backgroundTint="@null"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/icon_oven_menucycle_manualmode_convectbake"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="79dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="152dp"
+        android:layout_height="96dp"
+        android:background="@drawable/background_tools_grid_tile">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="17dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/background_frame_1109_line"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/toolsGridText"
+            style="@style/Tile35Regular20"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/toolsGridSwitch"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="92dp"
+            android:layout_marginTop="64dp"
+            android:theme="@style/MyActivityTheme"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:switchMinWidth="60dp"
+            app:track="@drawable/background_frame_1138_toggle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

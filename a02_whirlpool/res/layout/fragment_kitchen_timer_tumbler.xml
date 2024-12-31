@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/image_background_lightmode_navigationscreen"
+        android:layout_height="match_parent">
+
+        <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumbler
+            android:id="@+id/widget_tumbler_kitchentimer"
+            android:layout_width="854dp"
+            android:layout_height="212dp"
+            android:layout_marginTop="132dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:visibility="visible"
+            android:background="@color/color_white"
+            app:baseTumbler_item_divider="@drawable/tumbler_divider"
+            app:baseTumbler_item_layoutHeight="171dp"
+            app:baseTumbler_item_layoutWidth="385dp"
+            app:baseTumbler_item_spacing="30"
+            app:baseTumbler_nonSelectedFade="5"
+            app:baseTumbler_nonSelectedFadeMode="exponential"
+            app:baseTumbler_nonSelectedScaleMode="exponential"
+            app:baseTumbler_scrollSpeed="7"
+            app:baseTumbler_textViewCornerRadius="10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/left_gradient"
+            android:layout_width="190dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/left_gradient"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/right_gradient"
+            android:layout_width="190dp"
+            android:layout_height="212dp"
+            android:layout_marginStart="664dp"
+            android:background="@drawable/right_gradient"
+            android:layout_marginTop="132dp"
+            app:layout_constraintStart_toStartOf="@id/widget_tumbler_kitchentimer"
+            app:layout_constraintTop_toTopOf="parent">
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.whirlpool.cooking.widgets.header.HeaderBar
+            android:id="@+id/widget_header"
+            android:layout_width="854dp"
+            android:layout_height="124dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/frame_1119"
+            android:layout_width="297dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="303dp"
+            android:layout_marginTop="409dp"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_30px_kitchentimer_initialframe_grey"
+            android:gravity="center_horizontal|center_vertical"
+            android:includeFontPadding="false"
+            android:text="Add Kitchen Timer"
+            android:textColor="#363636"
+            android:textSize="20sp"
+            app:backgroundTint="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/elements_gallerydots"
+            android:layout_width="36dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="409dp"
+            android:layout_marginTop="345dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+                android:id="@+id/button_elements_gallerydot"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/color_yellow"
+                app:backgroundTint="@null" />
+
+            <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+                android:id="@+id/button_elements_gallerydot_1"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/black"
+                app:backgroundTint="@null" />
+
+            <com.whirlpool.hmi.uicomponents.widgets.buttons.NavigationButton
+                android:id="@+id/button_elements_gallerydot_2"
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:background="@color/black"
+                app:backgroundTint="@null" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

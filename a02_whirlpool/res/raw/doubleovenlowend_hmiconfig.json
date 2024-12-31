@@ -1,0 +1,31 @@
+{
+  "Version": "0.0.1",
+  "HmiExpansionConfig": {
+    "Buttons": {
+      "0": {
+        "Offset": 0,
+        "Func": "upper"
+      },
+      "1": {
+        "Offset": 0,
+        "Func": "home"
+      },
+      "2": {
+        "Offset": 0,
+        "Func": "favorite"
+      },
+      "3": {
+        "Offset": 0,
+        "Func": "light"
+      },
+      "4": {
+        "Offset": 0,
+        "Func": "tools"
+      },
+      "5": {
+        "Offset": 1,
+        "Func": "lower"
+      }
+    }
+  }
+}

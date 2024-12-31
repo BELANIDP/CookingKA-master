@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/self_clean_double_oven_graph"
+    app:startDestination="@id/selfCleanCavitySelection">
+
+    <!--<action
+        android:id="@+id/global_action_to_self_clean_double_menu"
+        app:destination="@id/selfCleanCavitySelection"/>-->
+
+    <fragment
+        android:id="@+id/selfCleanCavitySelection"
+        android:name="com.whirlpool.cooking.selfclean.CleanCavitySelectionFragment"
+        android:label="selfcleancavityselection">
+        <action
+            android:id="@+id/action_selfCleanCavitySelection_to_typeCleanCycle"
+            app:destination="@id/selfCleanTypeSelection"/>
+        <action
+            android:id="@+id/action_selfCleanCavitySelection_to_cleanCycleSelectionTumblerFragment"
+            app:destination="@id/cleanCycleSelectionTumblerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/selfCleanTypeSelection"
+        android:name="com.whirlpool.cooking.selfclean.CleanTypeSelectionFragment"
+        android:label="selfcleancavityselection">
+        <action
+            android:id="@+id/action_selfCleanTypeSelection_to_cleanCycleSelectionTumblerFragment"
+            app:destination="@id/cleanCycleSelectionTumblerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/selfCleanInstruction"
+        android:name="com.whirlpool.cooking.selfclean.PrepareOvenCleanInstructionFragment"
+        android:label="selfcleanInstruction">
+        <action
+            android:id="@+id/action_selfCleanInstruction_to_delayPrepareOvenPopUpFragment"
+            app:destination="@id/delayPrepareOvenPopUpFragment" />
+        <action
+            android:id="@+id/action_selfCleanInstruction_to_cleanStatusScreen"
+            app:destination="@id/cleanStatusScreen" />
+        <action
+            android:id="@+id/action_selfCleanInstruction_to_cleanDelayTimeTumbler"
+            app:destination="@id/cleanDelayTimeTumbler" />
+        <action
+            android:id="@+id/action_selfCleanInstruction_to_cleanCycleSelectionTumblerFragment"
+            app:destination="@id/cleanCycleSelectionTumblerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cleanStatusScreen"
+        android:name="com.whirlpool.cooking.selfclean.CleanStatusFragment"
+        android:label="CleanStatus">
+        <action
+            android:id="@+id/action_cleanStatusScreen_to_cavity_graph"
+            app:destination="@id/cavity_graph" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/delayPrepareOvenPopUpFragment"
+        android:name="com.whirlpool.cooking.selfclean.DelayPrepareOvenPopUpFragment"
+        android:label="DelayPrepareOvenPopUpFragment">
+        <action
+            android:id="@+id/action_delayPrepareOvenPopUpFragment_to_cleanDelayTimeTumbler"
+            app:destination="@id/cleanDelayTimeTumbler" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cleanDelayTimeTumbler"
+        android:name="com.whirlpool.cooking.selfclean.CleanDelayTimeTumbler"
+        android:label="CleanDelayTimeTumbler">
+        <action
+            android:id="@+id/action_cleanDelayTimeTumbler_to_selfCleanInstruction"
+            app:destination="@id/selfCleanInstruction" />
+        <action
+            android:id="@+id/action_cleanDelayTimeTumbler_to_cleanStatusScreen"
+            app:destination="@id/cleanStatusScreen" />
+    </fragment>
+
+
+    <!--    <include app:graph="@navigation/tools_menu_graph" />-->
+    <!--    <action android:id="@+id/action_global_tools_menu" app:destination="@id/tools_menu_graph"/>-->
+
+    <action android:id="@+id/action_global_navigate_to_home" app:destination="@id/manual_cooking_double_oven_graph"/>
+    <fragment
+        android:id="@+id/cleanCycleSelectionTumblerFragment"
+        android:name="com.whirlpool.cooking.selfclean.CleanCycleSelectionTumblerFragment"
+        android:label="CleanCycleSelectionTumblerFragment" >
+        <action
+            android:id="@+id/action_cleanCycleSelectionTumblerFragment_to_selfCleanCavitySelection"
+            app:destination="@id/selfCleanCavitySelection" />
+        <action
+            android:id="@+id/action_cleanCycleSelectionTumblerFragment_to_selfCleanInstruction"
+            app:destination="@id/selfCleanInstruction" />
+    </fragment>
+
+</navigation>

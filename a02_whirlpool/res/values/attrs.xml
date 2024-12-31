@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    These are whirlpool brand specific attributes -->
+    <attr name="whpTextColorGray" format="reference"/>
+    <attr name="whpTextColorBlack" format="reference"/>
+    <attr name="whpClockTextColor" format="reference"/>
+    <attr name="clockScreenBackground" format="reference"/>
+    <attr name="screenBackground" format="reference"/>
+    <attr name="primaryBrandColor" format="reference"/>
+    <attr name="secondaryBrandColor" format="reference"/>
+    <attr name="statusScreenProgressBarBackground" format="reference"/>
+    <attr name="ButtonBackground" format="reference"/>
+    <attr name="TumblerTextBackground" format="reference"/>
+    <attr name="TumblerFadeGradientLeft1" format="reference" />
+    <attr name="TumblerFadeGradientLeft2" format="reference" />
+    <attr name="TumblerFadeGradientRight1" format="reference" />
+    <attr name="TumblerFadeGradientRight2" format="reference" />
+    <attr name="NumpadTextColor" format="reference"/>
+    <attr name="HeaderBarTextColor" format="reference"/>
+    <attr name="MainTextColor" format="reference"/>
+    <attr name="BackgroundColor" format="reference"/>
+
+    <attr name="BackIconBackground" format="reference"/>
+
+    <attr name="FavoriteScreen" format="reference"/>
+    <attr name="testFont" format="reference"/>
+
+    <declare-styleable name="BaseSeekBar">
+        <attr format="integer" name="active_thumb_drawable"/>
+        <attr format="integer" name="inactive_thumb_drawable"/>
+        <attr format="integer" name="seeking_thumb_drawable"/>
+        <attr format="integer" name="seeking_progress_drawable"/>
+        <attr format="dimension" name="padding_horizontal"/>
+        <attr format="integer" name="seek_bar_max"/>
+        <attr format="integer" name="seek_progress"/>
+        <attr format="integer" name="thumb_animation_duration"/>
+    </declare-styleable>
+    
+</resources>

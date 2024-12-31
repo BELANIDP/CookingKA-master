@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="212dp"
+        android:layout_height="60dp"
+        android:background="@drawable/background_fragment_cycle_edit_tile">
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceTextView
+            android:id="@+id/cycle_edit_sheet_text_view"
+            style="@style/W35TileRegular20"
+            android:layout_width="137dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="53dp"
+            android:layout_marginTop="19dp"
+            android:fontFamily="@font/roboto_regular"
+            android:fontWeight="400"
+            android:gravity="left|top"
+            android:includeFontPadding="false"
+            android:lineHeight="22.0dp"
+            android:textColor="@color/color_whp_text_gray"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"  />
+
+        <com.whirlpool.hmi.uicomponents.widgets.resourcehelper.ResourceImageView
+            android:id="@+id/cycle_edit_icon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"  />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

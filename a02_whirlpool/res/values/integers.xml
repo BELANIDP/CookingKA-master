@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="integer_matrix_columns">2</integer>
+    <integer name="integer_information_text_max_size_for_alignment">1200</integer>
+    <integer name="integer_cavity_list_count">2</integer>
+    <integer name="integer_self_clean_types_count">2</integer>
+    <integer name="integer_self_clean_cycle_spacing">26</integer>
+    <integer name="integer_list_recycler_vertical_spacing">25</integer>
+    <integer name="integer_more_modes_count">1</integer>
+    <integer name="integer_15_mins_in_seconds">900</integer>
+    <integer name="integer_dummy_options_tumbler_item_spacing">10</integer>
+    <integer name="integer_dummy_options_tumbler_corner_radius"> 10</integer>
+    <integer name="integer_dummy_options_tumbler_layout_width">120</integer>
+    <integer name="integer_dummy_options_tumbler_layout_height">30</integer>
+    <integer name="integer_thirty_seconds"> 30 </integer>
+    <integer name="integer_one_minute"> 60 </integer>
+    <integer name="integer_five_minute"> 300 </integer>
+    <integer name="integer_quick_start_for_oven"> 300 </integer>
+    <integer name="integer_status_flame_scale_animation_duration">3000</integer>
+    <integer name="integer_status_fade_animation_duration">500</integer>
+    <integer name="integer_tumbler_item_spacing">8</integer>
+    <integer name="integer_tumbler_textView_corner_radius">10</integer>
+    <integer name="integer_tumbler_tumblet_item_width">160</integer>
+    <integer name="integer_tumbler_tumblet_item_height">80</integer>
+    <integer name="integer_number_pad_backspace_icon_duration">266</integer>
+    <integer name="session_short_timeout"> 60 </integer>
+
+    <integer name="integer_range_0">0</integer>
+    <integer name="integer_range_1">1</integer>
+    <integer name="integer_range_10">10</integer>
+    <integer name="integer_range_12">12</integer>
+    <integer name="integer_range_24">24</integer>
+    <integer name="integer_range_20">20</integer>
+    <integer name="integer_range_23">23</integer>
+    <integer name="integer_range_59">59</integer>
+    <integer name="integer_range_87">87</integer>
+    <integer name="integer_range_90">90</integer>
+    <integer name="integer_range_100">100</integer>
+    <integer name="integer_range_102">102</integer>
+    <integer name="integer_range_105">105</integer>
+    <integer name="integer_range_113">113</integer>
+    <integer name="integer_range_124">124</integer>
+    <integer name="integer_range_135">135</integer>
+    <integer name="integer_range_145">145</integer>
+    <integer name="integer_range_205">205</integer>
+
+    <integer name="integer_max_kitchen_time_hr">24</integer>
+    <integer name="integer_add_30secs">30</integer>
+    <integer name="integer_add_5mins">300</integer>
+    <integer name="integer_add_52">52</integer>
+    <integer name="integer_add_42">42</integer>
+    <integer name="integer_add_hrs_multiplier">3600</integer>
+    <integer name="integer_add_mins_multilpier">60</integer>
+    <integer name="integer_count_three">3</integer>
+    <integer name="kitchen_timer_count">1</integer>
+    <integer name="kitchen_timer_count_1">1</integer>
+    <integer name="kitchen_timer_count_4">4</integer>
+    <integer name="integer_range_120">120</integer>
+    <integer name="integer_range_480">480</integer>
+
+    <!--    Display Brightness Values    -->
+    <integer-array name="display_brightness_values">
+        <item>20</item>
+        <item>40</item>
+        <item>60</item>
+        <item>80</item>
+        <item>100</item>
+    </integer-array>
+
+    <!--    Sound / Button Volume Levels    -->
+    <integer-array name="sound_button_values">
+        <item>0</item>
+        <item>30</item>
+        <item>50</item>
+        <item>80</item>
+        <item>100</item>
+    </integer-array>
+
+</resources>

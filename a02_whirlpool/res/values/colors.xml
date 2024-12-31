@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    These are all whirlpool Specific colors-->
+    <color name="color_tumbler_divider">#9F9E9E</color>
+    <color name="color_whp_text_gray">#363636</color>
+    <color name="color_whp_text_black">#000000 </color>
+    <color name="color_whp_dark_brand_primary"> #add8e6 </color>
+    <color name="color_whp_light_brand_primary"> #FFFFFF </color>
+    <color name="color_whp_light_brand_secondary"> 	#EFB112  </color>
+    <color name="color_whp_dark_brand_secondary"> #FF8C00 </color>
+    <color name="color_whp_light_clock_screen_background"> #000000 </color>
+    <color name="color_whp_brand_primary"> #FFFFFF </color>
+    <color name="color_whp_clock_screen_text">#FFFFFF </color>
+    <color name="color_whp_status_screen_progress_background_gray"> #979797</color>
+    <color name="color_whp_light_tumbler_background">#ECEAE6</color>
+    <color name="color_whp_dark_tumbler_background">#add8e6</color>
+    <color name="color_whp_background">#FFFFFF</color>
+    <color name="tumbler_whp_light_left_gradient1"> #FFFFFF </color>
+    <color name="tumbler_whp_light_left_gradient2"> #00FFFFFF </color>
+    <color name="tumbler_whp_light_right_gradient1"> #FFFFFF</color>
+    <color name="tumbler_whp_light_right_gradient2"> #00FFFFFF </color>
+    <color name="tumbler_whp_dark_left_gradient1"> @color/color_whp_dark_brand_primary</color>
+    <color name="tumbler_whp_dark_left_gradient2"> #00FFFFFF</color>
+    <color name="tumbler_whp_dark_right_gradient1"> @color/color_whp_dark_brand_primary</color>
+    <color name="tumbler_whp_dark_right_gradient2"> #00FFFFFF</color>
+    <color name="color_red_warning"> #D63B36</color>
+    <color name="color_whp_text_gray42">#6B6B6B</color>
+    <color name="color_whp_text_gray77">#C4C4C4</color>
+    <color name="color_whp_text_dove_gray">#828181</color>
+    <color name="color_aplha_white">#F7F7F7</color>
+    <color name="color_whp_restore_bg">#F8F8F8</color>
+    <color name="color_whp_keypad_color">#353535</color>
+    <color name="color_tumbler_background">#eeebe2</color>
+    <color name="color_whp_light_brand_dark">#EEB111  </color>
+    <color name="color_whp_light_brand_primary_alpha"> #BFFFFFFF </color>
+    <color name="color_white_alpha">#BFF7F7F7</color>
+    <color name="color_black_alpha">#80000000</color>
+
+    <!--    These are common colors, which can be part of the base colors,-->
+    <!--    All the special/brand colors should be part of individual flavors-->
+    <!--    ToDo:// Delete all below or move to individual flavors-->
+    <color name="common_solid_black">#000000</color>
+    <color name="common_solid_white">#ffffff</color>
+
+
+    <!--    ToDo:// Delete all below or move to individual flavors-->
+    <color name="black">#232323</color>
+    <color name="dark_grey">#363636</color>
+    <color name="light_grey">#A1A1A1</color>
+    <color name="color_gray"> #363636 </color>
+    <color name="color_home_shadow">#393733</color>
+    <color name="color_alabaster">#EEEBE2</color>
+</resources>

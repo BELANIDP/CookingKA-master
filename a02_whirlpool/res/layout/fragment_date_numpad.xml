@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="cookingVM"
+            type="com.whirlpool.hmi.cooking.viewmodel.CookingViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="?attr/screenBackground">
+
+        <ImageView
+            android:id="@+id/numpad_wifi_icon"
+            style="@style/CommonNumpadAndTumblerScreenWifiIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whirlpool.cooking.widgets.header.HeaderBar
+            android:id="@+id/header_bar_clock_numpad"
+            style="@style/StyleNumericTumblerHeaderBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/clocksubtext"
+            style="@style/ClockNumpadHHMMSubText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_bar_clock_numpad" />
+
+        <ImageView
+            android:id="@+id/clock_backspace_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:background="?attr/BackIconBackground"
+            app:layout_constraintStart_toEndOf="@+id/clocksubtext"
+            app:layout_constraintTop_toBottomOf="@+id/header_bar_clock_numpad" />
+
+        <com.whirlpool.hmi.uicomponents.widgets.keyboard.KeyboardView
+            android:id="@+id/keyboardView"
+            style="@style/NumpadKeyboardStyle"
+            app:keyBackground="?attr/screenBackground"
+            app:keyTextColor="?attr/NumpadTextColor"
+            app:keyTextSize="@dimen/keyboard_key_TextSize"
+            app:keyboardAlpha="@xml/keyboard_num"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clocksubtext"
+            app:providePredictionCandidates="false" />
+
+        <TextView
+            android:id="@+id/button_start_delay"
+            style="@style/CommonNumpadAndTumblerScreenStartAndCancelButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

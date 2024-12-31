@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="cookingViewModel"
+            type="com.whirlpool.hmi.cooking.viewmodel.CookingViewModel" />
+
+        <variable
+            name="recipeViewModel"
+            type="com.whirlpool.hmi.cooking.recipeexecution.RecipeExecutionViewModel" />
+
+        <variable
+            name="primaryMicrowaveViewModel"
+            type="com.whirlpool.cooking.utils.MicrowaveMockViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_alabaster">
+
+        <ImageView
+            android:id="@+id/widget_header_doubleicon_doubletext"
+            android:layout_width="480dp"
+            android:layout_height="61dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/W35ButtonBold20"
+            android:layout_width="90dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="364dp"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/background_buttons_buttons_primary"
+            android:textAllCaps="false"
+            app:backgroundTint="@null"
+            android:text="Set"
+            android:fontWeight="700"
+            android:letterSpacing="0"
+            android:fontFamily="@font/roboto_bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonSecondary5min"
+            style="@style/W35ButtonBold20"
+            android:layout_width="100dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/background_button_cta_ghost_light_text"
+            android:fontFamily="@font/roboto_bold"
+            android:fontWeight="700"
+            android:gravity="center_horizontal|center_vertical"
+            android:textAllCaps="false"
+            android:textColor="#363636"
+            android:textStyle="bold"
+            app:backgroundTint="@null"
+            android:text="Format"
+            android:letterSpacing="0"
+            android:lineSpacingExtra="-3sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frame_hms"
+            android:layout_width="409dp"
+            android:layout_height="144dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="85dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/frame_1200"
+                android:layout_width="120dp"
+                android:layout_height="144dp"
+                android:layout_marginStart="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumbler
+                    android:id="@+id/widgetTumblerHour"
+                    android:layout_width="77dp"
+                    android:layout_height="144dp"
+                    app:baseTumbler_item_layoutWidth="65dp"
+                    app:baseTumbler_item_layoutHeight="50dp"
+                    app:baseTumbler_item_spacing="0"
+                    app:baseTumbler_nonSelectedFadeMode="standard"
+                    app:baseTumbler_nonSelectedScaleMode="standard"
+                    app:baseTumbler_nonSelectedScale="8"
+                    app:baseTumbler_orientation="vertical"
+                    app:baseTumbler_scrollSpeed="9"
+                    app:baseTumbler_textViewCornerRadius="10"
+                    app:baseTumbler_textViewSelectedStyle="@style/W35TumblerParameterTimeMedium52"
+                    app:baseTumbler_textViewStyle="@style/W35TumblerParameterTimeMedium42"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/h"
+                    android:layout_width="43dp"
+                    android:layout_height="31dp"
+                    android:layout_marginStart="77dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:fontWeight="700"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:includeFontPadding="false"
+                    android:lineHeight="28.0dp"
+                    android:text="@string/text_hours"
+                    android:textColor="@color/color_whp_text_gray"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/widgetTumblerHour"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/widgetTumblerHour" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/frame_1201"
+                android:layout_width="120dp"
+                android:layout_height="144dp"
+                android:layout_marginStart="143dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumbler
+                    android:id="@+id/widgetTumblerMinute"
+                    android:layout_width="77dp"
+                    android:layout_height="144dp"
+                    app:baseTumbler_item_layoutWidth="65dp"
+                    app:baseTumbler_item_layoutHeight="50dp"
+                    app:baseTumbler_nonSelectedScale="8"
+                    app:baseTumbler_item_spacing="0"
+                    app:baseTumbler_nonSelectedFadeMode="standard"
+                    app:baseTumbler_nonSelectedScaleMode="standard"
+                    app:baseTumbler_orientation="vertical"
+                    app:baseTumbler_scrollSpeed="9"
+                    app:baseTumbler_textViewCornerRadius="10"
+                    app:baseTumbler_textViewSelectedStyle="@style/W35TumblerParameterTimeMedium52"
+                    app:baseTumbler_textViewStyle="@style/W35TumblerParameterTimeMedium42"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/h_1"
+                    android:layout_width="43dp"
+                    android:layout_height="31dp"
+                    android:layout_marginStart="77dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:fontWeight="700"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:includeFontPadding="false"
+                    android:lineHeight="28.0dp"
+                    android:text="@string/text_minutes"
+                    android:textColor="@color/color_whp_text_gray"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/widgetTumblerMinute"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/widgetTumblerMinute" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/frame_seconds"
+                android:layout_width="131dp"
+                android:layout_height="144dp"
+                android:layout_marginStart="284dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.whirlpool.hmi.uicomponents.widgets.tumblers.BaseTumbler
+                    android:id="@+id/widgetTumblerAmpm"
+                    android:layout_width="131dp"
+                    android:layout_height="144dp"
+                    app:baseTumbler_item_layoutWidth="131dp"
+                    app:baseTumbler_item_layoutHeight="50dp"
+                    app:baseTumbler_item_spacing="0"
+                    app:baseTumbler_nonSelectedFadeMode="standard"
+                    app:baseTumbler_nonSelectedScaleMode="standard"
+                    app:baseTumbler_nonSelectedScale="8"
+                    app:baseTumbler_orientation="vertical"
+                    app:baseTumbler_scrollSpeed="9"
+                    app:baseTumbler_textViewCornerRadius="10"
+                    app:baseTumbler_textViewSelectedStyle="@style/W35TumblerParameterTimeMedium52"
+                    app:baseTumbler_textViewStyle="@style/W35TumblerParameterTimeMedium42"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.whirlpool.cooking.widgets.header.HeaderSingleIconDoubleText
+            android:id="@+id/widgetHeaderTime"
+            android:layout_width="480dp"
+            android:layout_height="79dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

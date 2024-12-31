@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="app_name">WhirlpoolM1_2</string>
+
+    <!--    <SDK Resources-->
+    <string name="Bake">Bake</string>
+    <string name="Broil">Broil</string>
+    <string name="Cook"> Cook </string>
+    <string name="Soften"> Soften </string>
+    <string name="Reheat"> Reheat </string>
+    <string name="pyroClean"> Self Clean </string>
+    <string name="convect"> Convect </string>
+    <string name="convectBake"> Convect Bake </string>
+    <string name="convectBroil"> Convect Broil </string>
+    <string name="convectRoast"> Convect Roast </string>
+    <string name="keepWarm"> Keep Warm </string>
+    <string name="cycle_resource_convect_bake"> Convect Bake </string>
+    <string name="cycle_resource_convect_broil"> Convect Broil </string>
+    <string name="cycle_resource_convect_roast"> Convect Roast </string>
+    <string name="cycle_resource_keep_warm"> Keep Warm </string>
+    <string name="probeBake"> Probe Bake </string>
+    <string name="probeBroil"> Probe Broil </string>
+    <string name="Convect">Convect</string>
+    <string name="convect_bake">Convect\nBake</string>
+    <string name="convect_broil">Convect\nBroil</string>
+    <string name="grillAndMicrowave">Grill + MW</string>
+    <string name="turboGrill">Turbo Grill</string>
+    <string name="airFry">AirFry</string>
+    <string name="turboGrillAndMicrowave">Turbo Grill + MW</string>
+    <string name="forcedAir">Forced Air</string>
+    <string name="rapidPreheat">Rapid Preheat</string>
+    <string name="bakeAndMicrowave">Bake + MW</string>
+    <string name="OvenUpperCavity_CycleSetCommonModeCommonModeBake"> Bake</string>
+    <string name="OvenUpperCavity_CycleSetCommonModeCommonModeBroil">Broil</string>
+    <string name="OvenLowerCavity_CycleSetCommonModeCommonModeBake"> Bake </string>
+    <string name="OvenLowerCavity_CycleSetCommonModeCommonModeBroil">Broil</string>
+    <string name="OvenLowerCavity_CycleSetCommonModeCommonModeConvect">Convect Bake</string>
+    <string name="OvenUpperCavity_CycleSetCommonModeCommonModeConvectBake">Convect Bake</string>
+    <string name="OvenUpperCavity_CycleSetCommonModeCommonModeConvectBroil">Convect Broil</string>
+    <string name="OvenLowerCavity_CycleSetCommonModeCommonModeConvectBake">Convect Bake</string>
+    <string name="OvenLowerCavity_CycleSetCommonModeCommonModeConvectBroil">Convect Broil</string>
+    <string name="OvenUpperCavity_CycleSetCommonModeCommonModeKeepWarm">Keep Warm</string>
+    <string name="OvenLowerCavity_CycleSetCommonModeCommonModeKeepWarm">Keep Warm </string>
+    <string name="OvenUpperCavity_CycleSetCommonModeCommonModeConvectRoast">Convect Roast</string>
+    <string name="OvenLowerCavity_CycleSetCommonModeCommonModeConvectRoast">Convect Roast </string>
+
+    <!--    Microwave cycle names-->
+    <string name="Mwo_ModeSetCookManual"> Microwave Cook</string>
+    <string name="Mwo_ModeSetDefrostManual">Defrost</string>
+    <string name="Mwo_ModeSetReheatManual">Reheat</string>
+    <string name="cycle_resource_microwave">Microwave</string>
+    <string name="cycle_resource_soften">Soften</string>
+    <string name="cycle_resource_reheat">Reheat</string>
+    <string name="cycle_resource_bakemwo">Convection Bake MWO</string>
+    <string name="bakemwo">Convection Bake + Mwo</string>
+
+    <!--    END-->
+    <string name="cycle_resource_bake">Bake</string>
+    <string name="cycle_resource_broil">Broil</string>
+    <string name="cycle_resource_commonmodebake">Bake</string>
+    <string name="cycle_resource_commonmodebroil">Broil</string>
+    <string name="cycle_resource_commonmodeconvectbake">Convect Bake</string>
+    <string name="cycle_resource_commonmodeconvectroast">Convect Roast</string>
+    <string name="cycle_resource_commonmodekeepwarm">Keep Warm</string>
+    <string name="OvenLowerCavity_CycleSetCommonModeCommonModeDehydration">Dehydrate</string>
+    <string name="OvenLowerCavity_CycleSetCommonModeCommonModeAirFry">Air Fry</string>
+    <string name="OvenLowerCavity_CycleSetCommonModeCommonModeSlowCook">Slow Cooking</string>
+    <string name="cycle_resource_commonmodetoast">Toast</string>
+    <string name="cycle_resource_probecommonmodeprobebake">Probe Bake</string>
+    <string name="cycle_resource_probecommonmodeprobebroil">Probe Broil</string>
+    <string name="cycle_resource_probebake">Probe Bake</string>
+    <string name="cycle_resource_probebroil">Probe Broil</string>
+    <string name="cycle_resource_cleanpyro">Clean</string>
+    <string name="cycle_resource_keepwarm">Keep Warm</string>
+    <string name="cycle_resource_breadproof">Proof</string>
+    <string name="cycle_resource_convectbake">Convect Bake</string>
+    <string name="cycle_resource_convectbroil">Convect Broil</string>
+    <string name="cycle_resource_convectroast">Convect Roast</string>
+    <string name="cycle_resource_convectbakefoodpizza">Thin Pizza</string>
+    <string name="cycle_resource_convectbakefoodfrozenpizza">Frozen Pizza</string>
+    <string name="cycle_resource_easyconvectfoodpizza">Thick Pizza</string>
+    <string name="cycle_resource_frozen">Frozen Foods</string>
+    <string name="cycle_resource_pizza">Pizza</string>
+    <string name="cycle_resource_poultry">Poultry</string>
+    <string name="cycle_resource_meat">Meat</string>
+    <string name="cycle_resource_seafood">Seafood</string>
+    <string name="cycle_resource_veggies">Veggies</string>
+    <string name="cycle_resource_bakedgoods">Baked Goods</string>
+    <string name="cycle_resource_casseroles">Casseroles</string>
+    <string name="cycle_resource_toast">Toast</string>
+    <string name="cycle_resource_nuts">Nuts</string>
+    <string name="cycle_resource_frozenbakefoodpizza">Thick Frozen Pizza</string>
+    <string name="cycle_resource_frozenasparagus">Frozen Asparagus</string>
+    <string name="cycle_resource_frozenbrocoli">Frozen Broccoli</string>
+    <string name="cycle_resource_frozenbrusselsprouts">Frozen Brussel Sprouts</string>
+    <string name="cycle_resource_buffalowings">Frozen Buffalo Wings</string>
+    <string name="cycle_resource_burgers">Burgers</string>
+    <string name="cycle_resource_frozenburgers">Frozen Burgers</string>
+    <string name="cycle_resource_frozenlasagna">Frozen Lasagna</string>
+    <string name="cycle_resource_frozenbutternutsquash">Frozen Butternut Squash</string>
+    <string name="cycle_resource_easyconvectfoodfishsticks">Frozen Fish Sticks</string>
+    <string name="cycle_resource_frozencustomfoodfrenchfries">Frozen French Fries</string>
+    <string name="cycle_resource_frozenbakefoodlasagna">Frozen Lasagna</string>
+    <string name="cycle_resource_frozencauliflower">Frozen Cauliflower</string>
+    <string name="cycle_resource_easyconvectfoodchickenpieces">Frozen Chicken Breast</string>
+    <string name="cycle_resource_frozenbakefoodnuggets">Frozen Chicken Nuggets</string>
+    <string name="cycle_resource_frozenroastedpotatoes">Frozen Roasted Potatoes</string>
+    <string name="cycle_resource_frozenrolls">Frozen Rolls</string>
+    <string name="cycle_resource_frozenslicedcarrots">Frozen Sliced Carrots</string>
+    <string name="cycle_resource_frozensweetpotatofries">Frozen Sweet Potato Fries</string>
+    <string name="cycle_resource_frozentoasterstrudel">Toaster Strudel</string>
+    <string name="cycle_resource_frozenwaffles">Waffles</string>
+    <string name="cycle_resource_easyconvectfoodfishfillet">Fish Fillet</string>
+    <string name="cycle_resource_jumboshrimp">Jumbo Shrimp</string>
+    <string name="cycle_resource_salmonfilet">Salmon Fillet</string>
+    <string name="cycle_resource_seascallops">Sea Scallops</string>
+    <string name="cycle_resource_tunasteak">Tuna Steak</string>
+    <string name="cycle_resource_chickenbreast">Fresh Chicken Breast</string>
+    <string name="cycle_resource_chickendrumsticks">Chicken Drumsticks</string>
+    <string name="cycle_resource_chickenthighs">Chicken Thighs</string>
+    <string name="cycle_resource_chickenwings">Chicken Wings</string>
+    <string name="cycle_resource_friedchicken">Fried Chicken</string>
+    <string name="cycle_resource_turkeybreast">Turkey Burgers</string>
+    <string name="cycle_resource_wholechicken">Whole Chicken</string>
+    <string name="cycle_resource_bacon">Bacon</string>
+    <string name="cycle_resource_beefjerky">Beef Jerky</string>
+    <string name="cycle_resource_beefroast">Beef Roast</string>
+    <string name="cycle_resource_beef">Beef Steak</string>
+    <string name="cycle_resource_lamb">Lamb Chops</string>
+    <string name="cycle_resource_lambroast">Lamb Roast</string>
+    <string name="cycle_resource_meatloaf">Meatloaf</string>
+    <string name="cycle_resource_pork">Pork Chops</string>
+    <string name="cycle_resource_porkribs">Pork Ribs</string>
+    <string name="cycle_resource_porkroast">Pork Roast</string>
+    <string name="cycle_resource_freshsausage">Fresh</string>
+    <string name="cycle_resource_frozensausage">Frozen Sausages</string>
+    <string name="cycle_resource_acornsquash">Acorn Squash</string>
+    <string name="cycle_resource_freshasparagus">Asparagus</string>
+    <string name="cycle_resource_easyconvectfoodbakedpotato">Baked Potato</string>
+    <string name="cycle_resource_sweetpotato">Baked Sweet Potato</string>
+    <string name="cycle_resource_freshbrocoli">Broccoli</string>
+    <string name="cycle_resource_freshbrusselsprouts">Brussel Sprouts</string>
+    <string name="cycle_resource_freshbutternutsquash">Butternut Squash</string>
+    <string name="cycle_resource_babycarrots">Baby</string>
+    <string name="cycle_resource_freshslicedcarrots">Sliced</string>
+    <string name="cycle_resource_freshcauliflower">Cauliflower</string>
+    <string name="cycle_resource_freshfrenchfries">French Fries</string>
+    <string name="cycle_resource_mushrooms">Mushrooms</string>
+    <string name="cycle_resource_slicedonions">Onions</string>
+    <string name="cycle_resource_slicedpeppers">Peppers</string>
+    <string name="cycle_resource_freshroastedpotatoes">Roasted Potatoes</string>
+    <string name="cycle_resource_roastedsweetpotatoes">Roasted Sweet Potato</string>
+    <string name="cycle_resource_freshsweetpotatofries">Sweet Potato Fries</string>
+    <string name="cycle_resource_lasagna">Lasagna</string>
+    <string name="cycle_resource_freshbagel">Fresh Bagel</string>
+    <string name="cycle_resource_frozenbagel">Frozen Bagel</string>
+    <string name="cycle_resource_freshenglishmuffin">Fresh</string>
+    <string name="cycle_resource_frozenenglishmuffin">Frozen</string>
+    <string name="cycle_resource_slicedbread">Sliced Bread</string>
+    <string name="cycle_resource_convectbakefoodpastry">Toaster Pastry</string>
+    <string name="cycle_resource_almonds">Almonds</string>
+    <string name="cycle_resource_pecans">Pecans</string>
+    <string name="cycle_resource_walnuts">Walnut</string>
+    <string name="cycle_resource_pumpkinseeds">Pumpkin Seeds</string>
+    <string name="cycle_resource_proofbreadproofstandard">Bread Dough Proof</string>
+    <string name="cycle_resource_breadloaf">Bread Loaf</string>
+    <string name="cycle_resource_brownies">Brownies</string>
+    <string name="cycle_resource_carrotcake">Carrot Cake</string>
+    <string name="cycle_resource_chocolatecake">Chocolate Cake</string>
+    <string name="cycle_resource_spongecake">Sponge Cake</string>
+    <string name="cycle_resource_angelfoodcake">Angel Food Cake</string>
+    <string name="cycle_resource_chocolatechipcookies">Chocolate Chip</string>
+    <string name="cycle_resource_sugarcookies">Sugar Cookies</string>
+    <string name="cycle_resource_easyconvectfoodcroissants">Croissants</string>
+    <string name="cycle_resource_cupcakes">Cup Cakes</string>
+    <string name="cycle_resource_frenchtoast">French Toast</string>
+    <string name="cycle_resource_muffins">Muffins</string>
+    <string name="cycle_resource_proofbreadproofrapid">Quick Breads</string>
+    <string name="cycle_resource_easyconvectfoodbakedgoods">Reheat Baked Goods</string>
+    <string name="cycle_resource_mwo_modesetdefrostmanual">Defrost</string>
+    <string name="cycle_resource_mwo_modesetcookmanual">Manual Cook</string>
+    <string name="cycle_resource_mwo_modesetsoftenmanual">Soften</string>
+    <string name="cycle_resource_mwo_modesetreheatmanual">Reheat</string>
+    <string name="cycle_resource_convect">Convect</string>
+    <string name="cycle_resource_cake">Cake</string>
+    <string name="cycle_resource_cookies">Cookies</string>
+    <string name="cycle_resource_frozenpizza">Frozen Pizza</string>
+    <string name="cycle_resource_freshpizza">Fresh Pizza</string>
+    <string name="cycle_resource_sausages">Sausages</string>
+    <string name="cycle_resource_beefsteak">Beef Steak</string>
+    <string name="cycle_resource_carrots">Carrots</string>
+    <string name="cycle_resource_partycoffeecake">Party Coffee Cake</string>
+    <string name="cycle_resource_bagel">Bagel</string>
+    <string name="cycle_resource_englishmuffin">English Muffin</string>
+    <!--    To be deleted &ndash;&gt; Till here-->
+    <string name="stayon">Hold Temperature</string>
+    <string name="turnoff">Turn Off</string>
+    <string name="header_navigation_icon_cavity_upper">icon_40px_upcavity</string>
+    <string name="header_navigation_icon_cavity_lower">icon_40px_lowcavity</string>
+
+    <!--    String Widgets-->
+    <string name="text_at_temperature">AT TEMPERATURE</string>
+    <string name="text_cook_time_seconds">%1$d SEC</string>
+    <string name="text_cook_time_minutes">%1$dM %2$dS</string>
+    <string name="text_cook_time_hours">%1$dH %2$dM %3$dS</string>
+    <string name="text_cooling"> COOLING</string>
+    <string name="text_delay_button">DELAY</string>
+    <string name="text_dismiss">Dismiss</string>
+    <string name="text_delay">Delay</string>
+    <string name="text_dont_show_again">Don\'t show again</string>
+    <string name="text_skip_delay">Skip Delay</string>
+    <string name="text_manual_mode_heading">Manual Modes</string>
+    <string name="text_wait_for_preheat">Wait Preheat</string>
+    <string name="text_preheating">PREHEATING</string>
+    <string name="text_okay">OK</string>
+    <string name="text_set_cooking">Set Cook Time</string>
+    <string name="text_start">Start</string>
+    <string name="text_save_for_later">Save for later</string>
+    <string name="text_cooking_complete_header">Cooking Complete</string>
+    <string name="text_cooking_complete">Your cooking is complete</string>
+    <string name="text_valid_time">Please enter a valid time</string>
+
+    <string name="text_set">Set</string>
+    <string name="text_next">Next</string>
+    <string name="text_Untime">Untimed</string>
+    <string name="text_default_cook_time">HH:MM:SS</string>
+    <string name="text_default_Date">00</string>
+    <string name="text_cooktime_at_complete">--:--</string>
+    <string name="text_when_done">"WHEN DONE:\u0020"</string>
+    <string name="text_save">Save</string>
+    <string name="text_cooking_time_error">Cooking Time Error</string>
+    <string name="text_Temperature_error">Temperature Error</string>
+
+    <string name="assisted_mode">Assisted Cooking</string>
+    <string name="favorite_mode">Favorites</string>
+
+    <string name="tools_mode">Tools</string>
+    <string name="button_text_dismiss">Dismiss</string>
+    <string name="button_text_close">Close</string>
+    <string name="common_text_degree_symbol">°</string>
+    <string name="common_text_watt_symbol">W</string>
+    <string name="cook_time_completed"> COOK     TIME COMPLETE </string>
+    <string name="count_down_timer_default_text"> 00H00M00S </string>
+
+    <string name="cycle_temp_range_title">Baking Temperature Range</string>
+    <string name="cycle_temp_range_info">"Bake can only be used with temperatures of 100F - 500F.
+Other cooking methods may have different ranges."
+    </string>
+    <string name="friendly_text">This is a brief, friendly message for you...</string>
+    <string name="friendly_welcome_text">Hello !!!! Wish You a wonderful day.</string>
+    <string name="text_info_temperature_range_value">%1$s can only be used with temperatures of %2$d°C - %3$d°C. Other cooking methods may have different ranges. </string>
+    <string name="text_info_Cooktime_range_value">%1$s can only be used with Cooktime of %2$d Sec - %3$d Min. Other cooking methods may have different ranges. </string>
+    <string name="info_time_to_long">There is a limit of 24 hours to use your Oven. Please select another baking time</string>
+    <string name="manual_mode">Cooking Methods</string>
+    <string name="set_cook_time">SET COOK TIME</string>
+    <string name="temperature_tumbler_new_header_text">Select a Temperature</string>
+    <string name="time_tumbler_header_text">Enter the %1$s Time </string>
+    <string name="enter_cook_time">Enter a cooktime less than %1s</string>
+    <string name="cook_time_limit">12:00:00</string>
+    <string name="text_status_oven_off">Oven Off</string>
+    <string name="text_preheating_oven">Preheating Oven</string>
+    <string name="text_cook_time_not_set"> Cooktime not set</string>
+    <string name="text_add_time"> Add Time </string>
+    <string name="string_start_now"> Start Now </string>
+    <string name="string_set_cook_time"> Set Cook Time </string>
+    <string name="text_since_preheat">since preheated</string>
+    <string name="text_since_ready">Since</string>
+    <string name="text_cooking_time_add_error_body">You have already set the maximum cooktime, you cannot add +5mins to the cycle</string>
+    <string name="text_cooking_time_add_error_header">Cannot add cooktime</string>
+    <string name="turn_oven_off">Turn Oven Off</string>
+    <string name="text_extra_brown">Extra Brown</string>
+    <string name="text_add_5_mins">+5min</string>
+
+    <!--    Cycle Names &ndash;&gt;From SDK-->
+    <string name="preheating_to">"Preheating to "</string>
+    <string name="text_view_status_description_cooking">At Temperature</string>
+    <string name="fahrenheit">Fahrenheit</string>
+
+    <!--    MWO Door open popup strings-->
+    <string name="text_mwo_door_open_popup_text">Close the door and tap START to start the microwave</string>
+    <string name="text_mwo_door_open_header">Microwave door is open</string>
+    <string name="text_cancel">Cancel</string>
+    <string name="text_mwo_tips">Tips</string>
+    <string name="text_mwo_tips_msg">Cook the ingredients in a particular order to make the dish appetizing and tasteful. For example onions should be added first, then garlic and then ginger.</string>
+    <!--    END-->
+    <!-- Sabbath Strings -->
+    <string name="text_sabbath_select_sabbath_bake">Would you like to set Sabbath Bake</string>
+    <string name="text_sabbath_header">Sabbath Mode</string>
+    <string name="text_sabbath_bake_yes">YES</string>
+    <string name="text_sabbath_bake_no">NO</string>
+    <string name="text_sabbath_clock_subtext">Press and hold for 3 sec to exit form sabbath mode</string>
+    <!--    END-->
+    <string name="cycle_name_cooking_mode_text">Use [XXX]F with [Cooking Mode Name]</string>
+
+    <!--Hydro clean Prepare Oven Information-->
+    <string name="text_hydro_clean_instruction">
+         1. Remove the broiler pan, grid, cookware and bakeware, all cooking utensils, oven racks and aluminium foil and,
+        on some models, the temperature probe from the oven. \n\n2. Use a damp cloth to clean inside
+        door edge and the 1 1/2\' (38mm) area around the inside oven cavity frame,
+        being certain not to move or bend the gasket. \n\n3. Wipe out any loose soil to reduce smoke
+        and avoid damage. At high temperatures, foods react with porcelain.
+        staining, itching, pitting or faint white spots can result. This will not affect cooking performance.
+        \n\n4. Cleaning duration : %s \n\nAfter having closed the door,press <b>Start Button</b> to begin the cycle.
+    </string>
+
+    <string name="text_hydro_clean_title">Hydro Clean Instructions</string>
+    <string name="hydroclean">Hydro Self Clean</string>
+    <string name="text_hydrocomplete_title">Cleaning Completed</string>
+    <string name="text_hydrocomplete_body">Wipe down any residue and place racks back in the oven.</string>
+
+    <!--Self clean Prepare Oven Information-->
+    <string name="text_self_clean_complete">Self Clean Complete!</string>
+    <string name="text_door_open_close_instruction">Before Starting, you must open the oven door and verify the oven is empty.</string>
+    <string name="text_delay_door_open_close_instruction">Before delaying, you must open the oven door and verify the oven is empty</string>
+    <string name="text_prepare_oven">Prepare your Oven</string>
+    <string name="text_self_clean_instruction_text_1">
+        1. Remove the broiler pan, grid, cookware and bakeware, all cooking utensils, oven racks and aluminium foil and,
+        on some models, the temperature probe from the oven.\n
+    </string>
+    <string name="text_self_clean_instruction_text_2">2. Use a damp cloth to clean inside
+        door edge and the 1 1/2\' (38mm) area around the inside oven cavity frame,
+        being certain not to move or bend the gasket.\n</string>
+    <string name="text_self_clean_instruction_text_3">3. Wipe out any loose soil to reduce smoke
+        and avoid damage. At high temperatures, foods react with porcelain.
+        staining, itching, pitting or faint white spots can result. This will not affect cooking performance.\n</string>
+    <string name="text_self_clean_instruction_text_4">4. Cleaning duration : %s \n</string>
+    <string name="text_self_clean_instruction_text_5">After having closed the door,press <b>Start Button</b> to begin the cycle.\n\n\n\n</string>
+    <string name="text_self_clean_door_lock">Locking Oven Door</string>
+    <string name="text_clean_instruction">Pyro Clean Instructions</string>
+    <string name="text_self_clean_door_lock_instructions">Locking the door for Self Clean.\nPlease do not try to open the \ndoor.</string>
+
+    <!-- Self Clean Strings   -->
+    <string name="text_self_clean">Self Clean Cycles</string>
+    <string name="text_self_clean_type">Self Clean Types</string>
+    <string name="text_upper_cavity">Upper Cavity</string>
+    <string name="text_lower_cavity">Lower Cavity</string>
+    <string name="text_self_clean_cavity_selection">"Pyro clean</string>
+    <string name="text_self_clean_unavailable_time">unavailable for another %d hrs %d min</string>
+    <string name="text_self_clean_unavailable_time_minutes">unavailable for another %d min</string>
+    <string name="text_self_clean_unavailable_time_min">unavailable for another 1 min</string>
+    <string name="text_hydro_clean_cavity_selection">Hydro clean</string>
+
+    <string name="text_self_clean_soil_level">Soil Level: </string>
+
+    <string name="self_clean_cavity_subtitle">Pick a cavity you want to run self clean on</string>
+    <string name="self_clean_type_subtitle">Pick the self-clean type you would like to pick</string>
+    <string name="self_clean_level_subtitle">Pick the self-clean level you would like to pick</string>
+
+    <string name="text_sub_time"> hour cycle</string>
+    <string name="text_door_locked">Other feature unavailable</string>
+    <string name="text_cooling_down">Cooling Down...</string>
+    <string name="text_door_unlocked">Door Unlocked</string>
+    <string name="text_cleaning">CLEANING</string>
+    <string name="text_pyroclean_state">Pyro Self Clean</string>
+    <string name="text_pyro_level">Choose Level</string>
+    <string name="text_pyro_level_cookTime_suffix_hour">hr</string>
+    <string name="text_pyro_level_cookTime_suffix_minute">min</string>
+    <string name="text_pyro_door_locked">Door locked</string>
+    <string name="text_pyro_door_locked_body">Oven door locked.</string>
+    <string name="text_pyrocomplete_state">Cycle Complete</string>
+    <string name="text_pyrocomplete_title">Door Unlocked</string>
+    <string name="text_pyrocomplete_body">Caution: Oven may still be very hot. Please be careful not to burn yourself. Wipe down any residue and place racks back in the oven.</string>
+    <string name="text_pyro_return_home">Return Home</string>
+    <string name="text_hydro_clean_auto">Auto</string>
+    <string name="text_pyro_lock">Oven Locked</string>
+    <string name="text_pyro_unlock">Oven Unlocked</string>
+    <string name="text_pyro_cooling">Oven Cooling</string>
+    <string name="text_door_locked_body">During the self Clean cycle you will be unable to use the oven.To cancel the cycle use the power button side of the display.</string>
+    <string name="text_door_locked_Cool_body">The system is cooling down,wait until the door to unlock before any action.</string>
+
+
+    <!--    Delay Strings-->
+    <string name="text_delay_heading">Select a time for cooking to end</string>
+    <string name="text_delay_timer_helper_text">At %d:%02d %s</string>
+    <string name="text_delay_timer_helper_summary_button_text">Ready at %d:%02d %s</string>
+    <string name="numPad_clock_modifier_text_am">AM</string>
+    <string name="numPad_clock_modifier_text_pm">PM</string>
+    <string name="text_delay_time_number_pad_error_text">Enter a time that is less than %d hours ahead</string>
+    <string name="text_delay_running">Delayed</string>
+    <string name="text_delay_time_Until_helper">Delayed..Until %d:%02d %s</string>
+    <string name="text_since_time_preheat">Since %d sec</string>
+    <string name="text_delayed_until">Delayed to be started at</string>
+    <string name="text_start_timer">Start Timer</string>
+    <string name="text_delay_time_error">Delay Time error</string>
+    <string name="text_delay_duration_wcooktime_minonly">Starts After %d Min</string>
+    <string name="text_delay_duration_wcooktime_hr_min">Starts After %d Hr %d Min</string>
+    <string name="text_skip_delay_title">Skip Delay</string>
+    <string name="text_skip_delay_body">Are You sure of skipping delay?</string>
+    <string name="text_skip_delay_left_button">Yes, Skip Delay</string>
+    <string name="text_skip_delay_right_button">Go Back</string>
+    <string name="text_Delay_botton_sheet_button">Delay Time</string>
+
+    <!-- Delay Strings   -->
+    <string name="text_delay_tumbler_header">When should cooking end ?</string>
+    <string name="text_delay_tumbler_header_wocooktime">Start After</string>
+    <string name="text_delay_tumbler_header_wcooktime">Ready At</string>
+    <string name="text_delay_duration">Starts in x hour and Y minutes</string>
+    <string name="text_delay_duration_wocooktime">Starts at %s</string>
+    <string name="text_delay_duration_wcooktime">Starts after %s</string>
+    <string name="text_delay_start">Set</string>
+
+    <!-- Probe Strings   -->
+    <string name="text_probe_instruction">
+        COOKING INSTRUCTION:\n\nFor Cooking meat, baking cakes with fillings on one shelf only.\n\nInsert the food
+        on level 3. Use wire shelf with pan or tray.
+    </string>
+    <string name="text_insert_probe_header">Insert Meat Probe</string>
+    <string name="text_insert_probe_instruction">Insert meat probe in the cavity and press \"Resume\" to continue</string>
+    <string name="text_resume">Resume</string>
+
+    <!--    Ble provisioning String-->
+    <string name="text_item_1_connect_to_network"> Connect to Network </string>
+    <string name="text_item_2_said_code"> SAID Code</string>
+    <string name="text_forget_network">Forget Network</string>
+    <string name="text_ok_retun_back">Ok, Return Back</string>
+    <string name="fragment_provisioning_ble_connection_title">Bluetooth Connection</string>
+    <string name="fragment_provisioning_ble_connect_instructions">Download the mobile app and follow the instructions</string>
+    <string name="fragment_provisioning_ble_connect_Said_Label">SAID: </string>
+    <string name="fragment_provisioning_ble_pair_title">Bluetooth Pairing</string>
+    <string name="fragment_provisioning_ble_pair_description">Description describing how the PIN works for mobile phone and appliance</string>
+    <string name="fragment_provisioning_ble_pair_pin_label">PIN:</string>
+    <string name="fragment_provisioning_ble_pair_device_name">Device Name:</string>
+    <string name="fragment_provisioning_ble_pair_primary_button">PAIR</string>
+    <string name="fragment_provisioning_tools_provisioning_menu">Bluetooth Provisioning</string>
+    <string name="fragment_provisioning_tools_connection_details"> Connection Details</string>
+    <string name="fragment_provisioning_tools_connection_details_signal_strength">Signal Strength: </string>
+    <string name="fragment_provisioning_tools_connection_details_wifi5g">WIFI5G: </string>
+    <string name="fragment_provisioning_tools_connection_details_ip">IP: </string>
+    <string name="fragment_provisioning_tools_connection_details_subnet_mask">SubnetMask: </string>
+    <string name="fragment_provisioning_tools_connection_details_router_ip">Router IP: </string>
+    <string name="fragment_provisioning_tools_connection_details_dns">DNS: </string>
+    <string name="fragment_provisioning_tools_connection_details_rssi">RSSI: </string>
+    <string name="fragment_provisioning_tools_header_network_info">Network Info</string>
+    <string name="fragment_provisioning_home_screen_text_description">Scan the QR code to download the Whirlpool app on your phone.\nMake sure bluetooth on your phone is on.\nMake sure your phone is connected to your WiFi network.\nIf you already have the app, press next to continue.</string>
+    <string name="fragment_provisioning_pair_screen_text_description">If this PIN matches the one shown on your device, press ‘Pair’ to continue. Otherwise, press back to try again.</string>
+    <string name="fragment_provisioning_successfully_connected">Successfully Connected</string>
+    <string name="fragment_provisioning_remote_enable_turned_on">Remote Enable Turned On</string>
+    <string name="fragment_provisioning_remote_enable_turned_on_description">Remote Enable has been turned on, it allows you to control your appliance from your mobile devices.</string>
+    <string name="fragment_provisioning_wifi_connect_pairing_in_progress_instruction">Please follow instructions on the mobile app and return to this screen when completed.</string>
+    <string name="fragment_provisioning_wifi_connect_time_instruction">%s is connecting to WiFi. This will typically take up to 2 mins.</string>
+    <string name="fragment_provisioning_pairing_in_progress_title">Pairing in Progress...</string>
+    <string name="fragment_provisioning_connecting_to_wifi_title">Connecting to WiFi</string>
+    <string name="fragment_provisioning_connecting_to_Whirlpool_title">Connecting to Whirlpool</string>
+    <string name="fragment_provisioning_registering_oven_title">Registering Oven</string>
+    <string name="fragment_provisioning_wifi_connect_whp_server_instruction">%s is connecting to Whirlpool Server. This will typically take up to 2 mins.</string>
+    <string name="fragment_provisioning_wifi_connect_cloud_connecting_wait_instruction">This is a bit longer than expected. This process is expected to finish in the next two minutes.</string>
+    <string name="fragment_provisioning_home_button">Home</string>
+    <string name="fragment_provisioning_turn_off_button">Turn Off</string>
+    <string name="fragment_provisioning_home_text_set_up_later">Setup Later</string>
+    <string name="fragment_provisioning_ble_connect_text_cancel">Cancel</string>
+    <string name="fragment_provisioning_home_title_text">Connect to Internet</string>
+    <string name="fragment_provisioning_connect_device">Connect Device</string>
+    <string name="fragment_provisioning_home_text_next">Next</string>
+    <string name="text_done">Done</string>
+    <string name="text_try_again">Try Again</string>
+    <string name="fragment_provisioning_failed_to_connect_title">Failed to Connect</string>
+    <string name="fragment_provisioning_forget_network_description">Are you sure you want to forget the network ? This will delete any username and password that associated with the network.</string>
+    <string name="text_forget">Forget</string>
+    <string name="text_keep">Keep</string>
+    <string name="fragment_provisioning_error_description">You can press "Try Again" to reinitiate the connection. Press "Cancel" to return back to the Idle Screen. You can always try again from the Tools Menu.</string>
+    <string name="fragment_provisioning_connect_device_title">Would you like to Connect with </string>
+    <string name="fragment_provisioning_WiFi_connecting_text">WiFi is connecting...</string>
+
+    <!--    MWO strings-->
+    <string name="text_cook_turn_table_on">Turn Table : ON</string>
+    <string name="text_cook_turn_table_off">Turn Table : OFF</string>
+    <string name="text_set_power_level">Set Power Level</string>
+    <string name="text_power_level_percentage">%</string>
+    <string name="text_power_level_watts">%dW</string>
+    <string name="text_watt">Watt</string>
+    <string name="text_set_temperature">Set Temperature</string>
+
+
+    <!--    Kitchen Timer Strings-->
+    <string name="text_kitchen_timer_title">Kitchen Timer</string>
+    <string name="text_kitchen_timer_complete">Kitchen Timer Completed</string>
+    <string name="text_kitchen_new_timer">Set New Timer</string>
+    <string name="text_kitchen_set_timer">Set Kitchen Timer</string>
+    <string name="text_kitchen_plus_30_seconds">+ 30 SEC</string>
+    <string name="text_kitchen_plus_5_minutes">+ 5 MINS</string>
+    <string name="text_zero">0</string>
+    <string name="text_kitchen_timer_cancel">Cancel</string>
+    <string name="text_kitchen_timer_max_valid_time">Use 24 hr</string>
+    <string name="text_kitchen_timer_invalid_time_header">Invalid Time</string>
+    <string name="text_kitchen_timer_invalid_time_body">For Kitchen Timer, Time range is from 00 sec to 24 hr</string>
+    <string name="text_kitchen_timer_pause">Pause</string>
+    <string name="text_kitchen_timer_restart">Restart</string>
+    <string name="text_12hrs">-120000</string>
+    <string name="text_24hrs">240000</string>
+    <string name="text_kitchen_timer_update_name"> Update Name</string>
+    <string name="text_default_kitchen_timer">00H:00M:00S</string>
+    <string name="text_kitchen_timer_resume">Resume</string>
+    <string name="text_kitchen_timer_set">Set Timer</string>
+    <string name="text_kitchen_timer_dismiss">Dismiss</string>
+    <string name="text_kitchen_timer_complete_header">Complete</string>
+    <string name="text_kitchen_timer_max_time">24:00:00</string>
+    <string name="text_kitchen_time_range">Range 0s - 24hrs</string>
+    <string name="text_kitchen_complete_body">You\'ve reach the time for kitchen timer since [time] Minute.</string>
+
+    <!--    Assisted Cooking-->
+    <string name="text_preview_food">Preview Food</string>
+    <string name="text_preview_dummy_text"> You %1$s food is ready to be cooked with following options:- </string>
+    <string name="dark">HIGH</string>
+    <string name="light"> LOW </string>
+    <string name="frozenLasagna"> FrozenLasagna </string>
+    <string name="partyCoffeeCake"> Party Coffee Cake </string>
+    <string name="lambRoast">Lamb Roast </string>
+    <string name="beefRoast">Beef Roast </string>
+    <string name="string_add_5mins"> +5 Min </string>
+    <string name="string_ready_at"> Will be ready at </string>
+    <string name="string_since_complete">Since Cook Completed</string>
+    <string name="string_cook_time_complete">Cook Time Complete</string>
+
+    <!--    Time and Date Strings-->
+    <string name="fragment_time_date_tools_menu">Time and Date</string>
+    <string name="fragment_time_date_tools_menu_header_text">Time &amp; Date</string>
+    <string name="text_set_time">SET TIME FORMAT</string>
+    <string name="text_set_time_manually">SET TIME MANUALLY</string>
+    <string name="text_set_time_automatically">SET TIME AUTOMATICALLY</string>
+    <string name="text_set_date">SET DATE FORMAT</string>
+    <string name="text_set_date_manually">SET DATE MANUALLY</string>
+    <string name="text_12_hour_format">12-HOUR</string>
+    <string name="text_24_hour_format">24-HOUR</string>
+    <string name="auto_time_mode_on">ON</string>
+    <string name="auto_time_mode_off">OFF</string>
+    <string name="text_month_first_format">MM/DD/WW</string>
+    <string name="text_day_first_format">DD/MM/WW</string>
+    <string name="text_time_format_sub_text">12-hour versus 24-hour</string>
+    <string name="text_date_format_sub_text">mm/dd/ww versus dd/mm/ww</string>
+    <string name="text_hour_suffix">H</string>
+    <string name="text_min_suffix">M</string>
+
+    <!--    App Themes Strings-->
+    <string name="fragment_app_themes_text">Select App theme</string>
+    <string name="light_theme"> Light </string>
+    <string name="dark_theme"> Dark </string>
+
+    <!-- Temperature Strings-->
+    <string name="choose_temperature_format">Choose Format</string>
+    <string name="temperature_mode">Temperature Format</string>
+    <string name="temperature_format">Set Temperature °C or °F</string>
+    <string name="grill_level">GRILL LEVEL</string>
+    <string name="grill_power">GRILL POWER</string>
+    <string name="text_grill">grill</string>
+    <string name="text_grill_level">Grill Level</string>
+    <string name="text_level_grill">Grill level</string>
+    <string name="text_grill_power">Grill power</string>
+    <string name="text_set_grill_level">Set Grill Level</string>
+    <string name="text_temperature_celsius_unit">%s°C</string>
+    <string name="text_temperature_fahrenheit_unit">%s°F</string>
+    <string name="text_temperature_format_sub_text">180°C versus 356°F</string>
+    <string name="text_celsius_format">Celsius</string>
+    <string name="text_fahrenheit_format">Fahrenheit</string>
+    <string name="text_more_modes">More Modes</string>
+    <string name="text_themes">App Themes</string>
+    <string name="text_celsius_format_unit">C</string>
+    <string name="fahrenheitUnit">F</string>
+
+    <!-- Time and Date Manually Strings-->
+    <string name="text_time_manually_heading">Set Time Manually</string>
+    <string name="text_date_manually_heading">Set Date Manually</string>
+    <string name="text_button_set_manually_heading">Set</string>
+
+    <!--    Dummy Options-->
+    <string name="text_cooking_required_options">Select Options</string>
+    <string name="text_doneness_label">Doneness</string>
+    <string name="text_weight_label">Weight</string>
+
+    <!--    Control Lock Strings-->
+    <string name="text_control_lock">Control Lock</string>
+    <string name="text_control_lock_label">The controls on this product are locked</string>
+
+
+<!--    Temperature strings Numpad-->
+    <string name="text_temperature_subtext">Enter a temperature between %d° and %d°</string>
+    <string name="temperature_tumbler_header_text">Select a %1$s temperature</string>
+
+<!--    MWO multi modes-->
+    <string name="text_add_time_mwo">-- : --</string>
+    <string name="text_cooktime">\n%s</string>
+    <string name="text_pick_cooktime">Pick cook time</string>
+    <string name="text_header_mwo_summary_modes">%1$s</string>
+
+
+    <!--    AT END STRINGS-->
+    <string name="text_at_end_title">Choose your end option:</string>
+
+    <!-- OTA strings   -->
+    <string name="text_ota_progress">SW update in Progress</string>
+    <string name="text_ota_popup_body"> Please do not unplug your oven until installation is completed. Oven features will return after reboot.</string>
+    <string name="text_cooking_in_progress"> Cooking might be in progress in this oven</string>
+    <string name="text_ota_popup_body_error">Error installing the bundle.\nIt will try again later.</string>
+    <string name="text_cooking_pregress_error">Cooking In Progress</string>
+    <string name="text_ota_popup_title">Installing Version %s</string>>
+    <string name="text_ota_update_successful_title"> Updates for Version %s:</string>
+    <string name="text_ota_update_successful_body"> 1: Version %s</string>
+
+
+    <string name="leak_canary_test_class_name">assertk.Assert</string>
+
+    <string name="mwo_power_level"> Power: %1$d%%</string>
+
+    <string name="text_add_30_seconds">+30 sec</string>
+    <string name="text_add_1_minute">+1 min</string>
+    <string name="text_add_5_minute">+5 min</string>
+    <string name="text_edit_more"> ... </string>
+    <string name="text_cook_time">TIME</string>
+    <string name="text_cook_power">MW POWER</string>
+    <string name="text_cook_temperature">TEMPERATURE</string>
+
+    <!--    Popup Strings-->
+    <string name="preheat_complete">Preheat Completed</string>
+    <string name="preheat_complete_body">Please insert food and press OK </string>
+    <string name="text_skip_preheat_body">Without preheat phase, the oven will take more time to reach the set temperature. It is recommended skipping to preheat, especially for those food categories.</string>
+    <string name="text_power_management_info">Check your electricity supplier information. This parameter helps the appliance in performing at best. A wrong power setting could lead to a lower maximum temperature in the cavity.</string>
+    <string name="text_are_you_sure">Are You Sure?</string>
+    <string name="text_ampere_select_body">Power Management %s </string>
+
+    <string name="mwo_door_open">Door Opened</string>
+    <string name="text_controlLocking_header">Keep Pressing To Lock The Product</string>
+    <string name="text_controlUnlocking_header">Keep Pressing To Un-Lock The Product</string>
+
+    <string name="text_controlLock_state_update_header">The Keys Have Been Locked</string>
+    <string name="text_controlLock_state_update_body">Any interaction won\'t be available.\nLong press control lock key to unlock.</string>
+    <string name="mwo_door_open_body">Please close the door and press Resume</string>
+    <string name="mwo_door_open_close_body">Open and close the door and then press Start</string>
+    <string name="text_action_needed">Action Needed</string>
+    <string name="resume">Resume</string>
+    <string name="cancel">Cancel</string>
+    <string name="cycle_complete">Cycle Complete</string>
+    <string name="power_level">MW Power</string>
+    <string name="temperature">Temperature</string>
+    <string name="cook_time">Cook time</string>
+    <string name="add_to_fav">Add to fav.</string>
+    <string name="text_skip_preheat">Skip preheat</string>
+    <string name="text_brown_extra">Extra brown</string>
+    <string name="text_brown_extra_body">Extra Brown is a 5 min cycle that add crisp to the surface of the food.</string>
+    <string name="text_browning">browning</string>
+    <string name="text_addbrowning">addBrowning</string>
+    <string name="text_extrabrowning">extraBrowning</string>
+    <string name="text_high">High</string>
+    <string name="text_prolong_30_sec">Prolong 30 sec</string>
+    <string name="text_prolong_5_min">Prolong 5 min</string>
+    <string name="text_press_start_button">Press start button</string>
+
+    <!--    Tools Menu    -->
+    <string name="text_show_all">Show All</string>
+    <string name="text_mute">Mute</string>
+    <string name="text_remote_enbale">Remote Enable</string>
+    <string name="text_13_ampere">13 Ampere</string>
+    <string name="text_16_ampere">16 Ampere</string>
+    <string name="text_13A">13A</string>
+    <string name="text_16A">16A</string>
+    <string name="text_uk">UK</string>
+    <string name="text_europe">Europe</string>
+    <string name="text_time_set">Set Time</string>
+    <string name="text_D">D</string>
+    <string name="text_M">M</string>
+    <string name="text_Y">Y</string>
+    <string name="text_mm_dd">mm/dd</string>
+    <string name="text_dd_mm">dd/mm</string>
+    <string name="text_d_m_y">D/M/Y</string>
+    <string name="text_m_d_y">M/D/Y</string>
+    <string name="text_time_in_hh_mm">HH : MM</string>
+    <string name="text_format">Format</string>
+    <string name="text_time_error_body">Enter correct time!!</string>
+    <string name="text_time_error_title">Time error</string>
+    <string name="text_date_error_body">Enter correct date!!</string>
+    <string name="text_date_error_title">Date error</string>
+    <string name="text_AM">AM</string>
+
+    <!--    Clean And Maintenance    -->
+
+    <!--    Preference    -->
+    <string name="text_eco_mode">Eco Mode</string>
+    <string name="text_lighting">Lighting</string>
+    <string name="text_demo_mode">Demo Mode</string>
+    <string name="text_preferences">Preferences</string>
+    <string name="text_sound_volume">Sound Volume</string>
+    <string name="text_power_management">Power Management</string>
+    <string name="text_display_settings">Display Settings</string>
+    <string name="text_restore_settings">Restore Settings</string>
+    <string name="text_language_and_region">Language And Region</string>
+    <string name="text_temperature_calibration">Temperature Calibration</string>
+    <string name="text_cleaning_and_maintenance">Cleaning &amp; Maintenance</string>
+    <string name="text_time_and_date">Time and Date</string>
+    <string name="text_date_set">Set Date</string>
+    <string name="text_time_format" >Time Format</string>
+    <string name="text_date_format" >Date Format</string>
+    <string name="text_hour" >Hour</string>
+    <string name="text_minute" >Minute</string>
+    <string name="text_cooking_completed">Cooking completed</string>
+    <string name="text_cooking_cancelled">Cooking cancelled due to reaching cooktime limitation.</string>
+    <string name="text_stop_cooking">Stop cooking</string>
+    <string name="text_temp_not_changeable">Temp. not changeable</string>
+    <string name="text_cooking_cancel">Cooking cancelled</string>
+    <string name="text_manual_modes">MANUAL MODES</string>
+    <string name="text_functions">FUNCTIONS</string>
+    <string name="text_oven_ready">Oven Ready</string>
+    <string name="text_preheat">preheat</string>
+    <string name="text_skippreheat">skipPreheat</string>
+    <string name="text_rapidpreheat">rapidPreheat</string>
+    <string name="text_set_cook_time">Set cook time</string>
+    <string name="text_start_now">Start now</string>
+
+    <!--    Preference > Lighting > Item   -->
+    <string name="text_lighting_item">Turn light off during cooking</string>
+    <string name="text_edit">Edit</string>
+    <string name="text_eco_mode_active"><b>Eco Mode</b> is active.\nSome functions are deactivated</string>
+
+
+    <!--    Preference > Display Settings -->
+    <string name="text_display_brightness">Display brightness</string>
+    <string name="text_standard_brightness">Standby brightness</string>
+    <string name="text_display_themes">Themes</string>
+
+    <!--    Unboxing    -->
+    <string name="text_unboxing_home_title_text">Set up your appliance</string>
+    <string name="text_unboxing_text_description">You can always modify your Preferences in by touching the Tools icon.</string>
+    <string name="text_unboxing_text_WiFi_description">By connecting to a network you can get updates, remote control your appliance and more...</string>
+    <string name="text_unboxing_text_WiFi_right_button">Connect</string>
+    <string name="text_unboxing_text_demo_mode">Demo</string>
+    <string name="text_unboxing_text_WiFi_left_button">Skip</string>
+    <string name="text_unboxing_text_WiFi_title">Connect to WiFi?</string>
+    <string name="text_unboxing_text_region_title">Region settings</string>
+    <string name="text_unboxing_text_completed">Congratulations!</string>
+    <string name="text_unboxing_text_completed_subtext">Your product is set up.</string>
+    <string name="text_unboxing_text_finished">Finish</string>
+    
+    <!--    Preference > SoundVolume -->
+    <string name="text_sound_and_volume">Sound &amp; volume</string>
+    <string name="text_button_effects">Button &amp; effects</string>
+<!--    Preference > Language Region > Item   -->
+    <string name="text_language_region">Language &amp; region</string>
+    <!--Regional Settings Menu strings-->
+    <string name="text_pref_regional_settings">Regional</string>
+
+    <!-- Language List Menu Strings-->
+    <string name="text_language">Language</string>
+    <string name="text_english">English</string>
+    <string name="text_deutsch">Deutsch</string>
+    <string name="text_italiano">Italiano</string>
+    <string name="text_francais">Francais</string>
+    <string name="text_polskie">Polskie</string>
+    <string name="text_en">en</string>
+    <string name="text_de">de</string>
+    <string name="text_it">it</string>
+    <string name="text_fr">fr</string>
+    <string name="text_pl">pl</string>
+
+    <!-- Temperature Unit Menu Strings -->
+    <string name="text_celsius">Celsius</string>
+    <string name="text_fahrenheit">Fahrenheit</string>
+    <string name="text_celsius_menu">C°</string>
+    <string name="text_fahrenheit_menu">F°</string>
+
+    <!-- Weight Unit Menu Strings -->
+    <string name="text_set_unit">Set Unit</string>
+    <string name="text_weight_unit">Weight Unit</string>
+    <string name="text_g">g</string>
+    <string name="text_lbs">Lbs</string>
+    <string name="text_imperial">imperial</string>
+    <string name="text_kilograms_unit">kgs</string>
+    <string name="text_lbs_unit">lbs</string>
+
+    <!--    Preference > Restore Settings -->
+    <string name="text_restore_instruction">Restore instructions</string>
+    <string name="text_factory_default">Restore factory defaults</string>
+
+    <!--    Connectivity    -->
+    <string name="text_connectivity">Connectivity</string>
+
+    <string name="text_light">Light</string>
+    <string name="text_dark">Dark</string>
+    <string name="theme_pref_key">app_theme</string>
+
+    <!--    Info    -->
+    <string name="text_info">Information</string>
+    <string name="text_my_appliance">My Appliance</string>
+    <string name="text_wifi_tc">WiFi Terms And Conditions</string>
+    <string name="text_service_and_suport">Service &amp; Support</string>
+    <string name="text_software_tc">Software Terms And Conditions</string>
+
+    <!--    Restore Instruction / Factory  Content -->
+    <string name="text_restore_instruction_content">12 instruction screens have been dismissed.\nWould you like to restore?</string>
+    <string name="text_proceed">Proceed</string>
+    <string name="text_restore">Restore</string>
+    <string name="text_restore_factory_content">This action will restore the product to the factory defaults setting.</string>
+
+    <!--    Restore Instruction / Factory  Warning Popup -->
+    <string name="text_warning_title">Warning</string>
+    <string name="text_default_warning_content">This will remove your saved preferences and cannot be undone. After the reboot process, you\'ll need to set up the product again.</string>
+    <string name="text_restore_warning_content">This will restore all the dismissed instructions shown automatically before any cooking cycle.</string>
+    <string name="text_cooking_restored">Cooking Info Restored</string>
+
+    <!--    Temperature calibration -->
+    <string name="text_temp_calibration">Temperature calibration</string>
+    <string name="text_temp_calibration_content">If oven seems too hot or too cool, you can calibrate it by increasing or decreasing oven’s temperature. The oven’s internal thermometer will be adjusted by this amount on all cycles.</string>
+    <string name="text_temp_calibration_confirm_content">Boiling Point Calibration %s°.</string>
+    <string name="text_default_temperature">000°</string>
+
+    <!--    Power Loss  -->
+    <string name="text_power_loss_title">Powerloss occured!</string>
+    <string name="text_power_loss_button_text">Set up manually</string>
+    <string name="text_power_loss_body_text">Power to your appliance was lost. You may need to check on your food in your appliance. The current Time and Date may be incorrect. Press Update to enter the correct information.</string>
+    <string name="text_power_loss_connect_wifi_title">Connect to WiFi</string>
+    <string name="text_power_loss_right_button">Update</string>
+    <string name="text_power_loss_WiFi_connected_connecting">Power to your appliance was lost. You may need to check on your food in your appliance.</string>
+    <string name="text_power_loss_WiFi_connected">Power to your appliance was lost. You may need to check on your food in your appliance.You have successfully reconnected to the WIFI.</string>
+
+    <!--    Tumbler Strings -->
+    <string name="text_seconds">S</string>
+    <string name="text_minutes">M</string>
+    <string name="text_hours">H</string>
+
+    <!--   Info -  MyAppliance  -->
+    <string name="myappliance_appliance">Appliance N\u00B0:</string>
+    <string name="myappliance_model_name">Model name:</string>
+    <string name="myappliance_sku">SKU:</string>
+    <string name="myappliance_last_update">Last update:</string>
+
+    <!--   Info -  Service & Support  -->
+    <string name="text_support_appliance_number">Appliance Number:</string>
+    <string name="text_support_visit_site">Visit our website:</string>
+    <string name="text_support_website_link_prefix">www.whirlpool.com/</string>
+    <string name="text_support_website_link_suffix">services/contact-us.html</string>
+    <string name="text_support_start_diagostic">Start diagostic</string>
+
+    <!--   Info -  Software Terms  -->
+    <string name="text_sw_term_tc_title">Software terms condic…</string>
+    <string name="text_sw_term_title">Introduction</string>
+    <string name="text_sw_term_content">Please read these Terms Of Use carefully, and the Privacy Statement (which is incorporated into these Terms - see below), before using your Connected Appliance and associated software applications and services. Your attention is drawn in particular to section VIII of these Terms of Use which contains restrictions on our liability to you.</string>
+
+    <!--   Info -  WiFi Terms  -->
+    <string name="text_wifi_tc_title">WiFi terms &amp; conditions</string>
+    <string name="text_wifi_term_title">Scan QR code to the read instructions.</string>
+    <string name="text_wifi_term_content">Please read these Terms Of Use carefully, and the Privacy Statement (which is incorporated into these Terms - see below), before using your Connected Appliance and associated software applications and services. Your attention is drawn in particular to section VIII of these Terms of Use which contains restrictions on our liability to you.</string>
+    <string name="text_preheat_needed">Preheat needed</string>
+    <string name="text_preheat_needed_info">Preheat phase is needed for convection bake, skipping preheat will affect the quality of the food. Preheat won’t be available once a cooking is delayed.\n</string>
+    <string name="text_cooking_instruction">Cooking instruction</string>
+    <string name="text_cooking_instruction_info">Hot air will circulate in convection bake, so if you have a regular recipe, trying tune down 10-20 degree on the temperature.\n</string>
+    <string name="text_headline">Headline</string>
+    <string name="text_headline_info">The cavity needs to be preheated before inserting the food. The oven will notify you when it’s time to insert the food.\n</string>
+    <string name="text_last_headline_info">The cavity needs to be preheated before inserting the food. The oven will notify you when it’s time to insert the food.\n\n\n</string>
+    <string name="text_lorem_info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n</string>
+    <string name="text_insert_the_food">Insert the food now on rack x\n</string>
+    <string name="text_yes">Yes</string>
+    <string name="text_no">No</string>
+    <!--    Display Settings    -->
+    <string-array name="display_brightness">
+        <item>Min</item>
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+        <item>Max</item>
+    </string-array>
+
+    <string-array name="standard_brightness">
+        <item>Off</item>
+        <item>Eco</item>
+        <item>Low</item>
+        <item>Mid</item>
+        <item>Max</item>
+    </string-array>
+
+    <!--    Sound Volume    -->
+    <string-array name="sound_button">
+        <item>Off</item>
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+        <item>Max</item>
+    </string-array>
+
+    />
+
+    <!-- Steam -->
+    <string name="text_steam_instruction_text_1">The cavity needs to be preheated before inserting the food. The oven will notify you when it\'s time to insert the food.</string>
+    <string name="text_steam_instruction_text_2">Pour 150ml water in the bottom.</string>
+    <string name="text_steam_instruction_text_3">Wipe out any loose soil to reduce smoke and avoid damage. At high temperatures, foods react with porcelain.
+        staining, itching, pitting or faint white spots can result. This will not affect cooking performance.\n</string>
+    <string name="text_steam_instruction_text_4">Cleaning duration : %s \n</string>
+    <string name="text_steam_instruction_text_5">After having closed the door,press <b>Start Button</b> to begin the cycle.\n\n\n\n</string>
+
+    <string name="text_pure_steam_title">Pure Steam</string>
+    <string name="text_steam_cooktime">-- : -- : --</string>
+    <string name="text_home">Home</string>
+
+    <!-- Water Level Popup -->
+    <string name="text_water_level_title">Fill the drawer</string>
+    <string name="text_drawer_state_title">Close the drawer</string>
+    <string name="text_water_level_content">Fill water to Level %s to provide enough steam for this cycle, Close the drawer and press start to continue.</string>
+
+    <string name="text_filling_attempt_title">%s Cancelled</string>
+    <string name="text_filling_attempt_body">%s cancelled because there\'s not enough water in the boiler.</string>
+
+    <string name="text_water_low">Water Low</string>
+    <string name="text_steam_press_start">Press start</string>
+    <string name="text_steam_level">Steam level</string>
+
+    <!-- convectSteam -->
+    <string name="text_convect_steam_title">Forced air + Steam</string>
+    <string name="text_convect_steam_sub_title">STEAM</string>
+    <string name="text_convect_steam_level">%s steam</string>
+
+    <!-- Steam Draining State -->
+    <string name="text_stm_draininig">Draining...</string>
+    <string name="text_stm_place_empty_drawer">Please empty the drawer</string>
+
+    <!-- Auto / Mandatory Drain Complete Popup -->
+    <string name="text_popup_drain_complete_title">Drain is completed</string>
+    <string name="text_popup_drain_complete_body">Drain is completed, please empty the drawer.</string>
+
+    <!-- Drawer Open Popup - Before Drain Start-->
+    <string name="text_popup_drain_drawer_open_title">Close the drawer</string>
+    <string name="text_popup_drain_drawer_open_body">Please make sure the drawer is in place and closed.</string>
+
+    <!-- Mandatory Drain required Popup -->
+    <string name="text_popup_mnd_drain_required_title">Drain required</string>
+    <string name="text_popup_mnd_drain_required_body">All functions blocked. Drain is required to continue cooking, please make sure the drawer is in place to begin drain.</string>
+
+    <!-- Mandatory Drain In-Progress Popup -->
+    <string name="text_popup_mnd_drain_inprogress_title">Draining</string>
+    <string name="text_popup_mnd_drain_inprogress_body">Draining in progress...\nThis process cannot be canceled</string>
+
+</resources>

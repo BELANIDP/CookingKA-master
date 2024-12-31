@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="upperCookingViewModel"
+            type="com.whirlpool.hmi.cooking.viewmodel.CookingViewModel" />
+<!--        <variable-->
+<!--            name="lowerCookingViewModel"-->
+<!--            type="com.whirlpool.hmi.cooking.viewmodel.CookingViewModel" />-->
+    </data>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="?attr/FavoriteScreen">
+
+<!--    app:binder_clock_time="@{clockVm.dateAndTime}"-->
+    <TextView
+        android:id="@+id/textView_favoriteScreenDigitalClock"
+        style="@style/CommonHomeAndStatusScreenDigitalClock"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    app:home_primary_cooking_cavity="@{upperCookingViewModel.ovenTypeEnum}"-->
+    <TextView
+        android:id="@+id/textView_favoriteScreenCavityChangeIcon"
+        style="@style/CommonHomeAndStatusScreenCavityChangeIcon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textView_favoriteScreenManualMode"
+        style="@style/CookingMethodFavoriteButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_favoriteAssistedCooking"
+        style="@style/AssistedCookFavoriteButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_favoriteScreenManualMode" />
+
+    <TextView
+        android:id="@+id/textView_favorite"
+        style="@style/FavoriteButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         />
+
+    <View
+        android:id="@+id/view_favoriteScreenManualModeIcon"
+        style="@style/ModeIconFavorite"
+        app:layout_constraintStart_toStartOf="@+id/textView_favoriteScreenManualMode"
+        app:layout_constraintTop_toTopOf="@+id/textView_favoriteScreenManualMode" />
+
+    <View
+        android:id="@+id/view_favoriteScreenAssistedModeIcon"
+        style="@style/ModeIconFavorite"
+        app:layout_constraintStart_toStartOf="@+id/textView_favoriteAssistedCooking"
+        app:layout_constraintTop_toTopOf="@+id/textView_favoriteAssistedCooking" />
+
+    <View
+        android:id="@+id/view_favoriteScreenMode"
+        style="@style/ModeIconFavorite"
+        app:layout_constraintStart_toStartOf="@+id/textView_favorite"
+        app:layout_constraintTop_toTopOf="@+id/textView_favorite" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

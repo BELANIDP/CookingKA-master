@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="?attr/screenBackground">
+
+
+        <ImageView
+            android:id="@+id/numpad_wifi_icon"
+            style="@style/CommonNumpadAndTumblerScreenWifiIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whirlpool.cooking.widgets.header.HeaderSingleIconDoubleText
+            android:id="@+id/header_bar_clock_numpad"
+            style="@style/StyleNumericTumblerHeaderBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/clocktimeHH"
+            style="@style/ClockNumpadtimeHr"
+            app:layout_constraintTop_toBottomOf="@id/header_bar_clock_numpad"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="visible" />
+        <TextView
+            android:id="@+id/clocktime_seperator"
+            style="@style/ClockNumpadtimeseperator"
+            app:layout_constraintTop_toBottomOf="@id/header_bar_clock_numpad"
+            app:layout_constraintStart_toEndOf="@id/clocktimeHH"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/clocktimeMM"
+            style="@style/ClockNumpadtimeMin"
+            app:layout_constraintStart_toEndOf="@id/clocktime_seperator"
+            app:layout_constraintTop_toBottomOf="@id/header_bar_clock_numpad"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/clock_numpad_AMPM"
+            style="@style/ClockNumpadAMPM"
+            app:layout_constraintStart_toEndOf="@id/clocktimeMM"
+            app:layout_constraintTop_toBottomOf="@id/header_bar_clock_numpad"
+            tools:visibility="visible"
+            />
+
+        <TextView
+            android:id="@+id/clocksubtext"
+            style="@style/ClockNumpadHHMMSubText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clocktimeHH" />
+
+        <ImageView
+            android:id="@+id/clock_backspace_icon"
+            style="@style/ClockNumpadtimeBackIcon"
+            app:layout_constraintStart_toEndOf="@id/clock_numpad_AMPM"
+            app:layout_constraintTop_toBottomOf="@id/header_bar_clock_numpad"
+            android:background="?attr/BackIconBackground"/>
+
+        <com.whirlpool.hmi.uicomponents.widgets.keyboard.KeyboardView
+            android:id="@+id/keyboardView"
+            style="@style/NumpadKeyboardStyle"
+            app:keyBackground="?attr/screenBackground"
+            app:keyTextColor="?attr/NumpadTextColor"
+            app:keyTextSize="@dimen/keyboard_key_TextSize"
+            app:keyboardAlpha="@xml/keyboard_num"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clocksubtext"
+            app:providePredictionCandidates="false" />
+
+        <TextView
+            android:id="@+id/button_start_delay"
+            style="@style/CommonNumpadAndTumblerScreenStartAndCancelButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

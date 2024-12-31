@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="kitchenTimerVm"
+            type="com.whirlpool.hmi.kitchentimer.KitchenTimerViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/a30base_clock_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="?attr/clockScreenBackground">
+
+        <com.whirlpool.hmi.uicomponents.widgets.clock.ClockTextView
+            android:id="@+id/text_sabbath_clock"
+            style="@style/SabbathClockScreenClockText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/text_sabbath_header" />
+
+        <TextView
+            android:id="@+id/text_view_sabbath_subtext"
+            style="@style/SabbathClocksubtext"
+            app:layout_constraintEnd_toEndOf="@id/text_sabbath_clock"
+            app:layout_constraintStart_toStartOf="@id/text_sabbath_clock"
+            app:layout_constraintTop_toBottomOf="@id/text_sabbath_clock"
+            tools:text="@string/text_sabbath_clock_subtext"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

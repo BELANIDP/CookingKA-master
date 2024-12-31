@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeebe2">
+
+        <com.whirlpool.cooking.widgets.header.HeaderBar
+            android:id="@+id/toolsMenuHeaderBar"
+            android:layout_width="480dp"
+            android:layout_height="79dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_tools"
+            android:layout_width="480dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="79dp"
+            android:orientation="vertical"
+            android:scrollbarThumbVertical="@drawable/background_vertical_scrollbar_color"
+            android:scrollbarTrackVertical="@drawable/background_vertical_scrollbar"
+            android:scrollbars="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="468dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.whirlpool.cooking.widgets.ToolsGridView
+                    android:id="@+id/toolsGrid_1"
+                    android:layout_width="152dp"
+                    android:layout_height="96dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.whirlpool.cooking.widgets.ToolsGridView
+                    android:id="@+id/toolsGrid_2"
+                    android:layout_width="152dp"
+                    android:layout_height="96dp"
+                    android:layout_marginStart="158dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.whirlpool.cooking.widgets.ToolsGridView
+                    android:id="@+id/toolsGrid_3"
+                    android:layout_width="152dp"
+                    android:layout_height="96dp"
+                    android:layout_marginStart="316dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.whirlpool.hmi.uicomponents.widgets.list.ListView
+                    android:id="@+id/toolsMenuListItem"
+                    android:layout_width="480dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="115dp"
+                    android:clipChildren="false"
+                    android:nestedScrollingEnabled="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="at_end">Al final</string>
+  <string name="at_end_hold">Mantener la temperatura</string>
+  <string name="at_end_hold_description">Esto mantendrá la temperatura del horno durante más tiempo hasta que apague el horno: limite a [%i: max_hours] horas.</string>
+  <string name="at_end_keep_warm">Mantener caliente</string>
+  <string name="at_end_keep_warm_description">Esto disminuirá la temperatura del horno, pero manténgalo caliente hasta que apague el horno: limite a [%i: max_hours] horas.</string>
+  <string name="at_end_selected_hold">Al final: Mantener la temperatura</string>
+  <string name="at_end_selected_keep_warm">Al final: Mantener caliente</string>
+  <string name="at_end_selected_turn_off">Al final: Apagar</string>
+  <string name="at_end_turn_off">Apagar</string>
+  <string name="at_end_turn_off_description">Esto apagará el horno y la temperatura de la cavidad disminuirá lentamente.</string>
+  <string name="button_delay">Demora</string>
+  <string name="button_next">Siguiente</string>
+  <string name="button_save_for_later">Guardar para más tarde</string>
+  <string name="button_set_cook_time">Establecer tiempo de cocción</string>
+  <string name="button_start">Comienzo</string>
+  <string name="button_start_now">Empezar ahora</string>
+  <string name="cooking_method_food_title">Cocina asistida</string>
+  <string name="layout_clock_date">EEEE, MMMM F</string>
+  <string name="layout_clock_time">h:mm</string>
+  <string name="layout_cook_method_standard_description">Los modos se priorizarán según la frecuencia de uso.</string>
+  <string name="layout_cook_method_standard_title">Seleccione un método de cocción</string>
+  <string name="layout_home_my_cookbook">Mi Libro\nde cocina</string>
+  <string name="layout_status_recipe_state_at_temp">A la temperatura</string>
+  <string name="layout_status_recipe_state_preheat">Precalentamiento a %d °</string>
+  <string name="layout_status_time_ready_at">Estará listo en h:mm z</string>
+  <string name="layout_status_time_since_complete">%s Desde que se completó</string>
+  <string name="layout_temperature_description" formatted="false">Ingrese una temperatura entre %d ° y %d °</string>
+  <string name="layout_temperature_title">Seleccione una temperatura</string>
+  <string name="more_modes">Más modos</string>
+  <string name="status_bar_time">h:mm z</string>
+  <string name="temperature_unit_celsius">Celsius</string>
+  <string name="temperature_unit_fahrenheit">Fahrenheit</string>
+</resources>

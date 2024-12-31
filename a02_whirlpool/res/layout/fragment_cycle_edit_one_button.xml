@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="480dp"
+        android:layout_height="152dp"
+        android:background="@drawable/background_fragment_bottomsheet_tile">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frame_1197"
+            android:layout_width="442dp"
+            android:layout_height="142dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/frame_1093"
+                android:layout_width="442dp"
+                android:layout_height="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/cycle_edit_back_arrow"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/icon_40px_backarrow"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/cycle_edit_right_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="402dp"
+                    android:background="@drawable/icon_40px_info"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/button_textlong"
+                android:layout_width="440dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="55dp"
+                android:background="@drawable/background_frame_1197_button_textlong"
+                android:fontFamily="@font/roboto_bold"
+                android:fontWeight="700"
+                android:gravity="center_horizontal|center_vertical"
+                android:includeFontPadding="false"
+                android:lineHeight="20.0dp"
+                android:textAllCaps="false"
+                android:textColor="@color/color_whp_text_gray"
+                android:textSize="20sp"
+                android:visibility="visible"
+                app:backgroundTint="@null"
+                android:text="@string/text_stop_cooking"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.whirlpool.hmi.uicomponents.widgets.grid.GridView
+                android:id="@+id/cycleeditRecycler"
+                android:layout_width="440dp"
+                android:layout_height="99dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="55dp"
+                android:clipChildren="false"
+                app:item_spacing="16"
+                app:number_of_columns="2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingClass" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

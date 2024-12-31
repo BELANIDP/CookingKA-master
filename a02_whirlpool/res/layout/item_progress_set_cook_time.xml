@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_alabaster">
+
+        <TextView
+            android:id="@+id/text_function_name"
+            android:layout_width="430dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="8dp"
+            android:fontWeight="400"
+            android:gravity="left|top"
+            android:fontFamily="@font/roboto_regular"
+            android:includeFontPadding="false"
+            android:lineHeight="34.0dp"
+            android:textColor="@color/color_whp_text_gray"
+            android:textSize="24sp"
+            android:text="cicle name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/golddash"
+            android:layout_width="17dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:id="@+id/rectangle"
+                android:layout_width="17dp"
+                android:layout_height="2dp"
+                android:background="@drawable/background_golddash_rectangle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bar_progress"
+            android:layout_width="430dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="110dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ProgressBar
+                android:id="@+id/progressbar_cook"
+                android:layout_width="430dp"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_height="12dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:progressDrawable="@drawable/background_progressbar_cook"
+                android:secondaryProgress="100"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/untimed_progressbar"
+                android:layout_width="430dp"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_height="12dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:indeterminateDrawable="@raw/progressbar_cooking_untimed"
+                android:secondaryProgress="100"
+                android:visibility="gone"
+                app:lottie_autoPlay="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/text_cooktime"
+            android:layout_width="186dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="252dp"
+            android:layout_marginTop="57dp"
+            android:fontFamily="@font/roboto_regular"
+            android:fontWeight="400"
+            android:gravity="right|center_vertical"
+            android:includeFontPadding="false"
+            android:lineHeight="34.0dp"
+            android:textColor="@color/dark_grey"
+            android:textSize="45sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/settings"
+            android:layout_width="233dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_power_level"
+                style="@style/RobotoReg30"
+                android:layout_width="233dp"
+                android:layout_height="32dp"
+                android:gravity="left|bottom"
+                android:text="setting function"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_temperature"
+                style="@style/RobotoReg30"
+                android:layout_width="233dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="32dp"
+                android:gravity="left|bottom"
+                android:text="setting function"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_power_temperature"
+                style="@style/W35SettingLine1Bold42"
+                android:layout_width="233dp"
+                android:layout_height="44dp"
+                android:text="Setting 1"
+                android:layout_marginTop="26dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="199dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/ramp_up_down_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="1dp"
+                    android:visibility="gone"
+                    android:background="@drawable/icon_40px_placeholder"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/ramp_up_down_temperature"
+                    android:layout_width="163dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="6dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:fontWeight="400"
+                    android:gravity="left|bottom"
+                    android:includeFontPadding="false"
+                    android:lineHeight="30.0dp"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="30sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frame_1436"
+            android:layout_width="227dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="57dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/icon_temperature_with_text"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="2.5dp"
+                android:visibility="gone"
+                android:background="@drawable/icon_40px_placeholder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_temperature_with_icon"
+                android:layout_width="182dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="45dp"
+                android:fontFamily="@font/roboto_regular"
+                android:fontWeight="400"
+                android:gravity="left|center_vertical"
+                android:includeFontPadding="false"
+                android:lineHeight="34.0dp"
+                android:textColor="@color/dark_grey"
+                android:textSize="45sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

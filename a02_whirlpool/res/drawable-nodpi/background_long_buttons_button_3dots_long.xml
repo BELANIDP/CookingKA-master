@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+	<item>
+		<shape android:shape="rectangle">
+			<solid android:color="@color/color_whp_light_brand_primary"/>
+			<corners android:radius="7.5dp"/>
+			<size android:width="200dp"
+				android:height="44dp"/>
+		</shape>
+	</item>
+	<item android:width="30px" android:height="32px" android:gravity="center">
+		<bitmap android:src="@drawable/icon_horizontal_dots_30px"
+			android:gravity="center_vertical|center_horizontal" />
+
+	</item>
+</layer-list>

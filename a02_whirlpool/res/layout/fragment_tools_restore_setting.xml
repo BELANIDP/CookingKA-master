@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_alabaster">
+
+        <com.whirlpool.cooking.widgets.header.HeaderSingleIconDoubleText
+            android:id="@+id/toolsShowAllHeaderBar"
+            android:layout_width="480dp"
+            android:layout_height="79dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/widget_tools_item"
+            android:layout_width="480dp"
+            android:layout_height="166dp"
+            android:layout_marginTop="79dp"
+            android:background="@color/color_aplha_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="408dp"
+                android:layout_height="146dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/display_item1"
+                    android:layout_width="409dp"
+                    android:layout_height="70dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <View
+                        android:layout_width="399dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="68dp"
+                        android:background="@color/color_whp_text_gray77"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="407dp"
+                        android:layout_height="31dp"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/item1_title"
+                            android:layout_width="248dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="1dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:fontWeight="400"
+                            android:gravity="start|center_vertical"
+                            android:includeFontPadding="false"
+                            android:lineHeight="22.0dp"
+                            android:text="@string/text_restore_instruction"
+                            android:textColor="@color/color_whp_text_gray"
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="377dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icon_30px_forward_arrow"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/display_item2"
+                    android:layout_width="409dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="76dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="407dp"
+                        android:layout_height="31dp"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/item2_title"
+                            android:layout_width="248dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="1dp"
+                            android:fontFamily="@font/roboto_regular"
+                            android:fontWeight="400"
+                            android:gravity="start|center_vertical"
+                            android:includeFontPadding="false"
+                            android:lineHeight="22.0dp"
+                            android:text="@string/text_factory_default"
+                            android:textColor="@color/color_whp_text_gray"
+                            android:textSize="20sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="377dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/icon_30px_forward_arrow"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

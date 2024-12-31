@@ -1,0 +1,142 @@
+<?xml version="1.0" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="singleStatusFragment"
+            type="com.whirlpool.cooking.base.AbstractCookingSingleStatusFragment" />
+
+        <variable
+            name="clockViewModel"
+            type="com.whirlpool.hmi.uicomponents.widgets.clock.ClockViewModel" />
+
+        <variable
+            name="recipeViewModel"
+            type="com.whirlpool.hmi.cooking.recipeexecution.RecipeExecutionViewModel" />
+
+        <variable
+            name="cookingViewModel"
+            type="com.whirlpool.hmi.cooking.viewmodel.CookingViewModel" />
+
+        <variable
+            name="kitchenTimerVM"
+            type="com.whirlpool.hmi.kitchentimer.KitchenTimerViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_alabaster">
+
+        <com.whirlpool.cooking.widgets.header.HeaderTop
+            android:id="@+id/widget_header_top"
+            android:layout_width="480dp"
+            android:layout_height="47dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whirlpool.cooking.widgets.ProgressSetCookTime
+            android:id="@+id/singleStatusProgressSetCookTime"
+            android:layout_width="444dp"
+            android:layout_height="122dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="45dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:single_status_broil_power_level_view="@{recipeViewModel.broilPowerLevel}"
+            app:single_status_cook_timer_state="@{recipeViewModel.cookTimerState}"
+            app:single_status_cooking_progress_basis="@{recipeViewModel.recipeProgressBasis}"
+            app:single_status_cooking_progress_value="@{recipeViewModel.recipeProgressPercentage}"
+            app:single_status_cooking_recipe_name="@{recipeViewModel.recipeName}"
+            app:single_status_countdown_cook_time="@{recipeViewModel.remainingCookTime}"
+            app:single_status_delay_timer_state="@{recipeViewModel.delayTimerState}"
+            app:single_status_power_level_view="@{recipeViewModel.mwoPowerLevel}"
+            app:single_status_recipe_cooking_state="@{recipeViewModel.recipeCookingState}"
+            app:single_status_recipe_delay_timer_state="@{recipeViewModel.delayTimerState}"
+            app:single_status_since_ready_time="@{recipeViewModel.readySinceTime}"
+            app:single_status_since_preheat_ready_time="@{recipeViewModel.readySincePreheatTime}"
+            app:single_status_temperature_display_view="@{cookingViewModel.ovenDisplayTemperature}"
+            app:single_status_temperature_target_view="@{recipeViewModel.targetTemperature}" />
+
+        <ImageView
+            android:id="@+id/icon_oven_runningscreen"
+            android:layout_width="128dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="176dp"
+            android:layout_marginTop="174dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_text_3dots"
+            android:layout_width="200dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/background_long_buttons_button_3dots_long"
+            android:fontFamily="@font/roboto_bold"
+            android:fontWeight="700"
+            android:gravity="center_horizontal|center_vertical"
+            android:includeFontPadding="false"
+            android:lineHeight="16.0dp"
+            android:textAllCaps="false"
+            android:textColor="@color/color_whp_text_gray"
+            android:textSize="16sp"
+            app:backgroundTint="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button_secondary_text_addtime"
+            style="@style/W35ButtonBold20"
+            android:layout_width="200dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="254dp"
+            android:layout_marginTop="250dp"
+            android:background="@drawable/background_long_buttons_button_addtimelong"
+            android:textAllCaps="false"
+            app:backgroundTint="@null"
+            android:letterSpacing="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/text_icon"
+            android:layout_width="179dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="275dp"
+            android:layout_marginTop="174dp"
+            android:layout_marginEnd="26dp"
+            android:gravity="end"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_readytime"
+                style="@style/W35TileRegular20"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/roboto_regular"
+                android:fontWeight="400"
+                android:gravity="right|center_vertical"
+                android:includeFontPadding="false"
+                android:lineHeight="22.0dp"
+                android:textColor="@color/color_whp_text_gray"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/icon_30px_placeholder_3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.whirlpool.cooking.utils.AppConstants" />
+
+        <variable
+            name="settingsViewModel"
+            type="com.whirlpool.hmi.settings.SettingsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_tumbler_background">
+
+        <com.whirlpool.cooking.widgets.header.HeaderSingleIconDoubleText
+            android:id="@+id/myappliance_header"
+            android:layout_width="480dp"
+            android:layout_height="79dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view_my_appliance"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="17dp"
+                android:layout_height="2dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="79dp"
+                android:background="@drawable/background_golddash_rectangle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_title_1"
+                android:layout_width="173dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="87dp"
+                android:fontFamily="@font/roboto_regular"
+                android:fontWeight="400"
+                android:gravity="start|center_vertical"
+                android:includeFontPadding="false"
+                android:lineHeight="22.0dp"
+                android:text="@string/myappliance_appliance"
+                android:textColor="@color/color_whp_text_gray"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_value_1"
+                android:layout_width="227dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="210dp"
+                android:layout_marginTop="87dp"
+                android:fontFamily="@font/roboto_light"
+                android:fontWeight="300"
+                android:gravity="start|center_vertical"
+                android:includeFontPadding="false"
+                android:lineHeight="22.0dp"
+                android:text='@{settingsViewModel.serialNumber}'
+                android:textColor="@color/color_whp_text_gray"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_title_2"
+                android:layout_width="173dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="123dp"
+                android:fontFamily="@font/roboto_regular"
+                android:fontWeight="400"
+                android:gravity="start|center_vertical"
+                android:includeFontPadding="false"
+                android:lineHeight="22.0dp"
+                android:text="@string/myappliance_model_name"
+                android:textColor="@color/color_whp_text_gray"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_value_2"
+                android:layout_width="227dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="210dp"
+                android:layout_marginTop="123dp"
+                android:fontFamily="@font/roboto_light"
+                android:fontWeight="300"
+                android:gravity="start|center_vertical"
+                android:includeFontPadding="false"
+                android:lineHeight="22.0dp"
+                android:text='@{settingsViewModel.model}'
+                android:textColor="@color/color_whp_text_gray"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_title_3"
+                android:layout_width="173dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="159dp"
+                android:fontFamily="@font/roboto_regular"
+                android:fontWeight="400"
+                android:gravity="start|center_vertical"
+                android:includeFontPadding="false"
+                android:lineHeight="22.0dp"
+                android:text="@string/myappliance_sku"
+                android:textColor="@color/color_whp_text_gray"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_value_3"
+                android:layout_width="227dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="210dp"
+                android:layout_marginTop="159dp"
+                android:fontFamily="@font/roboto_light"
+                android:fontWeight="300"
+                android:gravity="start|center_vertical"
+                android:includeFontPadding="false"
+                android:lineHeight="22.0dp"
+                android:text='@{settingsViewModel.model}'
+                android:textColor="@color/color_whp_text_gray"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_title_4"
+                android:layout_width="173dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="195dp"
+                android:fontFamily="@font/roboto_regular"
+                android:fontWeight="400"
+                android:gravity="start|center_vertical"
+                android:includeFontPadding="false"
+                android:lineHeight="22.0dp"
+                android:text="@string/myappliance_last_update"
+                android:textColor="@color/color_whp_text_gray"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_value_4"
+                android:layout_width="227dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="210dp"
+                android:layout_marginTop="195dp"
+                android:fontFamily="@font/roboto_light"
+                android:fontWeight="300"
+                android:gravity="start|center_vertical"
+                android:includeFontPadding="false"
+                android:lineHeight="22.0dp"
+                android:textColor="@color/color_whp_text_gray"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

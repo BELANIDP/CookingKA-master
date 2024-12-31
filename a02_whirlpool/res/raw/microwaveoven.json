@@ -1,0 +1,5151 @@
+{
+  "capabilityFileVersion": "1.2.4.0",
+  "whrPartNumber": "P07616859",
+  "partNumber": "P07616859",
+  "status": "committed",
+  "hash": "aa1c9dc01795764dc40a83500fc5c72890f3aad40082b935a0cc1dda21bb1149",
+  "productVariant": 4,
+  "generatorInfo": {
+    "partNumber": "P07616859",
+    "version": 19,
+    "status": "committed",
+    "hash": "aa1c9dc01795764dc40a83500fc5c72890f3aad40082b935a0cc1dda21bb1149"
+  },
+  "cavities": {
+    "primaryCavity": {
+      "ovenMwCavityIndex": 0,
+      "cavityType": "microwaveOven",
+      "physicalPosition": "upper",
+      "cavityLightConfig": {
+        "defaultLightStateWhenRunning": true,
+        "eco": {
+          "defaultEcoMode": false,
+          "ecoTimer": {
+            "range": {
+              "min": 0,
+              "max": 0,
+              "step": 0,
+              "default": 0
+            }
+          }
+        }
+      },
+      "recipes": {
+        "grillAndMicrowave": {
+          "name": "grillAndMicrowave",
+          "cookingMethod": [
+            "grillAndMicrowave"
+          ],
+          "whrOptions": {
+            "requiredOptions": {
+              "mwoPowerLevel": {
+                "range": {
+                  "min": 10,
+                  "max": 100,
+                  "step": 10,
+                  "default": 80
+                }
+              },
+              "broilLevelPercentage": {
+                "default": "medium",
+                "map": [
+                  {
+                    "value": 50,
+                    "displayString": "low"
+                  },
+                  {
+                    "value": 75,
+                    "displayString": "medium"
+                  },
+                  {
+                    "value": 100,
+                    "displayString": "high"
+                  }
+                ]
+              }
+            },
+            "optionalOptions": {
+              "cookTime": {
+                "range": {
+                  "min": 5,
+                  "max": 5400,
+                  "step": 60,
+                  "default": 30
+                }
+              },
+              "delayTime": {
+                "range": {
+                  "min": 900,
+                  "max": 86400,
+                  "step": 900,
+                  "default": 3600
+                }
+              }
+            },
+            "nonEditableOptions": {}
+          },
+          "whrSupportsCookTimeEstimation": false,
+          "whrUseMagnetron": true,
+          "whrType": "manual",
+          "whrApplyUpo": false,
+          "whrTemperatureProbeRequired": false,
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "cooking"
+              },
+              "cookingMethod": {
+                "methodName": "grillAndMicrowave"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "user",
+              "name": {
+                "@type": "enumeration",
+                "text": "addTime"
+              },
+              "userInstruction": {
+                "@type": "enumeration",
+                "text": "addTime",
+                "userPrompt": [
+                  "time"
+                ]
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "whrUseBoiler": false
+        },
+        "bakeAndMicrowave": {
+          "name": "bakeAndMicrowave",
+          "cookingMethod": [
+            "bakeAndMicrowave"
+          ],
+          "whrOptions": {
+            "requiredOptions": {
+              "targetTemperature": {
+                "range": {
+                  "min": 50,
+                  "max": 200,
+                  "default": 180,
+                  "stepC": 5,
+                  "stepF": 25
+                }
+              },
+              "mwoPowerLevel": {
+                "range": {
+                  "min": 10,
+                  "max": 100,
+                  "step": 10,
+                  "default": 80
+                }
+              }
+            },
+            "optionalOptions": {
+              "cookTime": {
+                "range": {
+                  "min": 5,
+                  "max": 5400,
+                  "step": 60,
+                  "default": 30
+                }
+              },
+              "delayTime": {
+                "range": {
+                  "min": 900,
+                  "max": 86400,
+                  "step": 900,
+                  "default": 3600
+                }
+              }
+            },
+            "nonEditableOptions": {}
+          },
+          "whrSupportsCookTimeEstimation": false,
+          "whrUseMagnetron": true,
+          "whrType": "manual",
+          "whrApplyUpo": false,
+          "whrTemperatureProbeRequired": false,
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "cooking"
+              },
+              "cookingMethod": {
+                "methodName": "bakeAndMicrowave"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "user",
+              "name": {
+                "@type": "enumeration",
+                "text": "addTime"
+              },
+              "userInstruction": {
+                "@type": "enumeration",
+                "text": "addTime",
+                "userPrompt": [
+                  "time"
+                ]
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "whrUseBoiler": false
+        },
+        "bake": {
+          "name": "bake",
+          "cookingMethod": [
+            "bakePreheat",
+            "bake"
+          ],
+          "whrOptions": {
+            "requiredOptions": {
+              "targetTemperature": {
+                "range": {
+                  "min": 30,
+                  "max": 250,
+                  "default": 180,
+                  "stepC": 5,
+                  "stepF": 25
+                }
+              }
+            },
+            "optionalOptions": {
+              "cookTime": {
+                "range": {
+                  "min": 0,
+                  "max": 43200,
+                  "step": 60,
+                  "default": 0
+                }
+              },
+              "delayTime": {
+                "range": {
+                  "min": 900,
+                  "max": 86400,
+                  "step": 900,
+                  "default": 3600
+                }
+              },
+              "preheat": {
+                "default": "preheat",
+                "enumeration": [
+                  "preheat",
+                  "skipPreheat"
+                ]
+              }
+            },
+            "nonEditableOptions": {}
+          },
+          "whrSupportsCookTimeEstimation": false,
+          "whrUseMagnetron": false,
+          "whrType": "manual",
+          "whrApplyUpo": false,
+          "whrTemperatureProbeRequired": false,
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "preheating"
+              },
+              "cookingMethod": {
+                "methodName": "bakePreheat"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$preheat == skipPreheat"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$ovenTemperature >= $targetTemperature"
+                    },
+                    "actions": [
+                      {
+                        "@type": "notification",
+                        "@subType": "enumeration",
+                        "value": "preheatComplete"
+                      },
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$preheat == skipPreheat"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$ovenTemperature >= $calculatedTargetTemperature"
+                    },
+                    "actions": [
+                      {
+                        "@type": "notification",
+                        "@subType": "enumeration",
+                        "value": "preheatComplete"
+                      },
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "user",
+              "name": {
+                "@type": "enumeration",
+                "text": "addTime"
+              },
+              "userInstruction": {
+                "@type": "enumeration",
+                "text": "addTime",
+                "userPrompt": [
+                  "time"
+                ]
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "cooking"
+              },
+              "cookingMethod": {
+                "methodName": "bake"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "whrUseBoiler": false
+        },
+        "broil": {
+          "name": "broil",
+          "cookingMethod": [
+            "broil"
+          ],
+          "whrOptions": {
+            "requiredOptions": {
+              "broilLevelPercentage": {
+                "default": "medium",
+                "map": [
+                  {
+                    "value": 50,
+                    "displayString": "low"
+                  },
+                  {
+                    "value": 75,
+                    "displayString": "medium"
+                  },
+                  {
+                    "value": 100,
+                    "displayString": "high"
+                  }
+                ]
+              }
+            },
+            "optionalOptions": {
+              "cookTime": {
+                "range": {
+                  "min": 0,
+                  "max": 14400,
+                  "step": 60,
+                  "default": 0
+                }
+              },
+              "delayTime": {
+                "range": {
+                  "min": 900,
+                  "max": 86400,
+                  "step": 900,
+                  "default": 3600
+                }
+              }
+            },
+            "nonEditableOptions": {}
+          },
+          "whrSupportsCookTimeEstimation": false,
+          "whrUseMagnetron": false,
+          "whrType": "manual",
+          "whrApplyUpo": false,
+          "whrTemperatureProbeRequired": false,
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "cooking"
+              },
+              "cookingMethod": {
+                "methodName": "broil"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "user",
+              "name": {
+                "@type": "enumeration",
+                "text": "addTime"
+              },
+              "userInstruction": {
+                "@type": "enumeration",
+                "text": "addTime",
+                "userPrompt": [
+                  "time"
+                ]
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "whrUseBoiler": false
+        },
+        "microwave": {
+          "name": "microwave",
+          "cookingMethod": [
+            "microwave"
+          ],
+          "whrOptions": {
+            "requiredOptions": {
+              "mwoPowerLevel": {
+                "range": {
+                  "min": 10,
+                  "max": 100,
+                  "step": 10,
+                  "default": 80
+                }
+              }
+            },
+            "optionalOptions": {
+              "cookTime": {
+                "range": {
+                  "min": 5,
+                  "max": 5400,
+                  "step": 60,
+                  "default": 30
+                }
+              },
+              "delayTime": {
+                "range": {
+                  "min": 900,
+                  "max": 86400,
+                  "step": 900,
+                  "default": 3600
+                }
+              }
+            },
+            "nonEditableOptions": {}
+          },
+          "whrSupportsCookTimeEstimation": false,
+          "whrUseMagnetron": true,
+          "whrType": "manual",
+          "whrApplyUpo": false,
+          "whrTemperatureProbeRequired": false,
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "cooking"
+              },
+              "cookingMethod": {
+                "methodName": "microwave"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "user",
+              "name": {
+                "@type": "enumeration",
+                "text": "addTime"
+              },
+              "userInstruction": {
+                "@type": "enumeration",
+                "text": "addTime",
+                "userPrompt": [
+                  "time"
+                ]
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "whrUseBoiler": false
+        },
+        "defrost": {
+          "name": "defrost",
+          "cookingMethod": [
+            "microwave"
+          ],
+          "whrOptions": {
+            "requiredOptions": {
+              "mwoPowerLevel": {
+                "range": {
+                  "min": 10,
+                  "max": 100,
+                  "step": 10,
+                  "default": 80
+                }
+              }
+            },
+            "optionalOptions": {
+              "cookTime": {
+                "range": {
+                  "min": 5,
+                  "max": 5400,
+                  "step": 60,
+                  "default": 30
+                }
+              },
+              "delayTime": {
+                "range": {
+                  "min": 900,
+                  "max": 86400,
+                  "step": 900,
+                  "default": 3600
+                }
+              }
+            },
+            "nonEditableOptions": {}
+          },
+          "whrSupportsCookTimeEstimation": false,
+          "whrUseMagnetron": true,
+          "whrType": "manual",
+          "whrApplyUpo": false,
+          "whrTemperatureProbeRequired": false,
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "cooking"
+              },
+              "cookingMethod": {
+                "methodName": "microwave"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "user",
+              "name": {
+                "@type": "enumeration",
+                "text": "addTime"
+              },
+              "userInstruction": {
+                "@type": "enumeration",
+                "text": "addTime",
+                "userPrompt": [
+                  "time"
+                ]
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "whrUseBoiler": false
+        },
+        "rapidPreheat": {
+          "name": "rapidPreheat",
+          "cookingMethod": [
+            "rapidPreheat",
+            "forcedAir"
+          ],
+          "whrOptions": {
+            "requiredOptions": {
+              "targetTemperature": {
+                "range": {
+                  "min": 50,
+                  "max": 250,
+                  "default": 180,
+                  "stepC": 5,
+                  "stepF": 25
+                }
+              }
+            },
+            "optionalOptions": {
+              "cookTime": {
+                "range": {
+                  "min": 0,
+                  "max": 43200,
+                  "step": 60,
+                  "default": 0
+                }
+              },
+              "delayTime": {
+                "range": {
+                  "min": 900,
+                  "max": 86400,
+                  "step": 900,
+                  "default": 3600
+                }
+              },
+              "preheat": {
+                "default": "preheat",
+                "enumeration": [
+                  "preheat",
+                  "skipPreheat"
+                ]
+              }
+            },
+            "nonEditableOptions": {}
+          },
+          "whrSupportsCookTimeEstimation": false,
+          "whrUseMagnetron": false,
+          "whrType": "manual",
+          "whrApplyUpo": false,
+          "whrTemperatureProbeRequired": false,
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "preheating"
+              },
+              "cookingMethod": {
+                "methodName": "rapidPreheat"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$preheat == skipPreheat"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$ovenTemperature >= $targetTemperature"
+                    },
+                    "actions": [
+                      {
+                        "@type": "notification",
+                        "@subType": "enumeration",
+                        "value": "preheatComplete"
+                      },
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$preheat == skipPreheat"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$ovenTemperature >= $calculatedTargetTemperature"
+                    },
+                    "actions": [
+                      {
+                        "@type": "notification",
+                        "@subType": "enumeration",
+                        "value": "preheatComplete"
+                      },
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "user",
+              "name": {
+                "@type": "enumeration",
+                "text": "addTime"
+              },
+              "userInstruction": {
+                "@type": "enumeration",
+                "text": "addTime",
+                "userPrompt": [
+                  "time"
+                ]
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "cooking"
+              },
+              "cookingMethod": {
+                "methodName": "forcedAir"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "whrUseBoiler": false
+        },
+        "forcedAir": {
+          "name": "forcedAir",
+          "cookingMethod": [
+            "forcedAirPreheat",
+            "forcedAir"
+          ],
+          "whrOptions": {
+            "requiredOptions": {
+              "targetTemperature": {
+                "range": {
+                  "min": 70,
+                  "max": 250,
+                  "default": 150,
+                  "stepC": 5,
+                  "stepF": 25
+                }
+              }
+            },
+            "optionalOptions": {
+              "cookTime": {
+                "range": {
+                  "min": 0,
+                  "max": 43200,
+                  "step": 60,
+                  "default": 0
+                }
+              },
+              "delayTime": {
+                "range": {
+                  "min": 900,
+                  "max": 86400,
+                  "step": 900,
+                  "default": 3600
+                }
+              },
+              "preheat": {
+                "default": "preheat",
+                "enumeration": [
+                  "preheat",
+                  "skipPreheat"
+                ]
+              }
+            },
+            "nonEditableOptions": {}
+          },
+          "whrSupportsCookTimeEstimation": false,
+          "whrUseMagnetron": false,
+          "whrType": "manual",
+          "whrApplyUpo": false,
+          "whrTemperatureProbeRequired": false,
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "preheating"
+              },
+              "cookingMethod": {
+                "methodName": "forcedAirPreheat"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$preheat == skipPreheat"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$ovenTemperature >= $targetTemperature"
+                    },
+                    "actions": [
+                      {
+                        "@type": "notification",
+                        "@subType": "enumeration",
+                        "value": "preheatComplete"
+                      },
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$preheat == skipPreheat"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$ovenTemperature >= $calculatedTargetTemperature"
+                    },
+                    "actions": [
+                      {
+                        "@type": "notification",
+                        "@subType": "enumeration",
+                        "value": "preheatComplete"
+                      },
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "user",
+              "name": {
+                "@type": "enumeration",
+                "text": "addTime"
+              },
+              "userInstruction": {
+                "@type": "enumeration",
+                "text": "addTime",
+                "userPrompt": [
+                  "time"
+                ]
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "cooking"
+              },
+              "cookingMethod": {
+                "methodName": "forcedAir"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "whrUseBoiler": false
+        },
+        "dehydration": {
+          "name": "dehydration",
+          "cookingMethod": [
+            "dehydration"
+          ],
+          "whrOptions": {
+            "optionalOptions": {
+              "cookTime": {
+                "range": {
+                  "min": 5,
+                  "max": 14400,
+                  "step": 60,
+                  "default": 60
+                }
+              },
+              "delayTime": {
+                "range": {
+                  "min": 900,
+                  "max": 86400,
+                  "step": 900,
+                  "default": 3600
+                }
+              }
+            },
+            "nonEditableOptions": {
+              "targetTemperature": 177
+            }
+          },
+          "whrSupportsCookTimeEstimation": false,
+          "whrUseMagnetron": false,
+          "whrType": "manual",
+          "whrApplyUpo": false,
+          "whrTemperatureProbeRequired": false,
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "cooking"
+              },
+              "cookingMethod": {
+                "methodName": "dehydration"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "user",
+              "name": {
+                "@type": "enumeration",
+                "text": "addTime"
+              },
+              "userInstruction": {
+                "@type": "enumeration",
+                "text": "addTime",
+                "userPrompt": [
+                  "time"
+                ]
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "whrUseBoiler": false
+        },
+        "convectBake": {
+          "name": "convectBake",
+          "cookingMethod": [
+            "forcedAirPreheat",
+            "convectBake"
+          ],
+          "whrOptions": {
+            "requiredOptions": {
+              "targetTemperature": {
+                "range": {
+                  "min": 50,
+                  "max": 250,
+                  "default": 180,
+                  "stepC": 5,
+                  "stepF": 25
+                }
+              }
+            },
+            "optionalOptions": {
+              "cookTime": {
+                "range": {
+                  "min": 0,
+                  "max": 43200,
+                  "step": 60,
+                  "default": 0
+                }
+              },
+              "delayTime": {
+                "range": {
+                  "min": 900,
+                  "max": 86400,
+                  "step": 900,
+                  "default": 3600
+                }
+              },
+              "preheat": {
+                "default": "preheat",
+                "enumeration": [
+                  "preheat",
+                  "skipPreheat"
+                ]
+              }
+            },
+            "nonEditableOptions": {}
+          },
+          "whrSupportsCookTimeEstimation": false,
+          "whrUseMagnetron": false,
+          "whrType": "manual",
+          "whrApplyUpo": false,
+          "whrTemperatureProbeRequired": false,
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "preheating"
+              },
+              "cookingMethod": {
+                "methodName": "forcedAirPreheat"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$preheat == skipPreheat"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$ovenTemperature >= $targetTemperature"
+                    },
+                    "actions": [
+                      {
+                        "@type": "notification",
+                        "@subType": "enumeration",
+                        "value": "preheatComplete"
+                      },
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$preheat == skipPreheat"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$ovenTemperature >= $calculatedTargetTemperature"
+                    },
+                    "actions": [
+                      {
+                        "@type": "notification",
+                        "@subType": "enumeration",
+                        "value": "preheatComplete"
+                      },
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "user",
+              "name": {
+                "@type": "enumeration",
+                "text": "addTime"
+              },
+              "userInstruction": {
+                "@type": "enumeration",
+                "text": "addTime",
+                "userPrompt": [
+                  "time"
+                ]
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "cooking"
+              },
+              "cookingMethod": {
+                "methodName": "convectBake"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "whrUseBoiler": false
+        },
+        "convectRoast": {
+          "name": "convectRoast",
+          "cookingMethod": [
+            "convectRoast"
+          ],
+          "whrOptions": {
+            "requiredOptions": {
+              "targetTemperature": {
+                "range": {
+                  "min": 50,
+                  "max": 250,
+                  "default": 180,
+                  "stepC": 5,
+                  "stepF": 25
+                }
+              }
+            },
+            "optionalOptions": {
+              "cookTime": {
+                "range": {
+                  "min": 0,
+                  "max": 43200,
+                  "step": 60,
+                  "default": 0
+                }
+              },
+              "delayTime": {
+                "range": {
+                  "min": 900,
+                  "max": 86400,
+                  "step": 900,
+                  "default": 3600
+                }
+              }
+            },
+            "nonEditableOptions": {}
+          },
+          "whrSupportsCookTimeEstimation": false,
+          "whrUseMagnetron": false,
+          "whrType": "manual",
+          "whrApplyUpo": false,
+          "whrTemperatureProbeRequired": false,
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "cooking"
+              },
+              "cookingMethod": {
+                "methodName": "convectRoast"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "user",
+              "name": {
+                "@type": "enumeration",
+                "text": "addTime"
+              },
+              "userInstruction": {
+                "@type": "enumeration",
+                "text": "addTime",
+                "userPrompt": [
+                  "time"
+                ]
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "whrUseBoiler": false
+        },
+        "proof": {
+          "name": "proof",
+          "cookingMethod": [
+            "proof"
+          ],
+          "whrOptions": {
+            "requiredOptions": {
+              "targetTemperature": {
+                "range": {
+                  "min": 30,
+                  "max": 150,
+                  "default": 40,
+                  "stepC": 5,
+                  "stepF": 25
+                }
+              }
+            },
+            "optionalOptions": {
+              "cookTime": {
+                "range": {
+                  "min": 0,
+                  "max": 43200,
+                  "step": 60,
+                  "default": 0
+                }
+              },
+              "delayTime": {
+                "range": {
+                  "min": 900,
+                  "max": 86400,
+                  "step": 900,
+                  "default": 3600
+                }
+              }
+            },
+            "nonEditableOptions": {}
+          },
+          "whrSupportsCookTimeEstimation": false,
+          "whrPreStartConfiguration": {
+            "whrMaxStartTemperature": 150,
+            "whrStartNotAllowed": false
+          },
+          "whrUseMagnetron": false,
+          "whrType": "manual",
+          "whrApplyUpo": false,
+          "whrTemperatureProbeRequired": false,
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "cooking"
+              },
+              "cookingMethod": {
+                "methodName": "proof"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "user",
+              "name": {
+                "@type": "enumeration",
+                "text": "addTime"
+              },
+              "userInstruction": {
+                "@type": "enumeration",
+                "text": "addTime",
+                "userPrompt": [
+                  "time"
+                ]
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "whrUseBoiler": false
+        },
+        "keepWarm": {
+          "name": "keepWarm",
+          "cookingMethod": [
+            "keepWarm"
+          ],
+          "whrOptions": {
+            "optionalOptions": {
+              "cookTime": {
+                "range": {
+                  "min": 0,
+                  "max": 43200,
+                  "step": 60,
+                  "default": 0
+                }
+              },
+              "delayTime": {
+                "range": {
+                  "min": 900,
+                  "max": 86400,
+                  "step": 900,
+                  "default": 3600
+                }
+              }
+            },
+            "nonEditableOptions": {
+              "targetTemperature": 75
+            }
+          },
+          "whrSupportsCookTimeEstimation": false,
+          "whrUseMagnetron": false,
+          "whrType": "manual",
+          "whrApplyUpo": false,
+          "whrTemperatureProbeRequired": false,
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "cooking"
+              },
+              "cookingMethod": {
+                "methodName": "keepWarm"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "user",
+              "name": {
+                "@type": "enumeration",
+                "text": "addTime"
+              },
+              "userInstruction": {
+                "@type": "enumeration",
+                "text": "addTime",
+                "userPrompt": [
+                  "time"
+                ]
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "whrUseBoiler": false
+        },
+        "turboGrill": {
+          "name": "turboGrill",
+          "cookingMethod": [
+            "turboGrill"
+          ],
+          "whrOptions": {
+            "requiredOptions": {
+              "broilLevelPercentage": {
+                "default": "medium",
+                "map": [
+                  {
+                    "value": 50,
+                    "displayString": "low"
+                  },
+                  {
+                    "value": 75,
+                    "displayString": "medium"
+                  },
+                  {
+                    "value": 100,
+                    "displayString": "high"
+                  }
+                ]
+              }
+            },
+            "optionalOptions": {
+              "cookTime": {
+                "range": {
+                  "min": 0,
+                  "max": 14400,
+                  "step": 60,
+                  "default": 0
+                }
+              },
+              "delayTime": {
+                "range": {
+                  "min": 900,
+                  "max": 86400,
+                  "step": 900,
+                  "default": 3600
+                }
+              }
+            },
+            "nonEditableOptions": {}
+          },
+          "whrSupportsCookTimeEstimation": false,
+          "whrUseMagnetron": false,
+          "whrType": "manual",
+          "whrApplyUpo": false,
+          "whrTemperatureProbeRequired": false,
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "cooking"
+              },
+              "cookingMethod": {
+                "methodName": "turboGrill"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "user",
+              "name": {
+                "@type": "enumeration",
+                "text": "addTime"
+              },
+              "userInstruction": {
+                "@type": "enumeration",
+                "text": "addTime",
+                "userPrompt": [
+                  "time"
+                ]
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "whrUseBoiler": false
+        },
+        "airFry": {
+          "name": "airFry",
+          "cookingMethod": [
+            "airFry"
+          ],
+          "whrOptions": {
+            "requiredOptions": {
+              "targetTemperature": {
+                "range": {
+                  "min": 70,
+                  "max": 280,
+                  "default": 180,
+                  "stepC": 5,
+                  "stepF": 25
+                }
+              }
+            },
+            "optionalOptions": {
+              "cookTime": {
+                "range": {
+                  "min": 0,
+                  "max": 43200,
+                  "step": 60,
+                  "default": 0
+                }
+              },
+              "delayTime": {
+                "range": {
+                  "min": 900,
+                  "max": 86400,
+                  "step": 900,
+                  "default": 3600
+                }
+              }
+            },
+            "nonEditableOptions": {}
+          },
+          "whrSupportsCookTimeEstimation": false,
+          "whrUseMagnetron": false,
+          "whrType": "manual",
+          "whrApplyUpo": false,
+          "whrTemperatureProbeRequired": false,
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "cooking"
+              },
+              "cookingMethod": {
+                "methodName": "airFry"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "user",
+              "name": {
+                "@type": "enumeration",
+                "text": "addTime"
+              },
+              "userInstruction": {
+                "@type": "enumeration",
+                "text": "addTime",
+                "userPrompt": [
+                  "time"
+                ]
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "whrUseBoiler": false
+        },
+        "turboGrillAndMicrowave": {
+          "name": "turboGrillAndMicrowave",
+          "cookingMethod": [
+            "grillAndMicrowave"
+          ],
+          "whrOptions": {
+            "requiredOptions": {
+              "mwoPowerLevel": {
+                "range": {
+                  "min": 10,
+                  "max": 100,
+                  "step": 10,
+                  "default": 80
+                }
+              },
+              "broilLevelPercentage": {
+                "default": "medium",
+                "map": [
+                  {
+                    "value": 50,
+                    "displayString": "low"
+                  },
+                  {
+                    "value": 75,
+                    "displayString": "medium"
+                  },
+                  {
+                    "value": 100,
+                    "displayString": "high"
+                  }
+                ]
+              }
+            },
+            "optionalOptions": {
+              "cookTime": {
+                "range": {
+                  "min": 5,
+                  "max": 5400,
+                  "step": 60,
+                  "default": 30
+                }
+              },
+              "delayTime": {
+                "range": {
+                  "min": 900,
+                  "max": 86400,
+                  "step": 900,
+                  "default": 3600
+                }
+              }
+            },
+            "nonEditableOptions": {}
+          },
+          "whrSupportsCookTimeEstimation": false,
+          "whrUseMagnetron": true,
+          "whrType": "manual",
+          "whrApplyUpo": false,
+          "whrTemperatureProbeRequired": false,
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "cooking"
+              },
+              "cookingMethod": {
+                "methodName": "grillAndMicrowave"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "user",
+              "name": {
+                "@type": "enumeration",
+                "text": "addTime"
+              },
+              "userInstruction": {
+                "@type": "enumeration",
+                "text": "addTime",
+                "userPrompt": [
+                  "time"
+                ]
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "whrUseBoiler": false
+        },
+        "crisp": {
+          "name": "crisp",
+          "cookingMethod": [
+            "crisp"
+          ],
+          "whrOptions": {
+            "requiredOptions": {
+              "mwoPowerLevel": {
+                "range": {
+                  "min": 10,
+                  "max": 100,
+                  "step": 10,
+                  "default": 80
+                }
+              }
+            },
+            "optionalOptions": {
+              "cookTime": {
+                "range": {
+                  "min": 5,
+                  "max": 5400,
+                  "step": 60,
+                  "default": 30
+                }
+              },
+              "delayTime": {
+                "range": {
+                  "min": 900,
+                  "max": 86400,
+                  "step": 900,
+                  "default": 3600
+                }
+              }
+            },
+            "nonEditableOptions": {}
+          },
+          "whrSupportsCookTimeEstimation": false,
+          "whrUseMagnetron": true,
+          "whrType": "manual",
+          "whrApplyUpo": false,
+          "whrTemperatureProbeRequired": false,
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "cooking"
+              },
+              "cookingMethod": {
+                "methodName": "crisp"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$cookTimerState == completed"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "user",
+              "name": {
+                "@type": "enumeration",
+                "text": "addTime"
+              },
+              "userInstruction": {
+                "@type": "enumeration",
+                "text": "addTime",
+                "userPrompt": [
+                  "time"
+                ]
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$onUserEntersCookTime == 1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 0
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "whrUseBoiler": false
+        }
+      },
+      "cookingMethods": {
+        "grillAndMicrowave": {
+          "methodName": "grillAndMicrowave",
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setOpenLoopLoadBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setOpenLoopLoadBalancingParams",
+                            "numberOfLoads": 2,
+                            "dutyPeriod": 23,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 10,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 0,
+                                "stopTime": 21
+                              },
+                              {
+                                "aliasValue": 4,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 0,
+                                "stopTime": 23
+                              }
+                            ],
+                            "magnetronTarget": 100
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 2,
+                            "parametersOptions": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            }
+          ]
+        },
+        "bakeAndMicrowave": {
+          "methodName": "bakeAndMicrowave",
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setOpenLoopLoadBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setOpenLoopLoadBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 23,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 10,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 0,
+                                "stopTime": 19
+                              }
+                            ],
+                            "magnetronTarget": 80
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 2,
+                                "startTime": 0,
+                                "stopTime": 50
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopPidParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopPidParams",
+                            "kp": 100,
+                            "ti": 1,
+                            "td": 0,
+                            "kw": 0.01,
+                            "reusePID": false,
+                            "forcedIntegral": 0
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 3,
+                            "parametersOptions": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            }
+          ]
+        },
+        "bakePreheat": {
+          "methodName": "bakePreheat",
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 13A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 16A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 13A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 16A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setOpenLoopLoadBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setOpenLoopLoadBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 4,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 0,
+                                "stopTime": 60
+                              }
+                            ],
+                            "magnetronTarget": 255
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 2,
+                                "startTime": 0,
+                                "stopTime": 50
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopPidParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopPidParams",
+                            "kp": 100,
+                            "ti": 1,
+                            "td": 0,
+                            "kw": 0.01,
+                            "reusePID": false,
+                            "forcedIntegral": 0
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 3,
+                            "parametersOptions": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            },
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setOpenLoopLoadBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setOpenLoopLoadBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 4,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 0,
+                                "stopTime": 30
+                              }
+                            ],
+                            "magnetronTarget": 255
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 2,
+                                "startTime": 0,
+                                "stopTime": 25
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopPidParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopPidParams",
+                            "kp": 100,
+                            "ti": 1,
+                            "td": 0,
+                            "kw": 0.01,
+                            "reusePID": false,
+                            "forcedIntegral": 0
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 3,
+                            "parametersOptions": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            }
+          ]
+        },
+        "bake": {
+          "methodName": "bake",
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 13A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 16A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 13A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 16A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 2,
+                                "startTime": 0,
+                                "stopTime": 60
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopPidParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopPidParams",
+                            "kp": 100,
+                            "ti": 1,
+                            "td": 0,
+                            "kw": 0.01,
+                            "reusePID": false,
+                            "forcedIntegral": 0
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 1,
+                            "parametersOptions": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            },
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 2,
+                                "startTime": 0,
+                                "stopTime": 30
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopPidParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopPidParams",
+                            "kp": 100,
+                            "ti": 1,
+                            "td": 0,
+                            "kw": 0.01,
+                            "reusePID": false,
+                            "forcedIntegral": 0
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 1,
+                            "parametersOptions": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            }
+          ]
+        },
+        "broil": {
+          "methodName": "broil",
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setOpenLoopLoadBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setOpenLoopLoadBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 4,
+                                "reduceFromRight": true,
+                                "userTarget": true,
+                                "startTime": 0,
+                                "stopTime": 60
+                              }
+                            ],
+                            "magnetronTarget": 255
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 2,
+                            "parametersOptions": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            }
+          ]
+        },
+        "microwave": {
+          "methodName": "microwave",
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setOpenLoopLoadBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setOpenLoopLoadBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 23,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 10,
+                                "reduceFromRight": true,
+                                "userTarget": true,
+                                "startTime": 0,
+                                "stopTime": 23
+                              }
+                            ],
+                            "magnetronTarget": 100
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 2,
+                            "parametersOptions": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            }
+          ]
+        },
+        "rapidPreheat": {
+          "methodName": "rapidPreheat",
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 13A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 16A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 13A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 16A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setTargetTemperatureOffsetParam",
+                        "value": {
+                          "function": {
+                            "name": "setTargetTemperatureOffsetParam",
+                            "targetTemperatureOffset": 1
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setOpenLoopLoadBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setOpenLoopLoadBalancingParams",
+                            "numberOfLoads": 2,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 4,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 0,
+                                "stopTime": 60
+                              },
+                              {
+                                "aliasValue": 5,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 0,
+                                "stopTime": 60
+                              }
+                            ],
+                            "magnetronTarget": 255
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setConvectionFanControlParams",
+                        "value": {
+                          "function": {
+                            "name": "setConvectionFanControlParams",
+                            "numberOfFans": 1,
+                            "fanAlias": [
+                              {
+                                "aliasValue": 8,
+                                "startTime": 0,
+                                "stopTime": 60,
+                                "speedRotation": 1,
+                                "useOpenLoopPeriod": false,
+                                "linkTo1stConvection": false,
+                                "linkTo2ndConvection": false
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 6,
+                                "startTime": 0,
+                                "stopTime": 60
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopPidParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopPidParams",
+                            "kp": 100,
+                            "ti": 1,
+                            "td": 0,
+                            "kw": 0.01,
+                            "reusePID": false,
+                            "forcedIntegral": 0
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 3,
+                            "parametersOptions": 20
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            },
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setOpenLoopLoadBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setOpenLoopLoadBalancingParams",
+                            "numberOfLoads": 2,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 4,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 0,
+                                "stopTime": 30
+                              },
+                              {
+                                "aliasValue": 5,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 0,
+                                "stopTime": 30
+                              }
+                            ],
+                            "magnetronTarget": 255
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setTargetTemperatureOffsetParam",
+                        "value": {
+                          "function": {
+                            "name": "setTargetTemperatureOffsetParam",
+                            "targetTemperatureOffset": 3
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setConvectionFanControlParams",
+                        "value": {
+                          "function": {
+                            "name": "setConvectionFanControlParams",
+                            "numberOfFans": 1,
+                            "fanAlias": [
+                              {
+                                "aliasValue": 8,
+                                "startTime": 0,
+                                "stopTime": 60,
+                                "speedRotation": 1,
+                                "useOpenLoopPeriod": false,
+                                "linkTo1stConvection": false,
+                                "linkTo2ndConvection": false
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 6,
+                                "startTime": 0,
+                                "stopTime": 30
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopPidParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopPidParams",
+                            "kp": 100,
+                            "ti": 0,
+                            "td": 0,
+                            "kw": 0,
+                            "reusePID": false,
+                            "forcedIntegral": 0
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 3,
+                            "parametersOptions": 20
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            }
+          ]
+        },
+        "forcedAir": {
+          "methodName": "forcedAir",
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 13A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 16A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 13A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 16A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setConvectionFanControlParams",
+                        "value": {
+                          "function": {
+                            "name": "setConvectionFanControlParams",
+                            "numberOfFans": 1,
+                            "fanAlias": [
+                              {
+                                "aliasValue": 8,
+                                "startTime": 0,
+                                "stopTime": 60,
+                                "speedRotation": 1,
+                                "useOpenLoopPeriod": false,
+                                "linkTo1stConvection": false,
+                                "linkTo2ndConvection": false
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopPidParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopPidParams",
+                            "kp": 100,
+                            "ti": 1,
+                            "td": 0,
+                            "kw": 0.01,
+                            "reusePID": false,
+                            "forcedIntegral": 0
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setCavityTemperatureEstimationParams",
+                        "value": {
+                          "function": {
+                            "name": "setCavityTemperatureEstimationParams",
+                            "rtd1Slope": 1,
+                            "rtd2Slope": 1,
+                            "rtd1Offset": 1,
+                            "rtd2Offset": 0,
+                            "probeBalance": 100
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 6,
+                                "startTime": 0,
+                                "stopTime": 60
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 1,
+                            "parametersOptions": 17
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            },
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setConvectionFanControlParams",
+                        "value": {
+                          "function": {
+                            "name": "setConvectionFanControlParams",
+                            "numberOfFans": 1,
+                            "fanAlias": [
+                              {
+                                "aliasValue": 8,
+                                "startTime": 0,
+                                "stopTime": 60,
+                                "speedRotation": 1,
+                                "useOpenLoopPeriod": false,
+                                "linkTo1stConvection": false,
+                                "linkTo2ndConvection": false
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopPidParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopPidParams",
+                            "kp": 0,
+                            "ti": 0,
+                            "td": 0,
+                            "kw": 0,
+                            "reusePID": false,
+                            "forcedIntegral": 47
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setCavityTemperatureEstimationParams",
+                        "value": {
+                          "function": {
+                            "name": "setCavityTemperatureEstimationParams",
+                            "rtd1Slope": 0.9,
+                            "rtd2Slope": 1,
+                            "rtd1Offset": 11,
+                            "rtd2Offset": 0,
+                            "probeBalance": 100
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 6,
+                                "startTime": 0,
+                                "stopTime": 30
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 1,
+                            "parametersOptions": 17
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            }
+          ]
+        },
+        "forcedAirPreheat": {
+          "methodName": "forcedAirPreheat",
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 13A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 16A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 13A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 16A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setTargetTemperatureOffsetParam",
+                        "value": {
+                          "function": {
+                            "name": "setTargetTemperatureOffsetParam",
+                            "targetTemperatureOffset": 1
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setOpenLoopLoadBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setOpenLoopLoadBalancingParams",
+                            "numberOfLoads": 2,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 4,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 0,
+                                "stopTime": 60
+                              },
+                              {
+                                "aliasValue": 5,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 0,
+                                "stopTime": 60
+                              }
+                            ],
+                            "magnetronTarget": 255
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setConvectionFanControlParams",
+                        "value": {
+                          "function": {
+                            "name": "setConvectionFanControlParams",
+                            "numberOfFans": 1,
+                            "fanAlias": [
+                              {
+                                "aliasValue": 8,
+                                "startTime": 0,
+                                "stopTime": 60,
+                                "speedRotation": 1,
+                                "useOpenLoopPeriod": false,
+                                "linkTo1stConvection": false,
+                                "linkTo2ndConvection": false
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 2,
+                                "startTime": 0,
+                                "stopTime": 60
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopPidParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopPidParams",
+                            "kp": 100,
+                            "ti": 1,
+                            "td": 0,
+                            "kw": 0.01,
+                            "reusePID": false,
+                            "forcedIntegral": 0
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 3,
+                            "parametersOptions": 20
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            },
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setOpenLoopLoadBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setOpenLoopLoadBalancingParams",
+                            "numberOfLoads": 2,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 4,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 0,
+                                "stopTime": 30
+                              },
+                              {
+                                "aliasValue": 5,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 0,
+                                "stopTime": 30
+                              }
+                            ],
+                            "magnetronTarget": 255
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setTargetTemperatureOffsetParam",
+                        "value": {
+                          "function": {
+                            "name": "setTargetTemperatureOffsetParam",
+                            "targetTemperatureOffset": 1
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setConvectionFanControlParams",
+                        "value": {
+                          "function": {
+                            "name": "setConvectionFanControlParams",
+                            "numberOfFans": 1,
+                            "fanAlias": [
+                              {
+                                "aliasValue": 8,
+                                "startTime": 0,
+                                "stopTime": 60,
+                                "speedRotation": 1,
+                                "useOpenLoopPeriod": false,
+                                "linkTo1stConvection": false,
+                                "linkTo2ndConvection": false
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 2,
+                                "startTime": 0,
+                                "stopTime": 30
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopPidParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopPidParams",
+                            "kp": 100,
+                            "ti": 0,
+                            "td": 0,
+                            "kw": 0,
+                            "reusePID": false,
+                            "forcedIntegral": 0
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 3,
+                            "parametersOptions": 20
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            }
+          ]
+        },
+        "dehydration": {
+          "methodName": "dehydration",
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setConvectionFanControlParams",
+                        "value": {
+                          "function": {
+                            "name": "setConvectionFanControlParams",
+                            "numberOfFans": 1,
+                            "fanAlias": [
+                              {
+                                "aliasValue": 8,
+                                "startTime": 0,
+                                "stopTime": 60,
+                                "speedRotation": 1,
+                                "useOpenLoopPeriod": false,
+                                "linkTo1stConvection": false,
+                                "linkTo2ndConvection": false
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 2,
+                                "startTime": 0,
+                                "stopTime": 60
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopPidParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopPidParams",
+                            "kp": 100,
+                            "ti": 1,
+                            "td": 0,
+                            "kw": 0.01,
+                            "reusePID": false,
+                            "forcedIntegral": 0
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 1,
+                            "parametersOptions": 16
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            }
+          ]
+        },
+        "convectBake": {
+          "methodName": "convectBake",
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 13A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 16A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 13A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 16A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setOpenLoopLoadBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setOpenLoopLoadBalancingParams",
+                            "numberOfLoads": 2,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 4,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 0,
+                                "stopTime": 60
+                              },
+                              {
+                                "aliasValue": 5,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 0,
+                                "stopTime": 60
+                              }
+                            ],
+                            "magnetronTarget": 255
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setConvectionFanControlParams",
+                        "value": {
+                          "function": {
+                            "name": "setConvectionFanControlParams",
+                            "numberOfFans": 1,
+                            "fanAlias": [
+                              {
+                                "aliasValue": 8,
+                                "startTime": 0,
+                                "stopTime": 60,
+                                "speedRotation": 1,
+                                "useOpenLoopPeriod": false,
+                                "linkTo1stConvection": false,
+                                "linkTo2ndConvection": false
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopPidParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopPidParams",
+                            "kp": 100,
+                            "ti": 1,
+                            "td": 0,
+                            "kw": 0.01,
+                            "reusePID": false,
+                            "forcedIntegral": 0
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setCavityTemperatureEstimationParams",
+                        "value": {
+                          "function": {
+                            "name": "setCavityTemperatureEstimationParams",
+                            "rtd1Slope": 1,
+                            "rtd2Slope": 1,
+                            "rtd1Offset": 1,
+                            "rtd2Offset": 0,
+                            "probeBalance": 100
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 2,
+                                "startTime": 0,
+                                "stopTime": 60
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 3,
+                            "parametersOptions": 17
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            },
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setOpenLoopLoadBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setOpenLoopLoadBalancingParams",
+                            "numberOfLoads": 2,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 4,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 0,
+                                "stopTime": 30
+                              },
+                              {
+                                "aliasValue": 5,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 0,
+                                "stopTime": 30
+                              }
+                            ],
+                            "magnetronTarget": 255
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setConvectionFanControlParams",
+                        "value": {
+                          "function": {
+                            "name": "setConvectionFanControlParams",
+                            "numberOfFans": 1,
+                            "fanAlias": [
+                              {
+                                "aliasValue": 8,
+                                "startTime": 0,
+                                "stopTime": 60,
+                                "speedRotation": 1,
+                                "useOpenLoopPeriod": false,
+                                "linkTo1stConvection": false,
+                                "linkTo2ndConvection": false
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopPidParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopPidParams",
+                            "kp": 100,
+                            "ti": 1,
+                            "td": 0,
+                            "kw": 0.01,
+                            "reusePID": false,
+                            "forcedIntegral": 0
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setCavityTemperatureEstimationParams",
+                        "value": {
+                          "function": {
+                            "name": "setCavityTemperatureEstimationParams",
+                            "rtd1Slope": 1,
+                            "rtd2Slope": 1,
+                            "rtd1Offset": 1,
+                            "rtd2Offset": 0,
+                            "probeBalance": 100
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 2,
+                                "startTime": 0,
+                                "stopTime": 30
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 3,
+                            "parametersOptions": 17
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            }
+          ]
+        },
+        "convectRoast": {
+          "methodName": "convectRoast",
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setOpenLoopLoadBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setOpenLoopLoadBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 4,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 0,
+                                "stopTime": 60
+                              }
+                            ],
+                            "magnetronTarget": 255
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setConvectionFanControlParams",
+                        "value": {
+                          "function": {
+                            "name": "setConvectionFanControlParams",
+                            "numberOfFans": 1,
+                            "fanAlias": [
+                              {
+                                "aliasValue": 8,
+                                "startTime": 0,
+                                "stopTime": 60,
+                                "speedRotation": 1,
+                                "useOpenLoopPeriod": false,
+                                "linkTo1stConvection": false,
+                                "linkTo2ndConvection": false
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopBalancingParams",
+                            "numberOfLoads": 2,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 2,
+                                "startTime": 0,
+                                "stopTime": 60
+                              },
+                              {
+                                "aliasValue": 6,
+                                "startTime": 0,
+                                "stopTime": 60
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopPidParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopPidParams",
+                            "kp": 100,
+                            "ti": 1,
+                            "td": 0,
+                            "kw": 0.01,
+                            "reusePID": false,
+                            "forcedIntegral": 0
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 3,
+                            "parametersOptions": 16
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            }
+          ]
+        },
+        "keepWarm": {
+          "methodName": "keepWarm",
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 2,
+                                "startTime": 0,
+                                "stopTime": 60
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopPidParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopPidParams",
+                            "kp": 100,
+                            "ti": 1,
+                            "td": 0,
+                            "kw": 0.01,
+                            "reusePID": false,
+                            "forcedIntegral": 0
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 1,
+                            "parametersOptions": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            }
+          ]
+        },
+        "proof": {
+          "methodName": "proof",
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 2,
+                                "startTime": 0,
+                                "stopTime": 60
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopPidParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopPidParams",
+                            "kp": 100,
+                            "ti": 1,
+                            "td": 0,
+                            "kw": 0.01,
+                            "reusePID": false,
+                            "forcedIntegral": 0
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 1,
+                            "parametersOptions": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            }
+          ]
+        },
+        "turboGrill": {
+          "methodName": "turboGrill",
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setOpenLoopLoadBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setOpenLoopLoadBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 4,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 0,
+                                "stopTime": 60
+                              }
+                            ],
+                            "magnetronTarget": 255
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 2,
+                            "parametersOptions": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            }
+          ]
+        },
+        "airFry": {
+          "methodName": "airFry",
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 13A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 16A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": [
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 13A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 2
+                      }
+                    ]
+                  },
+                  {
+                    "condition": {
+                      "expression": "$amperageSelection == 16A"
+                    },
+                    "actions": [
+                      {
+                        "@type": "recipeControl",
+                        "@subType": "goto",
+                        "value": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setOpenLoopLoadBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setOpenLoopLoadBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 4,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 30,
+                                "stopTime": 60
+                              }
+                            ],
+                            "magnetronTarget": 255
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 2,
+                                "startTime": 0,
+                                "stopTime": 30
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopPidParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopPidParams",
+                            "kp": 100,
+                            "ti": 1,
+                            "td": 0,
+                            "kw": 0.01,
+                            "reusePID": false,
+                            "forcedIntegral": 0
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 3,
+                            "parametersOptions": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            },
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setOpenLoopLoadBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setOpenLoopLoadBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 4,
+                                "reduceFromRight": true,
+                                "userTarget": false,
+                                "startTime": 15,
+                                "stopTime": 30
+                              }
+                            ],
+                            "magnetronTarget": 255
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 60,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 2,
+                                "startTime": 0,
+                                "stopTime": 15
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setClosedLoopPidParams",
+                        "value": {
+                          "function": {
+                            "name": "setClosedLoopPidParams",
+                            "kp": 100,
+                            "ti": 1,
+                            "td": 0,
+                            "kw": 0.01,
+                            "reusePID": false,
+                            "forcedIntegral": 0
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 3,
+                            "parametersOptions": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            }
+          ]
+        },
+        "crisp": {
+          "methodName": "crisp",
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "setOpenLoopLoadBalancingParams",
+                        "value": {
+                          "function": {
+                            "name": "setOpenLoopLoadBalancingParams",
+                            "numberOfLoads": 1,
+                            "dutyPeriod": 23,
+                            "loadAlias": [
+                              {
+                                "aliasValue": 10,
+                                "reduceFromRight": true,
+                                "userTarget": true,
+                                "startTime": 0,
+                                "stopTime": 21
+                              }
+                            ],
+                            "magnetronTarget": 100
+                          }
+                        }
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "activateHeat",
+                        "value": {
+                          "function": {
+                            "name": "activateHeat",
+                            "@type": 2,
+                            "parametersOptions": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            }
+          ]
+        },
+        "off": {
+          "methodName": "off",
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "deactivateHeat",
+                        "value": {
+                          "function": {
+                            "name": "deactivateHeat"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            }
+          ]
+        },
+        "offWithFCValve": {
+          "methodName": "offWithFCValve",
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "rules": {
+                "version": "1.0",
+                "entryRules": [
+                  {
+                    "condition": {
+                      "expression": "1"
+                    },
+                    "actions": [
+                      {
+                        "@type": "setCookingParameter",
+                        "@subType": "forcedConvectValve",
+                        "value": 2
+                      },
+                      {
+                        "@type": "cookingFunction",
+                        "@subType": "deactivateHeat",
+                        "value": {
+                          "function": {
+                            "name": "deactivateHeat"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "inStepRules": []
+              }
+            }
+          ]
+        }
+      },
+      "presentationTree": {
+        "Manual": {
+          "grillAndMicrowave": {},
+          "bakeAndMicrowave": {},
+          "microwave": {},
+          "broil": {},
+          "bake": {},
+          "rapidPreheat": {},
+          "forcedAir": {},
+          "dehydration": {},
+          "defrost": {},
+          "convectBake": {},
+          "convectRoast": {},
+          "proof": {},
+          "keepWarm": {},
+          "crisp": {},
+          "turboGrill": {},
+          "airFry": {},
+          "turboGrillAndMicrowave": {}
+        }
+      },
+      "mwoConfig": {
+        "hasTurnTable": true,
+        "mwoDoorOpenTimeout": 600,
+        "mwoDoorOpenCloseTimeout": 300,
+        "dutyPeriod": 23,
+        "powerLevelTable": [
+          {
+            "powerLevel": 10,
+            "onTime": 5,
+            "smps": 0
+          },
+          {
+            "powerLevel": 20,
+            "onTime": 7,
+            "smps": 0
+          },
+          {
+            "powerLevel": 30,
+            "onTime": 9,
+            "smps": 0
+          },
+          {
+            "powerLevel": 40,
+            "onTime": 11,
+            "smps": 0
+          },
+          {
+            "powerLevel": 50,
+            "onTime": 13,
+            "smps": 0
+          },
+          {
+            "powerLevel": 60,
+            "onTime": 3,
+            "smps": 0
+          },
+          {
+            "powerLevel": 70,
+            "onTime": 17,
+            "smps": 0
+          },
+          {
+            "powerLevel": 80,
+            "onTime": 19,
+            "smps": 0
+          },
+          {
+            "powerLevel": 100,
+            "onTime": 21,
+            "smps": 0
+          }
+        ]
+      },
+      "selfClean": {
+        "hydroClean": {
+          "name": "hydroClean",
+          "cookingMethod": [
+            "bake"
+          ],
+          "whrOptions": {
+            "optionalOptions": {
+              "delayTime": {
+                "range": {
+                  "min": 900,
+                  "max": 86400,
+                  "step": 900,
+                  "default": 3600
+                }
+              }
+            },
+            "nonEditableOptions": {
+              "targetTemperature": 175,
+              "cookTime": 3600
+            }
+          },
+          "whrSupportsCookTimeEstimation": false,
+          "whrUseMagnetron": false,
+          "whrType": "manual",
+          "whrApplyUpo": false,
+          "whrTemperatureProbeRequired": false,
+          "whrSteps": [
+            {
+              "@type": "cooking",
+              "name": {
+                "@type": "enumeration",
+                "text": "cleaning"
+              },
+              "cookingMethod": {
+                "methodName": "bake"
+              },
+              "rules": {
+                "version": "1.0",
+                "entryRules": [],
+                "inStepRules": []
+              }
+            }
+          ],
+          "whrUseBoiler": false
+        }
+      },
+      "defaultLightStateWhenRunning": true
+    }
+  }
+}

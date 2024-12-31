@@ -1,0 +1,200 @@
+<?xml version="1.0" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root_timer_headerbar"
+        android:layout_width="480dp"
+        android:layout_height="79dp">
+
+        <ImageView
+            android:id="@+id/headerbar_timer_backarrow_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="26dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/headerbar_timer_delete_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="368dp"
+            android:layout_marginTop="26dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/headerbar_timer_toggle_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="422dp"
+            android:layout_marginTop="26dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/frame_1299"
+            android:layout_width="204dp"
+            android:layout_height="71dp"
+            android:layout_marginStart="138dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_primary"
+                android:layout_width="204dp"
+                android:layout_height="45dp"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/primary_text_one"
+                    style="@style/W35HeaderRegular30"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:fontWeight="400"
+                    android:gravity="center_horizontal|bottom"
+                    android:includeFontPadding="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/primary_text_unit_one"
+                    style="@style/W35TileRegular20"
+                    android:layout_width="16dp"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:fontWeight="400"
+                    android:gravity="start|bottom"
+                    android:paddingBottom="2dp"
+                    android:includeFontPadding="false"
+                    android:lineHeight="22.0dp"
+                    android:textColor="@color/color_whp_text_gray"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/primary_text_two"
+                    style="@style/W35HeaderRegular30"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:fontWeight="400"
+                    android:gravity="center_horizontal|bottom"
+                    android:includeFontPadding="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/primary_text_unit_two"
+                    style="@style/W35TileRegular20"
+                    android:layout_width="16dp"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:fontWeight="400"
+                    android:gravity="start|bottom"
+                    android:paddingBottom="2dp"
+                    android:includeFontPadding="false"
+                    android:lineHeight="22.0dp"
+                    android:textColor="@color/color_whp_text_gray"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/primary_text_three"
+                    style="@style/W35HeaderRegular30"
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:fontWeight="400"
+                    android:gravity="center_horizontal|bottom"
+                    android:includeFontPadding="false"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/primary_text_unit_three"
+                    style="@style/W35TileRegular20"
+                    android:layout_width="16dp"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:fontWeight="400"
+                    android:gravity="start|bottom"
+                    android:paddingBottom="2dp"
+                    android:includeFontPadding="false"
+                    android:lineHeight="22.0dp"
+                    android:textColor="@color/color_whp_text_gray"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_secondary"
+                android:layout_width="138dp"
+                android:layout_height="19dp"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/secondary_text_one"
+                    style="@style/W35ClockLight20"
+                    android:layout_width="29dp"
+                    android:layout_height="34dp"
+                    android:alpha="0.63"
+                    android:fontFamily="@font/roboto_light"
+                    android:fontWeight="300"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:includeFontPadding="false"
+                    android:lineHeight="34.0dp"
+                    android:textColor="@color/color_whp_text_gray"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/secondary_text_two"
+                    style="@style/W35ClockLight20"
+                    android:layout_width="35dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="25dp"
+                    android:alpha="0.63"
+                    android:fontFamily="@font/roboto_light"
+                    android:fontWeight="300"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:includeFontPadding="false"
+                    android:lineHeight="34.0dp"
+                    android:textColor="@color/color_whp_text_gray"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/secondary_text_three"
+                    style="@style/W35ClockLight20"
+                    android:layout_width="24dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="25dp"
+                    android:alpha="0.63"
+                    android:fontFamily="@font/roboto_light"
+                    android:fontWeight="300"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:includeFontPadding="false"
+                    android:lineHeight="34.0dp"
+                    android:textColor="@color/color_whp_text_gray"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

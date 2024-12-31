@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="394dp"
+        android:layout_height="55dp"
+        android:alpha="0.8"
+        android:elevation="10dp"
+        android:background="@drawable/background_fragment_threebutton_tile">
+
+        <FrameLayout
+            android:layout_width="186dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/background_fragment_30sec1min3dotsbutton_tile">
+
+            <TextView
+                android:id="@+id/sheet_text_view"
+                android:layout_width="62dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="62dp"
+                android:layout_marginTop="12dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="178dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="216dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="88dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/background_fragment_30sec1min3dotsbutton_tile">
+
+            <TextView
+                android:id="@+id/sheet_text_view1"
+                android:layout_width="54dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="58.5dp"
+                android:layout_marginTop="12dp"
+                android:textAlignment="center"
+                android:fontFamily="@font/roboto_bold"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

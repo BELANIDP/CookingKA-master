@@ -1,0 +1,508 @@
+<?xml version="1.0" ?>
+<resources>
+	<style name="W35ClockLight20">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="Tile">
+		<item name="android:fontFamily">@font/roboto_regular</item>
+		<item name="android:textSize">20.0sp</item>
+		<item name="android:letterSpacing">-0.004</item>
+		<item name="android:gravity">center_horizontal|top</item>
+		<item name="android:lineHeight">22.0dp</item>
+		<item name="android:textColor">#353535</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="RobotoReg42">
+		<item name="android:fontFamily">@font/roboto_regular</item>
+		<item name="android:textSize">38.0sp</item>
+		<item name="android:letterSpacing">-0.01</item>
+		<item name="android:gravity">left|center_vertical</item>
+		<item name="android:lineHeight">34.0dp</item>
+		<item name="android:textColor">#353535</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="H1HomeTileRegular28">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="ButtonOtherBold15">
+		<item name="android:fontFamily">@font/roboto_bold</item>
+		<item name="android:textSize">16.0sp</item>
+		<item name="android:letterSpacing">0</item>
+		<item name="android:gravity">center_horizontal|center_vertical</item>
+		<item name="android:lineHeight">16.0dp</item>
+		<item name="android:textColor">#353535</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="ButtonOtherBold20">
+		<item name="android:fontFamily">@font/roboto_bold</item>
+		<item name="android:textSize">20.0sp</item>
+		<item name="android:letterSpacing">0</item>
+		<item name="android:gravity">center_horizontal|center_vertical</item>
+		<item name="android:lineHeight">20.0dp</item>
+		<item name="android:textColor">#353535</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="H4Regular24">
+		<item name="android:fontFamily">@font/roboto_regular</item>
+		<item name="android:textSize">24.0sp</item>
+		<item name="android:letterSpacing">0</item>
+		<item name="android:gravity">center_horizontal|top</item>
+		<item name="android:lineHeight">24.0dp</item>
+		<item name="android:textColor">#353535</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="ClockSmallRegular20">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="H3SmallRegular22">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="H3BigLight30">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="Button45Bold24">
+		<item name="android:fontFamily">@font/roboto_bold</item>
+		<item name="android:textSize">24.0sp</item>
+		<item name="android:letterSpacing">0</item>
+		<item name="android:gravity">left|top</item>
+		<item name="android:lineHeight">16.0dp</item>
+		<item name="android:textColor">#353535</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="H3SmallLight22">
+		<item name="android:textSize">22.0sp</item>
+		<item name="android:fontWeight">300</item>
+		<item name="android:gravity">left|top</item>
+		<item name="android:lineHeight">22.0dp</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="H4Light24">
+		<item name="android:fontFamily">@font/roboto_light</item>
+		<item name="android:textSize">24.0sp</item>
+		<item name="android:fontWeight">300</item>
+		<item name="android:gravity">center_horizontal|center_vertical</item>
+		<item name="android:lineHeight">24.0dp</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+
+	<style name="H4Light42">
+		<item name="android:fontFamily">@font/roboto_light</item>
+		<item name="android:textSize">42.0sp</item>
+		<item name="android:fontWeight">500</item>
+		<item name="android:gravity">center_horizontal|center_vertical</item>
+		<item name="android:lineHeight">28.0dp</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+
+	<style name="KeypadThin70">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="H2BigLight38">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="H1HomeTileRegular30">
+		<item name="android:fontFamily">@font/roboto_regular</item>
+		<item name="android:textSize">30.0sp</item>
+		<item name="android:letterSpacing">0</item>
+		<item name="android:gravity">left|top</item>
+		<item name="android:lineHeight">32.0dp</item>
+		<item name="android:textColor">#353535</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="TileParBold24">
+		<item name="android:fontFamily">@font/roboto_bold</item>
+		<item name="android:textSize">24.0sp</item>
+		<item name="android:layout_marginLeft">53dp</item>
+		<item name="android:height">24dp</item>
+		<item name="android:fontWeight">700</item>
+		<item name="android:lineHeight">24.0dp</item>
+		<item name="android:includeFontPadding">false</item>
+		<item name="android:gravity">center_horizontal|center_vertical</item>
+	</style>
+
+	<style name="SwitchBold24">
+		<item name="android:fontFamily">@font/roboto_bold</item>
+		<item name="android:textSize">24.0sp</item>
+		<item name="android:height">24dp</item>
+		<item name="android:fontWeight">700</item>
+		<item name="android:lineHeight">24.0dp</item>
+		<item name="android:includeFontPadding">false</item>
+		<item name="android:gravity">center_horizontal|center_vertical</item>
+	</style>
+
+	<style name="TileParBold26">
+		<item name="android:fontFamily">@font/roboto_bold</item>
+		<item name="android:textSize">28.0sp</item>
+		<item name="android:fontWeight">700</item>
+		<item name="android:lineHeight">28.0dp</item>
+		<item name="android:includeFontPadding">false</item>
+		<item name="android:gravity">center_horizontal|center_vertical</item>
+	</style>
+
+	<style name="TileParBold44">
+		<item name="android:fontFamily">@font/roboto_bold</item>
+		<item name="android:textSize">44.0px</item>
+		<item name="android:layout_marginLeft">53dp</item>
+		<item name="android:height">24dp</item>
+		<item name="android:fontWeight">300</item>
+		<item name="android:lineHeight">28.0dp</item>
+		<item name="android:includeFontPadding">false</item>
+		<item name="android:gravity">center_horizontal|center_vertical</item>
+	</style>
+
+	<style name="TpTitleTileBold16">
+		<item name="android:fontFamily">@font/roboto_bold</item>
+		<item name="android:textSize">16.0sp</item>
+		<item name="android:letterSpacing">0.016</item>
+		<item name="android:gravity">center_horizontal|top</item>
+		<item name="android:lineHeight">20.0dp</item>
+		<item name="android:textColor">#9f9e9e</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="AddtimeBold18">
+		<item name="android:fontFamily">@font/roboto_bold</item>
+		<item name="android:textSize">18.0sp</item>
+		<item name="android:fontWeight">700</item>
+		<item name="android:gravity">center_horizontal|top</item>
+		<item name="android:lineHeight">20.0dp</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="TdThin80">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="ClockBigRegular26">
+		<item name="android:fontFamily">@font/roboto_regular</item>
+		<item name="android:textSize">26.0sp</item>
+		<item name="android:letterSpacing">0</item>
+		<item name="android:gravity">left|bottom</item>
+		<item name="android:lineHeight">30.0dp</item>
+		<item name="android:textColor">#353535</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="H2MoreModesHeader">
+		<item name="android:fontFamily">@font/roboto_bold</item>
+		<item name="android:textSize">24.0sp</item>
+		<item name="android:letterSpacing">0.024</item>
+		<item name="android:gravity">left|top</item>
+		<item name="android:lineHeight">26.0dp</item>
+		<item name="android:textColor">#353535</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="TaRegular90">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="PstRegular60">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="H3BigRegular30">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="PrtThin60">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="ClockSmallLight20">
+		<item name="android:fontFamily">@font/roboto_light</item>
+		<item name="android:textSize">20.0sp</item>
+		<item name="android:fontWeight">300</item>
+		<item name="android:gravity">right|center_vertical</item>
+		<item name="android:lineHeight">22.0dp</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+
+	<style name="H1SmallLight30">
+		<item name="android:fontFamily">@font/roboto_light</item>
+		<item name="android:textSize">30.0sp</item>
+		<item name="android:fontWeight">300</item>
+		<item name="android:gravity">left|center_vertical</item>
+		<item name="android:lineHeight">35.0dp</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="H1BigLight40">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="Button45Bold20">
+		<item name="android:fontFamily">@font/roboto_bold</item>
+		<item name="android:textSize">13.0sp</item>
+		<item name="android:letterSpacing">0</item>
+		<item name="android:gravity">left|top</item>
+		<item name="android:lineHeight">16.0dp</item>
+		<item name="android:textColor">#353535</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="Button35Bold20">
+		<item name="android:fontFamily">@font/roboto_bold</item>
+		<item name="android:textSize">20.0sp</item>
+		<item name="android:letterSpacing">0</item>
+		<item name="android:gravity">top</item>
+		<item name="android:fontWeight">700</item>
+		<item name="android:lineHeight">20.0dp</item>
+		<item name="android:textColor">#363636</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="ClockBigLight26">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="H2SmallLight28">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="Body1SmallLight16">
+		<item name="android:textSize">16.0sp</item>
+		<item name="android:fontWeight">300</item>
+		<item name="android:gravity">right|top</item>
+		<item name="android:lineHeight">18.0dp</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="PopupTSmallBold22">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="Body1BigLight22">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="PopupTBigBold28">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="ParametersTileTite">
+		<item name="android:fontFamily">@font/roboto_bold</item>
+		<item name="android:textSize">20.0sp</item>
+		<item name="android:letterSpacing">0.02</item>
+		<item name="android:gravity">center_horizontal|center_vertical</item>
+		<item name="android:lineHeight">18.0dp</item>
+		<item name="android:textColor">#9f9e9e</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="NumpadRegular30">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="lockLight20">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="ClockLight20">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="DateLight24">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="ClockLight130">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="Label45Regular20">
+		<item name="android:fontFamily">@font/roboto_regular</item>
+		<item name="android:textSize">20.0sp</item>
+		<item name="android:gravity">left|top</item>
+		<item name="android:lineHeight">30.0dp</item>
+		<item name="android:textColor">#363636</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="Body45BigRegular24">
+		<item name="android:fontFamily">@font/roboto_regular</item>
+		<item name="android:textSize">24.0sp</item>
+		<item name="android:gravity">left|top</item>
+		<item name="android:lineHeight">26.0dp</item>
+		<item name="android:textColor">#363636</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="Body345xlRegular30">
+		<item name="android:fontFamily">@font/roboto_regular</item>
+		<item name="android:textSize">30.0sp</item>
+		<item name="android:gravity">left|top</item>
+		<item name="android:lineHeight">32.0dp</item>
+		<item name="android:textColor">#363636</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="Tile35Regular20">
+		<item name="android:fontFamily">@font/roboto_regular</item>
+		<item name="android:textSize">20sp</item>
+		<item name="android:gravity">left|top</item>
+		<item name="android:lineHeight">22.0dp</item>
+		<item name="android:textColor">#363636</item>
+		<item name="android:fontWeight">400</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="Tumbler45BigLight68">
+		<item name="android:fontFamily">@font/roboto_regular</item>
+		<item name="android:textSize">60.0sp</item>
+		<item name="android:gravity">left|top</item>
+		<item name="android:lineHeight">68.0dp</item>
+		<item name="android:textColor">@color/dark_grey</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="T45H2Regular24">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="W45Tumbler3xlRegular90">
+		<item name="android:fontFamily">@font/roboto_regular</item>
+		<item name="android:textSize">90.0sp</item>
+		<item name="android:gravity">left|top</item>
+		<item name="android:lineHeight">105.46875dp</item>
+		<item name="android:textColor">#363636</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="Divider">
+		<item name="android:background">@color/text_color_grey</item>
+	</style>
+	<style name="Divider.Vertical" parent="Divider">
+		<item name="android:layout_width">1dp</item>
+		<item name="android:layout_height">match_parent</item>
+	</style>
+	<style name="W35HeaderRegular30">
+		<item name="android:fontFamily">@font/roboto_regular</item>
+		<item name="android:textSize">30.0sp</item>
+		<item name="android:gravity">left|top</item>
+		<item name="android:lineHeight">28.0dp</item>
+		<item name="android:fontWeight">400</item>
+		<item name="android:textColor">@color/color_whp_text_gray</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="W35ButtonBold20">
+		<item name="android:fontFamily">@font/roboto_bold</item>
+		<item name="android:textSize">20.0sp</item>
+		<item name="android:gravity">center_vertical|center_horizontal</item>
+		<item name="android:lineHeight">20.0dp</item>
+		<item name="android:textColor">#363636</item>
+		<item name="android:fontWeight">700</item>
+		<item name="background">@drawable/background_fragment_bottomsheet_tile</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="ButtonBold20">
+		<item name="android:fontFamily">@font/roboto_bold</item>
+		<item name="android:textSize">20.0sp</item>
+		<item name="android:gravity">center|bottom</item>
+		<item name="android:lineHeight">20.0dp</item>
+		<item name="android:textColor">#363636</item>
+		<item name="android:fontWeight">700</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="W35PopupHeadlineRegular22">
+		<item name="android:fontFamily">@font/roboto_regular</item>
+		<item name="android:textSize">22.0sp</item>
+		<item name="android:gravity">left|center_vertical</item>
+		<item name="android:lineHeight">32.0dp</item>
+		<item name="android:textColor">#363636</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="W35PopupBodyLight20">
+		<item name="android:fontFamily">@font/roboto_light</item>
+		<item name="android:textSize">20.0sp</item>
+		<item name="android:gravity">left|top</item>
+		<item name="android:lineHeight">22.0dp</item>
+		<item name="android:textColor">#363636</item>
+		<item name="android:fontWeight">300</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="W35TumblerParameterTimeMedium52">
+		<item name="android:textSize">52.0sp</item>
+		<item name="android:fontFamily">@font/roboto_medium</item>
+		<item name="android:gravity">center_horizontal|center_vertical</item>
+		<item name="android:lineHeight">60.9375dp</item>
+		<item name="android:textColor">#363636</item>
+		<item name="android:fontWeight">500</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="W35TumblerParameterTimeMedium42">
+		<item name="android:textSize">52.0sp</item>
+		<item name="android:gravity">center_horizontal|center_vertical</item>
+		<item name="android:lineHeight">60.9375dp</item>
+		<item name="android:textColor">#9f9e9e</item>
+		<item name="android:fontWeight">500</item>
+		<item name="android:fontFamily">@font/roboto_medium</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="W35TileRegular20">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="W35NumpadRegular30">
+		<item name="android:fontFamily">@font/roboto_regular</item>
+		<item name="android:textSize">30.0sp</item>
+		<item name="android:gravity">center_horizontal|center_vertical</item>
+		<item name="android:lineHeight">30.0dp</item>
+		<item name="android:textColor">@color/dark_grey</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+
+	<style name="TileReg20">
+		<item name="android:fontFamily">@font/roboto_regular</item>
+		<item name="android:textSize">20.0sp</item>
+		<item name="android:letterSpacing">-0.02</item>
+		<item name="android:gravity">right|center_vertical</item>
+		<item name="android:lineHeight">22.0dp</item>
+		<item name="android:textColor">@color/dark_grey</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="RobotoReg30">
+		<item name="android:fontFamily">@font/roboto_regular</item>
+		<item name="android:textSize">30sp</item>
+		<item name="android:lineSpacingExtra">-5sp</item>
+		<item name="android:gravity">top</item>
+		<item name="android:lineHeight">30dp</item>
+		<item name="fontWeight">400</item>
+		<item name="android:textColor">@color/dark_grey</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="W35KeypadRegular60">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="W35ClockRegular24">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="ornamentalNonSelectedText">
+		<item name="android:textSize">25sp</item>
+		<item name="android:textColor">@color/color_whp_text_gray42</item>
+		<item name="fontFamily">@font/roboto_light</item>
+		<item name="fontWeight">300</item>
+		<item name="android:gravity">center_horizontal|center_vertical</item>
+		<item name="android:includeFontPadding">false</item>
+		<item name="lineHeight">30dp</item>
+	</style>
+	<style name="ornamentalSelectedText">
+		<item name="android:textSize">28sp</item>
+		<item name="android:textColor">@color/dark_grey</item>
+		<item name="fontFamily">@font/roboto_regular</item>
+		<item name="fontWeight">400</item>
+		<item name="android:gravity">center_horizontal|center_vertical</item>
+		<item name="android:includeFontPadding">false</item>
+		<item name="lineHeight">30dp</item>
+	</style>
+	<style name="TumblerDateTimeNonSelectedTextStyle">
+		<item name="android:textSize">80sp</item>
+		<item name="android:textStyle">normal</item>
+		<item name="android:textColor">@color/light_grey</item>
+		<item name="android:gravity">center</item>
+		<item name="android:letterSpacing">0.01</item>
+	</style>
+	<style name="W35NumpadHometileRobotoBold20">
+		<item name="android:fontFamily">@font/roboto_bold</item>
+		<item name="android:textSize">20.0sp</item>
+		<item name="android:letterSpacing">0.1</item>
+		<item name="android:gravity">center_horizontal|center_vertical</item>
+		<item name="android:lineHeight">20.0dp</item>
+		<item name="android:textColor">#363636</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="W35PopupHeadlineMedium20">
+		<item name="android:fontFamily">@font/roboto_medium</item>
+		<item name="android:textSize">20.0sp</item>
+		<item name="android:gravity">left|center_vertical</item>
+		<item name="android:lineHeight">25.0dp</item>
+		<item name="android:textColor">#363636</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="W35ParameterUnitBold28">
+		<item name="android:fontFamily">@font/roboto_bold</item>
+		<item name="android:textSize">28.0sp</item>
+		<item name="android:gravity">center_horizontal|center_vertical</item>
+		<item name="android:lineHeight">28.0dp</item>
+		<item name="android:textColor">#363636</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="W35TpTitleParameterBold16">
+		<item name="android:includeFontPadding">false</item>
+	</style>
+	<style name="W35SettingLine1Bold42">
+		<item name="android:fontFamily">@font/roboto_regular</item>
+		<item name="android:textSize">42.0sp</item>
+		<item name="android:gravity">left|bottom</item>
+		<item name="android:lineHeight">34.0dp</item>
+		<item name="android:textColor">#363636</item>
+		<item name="android:includeFontPadding">false</item>
+	</style>
+</resources>

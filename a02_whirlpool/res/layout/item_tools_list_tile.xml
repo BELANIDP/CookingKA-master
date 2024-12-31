@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="409dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="35.6dp"
+        android:background="@color/color_whp_brand_primary">
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="399dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="68dp"
+            android:background="@color/color_whp_text_gray77"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/group_1179"
+            android:layout_width="407dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/toolsListImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/group_1178"
+                android:layout_width="342dp"
+                android:layout_height="44dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/toolsListName"
+                    android:layout_width="275dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:fontFamily="@font/roboto_regular"
+                    android:fontWeight="400"
+                    android:gravity="start|center"
+                    android:includeFontPadding="false"
+                    android:lineHeight="22.0dp"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/toolsSubtitleName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:fontFamily="@font/roboto_regular"
+                    android:fontWeight="400"
+                    android:gravity="start|center"
+                    android:includeFontPadding="false"
+                    android:lineHeight="22.0dp"
+                    android:textColor="@color/color_tumbler_divider"
+                    android:visibility="gone"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/toolsListIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="377dp"
+                android:layout_marginTop="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/toolsListDescription"
+            android:layout_width="182dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="192dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="@font/roboto_regular"
+            android:fontWeight="400"
+            android:gravity="right|center_vertical"
+            android:includeFontPadding="false"
+            android:lineHeight="22.0dp"
+            android:textColor="@color/color_whp_text_gray42"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

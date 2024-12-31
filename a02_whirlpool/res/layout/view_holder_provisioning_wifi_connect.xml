@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeebe2">
+
+        <com.whirlpool.cooking.widgets.header.HeaderSingleIconDoubleText
+            android:id="@+id/header_bar_information"
+            android:layout_width="480dp"
+            android:layout_height="79dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/rectangle_1316"
+            android:layout_width="480dp"
+            android:layout_height="188dp"
+            android:layout_marginTop="79dp"
+            android:background="#f7f5f0"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/frame_1291"
+            android:layout_width="393dp"
+            android:layout_height="132dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="94dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/text_content"
+                android:layout_width="393dp"
+                android:layout_height="90dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <View
+                    android:id="@+id/rectangle"
+                    android:layout_width="17dp"
+                    android:layout_height="2dp"
+                    android:background="@drawable/background_text_content_rectangle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/headl"
+                    android:layout_width="393dp"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="6dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:fontWeight="400"
+                    android:gravity="left|center_vertical"
+                    android:includeFontPadding="false"
+                    android:lineHeight="26.0dp"
+                    android:textColor="#363636"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/body_text"
+                    android:layout_width="393dp"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="36dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:fontWeight="300"
+                    android:gravity="left|top"
+                    android:includeFontPadding="false"
+                    android:lineHeight="22.0dp"
+                    android:textColor="#363636"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/group_1097"
+                android:layout_width="393dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="90dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/active_buttons"
+                    android:layout_width="394dp"
+                    android:layout_height="37dp"
+                    android:background="@null"
+                    android:textAllCaps="false"
+                    android:visibility="gone"
+                    app:backgroundTint="@null"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.whirlpool.hmi.uicomponents.widgets.progress.Stepper
+                    android:id="@+id/bar_pairing"
+                    android:layout_width="393dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="13dp"
+                    app:no_of_steps="4"
+                    app:bg_step_default_color="@color/color_tumbler_divider"
+                    app:bg_step_highlighted_color="@color/color_yellow"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/detail_text"
+                    android:layout_width="396dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="5dp"
+                    android:fontWeight="700"
+                    android:gravity="left|top"
+                    android:includeFontPadding="false"
+                    android:letterSpacing="0.03"
+                    android:lineHeight="28.0dp"
+                    android:textColor="#363636"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

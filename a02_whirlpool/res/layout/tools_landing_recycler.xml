@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.whirlpool.hmi.uicomponents.widgets.list.ListView
+            android:id="@+id/toolsMenuListItem"
+            android:layout_width="480dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:nestedScrollingEnabled="true"
+            android:clipChildren="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whirlpool.cooking.widgets.ToolsGridView
+            android:id="@+id/toolsGrid_1"
+            android:layout_width="152dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/background_tools_grid_tile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whirlpool.cooking.widgets.ToolsGridView
+            android:id="@+id/toolsGrid_2"
+            android:layout_width="152dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="164dp"
+            android:background="@drawable/background_tools_grid_tile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.whirlpool.cooking.widgets.ToolsGridView
+            android:id="@+id/toolsGrid_3"
+            android:layout_width="152dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="322dp"
+            android:background="@drawable/background_tools_grid_tile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

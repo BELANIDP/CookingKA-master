@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<shape android:shape="rectangle" xmlns:android="http://schemas.android.com/apk/res/android">
+	<solid android:color="@color/color_whp_light_brand_primary_alpha"/>
+	<corners android:radius="7.5dp"/>
+</shape>

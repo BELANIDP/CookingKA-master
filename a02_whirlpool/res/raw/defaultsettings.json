@@ -1,0 +1,243 @@
+{
+  "said": {
+    "key": "saidKey",
+    "value": "WPR0123456789",
+    "type": "static"
+  },
+  "ccUri": {
+    "key": "ccuriKey",
+    "value": "com.whirlpool.fake.CCURI",
+    "type": "static"
+  },
+  "serialNumber": {
+    "key": "serialNumberKey",
+    "value": "12345678",
+    "type": "static"
+  },
+  "model": {
+    "key": "modelKey",
+    "value": "TEST MODEL",
+    "type": "static"
+  },
+  "webRtcSecret": {
+    "key": "webRtcSecretKey",
+    "value": "SECRET",
+    "type": "static"
+  },
+  "webRtcId":{
+    "key": "webRtcIdKey",
+    "value": "WEBRTCID",
+    "type": "static"
+  },
+  "rtspPassword": {
+    "key": "rtspPasswordKey",
+    "value": "PW",
+    "type": "static"
+  },
+  "rtspName": {
+    "key": "rtspNameKey",
+    "value": "NAME",
+    "type": "static"
+  },
+  "rtspIp": {
+    "key": "rtspIpKey",
+    "value": "111.111.11.11",
+    "type": "static"
+  },
+  "brand": {
+    "key": "brandKey",
+    "value": "WHIRLPOOL",
+    "type": "static"
+  },
+  "arch": {
+    "key": "archKey",
+    "value": "REBEL",
+    "type": "static"
+  },
+  "platform":{
+    "key": "platformKey",
+    "value": "SMALL_APP",
+    "type": "static"
+  },
+  "mqttOrgId": {
+    "key": "mqttOrgIdKey",
+    "value": "MQTT_ORG_ID",
+    "type": "static"
+  },
+  "mqttUrl": {
+    "key": "mqttUrlKey",
+    "value": "MQTT_URL",
+    "type": "static"
+  },
+  "mqttBroker": {
+    "key": "mqttBrokerKey",
+    "value": "MQTT_BROKER",
+    "type": "static"
+  },
+  "partNumber": {
+    "key": "partNumberKey",
+    "value": "PART_NUMBER",
+    "type": "static"
+  },
+  "releaseNumber": {
+    "key": "releaseNumberKey",
+    "value": "RELEASE_NUMBER",
+    "type": "static"
+  },
+  "aesKey": {
+    "key": "aesKeyKey",
+    "value": "AES_KEY",
+    "type": "static"
+  },
+  "metricsBackendIp": {
+    "key": "metricsBackendIpKey",
+    "value": "10.0.2.2",
+    "type": "static"
+  },
+  "metricsBackendPort": {
+    "key": "metricsBackendPortKey",
+    "value": "4317",
+    "type": "static"
+  },
+  "traceBackendIp": {
+    "key": "traceBackendIpKey",
+    "value": "10.0.2.2",
+    "type": "static"
+  },
+  "traceBackendPort":{
+    "key": "traceBackendPortKey",
+    "value":"4317",
+    "type": "static"
+  },
+  "temperatureUnit": {
+    "key": "temperatureUnitKey",
+    "value":"fahrenheit",
+    "type": "dynamic"
+  },
+  "weightUnit": {
+    "key":  "weightUnitKey",
+    "value":"metric",
+    "type": "dynamic"
+  },
+  "brightness":{
+    "key":  "brightnessKey",
+    "value":"100",
+    "type": "dynamic"
+  },
+  "alarmTimerVolume": {
+    "key":  "alarmTimerVolumeKey",
+    "value":"10",
+    "type": "dynamic"
+  },
+  "buttonVolume": {
+    "key":  "buttonVolumeKey",
+    "value":"10",
+    "type": "dynamic"
+  },
+  "videoVolume": {
+    "key":  "videoVolumeKey",
+    "value":"10",
+    "type": "dynamic"
+  },
+  "mute": {
+    "key":  "mute",
+    "value":"false",
+    "type": "dynamic"
+  },
+  "remoteEnable": {
+    "key":  "remoteEnableKey",
+    "value":"true",
+    "type": "dynamic"
+  },
+  "cookingTips": {
+    "key":  "cookingTipsKey",
+    "value":"true",
+    "type": "dynamic"
+  },
+  "feedback": {
+    "key":  "feedbackKey",
+    "value":"true",
+    "type": "dynamic"
+  },
+  "upoPrimaryCavity": {
+    "key":  "upoPrimaryCavityKey",
+    "value":"0",
+    "type": "dynamic"
+  },
+  "upoSecondaryCavity": {
+    "key":  "upoSecondaryCavityKey",
+    "value":"0",
+    "type": "dynamic"
+  },
+  "useWirelessProbe": {
+    "key":  "useWirelessProbeKey",
+    "value":"false",
+    "type": "dynamic"
+  },
+  "ecoModePrimaryCavity": {
+    "key":  "ecoModePrimaryCavityKey",
+    "value":"unknown",
+    "type": "dynamic"
+  },
+  "ecoModeSecondaryCavity":{
+    "key":  "ecoModeSecondaryCavityKey",
+    "value":"unknown",
+    "type": "dynamic"
+  },
+  "lightStateWhenRunningPrimaryCavity": {
+    "key":  "lightStateWhenRunningPrimaryCavityKey",
+    "value":"unknown",
+    "type": "dynamic"
+  },
+  "lightStateWhenRunningSecondaryCavity":{
+    "key":  "lightStateWhenRunningSecondaryCavityKey",
+    "value":"unknown",
+    "type": "dynamic"
+  },
+  "isClockFormat": {
+    "key":  "isClockFormatKey",
+    "value":"false",
+    "type": "dynamic"
+  },
+  "amperageSelection": {
+    "key":  "amperageSelectionKey",
+    "value":"16A",
+    "type": "dynamic"
+  },
+  "sabbathMode": {
+    "key":  "sabbathModeKey",
+    "value":"1",
+    "type": "dynamic"
+  },
+  "led": {
+    "key": "ledKey",
+    "value":"off",
+    "type": "dynamic",
+    "isProtected": "true",
+    "dataType": "string"
+  },
+  "mwoPowerUnit": {
+    "key": "mwoPowerUnitKey",
+    "value": "percentage",
+    "type": "static"
+  },
+  "lightStatePrimaryCavity": {
+    "key": "lightStatePrimaryCavityKey",
+    "value": "false",
+    "type": "dynamic"
+  },
+  "lightStateSecondaryCavity": {
+    "key": "lightStateSecondaryCavityKey",
+    "value": "false",
+    "type": "dynamic"
+  },
+  "unboxing": {
+    "key":  "unboxingKey",
+    "value":"true",
+    "type": "dynamic"
+  },"ecoMode": {
+  "key":  "ecoMode",
+  "value":"unknown",
+  "type": "dynamic"
+  }
+}

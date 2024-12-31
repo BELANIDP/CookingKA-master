@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/manual_cooking_double_oven_graph"
+    app:startDestination="@id/homeFragment"
+    tools:ignore="UnusedNavigation" >
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.whirlpool.cooking.HomeFragment"
+        android:label="HomeFragment" >
+
+        <deepLink
+            android:id="@+id/linkdoubleHomeFragment"
+            app:uri="cookingApplianceApp://doubleHomeFragment" />
+
+        <include app:graph="@navigation/self_clean_double_oven_graph" />
+        <action android:id="@+id/global_action_to_self_clean_double_menu" app:destination="@id/self_clean_double_oven_graph"/>
+
+        <action
+            android:id="@+id/action_homeFragment2_to_doubleOvenTumbler"
+            app:destination="@id/doubleOvenTumbler" />
+        <action
+            android:id="@+id/action_homeFragment_to_doubleOvenManualModesRecycleView2"
+            app:destination="@id/doubleOvenManualModesRecycleView" />
+        <action
+            android:id="@+id/action_homeFragment_to_double_oven_single_status"
+            app:destination="@id/double_oven_single_status" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_provisioningBleConnect"
+            app:destination="@id/provisioningConnectNowNavGraph" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_connection_details"
+            app:destination="@+id/double_oven_connection_details"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/double_oven_connection_details"
+        android:name="com.whirlpool.cooking.provisioning.ConnectionDetails"
+        android:label="ConnectionDetails" />
+
+    <fragment
+        android:id="@+id/doubleOvenTumbler"
+        android:name="com.whirlpool.cooking.doubleoven.DoubleOvenTemperatureTumbler"
+        android:label="DoubleOvenTumbler" >
+        <action
+            android:id="@+id/action_doubleOvenTumbler_to_doubleOvenTemperatureNumpad"
+            app:destination="@id/doubleOvenTemperatureNumpad" />
+        <action
+            android:id="@+id/action_double_oven_tumbler_to_single_status"
+            app:destination="@id/double_oven_single_status" />
+        <action
+            android:id="@+id/action_double_oven_tumbler_to_double_status"
+            app:destination="@id/double_oven_double_status" />
+        <action
+            android:id="@+id/action_doubleOvenTumbler_to_doubleOvenManualModesRecycleView"
+            app:destination="@id/doubleOvenManualModesRecycleView" />
+        <action
+            android:id="@+id/action_doubleOvenTumbler_to_doubleOvenCookTimeNumpad"
+            app:destination="@id/doubleOvenCookTimeNumpad" />
+        <action
+            android:id="@+id/action_doubleOvenTumbler_to_doubleOvenDelayTimeTumbler"
+            app:destination="@id/doubleOvenDelayTimeTumbler" />
+        <action
+            android:id="@+id/action_doubleOvenTumbler_to_doubleOven_Preset_Time"
+            app:destination="@id/doubleovenpresetcooktimenumpad" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/doubleOvenTemperatureNumpad"
+        android:name="com.whirlpool.cooking.doubleoven.DoubleOvenTemperatureNumpad"
+        android:label="DoubleOvenTemperatureNumpad" >
+        <action
+            android:id="@+id/action_doubleOvenTemperatureNumpad_to_doubleOvenSingleStatus"
+            app:destination="@id/double_oven_single_status" />
+
+        <action
+            android:id="@+id/action_doubleOvenTemperatureNumpad_to_doubleOvenDoubleStatus"
+            app:destination="@id/double_oven_double_status" />
+
+        <action
+            android:id="@+id/action_doubleOvenTemperatureNumpad_to_doubleOvenTumbler2"
+            app:destination="@id/doubleOvenTumbler" />
+        <action
+            android:id="@+id/action_doubleOvenTemperatureNumpad_to_doubleOvenManualModesRecycleView"
+            app:destination="@id/doubleOvenManualModesRecycleView" />
+        <action
+            android:id="@+id/action_doubleOvenTemperatureNumpad_to_doubleOvenCookTimeNumpad"
+            app:destination="@id/doubleOvenCookTimeNumpad" />
+        <action
+            android:id="@+id/action_doubleOvenTemperatureNumpad_to_doubleovenpresetcooktimenumpad"
+            app:destination="@id/doubleovenpresetcooktimenumpad" />
+        <action
+            android:id="@+id/action_doubleOvenTemperatureNumpad_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_doubleOvenTemperatureNumpad_to_doubleOven_Preset_Time"
+            app:destination="@id/doubleovenpresetcooktimenumpad" />
+        <action
+            android:id="@+id/action_doubleOvenNumpad_to_doubleOvenDelayTimeTumbler"
+            app:destination="@id/doubleOvenDelayTimeTumbler" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/double_oven_double_status"
+        android:name="com.whirlpool.cooking.doubleoven.DoubleOvenCookingDoubleStatus"
+        android:label="DoubleOvenCookingDoubleStatus" >
+        <action
+            android:id="@+id/action_doubleoven_double_status_to_cooktime"
+            app:destination="@id/doubleOvenCookTimeNumpad" />
+        <action
+            android:id="@+id/action_double_oven_double_status_to_tumbler"
+            app:destination="@id/doubleOvenTumbler" />
+        <action
+            android:id="@+id/action_double_oven_double_status_to_temperature_numpad"
+            app:destination="@id/doubleOvenTemperatureNumpad" />
+        <action
+            android:id="@+id/action_double_oven_double_status_to_tumbler"
+            app:destination="@id/doubleOvenTumbler" />
+        <action
+            android:id="@+id/action_double_oven_double_status_to_user_instruction"
+            app:destination="@+id/double_oven_user_instruction" />
+        <action
+            android:id="@+id/action_doubleoven_double_status_to_delay_edit"
+            app:destination="@id/doubleOvenDelayTimeTumbler" />
+
+        <action
+            android:id="@+id/action_double_oven_double_status_to_at_insert_food_popup"
+            app:destination="@id/doubleoven_popup"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/double_oven_user_instruction"
+        android:name="com.whirlpool.cooking.doubleoven.DoubleOvenUserInstructionPopUp"
+        android:label="DoubleOvenUserInstructionPopUp" >
+        <action
+            android:id="@+id/double_oven_user_instruction_to_single_status"
+            app:destination="@id/double_oven_single_status" />
+        <action
+            android:id="@+id/double_oven_user_instruction_to_double_status"
+            app:destination="@id/double_oven_double_status" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/double_oven_single_status"
+        android:name="com.whirlpool.cooking.doubleoven.DoubleOvenCookingSingleStatus"
+        android:label="DoubleOvenCookingSingleStatus" >
+        <action
+            android:id="@+id/action_doubleoven_single_status_to_cooktime"
+            app:destination="@id/doubleOvenCookTimeNumpad"
+            />
+        <action
+            android:id="@+id/action_double_oven_single_status_to_temperature_numpad"
+            app:destination="@id/doubleOvenTemperatureNumpad">
+        </action>
+        <action
+            android:id="@+id/action_double_oven_single_status_to_tumbler"
+            app:destination="@id/doubleOvenTumbler" />
+        <action
+            android:id="@+id/action_doubleoven_single_status_to_delaytumbler"
+            app:destination="@id/doubleOvenDelayTimeTumbler"
+            />
+        <action
+            android:id="@+id/action_doubleoven_single_status_to_double_oven_user_instruction"
+            app:destination="@id/double_oven_user_instruction"
+            />
+        <action
+            android:id="@+id/action_double_oven_single_status_to_at_end_option"
+            app:destination="@id/doubleovenatendoption"/>
+
+        <action
+            android:id="@+id/action_double_oven_single_status_to_at_insert_food_popup"
+            app:destination="@id/doubleoven_popup"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/doubleoven_popup"
+        android:name="com.whirlpool.cooking.doubleoven.DoubleOvenPopUpOverlay"
+        android:label="DoubleOvenOverlayPopUp">
+    </fragment>
+
+    <fragment
+        android:id="@+id/doubleOvenManualModesRecycleView"
+        android:name="com.whirlpool.cooking.doubleoven.DoubleOvenManualModesRecycleView"
+        android:label="DoubleOvenManualModesRecycleView" >
+<!--        <action-->
+<!--            android:id="@+id/action_doubleOvenManualModesRecycleView_to_doubleOvenHome2"-->
+<!--            app:destination="@id/doubleOvenHome" />-->
+        <action
+            android:id="@+id/action_doubleOvenManualModesRecycleView_to_doubleOvenTumbler"
+            app:destination="@id/doubleOvenTumbler" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/doubleOvenCookTimeNumpad"
+        android:name="com.whirlpool.cooking.doubleoven.DoubleOvenCookTimeNumpad"
+        android:label="DoubleOvenCookTimeNumpad" >
+        <action
+            android:id="@+id/action_doubleOvenCookTimeNumpad_to_doubleOvenSingleStatus"
+            app:destination="@id/double_oven_single_status" />
+        <action
+            android:id="@+id/action_doubleOvenCookTimeNumpad_to_doubleOvenDoubleStatus"
+            app:destination="@id/double_oven_double_status" />
+        <action
+            android:id="@+id/action_doubleOvenCookTimeNumpad_to_doubleOvenTempNumpad"
+            app:destination="@id/doubleOvenTemperatureNumpad" />
+        <action
+            android:id="@+id/action_doubleOvenCookTimeNumpad_to_doubleOvenPopUpInformationalTime"
+            app:destination="@id/doubleOvenPopUpInformationalTime" />
+        <action
+            android:id="@+id/action_doubleOvenCookTimeNumpad_to_doubleOvenManualModesRecycleView"
+            app:destination="@id/doubleOvenManualModesRecycleView" />
+        <action
+            android:id="@+id/action_doubleOvenCookTimeNumpad_to_doubleovenpresetcooktimenumpad"
+            app:destination="@id/doubleovenpresetcooktimenumpad" />
+        <action
+            android:id="@+id/action_double_oven__time_numpad_to_atEnd_option"
+            app:destination="@id/doubleovenatendoption"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/doubleOvenPopUpInformationalTime"
+        android:name="com.whirlpool.cooking.doubleoven.DoubleOvenPopUpFragmentTime"
+        android:label="DoubleOvenPopUpInformationalTime" >
+        <action
+            android:id="@+id/action_doubleOvenPopUpInformationalTime_to_doubleOvenCookTimeNumpad"
+            app:destination="@id/doubleOvenCookTimeNumpad" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/doubleOvenDelayTimeTumbler"
+        android:name="com.whirlpool.cooking.doubleoven.DoubleOvenDelayTimeTumbler"
+        android:label="DoubleOvenDelayTimeTumbler" >
+        <action
+            android:id="@+id/action_doubleOvenDelayTimeTumbler_to_doubleOvenTumbler"
+            app:destination="@id/doubleOvenTumbler" />
+        <action
+            android:id="@+id/action_doubleOvenDelayTimeTumbler_to_double_oven_single_status"
+            app:destination="@id/double_oven_single_status" />
+        <action
+            android:id="@+id/action_doubleOvenDelayTimeTumbler_to_double_oven_double_status"
+            app:destination="@id/double_oven_double_status" />
+    </fragment>
+
+<!--    <fragment-->
+<!--        android:id="@+id/doubleovenclocktimenumpad"-->
+<!--    android:name="com.whirlpool.cooking.doubleoven.DoubleOvenClockTimeNumpad"-->
+<!--    android:label="DoubleOvenDelay">-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_doubleovenclocktimenumpad_to_toolsTimeAndDateMenu"-->
+<!--            app:destination="@id/toolsTimeAndDateMenu" />-->
+<!--    </fragment>-->
+
+    <fragment
+        android:id="@+id/doubleovenpresetcooktimenumpad"
+        android:name="com.whirlpool.cooking.doubleoven.PresetCookTimeNumpadFragment"
+        android:label="OvenCooktime">
+
+        <action
+            android:id="@+id/action_doubleoven_cooktime_numpad_to_temp_tumbler"
+            app:destination="@id/doubleOvenTumbler"/>
+
+        <action
+            android:id="@+id/action_doubleoven_cooktime_to_delaytumbler"
+            app:destination="@id/doubleOvenDelayTimeTumbler"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/doubleOvenFavorite"
+        android:name="com.whirlpool.cooking.doubleoven.DoubleOvenFavorite"
+        android:label="DoubleOvenFavorite">
+    </fragment>
+
+    <fragment
+        android:id="@+id/doubleovenatendoption"
+        android:name="com.whirlpool.cooking.doubleoven.DoubleOvenAtEndOptions"
+        android:label="AtEndOptions">
+        <action
+            android:id="@+id/action_atend_to_numpad"
+            app:destination="@id/doubleOvenCookTimeNumpad" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/toolsMenu"
+        android:name="com.whirlpool.cooking.tools.ToolsMenu"
+        android:label="ToolsMenu">
+        <action
+            android:id="@+id/action_toolsMenu_to_doubleOvenProvisioningTools"
+            app:destination="@id/assisted_cooking_methods" />
+        <action
+            android:id="@+id/action_toolsMenu_to_self_clean_double_oven_graph"
+            app:destination="@id/self_clean_double_oven_graph" />
+        <action
+            android:id="@+id/action_toolsMenu_to_toolsTimeAndDateMenu"
+            app:destination="@id/toolsTimeAndDateMenu" />
+        <action
+            android:id="@+id/action_toolsMenu_to_doubleOvenHome"
+            app:destination="@id/manual_cooking_double_oven_graph" />
+<!--        <action-->
+<!--            android:id="@+id/action_toolsMenu_to_temperatureUnitsMenu"-->
+<!--            app:destination="@id/action_toolsMenu_to_toolsTemperatureUnits" />-->
+    </fragment>
+
+    <include app:graph="@navigation/provisioning_connect_now_nav_graph"/>
+<!--    <action android:id="@+id/action_global_homeScreen_favorite" app:destination="@id/doubleOvenHome" />-->
+
+    <fragment
+        android:id="@+id/toolsTimeAndDateMenu"
+        android:name="com.whirlpool.cooking.tools.ToolsTimeAndDateMenu"
+        android:label="ToolsTimeAndDateMenu" >
+        <action
+            android:id="@+id/action_toolsTimeAndDateMenu_to_toolsMenu"
+            app:destination="@id/toolsMenu" />
+
+        <action
+            android:id="@+id/action_toolsTimeAndDateMenu_to_doubleOvenClockTimeNumpad"
+            app:destination="@id/doubleOvenClockTimeNumpad" />
+<!--        <action-->
+<!--            android:id="@+id/action_toolsTimeAndDateMenu_to_doubleovenclocktimenumpad"-->
+<!--            app:destination="@id/doubleovenclocktimenumpad" />-->
+        <action
+            android:id="@+id/action_toolsTimeAndDateMenu_to_doubleOvenDateNumpad"
+            app:destination="@id/doubleOvenDateNumpad" />
+    </fragment>
+    <fragment
+        android:id="@+id/temperatureUnitsMenu"
+        android:name="com.whirlpool.cooking.tools.TemperatureUnitsMenu"
+        android:label="TemperatureUnitsMenu" >
+        <action
+            android:id="@+id/action_temperatureUnitsMenu_to_toolsMenu"
+            app:destination="@id/toolsMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/doubleOvenClockTimeNumpad"
+        android:name="com.whirlpool.cooking.doubleoven.DoubleOvenClockTimeNumpad"
+        android:label="DoubleOvenClockTimeNumpad" >
+        <action
+            android:id="@+id/action_doubleOvenClockTimeNumpad_to_toolsTimeAndDateMenu"
+            app:destination="@id/toolsTimeAndDateMenu" />
+    </fragment>
+
+<!--    <fragment-->
+<!--        android:id="@+id/doubleOvenDateNumpad"-->
+<!--        android:name="com.whirlpool.cooking.doubleoven.DoubleOvenDateNumpad"-->
+<!--        android:label="DoubleOvenDateNumpad" >-->
+
+<!--        <action-->
+<!--            android:id="@+id/action_doubleOvenDateNumpad_to_toolsTimeAndDateMenu"-->
+<!--            app:destination="@id/toolsTimeAndDateMenu" />-->
+<!--    </fragment>-->
+
+    <fragment
+        android:id="@+id/doubleOvenCookingComplete"
+        android:name="com.whirlpool.cooking.doubleoven.DoubleOvenPopupCookingComplete"
+        android:label="DoubleOvenPopupCookingComplete" />
+
+    <include app:graph="@navigation/provisioning_connect_now_nav_graph"/>
+    <include app:graph="@navigation/tools_menu_graph"/>
+
+    <action android:id="@+id/global_action_to_tools_menu_double_oven" app:destination="@+id/toolsMenu"/>
+    <action android:id="@+id/global_action_to_tools_menu" app:destination="@+id/toolsMenu"/>
+    <action android:id="@+id/action_global_double_oven_to_single_status" app:destination="@id/double_oven_single_status"/>
+    <action android:id="@+id/action_global_to_double_oven_double_status" app:destination="@id/double_oven_double_status"/>
+    <action android:id="@+id/action_global_favoriteScreen" app:destination="@+id/doubleOvenFavorite"/>
+    <action android:id="@+id/action_global_double_oven_cooking_complete" app:destination="@+id/doubleOvenCookingComplete" />
+    <action android:id="@+id/action_global_manual_cooking_double_oven_graph" app:destination="@+id/doubleOvenManualModesRecycleView"/>
+    <action android:id="@+id/action_global_double_oven_tumbler" app:destination="@+id/doubleOvenTumbler"/>
+    <action android:id="@+id/action_global_to_self_clean_double_menu" app:destination="@id/self_clean_double_oven_graph"/>
+
+    <action android:id="@+id/action_global_navigate_to_home" app:destination="@id/homeFragment"/>
+    <action android:id="@+id/action_double_lock_to_clock" app:destination="@+id/homeFragment"/>
+
+</navigation>

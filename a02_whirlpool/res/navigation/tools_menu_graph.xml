@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tools_menu_graph"
+    app:startDestination="@id/toolsMenu">
+
+    <include app:graph="@navigation/self_clean_double_oven_graph" />
+    <include app:graph="@navigation/provisioning_connect_now_nav_graph" />
+
+    <fragment
+        android:id="@+id/toolsMenu"
+        android:name="com.whirlpool.cooking.tools.ToolsLandingView"
+        android:label="ToolsMenu">
+
+        <deepLink
+            android:id="@+id/linkToolsMenu"
+            app:uri="cookingApplianceApp://toolsMenu" />
+        <action
+            android:id="@+id/action_toolsMenu_to_time_and_date"
+            app:destination="@id/toolsTimeAndDateMenu" />
+        <action
+            android:id="@+id/action_toolsMenu_to_kitchenTimerNumpad"
+            app:destination="@id/kitchenTimerNumpad" />
+        <action
+            android:id="@+id/action_toolsMenu_to_kitchenTimerStatusScreen"
+            app:destination="@id/kitchenTimerStatusScreen" />
+
+        <action
+            android:id="@+id/action_toolsMenu_to_set_kitchen_timer"
+            app:destination="@+id/kitchen_timer_vertical_tumbler" />
+        <action
+            android:id="@+id/action_toolsMenu_to_kitchen_timer_running"
+            app:destination="@id/kitchenTimerStatusScreen" />
+        <action
+            android:id="@+id/action_toolsMenu_to_toolsTemperatureUnits"
+            app:destination="@id/toolsTemperatureUnits" />
+        <action
+            android:id="@+id/action_toolsMenu_to_MoreModes"
+            app:destination="@id/toolsMoreModes" />
+
+        <action
+            android:id="@+id/action_toolsMenu_to_appThemes"
+            app:destination="@+id/toolsAppThemes" />
+        <action
+            android:id="@+id/action_toolsMenu_to_self_clean_double_oven_graph"
+            app:destination="@id/self_clean_double_oven_graph" />
+        <action
+            android:id="@+id/action_toolsMenu_to_pyro_self_clean_tumbler"
+            app:destination="@id/cleanCycleSelectionTumblerFragment" />
+        <action
+            android:id="@+id/action_toolsMenu_to_hydro_self_clean_single_oven"
+            app:destination="@id/hydroSelfCleanInstruction" />
+        <action
+            android:id="@+id/action_toolsMenu_to_toolsShowAllView_Cleaning_And_Maintenance"
+            app:destination="@id/toolsShowAllView" />
+        <action
+            android:id="@+id/action_toolsMenu_to_toolsShowAllView_Preferences"
+            app:destination="@id/toolsShowAllView" />
+        <action
+            android:id="@+id/action_toolsMenu_to_toolsDateAndTime"
+            app:destination="@id/toolsDateAndTime" />
+        <action
+            android:id="@+id/action_toolsMenu_to_toolsShowAllView_Connectivity"
+            app:destination="@id/toolsConnectivity" />
+        <action
+            android:id="@+id/action_toolsMenu_to_toolsShowAllView_Info"
+            app:destination="@id/toolsShowAllView" />
+        <action
+            android:id="@+id/action_toolsMenu_to_powerManagement"
+            app:destination="@id/powerManagement" />
+        <action
+            android:id="@+id/action_wifiFragment_to_provisioningBleConnect"
+            app:destination="@id/provisioningConnectNowNavGraph" />
+        <action
+            android:id="@+id/action_tools_provisioning_to_connection_details"
+            app:destination="@id/provisioningConnectionDetails" />
+        <action
+            android:id="@+id/action_toolsMenu_to_kitchenTimerRunningStatus"
+            app:destination="@id/kitchenTimerRunningStatus" />
+        <action
+            android:id="@+id/action_toolsMenu_to_toolslanguageregion"
+            app:destination="@id/toolslanguageregion" />
+
+        <action
+            android:id="@+id/action_toolsInfoMyApplicance"
+            app:destination="@id/toolsInformationMyAppliance" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/kitchen_timer_vertical_tumbler"
+        android:name="com.whirlpool.cooking.kitchentimer.KitchenTimerVerticalTumbler"
+        android:label="KitchenTimerVerticalTumbler">
+        <action
+            android:id="@+id/action_vertical_tumbler_timer_to_status"
+            app:destination="@id/kitchenTimerStatusScreen" />
+        <action
+            android:id="@+id/action_kitchen_timer_vertical_tumbler_to_kitchenTimerNumpad"
+            app:destination="@id/kitchenTimerNumpad" />
+        <action
+            android:id="@+id/action_kitchen_timer_vertical_tumbler_to_toolsMenu"
+            app:destination="@id/toolsMenu" />
+        <action
+            android:id="@+id/action_kitchen_timer_vertical_tumbler_to_kitchenTimerRunningStatus"
+            app:destination="@id/kitchenTimerRunningStatus" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/toolsTimeAndDateMenu"
+        android:name="com.whirlpool.cooking.tools.ToolsTimeAndDateMenu"
+        android:label="ToolsTimeAndDateMenu">
+        <action
+            android:id="@+id/action_toolsTimeAndDateMenu_to_toolsMenu"
+            app:destination="@id/toolsMenu" />
+        <action
+            android:id="@+id/action_toolsTimeAndDateMenu_to_doubleovenclocktimenumpad"
+            app:destination="@id/doubleovenclocktimenumpad" />
+        <action
+            android:id="@+id/action_toolsTimeAndDateMenu_to_doubleOvenDateNumpad2"
+            app:destination="@id/doubleOvenDateNumpad" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/doubleOvenDateNumpad"
+        android:name="com.whirlpool.cooking.doubleoven.DoubleOvenDateNumpad"
+        android:label="DoubleOvenDateNumpad">
+        <action
+            android:id="@+id/action_doubleOvenDateNumpad_to_toolsTimeAndDateMenu"
+            app:destination="@id/toolsTimeAndDateMenu" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/provisioningConnectionDetails"
+        android:name="com.whirlpool.cooking.provisioning.ConnectionDetails"
+        android:label="ConnectionDetails">
+        <!--        <action-->
+        <!--            android:id="@+id/action_connection_details_to_home"-->
+        <!--            app:destination="@id/doubleOvenHome" />-->
+    </fragment>
+
+    <fragment
+
+        android:id="@+id/kitchenTimerNumpad"
+        android:name="com.whirlpool.cooking.kitchentimer.KitchenTimerNumpad"
+        android:label="KitchenTimerNumpad">
+        <action
+            android:id="@+id/action_kitchenTimerNumpad_to_kitchenTimerStatusScreen"
+            app:destination="@id/kitchenTimerStatusScreen" />
+        <action
+            android:id="@+id/action_kitchenTimerNumpad_to_toolsMenu"
+            app:destination="@id/toolsMenu" />
+        <action
+            android:id="@+id/action_kitchenTimerNumpad_to_kitchen_timer_vertical_tumbler"
+            app:destination="@id/kitchen_timer_vertical_tumbler" />
+        <action
+            android:id="@+id/action_kitchenTimerNumpad_to_kitchenTimerRunningStatus"
+            app:destination="@id/kitchenTimerRunningStatus" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/toolsTemperatureUnits"
+        android:name="com.whirlpool.cooking.tools.TemperatureUnitsMenu"
+        android:label="ToolsTimeAndDateMenu">
+        <action
+            android:id="@+id/action_toolsTimeAndDateMenu_to_toolsMenu"
+            app:destination="@id/toolsMenu" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/kitchenTimerStatusScreen"
+        android:name="com.whirlpool.cooking.kitchentimer.KitchenTimerVerticalTumbler"
+        android:label="KitchenTimerStatusScreen">
+        <action
+            android:id="@+id/action_kitchenTimerStatusScreen_to_kitchenTimerNumpad"
+            app:destination="@id/kitchenTimerNumpad" />
+        <action
+            android:id="@+id/action_kitchenTimerStatusScreen_to_toolsMenu"
+            app:destination="@id/toolsMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/toolsMoreModes"
+        android:name="com.whirlpool.cooking.tools.ToolsMoreModes"
+        android:label="toolsMoreModes">
+
+        <action
+            android:id="@+id/sabbath_mode_to_bake_popup"
+            app:destination="@id/sabbathmodepopup" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/toolsAppThemes"
+        android:name="com.whirlpool.cooking.tools.ToolsAppThemes"
+        android:label="toolsAppThemes"></fragment>
+
+    <fragment
+        android:id="@+id/sabbathmodepopup"
+        android:name="com.whirlpool.cooking.sabbathMode.sabbathSelectionPopup"
+        android:label="sabbathmodepopup">
+
+        <action
+            android:id="@+id/action_sabbath_popup_to_clock"
+            app:destination="@id/sabbathClock" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/sabbathClock"
+        android:name="com.whirlpool.cooking.sabbathMode.SabbathClock"
+        android:label="sabbathmodeclcok">
+
+        <action
+            android:id="@+id/action_sabbath_clock_to_clock"
+            app:destination="@id/cavity_graph" />
+
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_to_kitchen_timer_status"
+        app:destination="@id/kitchenTimerStatusScreen" />
+
+    <fragment
+        android:id="@+id/doubleovenclocktimenumpad"
+        android:name="com.whirlpool.cooking.doubleoven.DoubleOvenClockTimeNumpad"
+        android:label="DoubleOvenDelay">
+
+        <action
+            android:id="@+id/action_doubleovenclocktimenumpad_to_toolsTimeAndDateMenu"
+            app:destination="@id/toolsTimeAndDateMenu" />
+
+
+        <!--        <action android:id="@+id/action_global_to_home"-->
+        <!--            app:destination="@id/homeScreen"/>-->
+    </fragment>
+
+
+    <!--    <action-->
+    <!--        android:id="@+id/action_global_navigate_to_home"-->
+    <!--        app:destination="@id/cavity_graph"/>-->
+    <!--    <include app:graph="@navigation/cavity_graph" />-->
+
+    <action
+        android:id="@+id/action_global_navigate_to_kitchenTimer_vertical_tumbler"
+        app:destination="@id/kitchen_timer_vertical_tumbler" />
+
+
+    <!-- Pyro & Hydro Clean Actions-->
+
+    <fragment
+        android:id="@+id/selfCleanInstruction"
+        android:name="com.whirlpool.cooking.selfclean.PrepareOvenCleanInstructionFragment"
+        android:label="PrepareOvenInstruction">
+        <action
+            android:id="@+id/action_selfCleanInstruction_to_cleanStatusScreen"
+            app:destination="@id/cleanStatusScreen" />
+        <action
+            android:id="@+id/action_selfCleanInstruction_to_delayPrepareOvenPopUpFragment"
+            app:destination="@id/delayPrepareOvenPopUpFragment" />
+        <action
+            android:id="@+id/action_selfCleanInstruction_to_cleanDelayTimeTumbler"
+            app:destination="@id/cleanDelayTimeTumbler" />
+        <action
+            android:id="@+id/action_selfCleanInstruction_to_cleanCycleSelectionTumblerFragment"
+            app:destination="@id/cleanCycleSelectionTumblerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/hydroSelfCleanInstruction"
+        android:name="com.whirlpool.cooking.selfclean.PrepareOvenHydroCleanInstructionFragment"
+        android:label="PrepareOvenInstruction">
+        <action
+            android:id="@+id/action_selfCleanInstruction_to_cleanStatusScreen"
+            app:destination="@id/cleanStatusScreen" />
+        <action
+            android:id="@+id/action_selfCleanInstruction_to_delayPrepareOvenPopUpFragment"
+            app:destination="@id/delayPrepareOvenPopUpFragment" />
+        <action
+            android:id="@+id/action_selfCleanInstruction_to_cleanDelayTimeTumbler"
+            app:destination="@id/cleanDelayTimeTumbler" />
+        <action
+            android:id="@+id/action_hydroSelfCleanInstruction_to_toolsMenu"
+            app:destination="@id/toolsMenu" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_selfCleanInstruction_to_cleanStatusScreen"
+        app:destination="@id/cleanStatusScreen" />
+
+    <fragment
+        android:id="@+id/cleanStatusScreen"
+        android:name="com.whirlpool.cooking.selfclean.CleanStatusFragment"
+        android:label="selfcleanstatus">
+
+        <deepLink
+            android:id="@+id/linkCleanStatusScreen"
+            app:uri="cookingApplianceApp://cleanStatusFragment" />
+
+        <action
+            android:id="@+id/action_cleanStatusScreen_to_cavity_graph"
+            app:destination="@id/cavity_graph" />
+        <action
+            android:id="@+id/action_cleanStatusScreen_to_cleanDelayTimeTumbler"
+            app:destination="@id/cleanDelayTimeTumbler" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/delayPrepareOvenPopUpFragment"
+        android:name="com.whirlpool.cooking.selfclean.DelayPrepareOvenPopUpFragment"
+        android:label="DelayPrepareOvenPopUpFragment">
+        <action
+            android:id="@+id/action_delayPrepareOvenPopUpFragment_to_cleanDelayTimeTumbler"
+            app:destination="@id/cleanDelayTimeTumbler" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cleanDelayTimeTumbler"
+        android:name="com.whirlpool.cooking.selfclean.CleanDelayTimeTumbler"
+        android:label="CleanDelayTimeTumbler">
+        <action
+            android:id="@+id/action_cleanDelayTimeTumbler_to_selfCleanInstruction"
+            app:destination="@id/selfCleanInstruction" />
+        <action
+            android:id="@+id/action_cleanDelayTimeTumbler_to_cleanStatusScreen"
+            app:destination="@id/cleanStatusScreen" />
+        <action
+            android:id="@+id/action_cleanDelayTimeTumbler_to_hydroSelfCleanInstruction"
+            app:destination="@id/hydroSelfCleanInstruction" />
+    </fragment>
+    <fragment
+        android:id="@+id/cleanCycleSelectionTumblerFragment"
+        android:name="com.whirlpool.cooking.selfclean.CleanCycleSelectionTumblerFragment"
+        android:label="CleanCycleSelectionTumblerFragment">
+        <action
+            android:id="@+id/action_cleanCycleSelectionTumblerFragment_to_selfCleanInstruction"
+            app:destination="@id/selfCleanInstruction" />
+        <action
+            android:id="@+id/action_cleanCycleSelectionTumblerFragment_to_toolsMenu"
+            app:destination="@id/toolsMenu" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/toolsShowAllView"
+        android:name="com.whirlpool.cooking.tools.ToolsShowAllView"
+        android:label="ToolsShowAllView">
+        <action
+            android:id="@+id/action_toolsShowAllView_to_toolsMenu"
+            app:destination="@id/toolsMenu" />
+        <action
+            android:id="@+id/action_toolsShowAllView_to_cleanCycleSelectionTumblerFragment"
+            app:destination="@id/cleanCycleSelectionTumblerFragment" />
+        <action
+            android:id="@+id/action_toolsShowAllView_to_hydroSelfCleanInstruction"
+            app:destination="@id/hydroSelfCleanInstruction" />
+        <action
+            android:id="@+id/action_toolsShowAllView_to_powerManagement"
+            app:destination="@id/powerManagement" />
+        <action
+            android:id="@+id/action_toolsShowAllView_to_toolsDateAndTime"
+            app:destination="@id/toolsDateAndTime" />
+        <action
+            android:id="@+id/action_toolsShowAllView_to_lighting"
+            app:destination="@id/toolslighting" />
+        <action
+            android:id="@+id/action_toolsShowAllView_to_ecomode"
+            app:destination="@id/toolsecomode" />
+        <action
+            android:id="@+id/action_toolsShowAllView_to_displaysettings"
+            app:destination="@id/toolsdisplaysettings" />
+        <action
+            android:id="@+id/action_toolsShowAllView_to_soundvolume"
+            app:destination="@id/tools_soundvolume" />
+	<action
+            android:id="@+id/action_toolsShowAllView_to_language_region"
+            app:destination="@id/toolslanguageregion" />
+        <action
+            android:id="@+id/action_toolsShowAllView_to_restore_setting"
+            app:destination="@id/toolsrestoresetting" />
+        <action
+            android:id="@+id/action_toolsShowAllView_to_temperature_calibration"
+            app:destination="@id/toolstemperaturecalibration" />
+
+        <action
+            android:id="@+id/action_toolsInfoMyApplicance"
+            app:destination="@id/toolsInformationMyAppliance" />
+
+        <action
+            android:id="@+id/action_toolsInfoSupportService"
+            app:destination="@id/toolsInformationServiceSupport" />
+
+        <action
+            android:id="@+id/action_toolsInfoWiFiTerms"
+            app:destination="@id/toolsInformationWiFiTerms" />
+
+        <action
+            android:id="@+id/action_toolsInfoSwTerms"
+            app:destination="@id/toolsInformationSwTerms" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/powerManagement"
+        android:name="com.whirlpool.cooking.tools.PowerManagement"
+        android:label="PowerManagement" />
+    <fragment
+        android:id="@+id/timeVerticalTumbler"
+        android:name="com.whirlpool.cooking.tools.TimeVerticalTumbler"
+        android:label="TimeVerticalTumbler">
+        <action
+            android:id="@+id/action_timeVerticalTumbler_to_timeNumpad"
+            app:destination="@id/timeNumpad" />
+        <action
+            android:id="@+id/action_timeVerticalTumbler_to_time24HrTumbler"
+            app:destination="@id/time24HrTumbler" />
+        <action
+            android:id="@+id/action_timeVerticalTumbler_to_toolsDateAndTime"
+            app:destination="@id/toolsDateAndTime" />
+        <action
+            android:id="@+id/action_timeVerticalTumbler_to_time12HrNumpad"
+            app:destination="@id/time12HrNumpad" />
+        <action
+            android:id="@+id/action_timeVerticalTumbler_to_toolslanguageregion"
+            app:destination="@id/toolslanguageregion" />
+    </fragment>
+    <fragment
+        android:id="@+id/timeNumpad"
+        android:name="com.whirlpool.cooking.tools.TimeNumpad"
+        android:label="TimeNumpad">
+        <action
+            android:id="@+id/action_timeNumpad_to_timeVerticalTumbler"
+            app:destination="@id/timeVerticalTumbler" />
+        <action
+            android:id="@+id/action_timeNumpad_to_time24HrTumbler"
+            app:destination="@id/time24HrTumbler" />
+        <action
+            android:id="@+id/action_timeNumpad_to_toolsDateAndTime"
+            app:destination="@id/toolsDateAndTime" />
+        <action
+            android:id="@+id/action_timeNumpad_to_time12HrNumpad"
+            app:destination="@id/time12HrNumpad" />
+        <action
+            android:id="@+id/action_timeNumpad_to_toolslanguageregion"
+            app:destination="@id/toolslanguageregion" />
+    </fragment>
+    <fragment
+        android:id="@+id/time24HrTumbler"
+        android:name="com.whirlpool.cooking.tools.Time24HrTumbler"
+        android:label="Time24HrTumbler">
+        <action
+            android:id="@+id/action_time24HrTumbler_to_timeNumpad"
+            app:destination="@id/timeNumpad" />
+        <action
+            android:id="@+id/action_time24HrTumbler_to_timeVerticalTumbler"
+            app:destination="@id/timeVerticalTumbler" />
+        <action
+            android:id="@+id/action_time24HrTumbler_to_toolsDateAndTime"
+            app:destination="@id/toolsDateAndTime" />
+        <action
+            android:id="@+id/action_time24HrTumbler_to_toolslanguageregion"
+            app:destination="@id/toolslanguageregion" />
+    </fragment>
+    <fragment
+        android:id="@+id/toolsDateAndTime"
+        android:name="com.whirlpool.cooking.tools.ToolsDateAndTime"
+        android:label="ToolsDateAndTime">
+        <action
+            android:id="@+id/action_toolsDateAndTime_to_dateVerticalTumbler"
+            app:destination="@id/dateVerticalTumbler" />
+        <action
+            android:id="@+id/action_toolsDateAndTime_to_timeVerticalTumbler"
+            app:destination="@id/timeVerticalTumbler" />
+        <action
+            android:id="@+id/action_toolsDateAndTime_to_time24HrTumbler"
+            app:destination="@id/time24HrTumbler" />
+        <action
+            android:id="@+id/action_toolsDateAndTime_to_toolsMenu"
+            app:destination="@id/toolsMenu" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/toolsConnectivity"
+        android:name="com.whirlpool.cooking.tools.ToolsConnectivity"
+        android:label="ToolsConnectivity">
+        <action
+            android:id="@+id/action_toolsConnectivity_to_toolsMenu"
+            app:destination="@id/toolsMenu" />
+        <action
+            android:id="@+id/action_toolsConnectivityShowAllView_provisioningBleConnect"
+            app:destination="@id/provisioningConnectNowNavGraph" />
+        <action
+            android:id="@+id/action_toolsConnectivityShowAllView_to_connection_details"
+            app:destination="@id/provisioningConnectionDetails" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/toolslighting"
+        android:name="com.whirlpool.cooking.tools.ToolsLighting"
+        android:label="Lighting">
+        <action
+            android:id="@+id/action_toolsMenu_to_toolsShowAllView_Preferences"
+            app:destination="@id/toolsShowAllView" />
+        <action
+            android:id="@+id/action_toolsShowAllView_to_ecomode"
+            app:destination="@id/toolsecomode" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/toolsrestoresetting"
+        android:name="com.whirlpool.cooking.tools.ToolsRestoreSetting"
+        android:label="RestoreSetting">
+        <action
+            android:id="@+id/action_toolsMenu_to_toolsShowAllView_Preferences"
+            app:destination="@id/toolsShowAllView" />
+        <action
+            android:id="@+id/action_tools_restoresetting_to_instruction"
+            app:destination="@id/toolsrestoreinstruction" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/toolsInformationMyAppliance"
+        android:name="com.whirlpool.cooking.tools.ToolsInfoMyAppliance"
+        android:label="Information">
+        <action
+            android:id="@+id/action_toolsMenu_to_toolsShowAllView_Info"
+            app:destination="@id/toolsShowAllView" />
+        <action
+            android:id="@+id/action_toolsShowAllView_Info_to_toolsMenu"
+            app:destination="@id/toolsMenu" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/toolsInformationServiceSupport"
+        android:name="com.whirlpool.cooking.tools.ToolsInfoServiceSupport"
+        android:label="Information">
+        <action
+            android:id="@+id/action_toolsMenu_to_toolsShowAllView_Info"
+            app:destination="@id/toolsShowAllView" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/toolsInformationWiFiTerms"
+        android:name="com.whirlpool.cooking.tools.ToolsInfoWiFiTerms"
+        android:label="Information">
+        <action
+            android:id="@+id/action_toolsMenu_to_toolsShowAllView_Info"
+            app:destination="@id/toolsShowAllView" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/toolsInformationSwTerms"
+        android:name="com.whirlpool.cooking.tools.ToolsInfoSwTerms"
+        android:label="Information">
+        <action
+            android:id="@+id/action_toolsMenu_to_toolsShowAllView_Info"
+            app:destination="@id/toolsShowAllView" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/toolstemperaturecalibration"
+        android:name="com.whirlpool.cooking.tools.ToolsTemperatureCalibration"
+        android:label="RestoreSetting">
+        <action
+            android:id="@+id/action_toolsMenu_to_toolsShowAllView_Preferences"
+            app:destination="@id/toolsShowAllView" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/toolsecomode"
+        android:name="com.whirlpool.cooking.tools.ToolsEcoMode"
+        android:label="EcoMode">
+        <action
+            android:id="@+id/action_toolsMenu_to_toolsShowAllView_Preferences"
+            app:destination="@id/toolsShowAllView" />
+        <action
+            android:id="@+id/action_toolsShowAllView_to_lighting"
+            app:destination="@id/toolslighting" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/toolsdiaplaybrightnesssound"
+        android:name="com.whirlpool.cooking.tools.ToolsDisplayBrightnessSound"
+        android:label="DisplayBrightness">
+        <action
+            android:id="@+id/action_toolsShowAllView_to_displaysettings"
+            app:destination="@id/toolsdisplaysettings" />
+        <action
+            android:id="@+id/action_toolsShowAllView_to_soundvolume"
+            app:destination="@id/tools_soundvolume" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tools_soundvolume"
+        android:name="com.whirlpool.cooking.tools.ToolsSoundVolume"
+        android:label="SoundVolume">
+        <action
+            android:id="@+id/action_toolsMenu_to_toolsShowAllView_Preferences"
+            app:destination="@id/toolsShowAllView" />
+        <action
+            android:id="@+id/action_toolsMenu_to_display_brightness_sound"
+            app:destination="@id/toolsdiaplaybrightnesssound" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/toolsdiaplaythemes"
+        android:name="com.whirlpool.cooking.tools.ToolsDisplayThemes"
+        android:label="Themes">
+        <action
+            android:id="@+id/action_toolsShowAllView_to_displaysettings"
+            app:destination="@id/toolsdisplaysettings" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/toolsrestoreinstruction"
+        android:name="com.whirlpool.cooking.tools.ToolsRestoreInstruction"
+        android:label="Themes">
+        <action
+            android:id="@+id/action_toolsShowAllView_to_restore_setting"
+            app:destination="@id/toolsrestoresetting" />
+        <action
+            android:id="@+id/action_toolsShowAllView_to_toolsMenu"
+            app:destination="@id/toolsMenu" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/toolsdisplaysettings"
+        android:name="com.whirlpool.cooking.tools.ToolsDisplaySettings"
+        android:label="Display Settings">
+        <action
+            android:id="@+id/action_toolsMenu_to_toolsShowAllView_Preferences"
+            app:destination="@id/toolsShowAllView" />
+        <action
+            android:id="@+id/action_toolsMenu_to_display_brightness_sound"
+            app:destination="@id/toolsdiaplaybrightnesssound" />
+
+        <action
+            android:id="@+id/action_toolsMenu_to_themes"
+            app:destination="@id/toolsdiaplaythemes" />
+
+        <action
+            android:id="@+id/action_toolsShowAllView_to_ecomode"
+            app:destination="@id/toolsecomode" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/toolslanguageregion"
+        android:name="com.whirlpool.cooking.tools.ToolsLanguageRegion"
+        android:label="Languageandregion">
+        <action
+            android:id="@+id/action_toolsMenu_to_toolsShowAllView_Preferences"
+            app:destination="@id/toolsShowAllView" />
+        <action
+            android:id="@+id/action_toolslanguageregion_to_toolsMenu"
+            app:destination="@id/toolsMenu" />
+        <action
+            android:id="@+id/action_toolslanguageregion_to_languageSelection"
+            app:destination="@id/languageSelection" />
+        <action
+            android:id="@+id/action_toolslanguageregion_to_timeVerticalTumbler"
+            app:destination="@id/timeVerticalTumbler" />
+        <action
+            android:id="@+id/action_toolslanguageregion_to_time24HrTumbler"
+            app:destination="@id/time24HrTumbler" />
+        <action
+            android:id="@+id/action_toolslanguageregion_to_dateNumpad"
+            app:destination="@id/dateNumpad" />
+        <action
+            android:id="@+id/action_toolslanguageregion_to_dateVerticalTumbler"
+            app:destination="@id/dateVerticalTumbler" />
+        <action
+            android:id="@+id/action_toolslanguageregion_to_timeNumpad"
+            app:destination="@id/timeNumpad" />
+        <action
+            android:id="@+id/action_toolslanguageregion_to_time12HrNumpad"
+            app:destination="@id/time12HrNumpad" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dateVerticalTumbler"
+        android:name="com.whirlpool.cooking.tools.DateVerticalTumbler"
+        android:label="DateVerticalTumbler">
+        <action
+            android:id="@+id/action_dateVerticalTumbler_to_dateNumpad"
+            app:destination="@id/dateNumpad" />
+        <action
+            android:id="@+id/action_dateVerticalTumbler_to_toolsDateAndTime"
+            app:destination="@id/toolsDateAndTime" />
+        <action
+            android:id="@+id/action_dateVerticalTumbler_to_toolslanguageregion"
+            app:destination="@id/toolslanguageregion" />
+    </fragment>
+    <fragment
+        android:id="@+id/dateNumpad"
+        android:name="com.whirlpool.cooking.tools.DateNumpad"
+        android:label="DateNumpad">
+        <action
+            android:id="@+id/action_dateNumpad_to_toolsDateAndTime"
+            app:destination="@id/toolsDateAndTime" />
+        <action
+            android:id="@+id/action_dateNumpad_to_dateVerticalTumbler"
+            app:destination="@id/dateVerticalTumbler" />
+        <action
+            android:id="@+id/action_dateNumpad_to_toolslanguageregion"
+            app:destination="@id/toolslanguageregion" />
+    </fragment>
+    <fragment
+        android:id="@+id/time12HrNumpad"
+        android:name="com.whirlpool.cooking.tools.Time12HrNumpad"
+        android:label="Time12HrNumpad">
+        <action
+            android:id="@+id/action_time12HrNumpad_to_timeVerticalTumbler"
+            app:destination="@id/timeVerticalTumbler" />
+        <action
+            android:id="@+id/action_time12HrNumpad_to_toolsDateAndTime"
+            app:destination="@id/toolsDateAndTime" />
+        <action
+            android:id="@+id/action_time12HrNumpad_to_timeNumpad"
+            app:destination="@id/timeNumpad" />
+        <action
+            android:id="@+id/action_time12HrNumpad_to_toolslanguageregion"
+            app:destination="@id/toolslanguageregion" />
+    </fragment>
+    <fragment
+            android:id="@+id/kitchenTimerRunningStatus"
+            android:name="com.whirlpool.cooking.kitchentimer.KitchenTimerRunningStatus"
+            android:label="KitchenTimerRunningStatus" />
+    <fragment
+        android:id="@+id/languageSelection"
+        android:name="com.whirlpool.cooking.tools.LanguageSelection"
+        android:label="LanguageSelection" >
+
+        <action
+            android:id="@+id/action_languageSelection_to_toolslanguageregion"
+            app:destination="@id/toolslanguageregion" />
+    </fragment>
+
+</navigation>

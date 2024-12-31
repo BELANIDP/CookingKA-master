@@ -1,0 +1,353 @@
+{
+  "_id": "Capability_Cooking_Whirlpool",
+  "Version": 2.0,
+  "RelationalHexConversion": {
+    "EncodingVersion": 2
+  },
+  "PartNumber": "T27992343",
+  "DataModelVersion": "5v6",
+  "GeneratorVersion": "0.2.126.0",
+  "Status": "InWork",
+  "Revision": 0,
+  "ConfigurationNumbers": [
+    "JL_Check_Unit"
+  ],
+  "ProductVariant": 2,
+  "Capability": {
+    "OvenUpperCavity": {
+      "CapabilityData": {
+        "OvenUpperCavity_CycleSetCommonModeCommonModeBake": {
+          "CycleNonEditable": {
+            "OvenUpperCavity_CycleSetCommonMode": [
+              "CommonModeBake"
+            ]
+          },
+          "ACUCycleName": "Bake",
+          "ACUCycleNameId": 1,
+          "ConnectivityKey": 51380236,
+          "ConnectivityValue": 2,
+          "Required": {
+            "OvenUpperCavity_CycleSetTargetTemp": {
+              "TempRange": {
+                "Min": 1560,
+                "Max": 2610,
+                "StepC": 6,
+                "StepF": 6,
+                "Default": 1770
+              }
+            },
+            "OvenUpperCavity_CycleSetPreheat": {
+              "Default": "Preheat",
+              "Enumeration": [
+                "Preheat",
+                "RapidPreheat"
+              ],
+              "DisplayRampStepF": 5,
+              "DisplayRampStepC": 1
+            },
+            "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+              "Enumeration": [
+                "StayOn",
+                "KeepWarm",
+                "TurnOff"
+              ],
+              "Default": "StayOn"
+            }
+          },
+          "Optional": {
+            "OvenUpperCavity_TimeSetCookTimeSet": {
+              "Range": {
+                "Min": 0,
+                "Max": 43200,
+                "Step": 3600,
+                "Default": 0
+              }
+            },
+            "OvenUpperCavity_TimeSetDelayTime": {
+              "Range": {
+                "Min": 0,
+                "Max": 43200,
+                "Step": 900,
+                "Default": 3600
+              }
+            }
+          },
+          "HmiOnly": {
+            "ApplyUPO": true
+          }
+        },
+        "OvenUpperCavity_CleanPyro": {
+          "CycleNonEditable": {
+            "OvenUpperCavity_CleanPyro": [
+              null
+            ]
+          },
+          "ACUCycleName": "Clean Pyro",
+          "ACUCycleNameId": 41,
+          "ConnectivityKey": -1,
+          "ConnectivityValue": 255,
+          "Required": {
+            "OvenUpperCavity_TimeSetCookTimeSet": {
+              "List": [
+                10800,
+                12600,
+                14400
+              ],
+              "Default": 12600
+            },
+            "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+              "Enumeration": [
+                "TurnOff"
+              ],
+              "Default": "TurnOff"
+            }
+          },
+          "Optional": {
+            "OvenUpperCavity_TimeSetDelayTime": {
+              "Range": {
+                "Min": 0,
+                "Max": 43200,
+                "Step": 900,
+                "Default": 0
+              }
+            }
+          },
+          "HmiOnly": {
+            "ApplyUPO": true
+          },
+          "NonEditable": {
+            "OvenUpperCavity_CycleSetTargetTemp": 2540
+          }
+        }
+      },
+      "SetCommonCycle": {
+        "SetCycle": {
+          "OvenUpperCavity_CleanPyro": {
+            "Name": "PyroClean"
+          },
+          "Manual": {
+            "Bake": {
+              "OvenUpperCavity_CycleSetCommonModeCommonModeBake": {
+                "Name": "Bake"
+              }
+            }
+          },
+          "Assisted": {
+            "Pizza": {
+              "FrozenPizza": {
+                "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodPizza": {
+                  "Name": "PizzaFrozenThick"
+                }
+              }
+            }
+          }
+        }
+      },
+      "HMICavityConfiguration": {
+        "ACUTarget": 0
+      },
+      "OvenUpperCavity_CycleSetFrozenBakeFoodFrozenBakeFoodPizza": {
+        "CycleNonEditable": {
+          "OvenUpperCavity_CycleSetFrozenBakeFood": ["FrozenBakeFoodPizza"]
+        },
+        "ACUCycleName": "Frozen Bake 2",
+        "ACUCycleNameId": 47,
+        "ConnectivityKey": 51380242,
+        "ConnectivityValue": 5,
+        "Required": {
+          "OvenUpperCavity_CycleSetDoneness": {
+            "Default": "Medium",
+            "Enumeration": ["Light", "Medium", "ExtraCrispy"]
+          },
+          "OvenUpperCavity_OpSetCookTimeCompleteAction": {
+            "Enumeration": ["KeepWarm", "TurnOff"],
+            "Default": "KeepWarm"
+          }
+        },
+        "NonEditable": {
+          "OvenUpperCavity_TimeSetCookTimeSet": 1800
+        }
+      }
+    },
+    "OvenLowerCavity": {
+      "CapabilityData": {
+        "OvenLowerCavity_CycleSetCommonModeCommonModeBake": {
+          "CycleNonEditable": {
+            "OvenLowerCavity_CycleSetCommonMode": [
+              "CommonModeBake"
+            ]
+          },
+          "ACUCycleName": "Bake",
+          "ACUCycleNameId": 1,
+          "ConnectivityKey": 51707916,
+          "ConnectivityValue": 2,
+          "Required": {
+            "OvenLowerCavity_CycleSetTargetTemp": {
+              "TempRange": {
+                "Min": 1550,
+                "Max": 2600,
+                "StepC": 5,
+                "StepF": 5,
+                "Default": 1760
+              }
+            },
+            "OvenLowerCavity_CycleSetPreheat": {
+              "Default": "Preheat",
+              "Enumeration": [
+                "Preheat",
+                "RapidPreheat"
+              ],
+              "DisplayRampStepF": 5,
+              "DisplayRampStepC": 1
+            },
+            "OvenLowerCavity_OpSetCookTimeCompleteAction": {
+              "Enumeration": [
+                "StayOn",
+                "KeepWarm",
+                "TurnOff"
+              ],
+              "Default": "StayOn"
+            }
+          },
+          "Optional": {
+            "OvenLowerCavity_TimeSetCookTimeSet": {
+              "Range": {
+                "Min": 0,
+                "Max": 43200,
+                "Step": 60,
+                "Default": 0
+              }
+            },
+            "OvenLowerCavity_TimeSetDelayTime": {
+              "Range": {
+                "Min": 0,
+                "Max": 43200,
+                "Step": 900,
+                "Default": 3600
+              }
+            }
+          },
+          "HmiOnly": {
+            "ApplyUPO": true
+          }
+        },
+        "OvenLowerCavity_CycleSetCommonModeCommonModeBroil": {
+          "CycleNonEditable": {
+            "OvenLowerCavity_CycleSetCommonMode": [
+              "CommonModeBroil"
+            ]
+          },
+          "ACUCycleName": "Broil",
+          "ACUCycleNameId": 7,
+          "ConnectivityKey": 51707916,
+          "ConnectivityValue": 8,
+          "Required": {
+            "OvenLowerCavity_CycleSetTargetTemp": {
+              "TempRange": {
+                "Min": 2320,
+                "Max": 2870,
+                "StepC": 5,
+                "StepF": 5,
+                "Default": 2870
+              }
+            },
+            "OvenLowerCavity_OpSetCookTimeCompleteAction": {
+              "Enumeration": [
+                "StayOn",
+                "KeepWarm",
+                "TurnOff"
+              ],
+              "Default": "StayOn"
+            }
+          },
+          "Optional": {
+            "OvenLowerCavity_TimeSetCookTimeSet": {
+              "Range": {
+                "Min": 0,
+                "Max": 43200,
+                "Step": 60,
+                "Default": 0
+              }
+            },
+            "OvenLowerCavity_TimeSetDelayTime": {
+              "Range": {
+                "Min": 0,
+                "Max": 43200,
+                "Step": 900,
+                "Default": 3600
+              }
+            }
+          },
+          "HmiOnly": {
+            "ApplyUPO": true
+          }
+        },
+        "OvenLowerCavity_CleanPyro": {
+          "CycleNonEditable": {
+            "OvenLowerCavity_CleanPyro": [
+              null
+            ]
+          },
+          "ACUCycleName": "Clean Pyro",
+          "ACUCycleNameId": 41,
+          "ConnectivityKey": -1,
+          "ConnectivityValue": 255,
+          "Required": {
+            "OvenLowerCavity_TimeSetCookTimeSet": {
+              "List": [
+                10800,
+                12600,
+                14400
+              ],
+              "Default": 12600
+            },
+            "OvenLowerCavity_OpSetCookTimeCompleteAction": {
+              "Enumeration": [
+                "TurnOff"
+              ],
+              "Default": "TurnOff"
+            }
+          },
+          "Optional": {
+            "OvenLowerCavity_TimeSetDelayTime": {
+              "Range": {
+                "Min": 0,
+                "Max": 43200,
+                "Step": 900,
+                "Default": 0
+              }
+            }
+          },
+          "HmiOnly": {
+            "ApplyUPO": true
+          },
+          "NonEditable": {
+            "OvenLowerCavity_CycleSetTargetTemp": 2540
+          }
+        }
+      },
+      "SetCommonCycle": {
+        "SetCycle": {
+          "OvenLowerCavity_CleanPyro": {
+            "Name": "LowerCleanPyro"
+          },
+          "Manual": {
+            "Bake": {
+              "OvenLowerCavity_CycleSetCommonModeCommonModeBake": {
+                "Name": "BakeLower"
+              }
+            },
+            "Broil": {
+              "OvenLowerCavity_CycleSetCommonModeCommonModeBroil": {
+                "Name": "BroilLower"
+              }
+            }
+          }
+        }
+      },
+      "HMICavityConfiguration": {
+        "ACUTarget": 1
+      }
+    }
+  }
+}
