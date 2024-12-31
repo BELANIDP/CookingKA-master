@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--ToDo:// Decide based on the specification from GCD, This may not be required as these are fixed screens-->
-<font-family xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <font app:fontStyle="normal" app:fontWeight="200" app:font="@font/helvetica_neue_thin"/>
-    <font app:fontStyle="normal" app:fontWeight="400" app:font="@font/helvetica_neue_regular"/>
-    <font app:fontStyle="normal" app:fontWeight="700" app:font="@font/helvetica_neue_regular" />
-</font-family>
